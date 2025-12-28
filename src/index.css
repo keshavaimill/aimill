@@ -21,7 +21,7 @@
     --popover-foreground: 0 0% 100%;
 
     /* Cyan accent */
-    --primary: 189 94% 43%;
+    --primary: 0 0% 100%;
     --primary-foreground: 220 20% 4%;
 
     /* Glass/muted backgrounds */
@@ -45,11 +45,12 @@
     --radius: 0.75rem;
 
     /* Custom colors */
-    --cyan: 189 94% 43%;
+    --cyan: 150 25% 45%;
     --pink: 330 85% 60%;
     --green: 160 84% 39%;
     --purple: 265 89% 66%;
     --teal: 174 72% 40%;
+
 
     /* Gradients */
     --gradient-cyan-pink: linear-gradient(135deg, hsl(189 94% 43%), hsl(330 85% 60%));
@@ -142,7 +143,46 @@
   .pulse-glow {
     animation: pulseGlow 4s ease-in-out infinite;
   }
+
+  .square {
+  width: 30px;
+  height: 30px;
+  background: #111;
+  transition: background 0.3s ease;
+  }
+
+  .pixel-grid {
+    position: relative;
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+    overflow: hidden;
+  }
+
+  .pixel-grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        180px circle at var(--x, 50%) var(--y, 50%),
+        hsl(var(--primary) / 0.25),
+        transparent 60%
+      );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .pixel-grid:hover::before {
+    opacity: 1;
+  }
+
 }
+
+
 
 @keyframes float {
   0%, 100% {

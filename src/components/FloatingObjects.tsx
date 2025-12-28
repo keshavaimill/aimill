@@ -167,9 +167,9 @@ export const FloatingObjects = () => {
       {/* Background grid dots */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
-      {/* Gradient orbs */}
+      {/* Gradient orbs
       <div className="absolute left-1/4 top-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
-      <div className="absolute right-1/4 top-1/2 w-80 h-80 bg-accent/10 rounded-full blur-[100px]" />
+      <div className="absolute right-1/4 top-1/2 w-80 h-80 bg-accent/10 rounded-full blur-[100px]" /> */}
     </div>
   );
 };

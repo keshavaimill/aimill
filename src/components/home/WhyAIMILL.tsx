@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, Target, Zap, Building2, TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
+
 
 const benefits = [
   {
@@ -25,8 +27,21 @@ const benefits = [
 ];
 
 export const WhyAIMILL = () => {
+    const steps = ["Strategy", "Build", "Deploy", "Measure", "Scale"];
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prev) =>
+        prev < steps.length - 1 ? prev + 1 : 0
+      );
+    }, 1200); // speed of travel
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-card/30">
+    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-[#1a1a1a]">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Benefits */}
@@ -35,8 +50,10 @@ export const WhyAIMILL = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            style={{ backgroundColor: "#609a76ff" }} // green-400
+            className="rounded-2xl p-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
               Why AIMILL
             </h2>
             <div className="space-y-6">
@@ -53,8 +70,8 @@ export const WhyAIMILL = () => {
                     <benefit.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
+                    <h3 className="text-lg text-black/100 font-bold leading-relaxed">{benefit.title}</h3>
+                    <p className="text-black">{benefit.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -71,22 +88,45 @@ export const WhyAIMILL = () => {
           >
             <h3 className="text-xl font-bold mb-6">Your Journey</h3>
             <div className="space-y-4">
-              {["Strategy", "Build", "Deploy", "Measure", "Scale"].map((step, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                    idx === 0 ? "bg-primary text-primary-foreground" :
-                    "bg-secondary text-foreground"
-                  }`}>
+              {steps.map((step, idx) => {
+  const isActive = idx <= activeStep;
+
+              return (
+                <div key={idx} className="flex items-start gap-4">
+                  {/* Circle */}
+                  <motion.div
+                    animate={{
+                      backgroundColor: isActive
+                        ? "hsl(var(--primary))"
+                        : "hsl(var(--secondary))",
+                      color: isActive ? "#000" : "#fff",
+                    }}
+                    transition={{ duration: 0.4 }}
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-bold"
+                  >
                     {idx + 1}
-                  </div>
+                  </motion.div>
+
+                  {/* Label + Line */}
                   <div className="flex-1">
                     <div className="font-semibold">{step}</div>
-                    {idx < 4 && (
-                      <div className="h-8 w-0.5 bg-border ml-5 mt-2" />
+
+                    {idx < steps.length - 1 && (
+                      <motion.div
+                        animate={{
+                          backgroundColor: idx < activeStep
+                            ? "hsl(var(--primary))"
+                            : "hsl(var(--border))",
+                          height: idx < activeStep ? "2rem" : "1.5rem",
+                        }}
+                        transition={{ duration: 0.4 }}
+                        className="w-0.5 ml-5 mt-2"
+                      />
                     )}
                   </div>
                 </div>
-              ))}
+              );
+            })}
             </div>
           </motion.div>
         </div>

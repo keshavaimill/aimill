@@ -83,7 +83,7 @@ const layers = [
 
 export const PlatformArchitecture = () => {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
+    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden ">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple/5 via-transparent to-cyan/5" />
       

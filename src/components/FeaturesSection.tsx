@@ -103,7 +103,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative" style={{ backgroundColor: "#fff8eeff" }}>
       <div className="container mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -113,9 +113,9 @@ export const FeaturesSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-4xl mb-16"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900">
             AIMILL provides the core infrastructure needed to build and run{" "}
-            <span className="text-muted-foreground">AI agents in production.</span>
+            <span className="text-zinc-600">AI agents in production.</span>
           </h2>
         </motion.div>
 
@@ -128,7 +128,8 @@ export const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative rounded-2xl bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors"
+              className="group relative rounded-2xl bg-black/85 border border-border overflow-hidden hover:bg-black/90 transition-colors"
+
             >
               {/* Learn more link */}
               <Link
@@ -147,7 +148,7 @@ export const FeaturesSection = () => {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-white/80">{feature.description}</p>
               </div>
             </motion.div>
           ))}
