@@ -11,8 +11,11 @@
 @layer base {
   :root {
     /* Dark Theme - Primary */
-    --background: 220 20% 4%;
+    --background: 220 20% 4%; /* Black for Hero section */
     --foreground: 0 0% 100%;
+
+    /* Section background - RGB(32, 32, 32) */
+    --section-background: 0 0% 12.5%;
 
     --card: 220 15% 8%;
     --card-foreground: 0 0% 100%;
@@ -20,8 +23,8 @@
     --popover: 220 15% 6%;
     --popover-foreground: 0 0% 100%;
 
-    /* Cyan accent */
-    --primary: 189 94% 43%;
+    /* Light blue accent - RGB(127, 193, 251) */
+    --primary: 208 94% 74%;
     --primary-foreground: 220 20% 4%;
 
     /* Glass/muted backgrounds */
@@ -40,30 +43,30 @@
 
     --border: 220 15% 18%;
     --input: 220 15% 18%;
-    --ring: 189 94% 43%;
+    --ring: 208 94% 74%;
 
     --radius: 0.75rem;
 
     /* Custom colors */
-    --cyan: 189 94% 43%;
+    --cyan: 208 94% 74%;
     --pink: 330 85% 60%;
     --green: 160 84% 39%;
     --purple: 265 89% 66%;
     --teal: 174 72% 40%;
 
     /* Gradients */
-    --gradient-cyan-pink: linear-gradient(135deg, hsl(189 94% 43%), hsl(330 85% 60%));
+    --gradient-cyan-pink: linear-gradient(135deg, hsl(208 94% 74%), hsl(330 85% 60%));
     --gradient-purple-pink: linear-gradient(135deg, hsl(265 89% 66%), hsl(330 85% 60%));
     --gradient-dark: linear-gradient(180deg, hsl(220 20% 4%), hsl(220 15% 8%));
 
     /* Shadows */
-    --shadow-glow-cyan: 0 0 40px hsl(189 94% 43% / 0.3);
+    --shadow-glow-cyan: 0 0 40px hsl(208 94% 74% / 0.3);
     --shadow-glow-pink: 0 0 40px hsl(330 85% 60% / 0.3);
 
     /* Sidebar */
     --sidebar-background: 220 15% 6%;
     --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 189 94% 43%;
+    --sidebar-primary: 208 94% 74%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 15% 12%;
     --sidebar-accent-foreground: 0 0% 90%;
@@ -84,19 +87,43 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
   }
 }
 
 @layer utilities {
   /* Animated gradient text */
+  /* Enhanced gradient text */
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-cyan-pink);
+    background-image: linear-gradient(135deg, hsl(189 94% 43%), hsl(330 85% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .gradient-text-purple {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-purple-pink);
+    background-image: linear-gradient(135deg, hsl(265 89% 66%), hsl(330 85% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Better shadows for depth */
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .shadow-glow-primary {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.2), 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   /* Grid pattern background */

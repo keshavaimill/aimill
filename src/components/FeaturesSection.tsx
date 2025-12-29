@@ -4,29 +4,35 @@ import { ArrowUpRight, MessageSquare, Zap, Globe, Code } from "lucide-react";
 
 const features = [
   {
-    title: "Augment customer support workflows",
-    description: "Give agents the ability to handle routine inquiries, escalate when needed, and stay consistent across channels.",
+    title: "Seamlessly integrate into your existing workflows",
+    description: "Connect with your tools and systems effortlessly.",
     icon: MessageSquare,
     visual: (
-      <div className="relative p-6">
+      <div className="relative p-6 bg-gradient-to-br from-card to-card/50 rounded-2xl border border-border/50 shadow-xl">
+        {/* Chat interface mockup */}
         <div className="space-y-3">
-          <div className="glass rounded-xl p-3 flex items-center gap-3 max-w-[280px]">
-            <div className="w-10 h-10 rounded-full bg-green/20 flex items-center justify-center text-lg">💬</div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">WhatsApp User</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-green/20 text-green">Assigned</span>
+          <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-xl">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-sm">
+              CD
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-sm font-semibold">Cameron Diaz</span>
+                <span className="text-xs text-muted-foreground">2m ago</span>
               </div>
+              <p className="text-sm text-foreground">Can you help me with my order status?</p>
             </div>
           </div>
-          <div className="glass rounded-xl p-3 flex items-center gap-3 max-w-[280px] ml-8">
-            <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-lg">🌐</div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">Webchat User</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary">Assigned</span>
+          <div className="flex items-start gap-3 p-4 bg-primary/10 rounded-xl ml-8">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-white font-bold text-sm">
+              PS
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-sm font-semibold">Peter Smith</span>
+                <span className="text-xs text-muted-foreground">Just now</span>
               </div>
-              <p className="text-xs text-muted-foreground">Can I get a refund?</p>
+              <p className="text-sm text-foreground">I've checked your order #12345. It's being prepared for shipment.</p>
             </div>
           </div>
         </div>
@@ -38,24 +44,19 @@ const features = [
     description: "Agents can be deployed on the web, embedded into custom applications, or run through voice interfaces.",
     icon: Globe,
     visual: (
-      <div className="relative p-6">
-        <div className="glass rounded-xl p-4">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-purple/20 flex items-center justify-center">
-              <Zap className="w-5 h-5 text-purple" />
+      <div className="relative p-6 bg-gradient-to-br from-card to-card/50 rounded-2xl border border-border/50 shadow-xl">
+        {/* App icons grid */}
+        <div className="grid grid-cols-4 gap-3">
+          {['Google', 'Facebook', 'WhatsApp', 'Slack', 'Teams', 'Discord', 'Telegram', 'Web'].map((app, i) => (
+            <div
+              key={i}
+              className="aspect-square rounded-xl bg-secondary/50 flex items-center justify-center border border-border/30 hover:border-primary/50 transition-colors"
+            >
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
+                <span className="text-xs font-semibold">{app[0]}</span>
+              </div>
             </div>
-            <span className="font-semibold">Agent</span>
-            <div className="flex gap-2 ml-auto">
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💼</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💭</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💬</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">+</div>
-            </div>
-          </div>
-          <div className="border-t border-border pt-4">
-            <p className="text-xs text-muted-foreground mb-2">Instructions</p>
-            <p className="text-sm text-secondary-foreground">You're an integral part of this company's operations. Use these tools to optimize our customer feedback loop.</p>
-          </div>
+          ))}
         </div>
       </div>
     ),
@@ -65,28 +66,31 @@ const features = [
     description: "Use APIs, access business data, and work directly with structured inputs like files, tables, and user records.",
     icon: Code,
     visual: (
-      <div className="relative p-6">
+      <div className="relative p-6 bg-gradient-to-br from-card to-card/50 rounded-2xl border border-border/50 shadow-xl">
         <div className="glass rounded-xl p-4 font-mono text-sm">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-6 rounded bg-purple/20 flex items-center justify-center text-xs">S</div>
-            <span className="text-muted-foreground">Initiate refund</span>
+            <div className="w-6 h-6 rounded bg-purple/20 flex items-center justify-center text-xs font-bold">S</div>
+            <span className="text-foreground font-medium">Initiate refund</span>
           </div>
           <div className="text-xs text-muted-foreground">Stripe</div>
+          <div className="mt-3 pt-3 border-t border-border/50">
+            <div className="text-xs text-muted-foreground">Status: <span className="text-green">Connected</span></div>
+          </div>
         </div>
       </div>
     ),
   },
   {
-    title: "Deliver contextual conversations",
+    title: "Deliver human-like conversations",
     description: "Conversations are stateful and persistent, enabling agents to track context and operate across steps.",
     icon: MessageSquare,
     visual: (
-      <div className="relative p-6">
+      <div className="relative p-6 bg-gradient-to-br from-card to-card/50 rounded-2xl border border-border/50 shadow-xl">
         <div className="glass rounded-xl p-4">
           <div className="bg-secondary/50 rounded-lg p-3 mb-3">
-            <p className="text-sm">I've created a Linear ticket for this issue. Can you include a screenshot or screen recording?</p>
+            <p className="text-sm text-foreground">I've created a Linear ticket for this issue. Can you include a screenshot or screen recording?</p>
           </div>
-          <div className="flex items-center gap-2 rounded-lg bg-secondary p-2">
+          <div className="flex items-center gap-2 rounded-lg bg-secondary p-2 border border-border/30">
             <input 
               type="text" 
               placeholder="Type to test your bot..." 
@@ -103,7 +107,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 relative">
+    <section className="py-24 relative bg-section-bg">
       <div className="container mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -140,7 +144,7 @@ export const FeaturesSection = () => {
               </Link>
 
               {/* Visual */}
-              <div className="h-64 bg-secondary/30 flex items-center justify-center">
+              <div className="h-64 bg-gradient-to-br from-secondary/20 to-secondary/10 flex items-center justify-center p-4">
                 {feature.visual}
               </div>
 

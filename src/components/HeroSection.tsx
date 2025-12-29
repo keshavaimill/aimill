@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FloatingObjects } from "./FloatingObjects";
 import { HeroVisual } from "./home/HeroVisual";
+import { PixelGridBackground } from "./PixelGridBackground";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt- bg-black">
+      <PixelGridBackground />
       <FloatingObjects />
 
       <div className="container mx-auto px-6 relative z-10">
@@ -32,24 +34,24 @@ export const HeroSection = () => {
             </motion.div>
 
             {/* Main headline */}
-            <div className="text-left max-w-2xl">
+            <div className="text-left max-w-3xl">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95] tracking-tight mb-6"
+                className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-[0.9] tracking-tight mb-8"
               >
-                Agentic AI that executes{" "}
-                <span className="gradient-text-purple">real business outcomes</span>
+                The Complete{" "}
+                <span className="gradient-text-purple">AI Agent Platform</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg md:text-xl text-muted-foreground mb-8"
+                className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed"
               >
-                Ai Mill builds autonomous, production-grade AI agents that reason, plan, act, and validate — delivering measurable revenue impact, operational efficiency, and faster decision-making across the enterprise.
+                Build and run AI agents in production.
               </motion.p>
 
               {/* Value Bullets */}
@@ -82,13 +84,13 @@ export const HeroSection = () => {
               >
                 <Link to="/contact">
                   <Button variant="hero" size="lg" className="group">
-                    Book a Demo
+                    Get Started
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <Link to="/platform">
+                <Link to="/contact">
                   <Button variant="heroOutline" size="lg">
-                    Explore the Platform
+                    Book a Demo
                   </Button>
                 </Link>
               </motion.div>

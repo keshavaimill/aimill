@@ -3,7 +3,7 @@ import { Package, RefreshCw, GitBranch } from "lucide-react";
 
 export const ArchitectureSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-section-bg">
       {/* Background grid */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
       

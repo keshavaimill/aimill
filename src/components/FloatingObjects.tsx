@@ -3,62 +3,81 @@ import { motion } from "framer-motion";
 export const FloatingObjects = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Left side objects */}
+      {/* Purple Cylinder (like Botpress) */}
       <motion.div
-        className="absolute left-[5%] top-[20%] w-32 h-32"
+        className="absolute left-[8%] top-[15%] w-40 h-40"
         animate={{
-          y: [-10, 10, -10],
-          rotate: [0, 5, 0],
+          y: [-15, 15, -15],
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <div className="w-full h-full relative">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="relative w-24 h-32">
+              {/* Cylinder body with gradient */}
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-500/40 via-purple-600/40 to-purple-700/40 rounded-t-full rounded-b-full shadow-lg shadow-purple-500/20" />
+              {/* Cylinder top ellipse */}
+              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-purple-400/50 rounded-full" />
+              {/* Cylinder bottom ellipse */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-20 h-4 bg-purple-600/50 rounded-full" />
+              {/* Highlight */}
+              <div className="absolute left-2 top-4 w-8 h-20 bg-white/10 rounded-full blur-sm" />
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Blue Faceted Gem */}
+      <motion.div
+        className="absolute left-[12%] top-[35%] w-32 h-32"
+        animate={{
+          y: [10, -10, 10],
+          rotate: [0, -15, 0],
         }}
         transition={{
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut",
-        }}
-      >
-        {/* Wireframe cube */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-          <g stroke="hsl(265, 89%, 66%)" strokeWidth="1" fill="none">
-            {/* Front face */}
-            <path d="M20,30 L50,15 L80,30 L50,45 Z" strokeDasharray="4 2" />
-            {/* Top lines */}
-            <path d="M20,30 L20,70" strokeDasharray="4 2" />
-            <path d="M80,30 L80,70" strokeDasharray="4 2" />
-            <path d="M50,45 L50,85" strokeDasharray="4 2" />
-            {/* Bottom face */}
-            <path d="M20,70 L50,85 L80,70" strokeDasharray="4 2" />
-          </g>
-        </svg>
-      </motion.div>
-
-      <motion.div
-        className="absolute left-[10%] top-[40%] w-24 h-24"
-        animate={{
-          y: [10, -10, 10],
-          rotate: [0, -5, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
           delay: 1,
         }}
       >
-        {/* Wireframe sphere */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-          <g stroke="hsl(160, 84%, 39%)" strokeWidth="1" fill="none">
-            <circle cx="50" cy="50" r="35" strokeDasharray="4 2" />
-            <ellipse cx="50" cy="50" rx="35" ry="15" strokeDasharray="4 2" />
-            <ellipse cx="50" cy="50" rx="15" ry="35" strokeDasharray="4 2" />
-          </g>
-        </svg>
+        <div className="w-full h-full relative">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <defs>
+              <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#1e40af" stopOpacity="0.4" />
+              </linearGradient>
+            </defs>
+            {/* Faceted gem shape */}
+            <polygon
+              points="50,10 80,30 80,70 50,90 20,70 20,30"
+              fill="url(#blueGradient)"
+              opacity="0.6"
+            />
+            {/* Highlight */}
+            <polygon
+              points="50,10 65,25 50,40 35,25"
+              fill="rgba(255,255,255,0.3)"
+            />
+            {/* Edge highlights */}
+            <line x1="50" y1="10" x2="80" y2="30" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+            <line x1="50" y1="10" x2="20" y2="30" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+          </svg>
+        </div>
       </motion.div>
 
+      {/* Green Spiky Sphere */}
       <motion.div
-        className="absolute left-[15%] top-[60%] w-16 h-16"
+        className="absolute left-[15%] top-[55%] w-28 h-28"
         animate={{
-          y: [-5, 15, -5],
-          x: [-5, 5, -5],
+          y: [-8, 12, -8],
+          rotate: [0, 180, 360],
         }}
         transition={{
           duration: 7,
@@ -67,83 +86,87 @@ export const FloatingObjects = () => {
           delay: 0.5,
         }}
       >
-        {/* Small diamond */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-          <polygon
-            points="50,10 90,50 50,90 10,50"
-            stroke="hsl(189, 94%, 43%)"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="4 2"
-          />
-        </svg>
+        <div className="w-full h-full relative">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <defs>
+              <radialGradient id="greenGradient">
+                <stop offset="0%" stopColor="#10b981" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#059669" stopOpacity="0.4" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="35" fill="url(#greenGradient)" opacity="0.5" />
+            {/* Spikes */}
+            {[...Array(12)].map((_, i) => {
+              const angle = (i * 30) * (Math.PI / 180);
+              const x1 = 50 + Math.cos(angle) * 35;
+              const y1 = 50 + Math.sin(angle) * 35;
+              const x2 = 50 + Math.cos(angle) * 42;
+              const y2 = 50 + Math.sin(angle) * 42;
+              return (
+                <line
+                  key={i}
+                  x1={x1}
+                  y1={y1}
+                  x2={x2}
+                  y2={y2}
+                  stroke="#10b981"
+                  strokeWidth="2"
+                  opacity="0.6"
+                />
+              );
+            })}
+            {/* Highlight */}
+            <circle cx="45" cy="45" r="8" fill="rgba(255,255,255,0.2)" />
+          </svg>
+        </div>
       </motion.div>
 
-      {/* Right side objects */}
+      {/* Dark Blue Propeller-like Object */}
       <motion.div
-        className="absolute right-[5%] top-[25%] w-40 h-40"
+        className="absolute right-[10%] top-[20%] w-36 h-36"
         animate={{
-          y: [5, -15, 5],
-          rotate: [0, -3, 0],
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
         }}
         transition={{
-          duration: 8,
+          duration: 10,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: "linear",
         }}
       >
-        {/* Coffee cup / cylinder */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-          <g stroke="hsl(174, 72%, 40%)" strokeWidth="1.5" fill="none">
-            {/* Cup body */}
-            <ellipse cx="50" cy="25" rx="25" ry="8" />
-            <path d="M25,25 L30,75" />
-            <path d="M75,25 L70,75" />
-            <ellipse cx="50" cy="75" rx="20" ry="6" />
-            {/* Handle */}
-            <path d="M75,35 Q95,35 95,50 Q95,65 75,65" strokeDasharray="4 2" />
-          </g>
-          {/* Steam effect */}
-          <g stroke="hsl(189, 94%, 43%)" strokeWidth="1" opacity="0.4">
-            <path d="M40,15 Q45,5 40,-5" strokeDasharray="2 2" />
-            <path d="M50,12 Q55,2 50,-8" strokeDasharray="2 2" />
-            <path d="M60,15 Q65,5 60,-5" strokeDasharray="2 2" />
-          </g>
-        </svg>
+        <div className="w-full h-full relative">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <defs>
+              <linearGradient id="darkBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#1e3a8a" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#1e40af" stopOpacity="0.3" />
+              </linearGradient>
+            </defs>
+            {/* Propeller blades */}
+            {[0, 90, 180, 270].map((rotation, i) => (
+              <g key={i} transform={`rotate(${rotation} 50 50)`}>
+                <ellipse
+                  cx="50"
+                  cy="20"
+                  rx="8"
+                  ry="25"
+                  fill="url(#darkBlueGradient)"
+                  opacity="0.4"
+                />
+              </g>
+            ))}
+            {/* Center circle */}
+            <circle cx="50" cy="50" r="8" fill="#1e40af" opacity="0.6" />
+          </svg>
+        </div>
       </motion.div>
 
+      {/* Light Blue Abstract Shape */}
       <motion.div
-        className="absolute right-[15%] top-[45%] w-28 h-28"
-        animate={{
-          y: [-10, 10, -10],
-          rotate: [0, 10, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2,
-        }}
-      >
-        {/* Scissors / tools */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-60">
-          <g stroke="hsl(189, 94%, 43%)" strokeWidth="1.5" fill="none">
-            {/* Pencil */}
-            <path d="M30,70 L70,30 L80,40 L40,80 Z" strokeDasharray="4 2" />
-            <path d="M70,30 L80,20" />
-            {/* Ruler */}
-            <path d="M20,20 L50,20 L50,35 L20,35 Z" strokeDasharray="4 2" />
-            <line x1="30" y1="20" x2="30" y2="25" />
-            <line x1="40" y1="20" x2="40" y2="28" />
-          </g>
-        </svg>
-      </motion.div>
-
-      <motion.div
-        className="absolute right-[8%] top-[65%] w-20 h-20"
+        className="absolute right-[15%] top-[45%] w-24 h-24"
         animate={{
           y: [0, -20, 0],
-          x: [0, 5, 0],
+          rotate: [0, 90, 0],
         }}
         transition={{
           duration: 5,
@@ -152,24 +175,62 @@ export const FloatingObjects = () => {
           delay: 1.5,
         }}
       >
-        {/* Small triangle */}
-        <svg viewBox="0 0 100 100" className="w-full h-full opacity-50">
-          <polygon
-            points="50,20 80,70 20,70"
-            stroke="hsl(330, 85%, 60%)"
-            strokeWidth="2"
-            fill="none"
-            strokeDasharray="4 2"
-          />
-        </svg>
+        <div className="w-full h-full relative">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <defs>
+              <linearGradient id="lightBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#60a5fa" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.4" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M50,10 Q70,30 90,50 Q70,70 50,90 Q30,70 10,50 Q30,30 50,10"
+              fill="url(#lightBlueGradient)"
+              opacity="0.5"
+            />
+          </svg>
+        </div>
+      </motion.div>
+
+      {/* Small Pink/Accent Shape */}
+      <motion.div
+        className="absolute right-[8%] top-[65%] w-20 h-20"
+        animate={{
+          y: [0, -20, 0],
+          x: [0, 5, 0],
+          rotate: [0, 45, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
+      >
+        <div className="w-full h-full relative">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <defs>
+              <linearGradient id="pinkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#ec4899" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#be185d" stopOpacity="0.3" />
+              </linearGradient>
+            </defs>
+            <polygon
+              points="50,20 80,70 20,70"
+              fill="url(#pinkGradient)"
+              opacity="0.5"
+            />
+          </svg>
+        </div>
       </motion.div>
 
       {/* Background grid dots */}
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
-      {/* Gradient orbs */}
-      <div className="absolute left-1/4 top-1/3 w-96 h-96 bg-primary/10 rounded-full blur-[100px]" />
-      <div className="absolute right-1/4 top-1/2 w-80 h-80 bg-accent/10 rounded-full blur-[100px]" />
+      {/* Gradient orbs - more subtle like Botpress */}
+      <div className="absolute left-1/4 top-1/3 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px]" />
+      <div className="absolute right-1/4 top-1/2 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px]" />
+      <div className="absolute left-1/2 top-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px]" />
     </div>
   );
 };
