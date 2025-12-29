@@ -48,7 +48,7 @@ export const PlatformTeaser = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            The Ai Mill Agentic Ecosystem
+            The AI-MILL Agentic Ecosystem
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Design, orchestrate, deploy, and monitor AI agents across your enterprise.
@@ -64,13 +64,22 @@ export const PlatformTeaser = () => {
               whileInView={{ opacity: 0.8, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-primary/30 transition-all group"
+              className="
+  rounded-2xl p-6 h-full block
+  bg-zinc-900/80
+  backdrop-blur-md
+  border border-zinc-700/60
+  hover:border-zinc-500/60
+  transition-all
+  group
+"
+
             >
               <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <capability.icon className="w-6 h-6 text-black" />
               </div>
-              <h3 className="text-lg font-bold mb-2 text-black">{capability.title}</h3>
-              <p className="text-sm text-black">{capability.description}</p>
+              <h3 className="text-lg font-bold mb-2">{capability.title}</h3>
+              <p className="text-sm text-muted-foreground">{capability.description}</p>
             </motion.div>
 
           ))}

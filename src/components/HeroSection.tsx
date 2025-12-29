@@ -28,14 +28,15 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6 }}
                 className="flex justify-start mb-8"
               >
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all group"
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all group pointer-events-auto"
                 >
+
                   <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
                   Community support, daily live office hours, and thousands of builders
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </motion.div>
 
               {/* Main headline */}
@@ -56,7 +57,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg md:text-xl text-muted-foreground mb-8"
                 >
-                  Ai Mill builds autonomous, production-grade AI agents that reason, plan, act, and validate — delivering measurable revenue impact, operational efficiency, and faster decision-making across the enterprise.
+                  AI-MILL builds autonomous AI agents that reason, plan, act, and collaborate with humans to drive revenue, efficiency, and operational intelligence at enterprise scale.
                 </motion.p>
 
                 {/* Value Bullets */}
@@ -68,15 +69,15 @@ export const HeroSection = () => {
                 >
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
                     <span className="w-2 h-2 rounded-full bg-green" />
-                    <span className="text-sm font-semibold">Designed for production, not pilots</span>
+                    <span className="text-sm font-semibold">Outcome-driven agentic systems</span>
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
                     <span className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-sm font-semibold">Outcome-driven, confidence-scored decisions</span>
+                    <span className="text-sm font-semibold">Production-grade, secure, auditable</span>
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
                     <span className="w-2 h-2 rounded-full bg-purple" />
-                    <span className="text-sm font-semibold">Secure, auditable, human-in-the-loop by design</span>
+                    <span className="text-sm font-semibold">Industry-specialized agents</span>
                   </div>
                 </motion.div>
 
@@ -85,8 +86,9 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row items-start gap-4"
+                  className="flex flex-col sm:flex-row items-start gap-4 pointer-events-auto"
                 >
+
                   <Link to="/contact">
                     <Button variant="hero" size="lg" className="group">
                       Book a Demo

@@ -28,7 +28,7 @@ export const CTASection = () => {
               >
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                   Build better with{" "}
-                  <span className="gradient-text">AIMILL</span>
+                  <span className="gradient-text">AI-MILL</span>
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
                   Join thousands of developers building the next generation of AI-powered applications.

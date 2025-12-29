@@ -72,7 +72,7 @@ export const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-foreground">AIMILL</span>
+              <span className="text-xl font-bold text-foreground">AI-MILL</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Building the future of AI agents.
@@ -175,7 +175,7 @@ export const Footer = () => {
       <div className="border-t border-border">
         <div className="container mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 AIMILL. All rights reserved.
+            © 2025 AI-MILL. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>

@@ -102,26 +102,30 @@ export const HeroVisual = () => {
             MCP Servers
           </motion.div>
         </div>
-        <div className="absolute -bottom-4 left-1/3">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.9 }}
-            className="px-3 py-1 glass rounded-full text-xs font-semibold border border-border/50"
-          >
-            RAG Pipelines
-          </motion.div>
-        </div>
-        <div className="absolute -bottom-4 right-1/3">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 2.1 }}
-            className="px-3 py-1 glass rounded-full text-xs font-semibold border border-border/50"
-          >
-            Human-in-the-loop
-          </motion.div>
-        </div>
+        {/* Bottom Left */}
+<div className="absolute -bottom-6 left-1/2 -translate-x-full -ml-12">
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 1.9 }}
+    className="px-3 py-1 glass rounded-full text-xs font-semibold border border-border/50 whitespace-nowrap"
+  >
+    RAG Pipelines
+  </motion.div>
+</div>
+
+{/* Bottom Right */}
+<div className="absolute -bottom-6 left-1/2 translate-x-[20px]">
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 2.1 }}
+    className="px-3 py-1 glass rounded-full text-xs font-semibold border border-border/50 whitespace-nowrap"
+  >
+    Human-in-the-loop
+  </motion.div>
+</div>
+
       </div>
     </div>
   );

@@ -12,11 +12,11 @@ export const AgenticAISection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ backgroundColor: "#609a76ff" }} // green-400
+            style={{ backgroundColor: "#D1FAE5" }} // green-400
             className="rounded-2xl p-12"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
-              From automation to autonomy
+              From Automation To Autonomy
             </h2>
             <p className="text-lg text-black/80 leading-relaxed">
               Agentic systems continuously evaluate goals, invoke tools, collaborate with other agents, and validate outcomes with confidence scoring.

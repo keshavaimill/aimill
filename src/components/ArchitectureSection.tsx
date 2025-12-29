@@ -21,7 +21,7 @@ export const ArchitectureSection = () => {
         >
           {/* Main statement */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
-            <span className="text-muted-foreground">AIMILL uses a fully isolated runtime architecture:</span>{" "}
+            <span className="text-muted-foreground">AI-MILL uses a fully isolated runtime architecture:</span>{" "}
             <span className="text-foreground">every deployed agent runs its own self-contained environment.</span>
           </h2>
 

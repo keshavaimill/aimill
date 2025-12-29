@@ -105,8 +105,7 @@ export const SolutionsGrid = () => {
               >
                 <Component
                   {...props}
-                  className="glass rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all group block h-full"
-                >
+                  className="rounded-2xl p-6 h-full block bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all group">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${
                     solution.color === "cyan" ? "bg-cyan/20" :
                     solution.color === "purple" ? "bg-purple/20" :

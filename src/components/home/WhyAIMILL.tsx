@@ -50,11 +50,13 @@ export const WhyAIMILL = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            style={{ backgroundColor: "#609a76ff" }} // green-400
+            style={{ backgroundColor: "#D1FAE5" }}
+
+
             className="rounded-2xl p-12"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
-              Why AIMILL
+              Why AI-MILL
             </h2>
             <div className="space-y-6">
               {benefits.map((benefit, idx) => (
@@ -66,9 +68,22 @@ export const WhyAIMILL = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-5 h-5 text-primary" />
-                  </div>
+                  <div className="
+                      w-10 h-10 rounded-xl
+                      bg-emerald-100/70
+                      border border-emerald-200
+                      flex items-center justify-center flex-shrink-0
+                    ">
+                      <benefit.icon
+                        className="
+                          w-5 h-5
+                          text-emerald-700
+                          drop-shadow-[0_0_4px_rgba(16,185,129,0.9)]
+                        "
+                      />
+                    </div>
+
+
                   <div>
                     <h3 className="text-lg text-black/100 font-bold leading-relaxed">{benefit.title}</h3>
                     <p className="text-black">{benefit.description}</p>

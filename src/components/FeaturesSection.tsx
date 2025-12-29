@@ -10,21 +10,23 @@ const features = [
     visual: (
       <div className="relative p-6">
         <div className="space-y-3">
-          <div className="glass rounded-xl p-3 flex items-center gap-3 max-w-[280px]">
+          <div className="rounded-xl p-3 flex items-center gap-3 
+                bg-white/80 backdrop-blur-md border border-white/30">
+
             <div className="w-10 h-10 rounded-full bg-green/20 flex items-center justify-center text-lg">💬</div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">WhatsApp User</span>
+                <span className="text-sm font-medium text-zinc-900">WhatsApp User</span>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-green/20 text-green">Assigned</span>
               </div>
             </div>
           </div>
-          <div className="glass rounded-xl p-3 flex items-center gap-3 max-w-[280px] ml-8">
+          <div className="rounded-xl p-3 flex items-center gap-3 max-w-[280px] ml-8 bg-white/80 backdrop-blur-md border border-white/30">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-lg">🌐</div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">Webchat User</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary">Assigned</span>
+                <span className="text-sm font-medium text-zinc-900">Webchat User</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-green/20 text-green">Assigned</span>
               </div>
               <p className="text-xs text-muted-foreground">Can I get a refund?</p>
             </div>
@@ -39,22 +41,29 @@ const features = [
     icon: Globe,
     visual: (
       <div className="relative p-6">
-        <div className="glass rounded-xl p-4">
+        <div className="rounded-xl p-4 
+                bg-white/80 backdrop-blur-md 
+                border border-white/30">
+
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-purple/20 flex items-center justify-center">
               <Zap className="w-5 h-5 text-purple" />
             </div>
-            <span className="font-semibold">Agent</span>
+            <span className="font-semibold text-zinc-900">Agent</span>
             <div className="flex gap-2 ml-auto">
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💼</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💭</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center text-lg">💬</div>
-              <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center">+</div>
+              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
+                flex items-center justify-center border border-white/30 text-lg">💼</div>
+              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
+                flex items-center justify-center border border-white/30 text-lg">💭</div>
+              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
+                flex items-center justify-center border border-white/30 text-lg">💬</div>
+              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
+                flex items-center justify-center border border-white/30 text-black">+</div>
             </div>
           </div>
           <div className="border-t border-border pt-4">
-            <p className="text-xs text-muted-foreground mb-2">Instructions</p>
-            <p className="text-sm text-secondary-foreground">You're an integral part of this company's operations. Use these tools to optimize our customer feedback loop.</p>
+            <p className="text-xs mb-2 text-zinc-900">Instructions</p>
+            <p className="text-sm text-zinc-600">You're an integral part of this company's operations. Use these tools to optimize our customer feedback loop.</p>
           </div>
         </div>
       </div>
@@ -66,12 +75,15 @@ const features = [
     icon: Code,
     visual: (
       <div className="relative p-6">
-        <div className="glass rounded-xl p-4 font-mono text-sm">
+        <div className="rounded-xl p-4 font-mono text-sm
+             bg-white/80 backdrop-blur-md
+             border border-white/30">
+
           <div className="flex items-center gap-2 mb-3">
             <div className="w-6 h-6 rounded bg-purple/20 flex items-center justify-center text-xs">S</div>
-            <span className="text-muted-foreground">Initiate refund</span>
+            <span className="text-zinc-900">Initiate refund</span>
           </div>
-          <div className="text-xs text-muted-foreground">Stripe</div>
+          <div className="text-xs text-zinc-600">Stripe</div>
         </div>
       </div>
     ),
@@ -82,11 +94,16 @@ const features = [
     icon: MessageSquare,
     visual: (
       <div className="relative p-6">
-        <div className="glass rounded-xl p-4">
-          <div className="bg-secondary/50 rounded-lg p-3 mb-3">
-            <p className="text-sm">I've created a Linear ticket for this issue. Can you include a screenshot or screen recording?</p>
+        <div className="rounded-xl p-4
+             bg-white/80 backdrop-blur-md
+             border border-white/30">
+          <div className="bg-white/90 rounded-lg p-3 mb-3 border border-zinc-200">
+
+            <p className="text-sm text-zinc-900">I've created a Linear ticket for this issue. Can you include a screenshot or screen recording?</p>
           </div>
-          <div className="flex items-center gap-2 rounded-lg bg-secondary p-2">
+          <div className="flex items-center gap-2 rounded-lg p-2
+                bg-white/90 border border-zinc-200">
+
             <input 
               type="text" 
               placeholder="Type to test your bot..." 
@@ -103,7 +120,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 relative" style={{ backgroundColor: "#fff8eeff" }}>
+    <section className="py-24 relative" style={{ backgroundColor: "#dbdbdb" }}>
       <div className="container mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -114,7 +131,7 @@ export const FeaturesSection = () => {
           className="max-w-4xl mb-16"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900">
-            AIMILL provides the core infrastructure needed to build and run{" "}
+            AI-MILL provides the core infrastructure needed to build and run{" "}
             <span className="text-zinc-600">AI agents in production.</span>
           </h2>
         </motion.div>
