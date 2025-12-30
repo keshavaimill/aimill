@@ -27,7 +27,13 @@ const benefits = [
 ];
 
 export const WhyAIMILL = () => {
-    const steps = ["Strategy", "Build", "Deploy", "Measure", "Scale"];
+  const steps = [
+    { title: "Strategy", description: "Identify high-impact use cases and define success metrics tailored to your business goals." },
+    { title: "Build", description: "Develop custom agents using our low-code orchestration engine and vertical-specific templates." },
+    { title: "Deploy", description: "Launch with confidence using enterprise-grade security, compliance, and scalable infrastructure." },
+    { title: "Measure", description: "Track performance with real-time analytics, optimizing for ROI and operational efficiency." },
+    { title: "Scale", description: "Expand agent capabilities across departments, automating complex workflows end-to-end." }
+  ];
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
@@ -35,7 +41,7 @@ export const WhyAIMILL = () => {
       setActiveStep((prev) =>
         prev < steps.length - 1 ? prev + 1 : 0
       );
-    }, 1200); // speed of travel
+    }, 2000); // Slowed down slightly for readablity
 
     return () => clearInterval(interval);
   }, []);
@@ -51,8 +57,6 @@ export const WhyAIMILL = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             style={{ backgroundColor: "#D1FAE5" }}
-
-
             className="rounded-2xl p-12"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
@@ -74,16 +78,14 @@ export const WhyAIMILL = () => {
                       border border-emerald-200
                       flex items-center justify-center flex-shrink-0
                     ">
-                      <benefit.icon
-                        className="
+                    <benefit.icon
+                      className="
                           w-5 h-5
                           text-emerald-700
                           drop-shadow-[0_0_4px_rgba(16,185,129,0.9)]
                         "
-                      />
-                    </div>
-
-
+                    />
+                  </div>
                   <div>
                     <h3 className="text-lg text-black/100 font-bold leading-relaxed">{benefit.title}</h3>
                     <p className="text-black">{benefit.description}</p>
@@ -104,44 +106,48 @@ export const WhyAIMILL = () => {
             <h3 className="text-xl font-bold mb-6">Your Journey</h3>
             <div className="space-y-4">
               {steps.map((step, idx) => {
-  const isActive = idx <= activeStep;
+                const isActive = idx <= activeStep;
 
-              return (
-                <div key={idx} className="flex items-start gap-4">
-                  {/* Circle */}
-                  <motion.div
-                    animate={{
-                      backgroundColor: isActive
-                        ? "hsl(var(--primary))"
-                        : "hsl(var(--secondary))",
-                      color: isActive ? "#000" : "#fff",
-                    }}
-                    transition={{ duration: 0.4 }}
-                    className="w-10 h-10 rounded-full flex items-center justify-center font-bold"
-                  >
-                    {idx + 1}
-                  </motion.div>
-
-                  {/* Label + Line */}
-                  <div className="flex-1">
-                    <div className="font-semibold">{step}</div>
-
-                    {idx < steps.length - 1 && (
+                return (
+                  <div key={idx} className="flex items-start gap-4">
+                    {/* Circle */}
+                    <div className="flex flex-col items-center">
                       <motion.div
                         animate={{
-                          backgroundColor: idx < activeStep
+                          backgroundColor: isActive
                             ? "hsl(var(--primary))"
-                            : "hsl(var(--border))",
-                          height: idx < activeStep ? "2rem" : "1.5rem",
+                            : "hsl(var(--secondary))",
+                          color: isActive ? "#000" : "#fff",
                         }}
                         transition={{ duration: 0.4 }}
-                        className="w-0.5 ml-5 mt-2"
-                      />
-                    )}
+                        className="w-10 h-10 rounded-full flex items-center justify-center font-bold relative z-10"
+                      >
+                        {idx + 1}
+                      </motion.div>
+                      {/* Connecting Line (except for last item) */}
+                      {idx < steps.length - 1 && (
+                        <motion.div
+                          animate={{
+                            backgroundColor: idx < activeStep
+                              ? "hsl(var(--primary))"
+                              : "hsl(var(--border))",
+                          }}
+                          transition={{ duration: 0.4 }}
+                          className="w-0.5 h-16 my-1"
+                        />
+                      )}
+                    </div>
+
+                    {/* Label + Description */}
+                    <div className="flex-1 pt-1 pb-6">
+                      <div className="font-semibold text-lg">{step.title}</div>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
             </div>
           </motion.div>
         </div>

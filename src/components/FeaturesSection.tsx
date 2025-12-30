@@ -50,16 +50,7 @@ const features = [
               <Zap className="w-5 h-5 text-purple" />
             </div>
             <span className="font-semibold text-zinc-900">Agent</span>
-            <div className="flex gap-2 ml-auto">
-              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
-                flex items-center justify-center border border-white/30 text-lg">💼</div>
-              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
-                flex items-center justify-center border border-white/30 text-lg">💭</div>
-              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
-                flex items-center justify-center border border-white/30 text-lg">💬</div>
-              <div className="w-8 h-8 rounded-lg bg-white/70 backdrop-blur-md 
-                flex items-center justify-center border border-white/30 text-black">+</div>
-            </div>
+
           </div>
           <div className="border-t border-border pt-4">
             <p className="text-xs mb-2 text-zinc-900">Instructions</p>
@@ -104,9 +95,9 @@ const features = [
           <div className="flex items-center gap-2 rounded-lg p-2
                 bg-white/90 border border-zinc-200">
 
-            <input 
-              type="text" 
-              placeholder="Type to test your bot..." 
+            <input
+              type="text"
+              placeholder="Type to test your bot..."
               className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
               readOnly
             />

@@ -50,9 +50,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">A</span>
-          </div>
+          <img src="/image.png" alt="AIMILL Logo" className="w-8 h-8 rounded-lg object-contain" />
           <span className="text-xl font-bold text-foreground">AI-MILL</span>
         </Link>
 
@@ -74,8 +72,8 @@ export const Navbar = () => {
                 <Link
                   to={
                     item.label === "Consulting" ? "/consulting" :
-                    item.label === "About" ? "/about" :
-                    "#"
+                      item.label === "About" ? "/about" :
+                        "#"
                   }
                   className="flex items-center gap-1 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setActiveDropdown(null)}
@@ -330,11 +328,11 @@ export const Navbar = () => {
                   key={item.label}
                   to={
                     item.label === "Platform" ? "/platform" :
-                    item.label === "Solutions" ? "/solutions" :
-                    item.label === "Industries" ? "/industries" :
-                    item.label === "Consulting" ? "/consulting" :
-                    item.label === "About" ? "/about" :
-                    "#"
+                      item.label === "Solutions" ? "/solutions" :
+                        item.label === "Industries" ? "/industries" :
+                          item.label === "Consulting" ? "/consulting" :
+                            item.label === "About" ? "/about" :
+                              "#"
                   }
                   className="block text-foreground hover:text-primary transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
