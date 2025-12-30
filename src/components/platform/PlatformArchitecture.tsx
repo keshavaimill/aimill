@@ -97,10 +97,10 @@ export const PlatformArchitecture = () => {
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-            Built for trust, scale, and execution
+            Built for Trust, Scale, and Execution
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
-            Ai Mill's platform is architected for real-world enterprise environments.
+            AI Mill's platform is architected for real-world enterprise environments.
           </p>
         </motion.div>
 

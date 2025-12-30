@@ -51,7 +51,7 @@ export const PlatformTeaser = () => {
             The AI Mill Agentic Ecosystem
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Design, orchestrate, deploy, and monitor AI agents across your enterprise.
+            Design, Orchestrate, Deploy, and Monitor AI agents across your Enterprise.
           </p>
         </motion.div>
 

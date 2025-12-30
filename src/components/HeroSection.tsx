@@ -67,8 +67,8 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-6"
                 >
-                  Agents that execute{" "}
-                  <span className="gradient-text-purple">real business outcomes</span>
+                  Agents that Execute{" "}
+                  <span className="gradient-text-purple">Real Business Outcomes</span>
                 </motion.h1>
 
                 <motion.p

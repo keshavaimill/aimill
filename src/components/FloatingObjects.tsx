@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot, Brain, Cpu, Database, Network, Sparkles } from "lucide-react";
+import { Bot, Radar, Cpu, Database, Network, Sparkles } from "lucide-react";
 
 export const FloatingObjects = () => {
   return (
@@ -10,21 +10,22 @@ export const FloatingObjects = () => {
                The user wants them "scattered more", so we are using near-max offset values.
             */}
 
-      {/* 1. Top Right Corner - Brain */}
-      <motion.div
-        className="absolute right-[5%] top-[5%] text-purple-400"
-        animate={{
-          y: [-25, 25, -25],
-          rotate: [0, 8, 0],
-        }}
-        transition={{
-          duration: 9,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <Brain size={70} strokeWidth={1.5} />
-      </motion.div>
+      {/* 1. Top Right Corner - Radar */}
+        <motion.div
+          className="absolute right-[0%] top-[2%] text-white/100"
+          animate={{
+            y: [0, -32, 0],
+            rotate: [0, 12, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Radar size={72} strokeWidth={1} />
+        </motion.div>
+
 
       {/* 2. Top-Left Center Zone - Bot (Moved Safely Right) */}
       <motion.div

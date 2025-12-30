@@ -1,6 +1,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import OpenAILogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/open-ai-logo-duotone-3oawbwzm2rqeu3cpfix9gm.webp';
+import HuggingFaceLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/hf-logo.svg';
+import GeminiLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/gemini-color.png';
+import MistralLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Mistral_AI_logo_(2025–).svg.png';
+import ClaudeLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Claude_AI_symbol.svg.png';
+import AnthropicLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/anthropic.png';
 
 export const AnnouncementSection = () => {
     return (
@@ -72,18 +78,31 @@ export const AnnouncementSection = () => {
                             </h2>
                         </div>
 
-                        <div className="mt-12 md:mt-20">
-                            <p className="text-sm font-medium text-neutral-400 mb-4 uppercase tracking-wider">
-                                Backed By
-                            </p>
-                            <div className="flex flex-wrap items-center gap-6 md:gap-10 opacity-60 grayscale transition-opacity duration-300 group-hover:opacity-100">
-                                {/* SVG Placeholders for "Premium" Logos */}
-                                <span className="text-xl font-bold font-serif tracking-tighter">VANGUARD</span>
-                                <span className="text-lg font-bold font-mono">/nexus</span>
-                                <div className="h-6 w-20 bg-neutral-800 rounded-sm" />
-                                <div className="h-6 w-6 rounded-full bg-neutral-800" />
-                            </div>
+                       <div className="mt-12 md:mt-20">
+                        <p className="text-sm font-medium text-neutral-400 mb-4 uppercase tracking-wider">
+                            Powered By
+                        </p>
+                        <div className="flex flex-wrap items-center gap-6 md:gap-10 opacity-60 transition-opacity duration-300 group-hover:opacity-100">
+                            {[
+                                { name: "OpenAI", logo: OpenAILogo },
+                                { name: "Hugging Face", logo: HuggingFaceLogo },
+                                { name: "Gemini", logo: GeminiLogo },
+                                { name: "Mistral", logo: MistralLogo },
+                                { name: "Claude", logo: ClaudeLogo },
+                                { name: "Anthropic", logo: AnthropicLogo },
+                            ].map((provider, idx) => (
+                                <span key={idx} className="flex items-center gap-2">
+                                    <span className="text-xl font-bold font-serif tracking-tighter">{provider.name}</span>
+                                    <img src={provider.logo} alt={`${provider.name} Logo`} className="h-6 w-auto" />
+                                </span>
+                            ))}
+
+                            {/* Optional placeholders if needed */}
+                            <div className="h-6 w-20 bg-neutral-800 rounded-sm" />
+                            <div className="h-6 w-6 rounded-full bg-neutral-800" />
                         </div>
+                    </div>
+
                     </div>
 
                     {/* Right Image - Artistic/Illustrative */}
