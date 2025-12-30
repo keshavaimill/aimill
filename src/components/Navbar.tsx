@@ -300,9 +300,7 @@ export const Navbar = () => {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Log in
-          </a>
+
           <Link to="/contact">
             <Button variant="nav">Book a Demo</Button>
           </Link>
