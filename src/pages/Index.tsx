@@ -9,6 +9,7 @@ import { FeaturesSection } from "@/components/FeaturesSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
+import { AnnouncementSection } from "@/components/home/AnnouncementSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <AnnouncementSection />
         <TrustSection />
         <AgenticAISection />
         <PlatformTeaser />

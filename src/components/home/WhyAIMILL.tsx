@@ -1,43 +1,80 @@
-import { motion } from "framer-motion";
-import { Check, Target, Zap, Building2, TrendingUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Target, Zap, Building2, TrendingUp, Lightbulb, Hammer, Rocket, BarChart3, Network } from "lucide-react";
+import { useState } from "react";
+
 
 const benefits = [
   {
     icon: Target,
-    title: "Designed for production, not demos",
-    description: "Built for real-world enterprise deployment",
+    description: "Designed for production, not demos - built for real-world enterprise deployment",
   },
   {
     icon: Zap,
-    title: "Outcome-based agent design",
-    description: "Every agent optimized for measurable business results",
+    description: "Outcome-based agent design - every agent optimized for measurable business results",
   },
   {
     icon: Building2,
-    title: "Vertical-specific intelligence",
-    description: "Industry-tailored solutions that understand your domain",
+    description: "Vertical-specific intelligence - industry-tailored solutions that understand your domain",
   },
   {
     icon: TrendingUp,
-    title: "Faster time-to-value",
-    description: "Deploy in weeks, not months",
+    description: "Faster time-to-value - deploy in weeks, not months",
   },
 ];
 
 export const WhyAIMILL = () => {
+  const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  
+  const steps = [
+    { 
+      icon: Lightbulb, 
+      title: "Strategy", 
+      description: "Identify high-impact use cases and define success metrics." 
+    },
+    { 
+      icon: Hammer, 
+      title: "Build", 
+      description: "Develop custom agents with low-code orchestration and templates." 
+    },
+    { 
+      icon: Rocket, 
+      title: "Deploy", 
+      description: "Launch with enterprise-grade security and scalable infrastructure." 
+    },
+    { 
+      icon: BarChart3, 
+      title: "Measure", 
+      description: "Track performance with real-time analytics and optimize ROI." 
+    },
+    { 
+      icon: Network, 
+      title: "Scale", 
+      description: "Expand capabilities across departments and automate workflows." 
+    }
+  ];
+
   return (
     <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* Background texture */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)`,
+        }} />
+      </div>
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Benefits */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            style={{ backgroundColor: "#D1FAE5" }}
+            className="rounded-2xl p-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8">
-              Why AIMILL
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
+              Why AI Mill
             </h2>
             <div className="space-y-6">
               {benefits.map((benefit, idx) => (
@@ -49,12 +86,23 @@ export const WhyAIMILL = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-5 h-5 text-primary" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    idx === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                    idx === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                    idx === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
+                    "bg-gradient-to-br from-pink/30 to-pink/20"
+                  }`}>
+                    <benefit.icon
+                      className={`w-6 h-6 ${
+                        idx === 0 ? "text-cyan" :
+                        idx === 1 ? "text-purple" :
+                        idx === 2 ? "text-green" :
+                        "text-pink"
+                      }`}
+                    />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-1">{benefit.title}</h3>
-                    <p className="text-muted-foreground">{benefit.description}</p>
+                    <p className="text-lg text-black font-semibold leading-relaxed">{benefit.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -67,26 +115,116 @@ export const WhyAIMILL = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-2xl p-8 border border-border/50"
+            className="glass rounded-2xl p-6 lg:p-8 border border-border/50 hover:border-primary/30 transition-all duration-300"
           >
-            <h3 className="text-xl font-bold mb-6">Your Journey</h3>
-            <div className="space-y-4">
-              {["Strategy", "Build", "Deploy", "Measure", "Scale"].map((step, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                    idx === 0 ? "bg-primary text-primary-foreground" :
-                    "bg-secondary text-foreground"
-                  }`}>
-                    {idx + 1}
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold">{step}</div>
-                    {idx < 4 && (
-                      <div className="h-8 w-0.5 bg-border ml-5 mt-2" />
-                    )}
-                  </div>
-                </div>
-              ))}
+            <motion.h3 
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-2xl sm:text-3xl font-bold mb-8 text-foreground"
+            >
+              Your Journey
+            </motion.h3>
+            <div className="relative">
+              {/* Vertical connecting line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border/30" />
+              
+              <div className="space-y-0">
+                {steps.map((step, idx) => {
+                  const isActive = true; // All steps visible and active
+                  const isCompleted = true; // All steps completed for natural flow
+
+                  return (
+                    <motion.div
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      className="flex items-start gap-4 pb-4 last:pb-0 group"
+                    >
+                      {/* Icon Circle */}
+                      <div className="flex flex-col items-center relative z-10">
+                        <motion.button
+                          onClick={() => setExpandedStep(expandedStep === idx ? null : idx)}
+                          animate={{
+                            scale: expandedStep === idx ? 1.15 : 1.1,
+                          }}
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                          className={`w-10 h-10 rounded-full flex items-center justify-center relative cursor-pointer ${
+                            idx === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                            idx === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                            idx === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
+                            idx === 3 ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                            "bg-gradient-to-br from-primary/30 to-primary/20"
+                          } ${expandedStep === idx ? "ring-2 ring-white/50" : ""}`}
+                        >
+                          <step.icon className={`w-5 h-5 ${
+                            idx === 0 ? "text-cyan" :
+                            idx === 1 ? "text-purple" :
+                            idx === 2 ? "text-green" :
+                            idx === 3 ? "text-pink" :
+                            "text-primary"
+                          }`} />
+                          {/* Active pulse effect when expanded */}
+                          {expandedStep === idx && (
+                            <motion.div
+                              animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                              className={`absolute inset-0 rounded-full ${
+                                idx === 0 ? "bg-cyan/20" :
+                                idx === 1 ? "bg-purple/20" :
+                                idx === 2 ? "bg-green/20" :
+                                idx === 3 ? "bg-pink/20" :
+                                "bg-primary/20"
+                              }`}
+                            />
+                          )}
+                        </motion.button>
+                        
+                        {/* Connecting Line (except for last item) */}
+                        {idx < steps.length - 1 && (
+                          <div
+                            className="w-0.5 mt-2 mb-2 bg-white/20"
+                            style={{ minHeight: "3rem" }}
+                          />
+                        )}
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 pt-1">
+                        <h4 className={`text-base sm:text-lg font-bold mb-2 transition-colors ${
+                          expandedStep === idx
+                            ? idx === 0 ? "text-cyan" :
+                              idx === 1 ? "text-purple" :
+                              idx === 2 ? "text-green" :
+                              idx === 3 ? "text-pink" :
+                              "text-primary"
+                            : "text-white/70"
+                        }`}>
+                          {step.title}
+                        </h4>
+                        <AnimatePresence>
+                          {expandedStep === idx && (
+                            <motion.p
+                              initial={{ opacity: 0, height: 0, y: -10 }}
+                              animate={{ opacity: 1, height: "auto", y: 0 }}
+                              exit={{ opacity: 0, height: 0, y: -10 }}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}
+                              className="text-sm text-white/80 leading-relaxed overflow-hidden"
+                            >
+                              {step.description}
+                            </motion.p>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
           </motion.div>
         </div>

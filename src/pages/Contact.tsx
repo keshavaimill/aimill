@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Calendar, CheckCircle } from "lucide-react";
+import { ArrowRight, Mail, Calendar, CheckCircle, Clock, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -20,6 +20,12 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showScheduleDemo, setShowScheduleDemo] = useState(false);
+  const [scheduleData, setScheduleData] = useState({
+    timezone: "",
+    date: "",
+    time: "",
+  });
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -60,11 +66,11 @@ const Contact = () => {
             animate={{ opacity: 1, scale: 1 }}
             className="text-center max-w-md"
           >
-            <div className="w-20 h-20 rounded-full bg-green/20 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-green" />
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green/30 to-green/20 flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-8 h-8 text-green" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Thank you!</h2>
-            <p className="text-muted-foreground mb-8">
+            <h2 className="text-2xl font-bold mb-3">Thank you!</h2>
+            <p className="text-muted-foreground mb-6 text-sm">
               We've received your message and will get back to you within 24 hours.
             </p>
             <Button onClick={() => setIsSubmitted(false)} variant="outline">
@@ -82,7 +88,7 @@ const Contact = () => {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-40 pb-24 px-4 sm:px-8 lg:px-20">
+        <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-32 pb-16 px-4 sm:px-8 lg:px-20">
           <div className="absolute inset-0 grid-pattern opacity-30" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
           
@@ -92,14 +98,14 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-6">
+              <span className="inline-block px-3 py-1.5 text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-4">
                 Contact
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[0.95] tracking-tight mb-6">
                 Let's discuss your{" "}
                 <span className="gradient-text">AI transformation</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
                 Book a demo or talk to our team about how agentic AI can solve your challenges
               </p>
             </motion.div>
@@ -107,9 +113,40 @@ const Contact = () => {
         </section>
 
         {/* Contact Form */}
-        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
-          <div className="container mx-auto max-w-4xl">
-            <div className="grid md:grid-cols-2 gap-12">
+        <section className="relative py-12 sm:py-16 px-4 sm:px-8 lg:px-20">
+          {/* Elegant Blended Texture Background */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {/* Subtle gradient base */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-zinc-950/20" />
+            
+            {/* Very subtle top highlight */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white/[0.02] to-transparent" />
+            
+            {/* Refined grid pattern with dots at intersections */}
+            <div className="absolute inset-0 opacity-[0.15]" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.03) 39px, rgba(255,255,255,0.03) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.03) 39px, rgba(255,255,255,0.03) 40px)
+              `,
+            }} />
+            
+            {/* Subtle dots at grid intersections */}
+            <div className="absolute inset-0 opacity-[0.2]" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='0' cy='0' r='0.8'/%3E%3Ccircle cx='40' cy='0' r='0.8'/%3E%3Ccircle cx='0' cy='40' r='0.8'/%3E%3Ccircle cx='40' cy='40' r='0.8'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: '40px 40px',
+            }} />
+            
+            {/* Very subtle mesh for depth */}
+            <div className="absolute inset-0 opacity-[0.08]" style={{
+              backgroundImage: `
+                radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05) 0%, transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 0%, transparent 40%)
+              `,
+            }} />
+          </div>
+          
+          <div className="container mx-auto max-w-4xl relative z-10">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Form */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -117,8 +154,8 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name">Name *</Label>
                     <Input 
@@ -204,11 +241,11 @@ const Contact = () => {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-3xl font-bold mb-6">Other Ways to Reach Us</h2>
-                  <div className="space-y-6">
+                  <h2 className="text-2xl font-bold mb-4">Other Ways to Reach Us</h2>
+                  <div className="space-y-4">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan/30 to-cyan/20 flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-6 h-6 text-cyan" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
@@ -218,15 +255,32 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <Calendar className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple/30 to-purple/20 flex items-center justify-center flex-shrink-0">
+                        <Calendar className="w-6 h-6 text-purple" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="font-semibold mb-1">Book a Demo</h3>
-                        <p className="text-muted-foreground mb-3">
-                          Schedule a personalized demo with our team
+                        <p className="text-muted-foreground mb-3 text-sm">
+                          {formData.name && formData.email && formData.message 
+                            ? "Schedule a personalized demo with our team"
+                            : "Please complete the contact form first to schedule a demo"}
                         </p>
-                        <Button variant="outline" className="group">
+                        <Button 
+                          variant="outline" 
+                          className="group"
+                          onClick={() => {
+                            if (formData.name && formData.email && formData.message) {
+                              setShowScheduleDemo(!showScheduleDemo);
+                            } else {
+                              toast({
+                                title: "Please complete the form first",
+                                description: "Fill in Name, Email, and Message fields to schedule a demo",
+                                variant: "destructive",
+                              });
+                            }
+                          }}
+                          disabled={!formData.name || !formData.email || !formData.message}
+                        >
                           Schedule Demo
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Button>
@@ -235,16 +289,92 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="glass rounded-2xl p-8 border border-border/50">
-                  <h3 className="font-bold mb-4">Enterprise Sales</h3>
-                  <p className="text-muted-foreground mb-4">
-                    For enterprise inquiries and custom solutions
-                  </p>
-                  <Button variant="heroOutline" className="w-full group">
-                    Talk to Sales
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
+                {/* Schedule Demo Form */}
+                {showScheduleDemo && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="glass rounded-xl p-6 border border-border/50 mt-6"
+                  >
+                    <h3 className="font-bold mb-4 flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-purple" />
+                      Schedule Your Demo
+                    </h3>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="timezone" className="flex items-center gap-2 mb-2">
+                          <Globe className="w-4 h-4 text-muted-foreground" />
+                          Timezone *
+                        </Label>
+                        <Select 
+                          value={scheduleData.timezone} 
+                          onValueChange={(value) => setScheduleData({ ...scheduleData, timezone: value })}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select your timezone" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="utc">UTC (Coordinated Universal Time)</SelectItem>
+                            <SelectItem value="est">EST (Eastern Standard Time)</SelectItem>
+                            <SelectItem value="pst">PST (Pacific Standard Time)</SelectItem>
+                            <SelectItem value="cst">CST (Central Standard Time)</SelectItem>
+                            <SelectItem value="mst">MST (Mountain Standard Time)</SelectItem>
+                            <SelectItem value="gmt">GMT (Greenwich Mean Time)</SelectItem>
+                            <SelectItem value="cet">CET (Central European Time)</SelectItem>
+                            <SelectItem value="ist">IST (Indian Standard Time)</SelectItem>
+                            <SelectItem value="jst">JST (Japan Standard Time)</SelectItem>
+                            <SelectItem value="aest">AEST (Australian Eastern Standard Time)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div>
+                        <Label htmlFor="date">Date *</Label>
+                        <Input 
+                          id="date" 
+                          type="date" 
+                          className="mt-2"
+                          value={scheduleData.date}
+                          onChange={(e) => setScheduleData({ ...scheduleData, date: e.target.value })}
+                          min={new Date().toISOString().split('T')[0]}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="time">Time *</Label>
+                        <Input 
+                          id="time" 
+                          type="time" 
+                          className="mt-2"
+                          value={scheduleData.time}
+                          onChange={(e) => setScheduleData({ ...scheduleData, time: e.target.value })}
+                          required
+                        />
+                      </div>
+                      <Button 
+                        variant="hero" 
+                        className="w-full group"
+                        onClick={() => {
+                          if (scheduleData.timezone && scheduleData.date && scheduleData.time) {
+                            toast({
+                              title: "Demo scheduled!",
+                              description: `We'll send you a confirmation email for ${scheduleData.date} at ${scheduleData.time} (${scheduleData.timezone})`,
+                            });
+                            setScheduleData({ timezone: "", date: "", time: "" });
+                            setShowScheduleDemo(false);
+                          } else {
+                            toast({
+                              title: "Please fill all fields",
+                              variant: "destructive",
+                            });
+                          }
+                        }}
+                      >
+                        Confirm Demo
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </div>
+                  </motion.div>
+                )}
               </motion.div>
             </div>
           </div>

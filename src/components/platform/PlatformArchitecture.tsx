@@ -83,7 +83,7 @@ const layers = [
 
 export const PlatformArchitecture = () => {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
+    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden ">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple/5 via-transparent to-cyan/5" />
       
@@ -142,11 +142,11 @@ export const PlatformArchitecture = () => {
                         className="glass rounded-xl p-4 sm:p-5 flex items-center gap-3 hover:bg-card/50 transition-all group min-w-[140px] flex-1"
                       >
                         <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                          layer.color === "cyan" ? "bg-cyan/20" :
-                          layer.color === "purple" ? "bg-purple/20" :
-                          layer.color === "pink" ? "bg-pink/20" :
-                          layer.color === "green" ? "bg-green/20" :
-                          "bg-teal/20"
+                          layer.color === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                          layer.color === "purple" ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                          layer.color === "pink" ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                          layer.color === "green" ? "bg-gradient-to-br from-green/30 to-green/20" :
+                          "bg-gradient-to-br from-teal/30 to-teal/20"
                         }`}>
                           <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${
                             layer.color === "cyan" ? "text-cyan" :

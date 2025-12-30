@@ -70,8 +70,36 @@ const solutions = [
 
 export const SolutionsGrid = () => {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
+      {/* Elegant Grey Texture Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Soft gradient base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
+        
+        {/* Visible mesh gradient */}
+        <div className="absolute inset-0 opacity-50" style={{
+          backgroundImage: `
+            radial-gradient(circle at 20% 30%, rgba(128,128,128,0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(128,128,128,0.15) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
+          `,
+        }} />
+        
+        {/* Visible dot pattern */}
+        <div className="absolute inset-0 opacity-40" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+        
+        {/* Visible grid */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `
+            repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px),
+            repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px)
+          `,
+        }} />
+      </div>
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +116,7 @@ export const SolutionsGrid = () => {
         </motion.div>
 
         {/* Solutions Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {solutions.map((solution, idx) => {
             const Component = solution.href.startsWith("/") ? Link : motion.div;
             const props = solution.href.startsWith("/") 
@@ -105,16 +133,15 @@ export const SolutionsGrid = () => {
               >
                 <Component
                   {...props}
-                  className="glass rounded-2xl p-6 border border-border/50 hover:border-primary/30 transition-all group block h-full"
-                >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${
+                  className="rounded-xl p-4 h-full block bg-zinc-900 border border-zinc-700 hover:border-zinc-500 transition-all group">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform ${
                     solution.color === "cyan" ? "bg-cyan/20" :
                     solution.color === "purple" ? "bg-purple/20" :
                     solution.color === "green" ? "bg-green/20" :
                     solution.color === "pink" ? "bg-pink/20" :
                     "bg-teal/20"
                   }`}>
-                    <solution.icon className={`w-6 h-6 ${
+                    <solution.icon className={`w-5 h-5 ${
                       solution.color === "cyan" ? "text-cyan" :
                       solution.color === "purple" ? "text-purple" :
                       solution.color === "green" ? "text-green" :
@@ -122,11 +149,11 @@ export const SolutionsGrid = () => {
                       "text-teal"
                     }`} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{solution.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{solution.description}</p>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
+                  <h3 className="text-base font-bold mb-1.5">{solution.title}</h3>
+                  <p className="text-xs text-muted-foreground mb-3 leading-relaxed">{solution.description}</p>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-primary group-hover:gap-3 transition-all">
                     Learn more
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-3 h-3" />
                   </div>
                 </Component>
               </motion.div>

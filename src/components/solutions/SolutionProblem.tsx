@@ -64,8 +64,20 @@ export const SolutionProblem = ({ problems, callout, themeColor }: SolutionProbl
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-destructive/20 flex items-center justify-center flex-shrink-0">
-                    <AlertCircle className="w-5 h-5 text-destructive" />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    themeColor === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                    themeColor === "purple" ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                    themeColor === "green" ? "bg-gradient-to-br from-green/30 to-green/20" :
+                    themeColor === "pink" ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                    "bg-gradient-to-br from-teal/30 to-teal/20"
+                  }`}>
+                    <AlertCircle className={`w-6 h-6 ${
+                      themeColor === "cyan" ? "text-cyan" :
+                      themeColor === "purple" ? "text-purple" :
+                      themeColor === "green" ? "text-green" :
+                      themeColor === "pink" ? "text-pink" :
+                      "text-teal"
+                    }`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">{problem.title}</h3>
@@ -82,9 +94,21 @@ export const SolutionProblem = ({ problems, callout, themeColor }: SolutionProbl
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-destructive/5 border border-destructive/20 rounded-xl p-6 text-center"
+            className={`rounded-xl p-6 text-center border ${
+              themeColor === "cyan" ? "bg-cyan/5 border-cyan/20" :
+              themeColor === "purple" ? "bg-purple/5 border-purple/20" :
+              themeColor === "green" ? "bg-green/5 border-green/20" :
+              themeColor === "pink" ? "bg-pink/5 border-pink/20" :
+              "bg-teal/5 border-teal/20"
+            }`}
           >
-            <p className="text-xl font-semibold italic text-destructive">{callout}</p>
+            <p className={`text-xl font-semibold italic ${
+              themeColor === "cyan" ? "text-cyan" :
+              themeColor === "purple" ? "text-purple" :
+              themeColor === "green" ? "text-green" :
+              themeColor === "pink" ? "text-pink" :
+              "text-teal"
+            }`}>{callout}</p>
           </motion.div>
         </motion.div>
       </div>
