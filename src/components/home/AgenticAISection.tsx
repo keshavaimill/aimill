@@ -13,7 +13,7 @@ export const AgenticAISection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             style={{ backgroundColor: "#D1FAE5" }} // green-400
-            className="rounded-2xl p-12"
+            className="rounded-2xl p-12 h-full flex flex-col justify-center"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
               From Automation To Autonomy
@@ -29,14 +29,13 @@ export const AgenticAISection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative w-full"
+            className="relative w-full h-full"
           >
-            <div className="relative w-full rounded-2xl overflow-hidden">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden">
               <img
                 src="/imagem.png"
                 alt="From Automation to Autonomy comparison"
-                className="w-full h-auto object-contain rounded-2xl"
-                style={{ display: 'block', maxWidth: '100%' }}
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </motion.div>

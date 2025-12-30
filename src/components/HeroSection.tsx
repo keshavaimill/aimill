@@ -12,7 +12,7 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
       {/* BACKGROUND GRID */}
       <HoverGridBackground />
-      
+
       {/* Soothing Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Soft dot pattern */}
@@ -67,7 +67,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-6"
                 >
-                  Agents that executes{" "}
+                  Agents that execute{" "}
                   <span className="gradient-text-purple">real business outcomes</span>
                 </motion.h1>
 
@@ -152,7 +152,7 @@ export const HeroSection = () => {
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="w-1.5 h-1.5 rounded-full bg-primary"
-              />
+            />
           </motion.div>
         </motion.div>
       </div>

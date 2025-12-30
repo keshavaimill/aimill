@@ -40,7 +40,7 @@ const About = () => {
           </div>
           <div className="absolute inset-0 grid-pattern opacity-20" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
-          
+
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -84,7 +84,7 @@ const About = () => {
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }} />
           </div>
-          
+
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {/* Vision */}
@@ -128,7 +128,7 @@ const About = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Rich gradient base */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/50 to-zinc-900/60" />
-            
+
             {/* Visible grid pattern */}
             <div className="absolute inset-0 opacity-[0.2]" style={{
               backgroundImage: `
@@ -136,13 +136,13 @@ const About = () => {
                 repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.05) 39px, rgba(255,255,255,0.05) 40px)
               `,
             }} />
-            
+
             {/* Visible dots at grid intersections */}
             <div className="absolute inset-0 opacity-[0.25]" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='0' cy='0' r='1'/%3E%3Ccircle cx='40' cy='0' r='1'/%3E%3Ccircle cx='0' cy='40' r='1'/%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
               backgroundSize: '40px 40px',
             }} />
-            
+
             {/* Enhanced mesh for depth */}
             <div className="absolute inset-0 opacity-[0.12]" style={{
               backgroundImage: `
@@ -151,13 +151,13 @@ const About = () => {
                 radial-gradient(circle at 50% 50%, rgba(128,128,128,0.06) 0%, transparent 70%)
               `,
             }} />
-            
+
             {/* Additional texture overlay */}
             <div className="absolute inset-0 opacity-[0.15]" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }} />
           </div>
-          
+
           <div className="container mx-auto max-w-6xl relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -181,16 +181,14 @@ const About = () => {
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   className="glass rounded-xl p-6 text-center border border-zinc-800/50 bg-zinc-950/30 hover:border-zinc-700 hover:bg-zinc-950/50 transition-all group backdrop-blur-sm"
                 >
-                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform ${
-                    idx === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
-                    idx === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
-                    "bg-gradient-to-br from-green/30 to-green/20"
-                  }`}>
-                    <principle.icon className={`w-7 h-7 ${
-                      idx === 0 ? "text-cyan" :
-                      idx === 1 ? "text-purple" :
-                      "text-green"
-                    }`} />
+                  <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 bg-white/5 border border-white/10 shadow-[0_0_15px_-5px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_-5px] transition-all duration-300 ${idx === 0 ? "group-hover:shadow-cyan/30 group-hover:border-cyan/30" :
+                      idx === 1 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
+                        "group-hover:shadow-green/30 group-hover:border-green/30"
+                    }`}>
+                    <principle.icon className={`w-7 h-7 stroke-[1.5] ${idx === 0 ? "text-cyan" :
+                        idx === 1 ? "text-purple" :
+                          "text-green"
+                      }`} />
                   </div>
                   <h3 className="text-lg font-bold mb-3">{principle.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{principle.description}</p>

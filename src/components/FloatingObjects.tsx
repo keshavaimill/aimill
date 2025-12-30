@@ -12,18 +12,18 @@ export const FloatingObjects = () => {
 
       {/* 1. Top Right Corner - Brain */}
       <motion.div
-        className="absolute right-[0%] top-[2%] text-primary/30"
+        className="absolute right-[5%] top-[5%] text-purple-400"
         animate={{
-          y: [-25, 25, -25], // Increased movement range
+          y: [-25, 25, -25],
           rotate: [0, 8, 0],
         }}
         transition={{
-          duration: 9, // Slower for grander movement
+          duration: 9,
           repeat: Infinity,
           ease: "easeInOut",
         }}
       >
-        <Brain size={80} strokeWidth={1} />
+        <Brain size={70} strokeWidth={1.5} />
       </motion.div>
 
       {/* 2. Top-Left Center Zone - Bot (Moved Safely Right) */}
