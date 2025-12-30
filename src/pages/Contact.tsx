@@ -43,7 +43,24 @@ const Contact = () => {
     }
 
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const response = await fetch("/api/send-message", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || "N/A",
+        problem_solving: formData.problem,
+        message: formData.message,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send message");
+    }
+
 
     setIsSubmitted(true);
     setIsSubmitting(false);

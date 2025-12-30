@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Target, Zap, Building2, TrendingUp, Lightbulb, Hammer, Rocket, BarChart3, Network } from "lucide-react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 const benefits = [
   {
@@ -23,35 +22,42 @@ const benefits = [
 ];
 
 export const WhyAIMILL = () => {
-  const [expandedStep, setExpandedStep] = useState<number | null>(null);
-  
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [collapsed, setCollapsed] = useState(false);
+
   const steps = [
-    { 
-      icon: Lightbulb, 
-      title: "Strategy", 
-      description: "Identify high-impact use cases and define success metrics." 
-    },
-    { 
-      icon: Hammer, 
-      title: "Build", 
-      description: "Develop custom agents with low-code orchestration and templates." 
-    },
-    { 
-      icon: Rocket, 
-      title: "Deploy", 
-      description: "Launch with enterprise-grade security and scalable infrastructure." 
-    },
-    { 
-      icon: BarChart3, 
-      title: "Measure", 
-      description: "Track performance with real-time analytics and optimize ROI." 
-    },
-    { 
-      icon: Network, 
-      title: "Scale", 
-      description: "Expand capabilities across departments and automate workflows." 
-    }
+    { icon: Lightbulb, title: "Strategy", description: "Identify high-impact use cases and define success metrics." },
+    { icon: Hammer, title: "Build", description: "Develop custom agents with low-code orchestration and templates." },
+    { icon: Rocket, title: "Deploy", description: "Launch with enterprise-grade security and scalable infrastructure." },
+    { icon: BarChart3, title: "Measure", description: "Track performance with real-time analytics and optimize ROI." },
+    { icon: Network, title: "Scale", description: "Expand capabilities across departments and automate workflows." }
   ];
+
+  // Auto timeline animation
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (!collapsed && activeIndex < steps.length) {
+      timer = setTimeout(() => {
+        setActiveIndex(prev => prev + 1);
+      }, 1800); // delay between each step expand
+    }
+
+    if (!collapsed && activeIndex === steps.length) {
+      timer = setTimeout(() => {
+        setCollapsed(true);
+      }, 2200); // wait before collapsing all
+    }
+
+    if (collapsed) {
+      timer = setTimeout(() => {
+        setCollapsed(false);
+        setActiveIndex(0);
+      }, 1200); // restart after collapse
+    }
+
+    return () => clearTimeout(timer);
+  }, [activeIndex, collapsed, steps.length]);
 
   return (
     <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
@@ -71,7 +77,7 @@ export const WhyAIMILL = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             style={{ backgroundColor: "#D1FAE5" }}
-            className="rounded-2xl p-12"
+            className="rounded-2xl p-12 pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
               Why AI Mill
@@ -86,21 +92,30 @@ export const WhyAIMILL = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                    idx === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
-                    idx === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
-                    idx === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
-                    "bg-gradient-to-br from-pink/30 to-pink/20"
-                  }`}>
+                  <div
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                      idx === 0
+                        ? "bg-gradient-to-br from-indigo-500/30 to-indigo-400/20"
+                        : idx === 1
+                        ? "bg-gradient-to-br from-purple/30 to-purple/20"
+                        : idx === 2
+                        ? "bg-gradient-to-br from-violet-500/30 to-violet-400/20"
+                        : "bg-gradient-to-br from-pink/30 to-pink/20"
+                    }`}
+                  >
                     <benefit.icon
                       className={`w-6 h-6 ${
-                        idx === 0 ? "text-cyan" :
-                        idx === 1 ? "text-purple" :
-                        idx === 2 ? "text-green" :
-                        "text-pink"
+                        idx === 0
+                          ? "text-indigo-500"
+                          : idx === 1
+                          ? "text-purple"
+                          : idx === 2
+                          ? "text-violet-500"
+                          : "text-pink"
                       }`}
                     />
                   </div>
+
                   <div>
                     <p className="text-lg text-black font-semibold leading-relaxed">{benefit.description}</p>
                   </div>
@@ -132,8 +147,7 @@ export const WhyAIMILL = () => {
               
               <div className="space-y-0">
                 {steps.map((step, idx) => {
-                  const isActive = true; // All steps visible and active
-                  const isCompleted = true; // All steps completed for natural flow
+                  const isExpanded = !collapsed && idx < activeIndex;
 
                   return (
                     <motion.div
@@ -147,10 +161,7 @@ export const WhyAIMILL = () => {
                       {/* Icon Circle */}
                       <div className="flex flex-col items-center relative z-10">
                         <motion.button
-                          onClick={() => setExpandedStep(expandedStep === idx ? null : idx)}
-                          animate={{
-                            scale: expandedStep === idx ? 1.15 : 1.1,
-                          }}
+                          animate={{ scale: isExpanded ? 1.15 : 1.1 }}
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           whileTap={{ scale: 1.1 }}
                           transition={{ duration: 0.3 }}
@@ -160,7 +171,7 @@ export const WhyAIMILL = () => {
                             idx === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
                             idx === 3 ? "bg-gradient-to-br from-pink/30 to-pink/20" :
                             "bg-gradient-to-br from-primary/30 to-primary/20"
-                          } ${expandedStep === idx ? "ring-2 ring-white/50" : ""}`}
+                          } ${isExpanded ? "ring-2 ring-white/50" : ""}`}
                         >
                           <step.icon className={`w-5 h-5 ${
                             idx === 0 ? "text-cyan" :
@@ -169,8 +180,7 @@ export const WhyAIMILL = () => {
                             idx === 3 ? "text-pink" :
                             "text-primary"
                           }`} />
-                          {/* Active pulse effect when expanded */}
-                          {expandedStep === idx && (
+                          {isExpanded && (
                             <motion.div
                               animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
                               transition={{ duration: 2, repeat: Infinity }}
@@ -185,7 +195,6 @@ export const WhyAIMILL = () => {
                           )}
                         </motion.button>
                         
-                        {/* Connecting Line (except for last item) */}
                         {idx < steps.length - 1 && (
                           <div
                             className="w-0.5 mt-2 mb-2 bg-white/20"
@@ -197,7 +206,7 @@ export const WhyAIMILL = () => {
                       {/* Content */}
                       <div className="flex-1 pt-1">
                         <h4 className={`text-base sm:text-lg font-bold mb-2 transition-colors ${
-                          expandedStep === idx
+                          isExpanded
                             ? idx === 0 ? "text-cyan" :
                               idx === 1 ? "text-purple" :
                               idx === 2 ? "text-green" :
@@ -208,7 +217,7 @@ export const WhyAIMILL = () => {
                           {step.title}
                         </h4>
                         <AnimatePresence>
-                          {expandedStep === idx && (
+                          {isExpanded && (
                             <motion.p
                               initial={{ opacity: 0, height: 0, y: -10 }}
                               animate={{ opacity: 1, height: "auto", y: 0 }}
@@ -232,4 +241,3 @@ export const WhyAIMILL = () => {
     </section>
   );
 };
-

@@ -41,7 +41,7 @@ export const PlatformHero = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          A unified product studio to build, deploy, govern, and scale autonomous AI agents across mission-critical business workflows.
+          A unified product studio to Build, Deploy, Govern, and Scale Autonomous AI agents across mission-critical business workflows.
         </motion.p>
 
         {/* CTA Button */}
