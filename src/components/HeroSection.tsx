@@ -12,6 +12,26 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
       {/* BACKGROUND GRID */}
       <HoverGridBackground />
+      
+      {/* Soothing Texture Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Soft dot pattern */}
+        <div className="absolute inset-0 opacity-15" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='30' cy='10' r='1.5'/%3E%3Ccircle cx='10' cy='30' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+        {/* Subtle grain texture */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+        }} />
+        {/* Soft radial gradients for depth */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `
+            radial-gradient(circle at 20% 30%, rgba(128,128,128,0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(128,128,128,0.08) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(128,128,128,0.05) 0%, transparent 70%)
+          `,
+        }} />
+      </div>
 
       {/* FOREGROUND CONTENT */}
       <div className="relative z-10 pointer-events-none">
@@ -57,7 +77,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg md:text-xl text-muted-foreground mb-8"
                 >
-                  AI-MILL builds autonomous AI agents that reason, plan, act, and collaborate with humans to drive revenue, efficiency, and operational intelligence at enterprise scale.
+                  AI Mill builds autonomous AI agents that reason, plan, act, and collaborate with humans to drive revenue, efficiency, and operational intelligence at enterprise scale.
                 </motion.p>
 
                 {/* Value Bullets */}

@@ -48,7 +48,7 @@ export const PlatformTeaser = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            The AI-MILL Agentic Ecosystem
+            The AI Mill Agentic Ecosystem
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Design, orchestrate, deploy, and monitor AI agents across your enterprise.
@@ -75,8 +75,18 @@ export const PlatformTeaser = () => {
 "
 
             >
-              <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <capability.icon className="w-6 h-6 text-black" />
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform ${
+                idx % 4 === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                idx % 4 === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                idx % 4 === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
+                "bg-gradient-to-br from-pink/30 to-pink/20"
+              }`}>
+                <capability.icon className={`w-6 h-6 ${
+                  idx % 4 === 0 ? "text-cyan" :
+                  idx % 4 === 1 ? "text-purple" :
+                  idx % 4 === 2 ? "text-green" :
+                  "text-pink"
+                }`} />
               </div>
               <h3 className="text-lg font-bold mb-2">{capability.title}</h3>
               <p className="text-sm text-muted-foreground">{capability.description}</p>

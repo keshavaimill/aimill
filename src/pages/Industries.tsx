@@ -57,7 +57,17 @@ const Industries = () => {
       <main>
         {/* Hero */}
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-40 pb-24 px-4 sm:px-8 lg:px-20">
-          <div className="absolute inset-0 grid-pattern opacity-30" />
+          {/* Dark Grey Texture Background */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/30 to-zinc-900/40" />
+            <div className="absolute inset-0 opacity-[0.1]" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px)
+              `,
+            }} />
+          </div>
+          <div className="absolute inset-0 grid-pattern opacity-20" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
           
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
@@ -82,7 +92,41 @@ const Industries = () => {
 
         {/* Industries Grid */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
-          <div className="container mx-auto max-w-7xl">
+          {/* Elegant Dark Grey Texture Background */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {/* Rich gradient base */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/50 to-zinc-900/60" />
+            
+            {/* Visible grid pattern */}
+            <div className="absolute inset-0 opacity-[0.2]" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.05) 39px, rgba(255,255,255,0.05) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.05) 39px, rgba(255,255,255,0.05) 40px)
+              `,
+            }} />
+            
+            {/* Visible dots at grid intersections */}
+            <div className="absolute inset-0 opacity-[0.25]" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='0' cy='0' r='1'/%3E%3Ccircle cx='40' cy='0' r='1'/%3E%3Ccircle cx='0' cy='40' r='1'/%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: '40px 40px',
+            }} />
+            
+            {/* Enhanced mesh for depth */}
+            <div className="absolute inset-0 opacity-[0.12]" style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.06) 0%, transparent 70%)
+              `,
+            }} />
+            
+            {/* Additional texture overlay */}
+            <div className="absolute inset-0 opacity-[0.15]" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+          </div>
+          
+          <div className="container mx-auto max-w-7xl relative z-10">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, idx) => (
                 <motion.div
@@ -91,10 +135,24 @@ const Industries = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="glass rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all group"
+                  className="glass rounded-2xl p-8 border border-zinc-800/50 bg-zinc-950/30 hover:border-zinc-700 hover:bg-zinc-950/50 transition-all group backdrop-blur-sm"
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <industry.icon className="w-8 h-8 text-primary" />
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform ${
+                    idx === 0 ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                    idx === 1 ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                    idx === 2 ? "bg-gradient-to-br from-green/30 to-green/20" :
+                    idx === 3 ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                    idx === 4 ? "bg-gradient-to-br from-red-500/30 to-red-500/20" :
+                    "bg-gradient-to-br from-teal/30 to-teal/20"
+                  }`}>
+                    <industry.icon className={`w-8 h-8 ${
+                      idx === 0 ? "text-cyan" :
+                      idx === 1 ? "text-purple" :
+                      idx === 2 ? "text-green" :
+                      idx === 3 ? "text-pink" :
+                      idx === 4 ? "text-red-400" :
+                      "text-teal"
+                    }`} />
                   </div>
                   <h3 className="text-2xl font-bold mb-3">{industry.name}</h3>
                   <p className="text-muted-foreground mb-6">{industry.description}</p>
@@ -106,7 +164,14 @@ const Industries = () => {
                     <ul className="space-y-2">
                       {industry.useCases.map((useCase, i) => (
                         <li key={i} className="text-sm flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                          <span className={`w-1.5 h-1.5 rounded-full ${
+                            idx === 0 ? "bg-cyan" :
+                            idx === 1 ? "bg-purple" :
+                            idx === 2 ? "bg-green" :
+                            idx === 3 ? "bg-pink" :
+                            idx === 4 ? "bg-red-400" :
+                            "bg-teal"
+                          }`} />
                           {useCase}
                         </li>
                       ))}
@@ -134,7 +199,18 @@ const Industries = () => {
 
         {/* CTA */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
-          <div className="container mx-auto max-w-4xl text-center">
+          {/* Dark Grey Texture Background */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/30 to-zinc-900/40" />
+            <div className="absolute inset-0 opacity-[0.08]" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px)
+              `,
+            }} />
+          </div>
+          
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

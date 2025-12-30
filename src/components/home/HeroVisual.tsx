@@ -14,13 +14,13 @@ export const HeroVisual = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-col items-center gap-2"
           >
-            <div className="w-16 h-16 rounded-xl bg-cyan/20 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan/30 to-cyan/20 flex items-center justify-center">
               <Database className="w-8 h-8 text-cyan" />
             </div>
             <span className="text-xs font-semibold">Inputs</span>
           </motion.div>
 
-          <ArrowRight className="w-6 h-6 text-muted-foreground" />
+          <ArrowRight className="w-6 h-6 text-primary" />
 
           {/* Agents */}
           <motion.div
@@ -29,13 +29,13 @@ export const HeroVisual = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="flex flex-col items-center gap-2"
           >
-            <div className="w-16 h-16 rounded-xl bg-purple/20 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple/30 to-purple/20 flex items-center justify-center">
               <Brain className="w-8 h-8 text-purple" />
             </div>
             <span className="text-xs font-semibold">Agents</span>
           </motion.div>
 
-          <ArrowRight className="w-6 h-6 text-muted-foreground" />
+          <ArrowRight className="w-6 h-6 text-primary" />
 
           {/* Tools */}
           <motion.div
@@ -44,13 +44,13 @@ export const HeroVisual = () => {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="flex flex-col items-center gap-2"
           >
-            <div className="w-16 h-16 rounded-xl bg-green/20 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green/30 to-green/20 flex items-center justify-center">
               <Wrench className="w-8 h-8 text-green" />
             </div>
             <span className="text-xs font-semibold">Tools</span>
           </motion.div>
 
-          <ArrowRight className="w-6 h-6 text-muted-foreground" />
+          <ArrowRight className="w-6 h-6 text-primary" />
 
           {/* Decisions */}
           <motion.div
@@ -59,13 +59,13 @@ export const HeroVisual = () => {
             transition={{ duration: 0.6, delay: 1.1 }}
             className="flex flex-col items-center gap-2"
           >
-            <div className="w-16 h-16 rounded-xl bg-pink/20 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-pink/30 to-pink/20 flex items-center justify-center">
               <CheckCircle className="w-8 h-8 text-pink" />
             </div>
             <span className="text-xs font-semibold">Decisions</span>
           </motion.div>
 
-          <ArrowRight className="w-6 h-6 text-muted-foreground" />
+          <ArrowRight className="w-6 h-6 text-primary" />
 
           {/* Outcomes */}
           <motion.div
@@ -74,8 +74,8 @@ export const HeroVisual = () => {
             transition={{ duration: 0.6, delay: 1.3 }}
             className="flex flex-col items-center gap-2"
           >
-            <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center">
-              <TrendingUp className="w-8 h-8 text-primary" />
+            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green/30 via-teal/30 to-cyan/30 flex items-center justify-center">
+              <TrendingUp className="w-8 h-8 text-green" />
             </div>
             <span className="text-xs font-semibold">Outcomes</span>
           </motion.div>

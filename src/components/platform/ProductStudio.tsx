@@ -160,12 +160,12 @@ export const ProductStudio = () => {
                   }`}
                 >
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
-                    module.color === "purple" ? "bg-purple/20" :
-                    module.color === "cyan" ? "bg-cyan/20" :
-                    module.color === "green" ? "bg-green/20" :
-                    module.color === "pink" ? "bg-pink/20" :
-                    module.color === "teal" ? "bg-teal/20" :
-                    "bg-gradient-to-br from-purple/20 via-pink/20 to-cyan/20"
+                    module.color === "purple" ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                    module.color === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                    module.color === "green" ? "bg-gradient-to-br from-green/30 to-green/20" :
+                    module.color === "pink" ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                    module.color === "teal" ? "bg-gradient-to-br from-teal/30 to-teal/20" :
+                    "bg-gradient-to-br from-purple/30 via-pink/30 to-cyan/30"
                   }`}>
                     <module.icon className={`w-8 h-8 ${
                       module.color === "purple" ? "text-purple" :
@@ -260,7 +260,7 @@ export const ProductStudio = () => {
                       <div className="grid grid-cols-3 gap-3">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
                           <div key={i} className="aspect-square bg-secondary/30 rounded-lg flex items-center justify-center">
-                            <Plug className="w-6 h-6 text-muted-foreground" />
+                            <Plug className="w-6 h-6 text-primary" />
                           </div>
                         ))}
                       </div>

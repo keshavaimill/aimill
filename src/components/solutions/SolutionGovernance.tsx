@@ -108,13 +108,21 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
                     "border-teal"
                   }`}
                 >
-                  <feature.icon className={`w-8 h-8 flex-shrink-0 ${
-                    themeColor === "cyan" ? "text-cyan" :
-                    themeColor === "purple" ? "text-purple" :
-                    themeColor === "green" ? "text-green" :
-                    themeColor === "pink" ? "text-pink" :
-                    "text-teal"
-                  }`} />
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    themeColor === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
+                    themeColor === "purple" ? "bg-gradient-to-br from-purple/30 to-purple/20" :
+                    themeColor === "green" ? "bg-gradient-to-br from-green/30 to-green/20" :
+                    themeColor === "pink" ? "bg-gradient-to-br from-pink/30 to-pink/20" :
+                    "bg-gradient-to-br from-teal/30 to-teal/20"
+                  }`}>
+                    <feature.icon className={`w-6 h-6 ${
+                      themeColor === "cyan" ? "text-cyan" :
+                      themeColor === "purple" ? "text-purple" :
+                      themeColor === "green" ? "text-green" :
+                      themeColor === "pink" ? "text-pink" :
+                      "text-teal"
+                    }`} />
+                  </div>
                   <div>
                     <h3 className="font-bold mb-2">{feature.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">

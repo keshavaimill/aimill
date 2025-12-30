@@ -44,24 +44,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card/50">
-      {/* Status bar */}
-      <div className="border-b border-border">
-        <div className="container mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-sm">
-            <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-            <span className="text-muted-foreground">All Systems Operational</span>
-          </div>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <span className="text-green">✓</span> SOC 2 Certified
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-green">✓</span> GDPR Compliant
-            </span>
-          </div>
-        </div>
-      </div>
+    <footer className="relative border-t border-border bg-card/80 backdrop-blur-sm">
 
       {/* Main footer */}
       <div className="container mx-auto px-6 py-16">
@@ -72,20 +55,30 @@ export const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="text-xl font-bold text-foreground">AI-MILL</span>
+              <span className="text-xl font-bold text-foreground">AI Mill</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Building the future of AI agents.
             </p>
             <div className="flex items-center gap-3">
-              {socialLinks.map((social) => (
+              {socialLinks.map((social, idx) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-9 h-9 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-colors"
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all hover:scale-110 ${
+                    idx === 0 ? "bg-gradient-to-br from-gray-800/50 to-gray-700/50 hover:from-gray-800 hover:to-gray-700" :
+                    idx === 1 ? "bg-gradient-to-br from-red-600/30 to-red-500/20 hover:from-red-600/40 hover:to-red-500/30" :
+                    idx === 2 ? "bg-gradient-to-br from-blue-500/30 to-blue-400/20 hover:from-blue-500/40 hover:to-blue-400/30" :
+                    "bg-gradient-to-br from-blue-700/30 to-blue-600/20 hover:from-blue-700/40 hover:to-blue-600/30"
+                  }`}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-4 h-4" />
+                  <social.icon className={`w-5 h-5 ${
+                    idx === 0 ? "text-gray-300" :
+                    idx === 1 ? "text-red-400" :
+                    idx === 2 ? "text-blue-400" :
+                    "text-blue-500"
+                  }`} />
                 </a>
               ))}
             </div>
@@ -171,16 +164,31 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2025 AI-MILL. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
+      {/* Bottom bar with status */}
+      <div className="border-t border-border bg-background">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            {/* Left side - Status */}
+            <div className="flex items-center gap-2 text-sm">
+              <span className="w-2 h-2 rounded-full bg-green" />
+              <span className="text-green font-medium">Services Operational</span>
+            </div>
+            
+            {/* Right side - Certifications and links */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <span className="text-green">✓</span>
+                <span>SOC 2 Certified</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                © 2025 AI Mill. All rights reserved.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
+                <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+                <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
