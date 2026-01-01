@@ -1,12 +1,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import OpenAILogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/open-ai-logo-duotone-3oawbwzm2rqeu3cpfix9gm.webp';
-import HuggingFaceLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/hf-logo.svg';
-import GeminiLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/gemini-color.png';
-import MistralLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Mistral_AI_logo_(2025–).svg.png';
-import ClaudeLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Claude_AI_symbol.svg.png';
-import AnthropicLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/anthropic.png';
 
 export const AnnouncementSection = () => {
     return (
@@ -84,12 +78,12 @@ export const AnnouncementSection = () => {
                         </p>
                         <div className="flex flex-wrap items-center gap-6 md:gap-10 opacity-60 transition-opacity duration-300 group-hover:opacity-100">
                             {[
-                                { name: "OpenAI", logo: OpenAILogo },
-                                { name: "Hugging Face", logo: HuggingFaceLogo },
-                                { name: "Gemini", logo: GeminiLogo },
-                                { name: "Mistral", logo: MistralLogo },
-                                { name: "Claude", logo: ClaudeLogo },
-                                { name: "Anthropic", logo: AnthropicLogo },
+                                { name: "OpenAI", logo: "/OpenAI.webp" },
+                                { name: "Hugging Face", logo: "/hf-logo.svg" },
+                                { name: "Gemini", logo: "/gemini-color.png" },
+                                { name: "Mistral", logo: "/Mistral.png" },
+                                { name: "Claude", logo: "/Claude.png" },
+                                { name: "Anthropic", logo: "/anthropic.png" },
                             ].map((provider, idx) => (
                                 <span key={idx} className="flex items-center gap-2">
                                     <span className="text-xl font-bold font-serif tracking-tighter">{provider.name}</span>
