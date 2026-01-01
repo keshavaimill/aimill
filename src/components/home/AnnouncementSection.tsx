@@ -1,6 +1,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import OpenAILogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/open-ai-logo-duotone-3oawbwzm2rqeu3cpfix9gm.webp';
+import HuggingFaceLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/hf-logo.svg';
+import GeminiLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/gemini-color.png';
+import MistralLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Mistral_AI_logo_(2025–).svg.png';
+import ClaudeLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/Claude_AI_symbol.svg.png';
+import AnthropicLogo from '/Users/pranjalmaheshwari/Documents/ARP/aimill/src/img/anthropic.png';
 
 export const AnnouncementSection = () => {
     return (
