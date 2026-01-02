@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -90,10 +89,6 @@ export const AnnouncementSection = () => {
                                     <img src={provider.logo} alt={`${provider.name} Logo`} className="h-6 w-auto" />
                                 </span>
                             ))}
-
-                            {/* Optional placeholders if needed */}
-                            <div className="h-6 w-20 bg-neutral-800 rounded-sm" />
-                            <div className="h-6 w-6 rounded-full bg-neutral-800" />
                         </div>
                     </div>
 

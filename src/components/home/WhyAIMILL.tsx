@@ -142,9 +142,6 @@ export const WhyAIMILL = () => {
               Your Journey
             </motion.h3>
             <div className="relative">
-              {/* Vertical connecting line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border/30" />
-              
               <div className="space-y-0">
                 {steps.map((step, idx) => {
                   const isExpanded = !collapsed && idx < activeIndex;
@@ -156,7 +153,7 @@ export const WhyAIMILL = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: idx * 0.1 }}
-                      className="flex items-start gap-4 pb-4 last:pb-0 group"
+                      className="flex items-start gap-4 pb-6 last:pb-0 group"
                     >
                       {/* Icon Circle */}
                       <div className="flex flex-col items-center relative z-10">
