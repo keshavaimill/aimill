@@ -122,8 +122,8 @@ export const FeaturesSection = () => {
           className="max-w-4xl mb-16"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900">
-            AI Mill provides the core infrastructure needed to build and run{" "}
-            <span className="text-zinc-600">AI agents in production.</span>
+            AI Mill designs and delivers intelligent systems that combine agentic execution with rigorous data science—{" "}
+            <span className="text-zinc-600">turning predictions into decisions and decisions into action within existing enterprise environments.</span>
           </h2>
         </motion.div>
 

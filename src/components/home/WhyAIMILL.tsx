@@ -5,19 +5,19 @@ import { useState, useEffect } from "react";
 const benefits = [
   {
     icon: Target,
-    description: "Designed for production, not demos - built for real-world enterprise deployment",
+    description: "Production-First Architecture Designed to operate reliably within complex enterprise systems.",
   },
   {
     icon: Zap,
-    description: "Outcome-based agent design - every agent optimized for measurable business results",
+    description: "Business Outcomes at the Core Agent behavior aligned directly to measurable results.",
   },
   {
     icon: Building2,
-    description: "Vertical-specific intelligence - industry-tailored solutions that understand your domain",
+    description: "Domain-Specific Intelligence Solutions shaped by industry realities, not generic models.",
   },
   {
     icon: TrendingUp,
-    description: "Faster time-to-value - deploy in weeks, not months",
+    description: "Rapid Path to Impact from engagement to production in weeks—not quarters.",
   },
 ];
 

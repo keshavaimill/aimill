@@ -61,7 +61,9 @@ export const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl glass border border-border/50"
+                    className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
+                            bg-background/90 backdrop-blur-md
+                            border border-border shadow-lg"
                   >
                     <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
@@ -119,7 +121,9 @@ export const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl glass border border-border/50"
+                    className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
+                            bg-background/90 backdrop-blur-md
+                            border border-border shadow-lg"
                   >
                     <div className="space-y-1">
                       <Link

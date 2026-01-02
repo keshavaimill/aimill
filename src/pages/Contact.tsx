@@ -367,17 +367,50 @@ const Contact = () => {
                           required
                         />
                       </div>
-                      <Button 
-                        variant="hero" 
+                      <Button
+                        variant="hero"
                         className="w-full group"
-                        onClick={() => {
-                          if (scheduleData.timezone && scheduleData.date && scheduleData.time) {
-                            toast({
-                              title: "Demo scheduled!",
-                              description: `We'll send you a confirmation email for ${scheduleData.date} at ${scheduleData.time} (${scheduleData.timezone})`,
-                            });
-                            setScheduleData({ timezone: "", date: "", time: "" });
-                            setShowScheduleDemo(false);
+                        onClick={async () => {
+                          if (
+                            scheduleData.timezone &&
+                            scheduleData.date &&
+                            scheduleData.time &&
+                            formData.name &&
+                            formData.email
+                          ) {
+                            try {
+                              const res = await fetch(
+                                "http://127.0.0.1:8000/api/schedule-demo",
+                                {
+                                  method: "POST",
+                                  headers: { "Content-Type": "application/json" },
+                                  body: JSON.stringify({
+                                    name: formData.name,
+                                    email: formData.email,
+                                    company: formData.company || "N/A",
+                                    date: scheduleData.date,
+                                    preferred_time: scheduleData.time,
+                                    time_zone: scheduleData.timezone.toUpperCase(),
+                                    duration: "30 mins",
+                                  }),
+                                }
+                              );
+
+                              if (!res.ok) throw new Error();
+
+                              toast({
+                                title: "Demo scheduled!",
+                                description: `We'll send you a confirmation email for ${scheduleData.date} at ${scheduleData.time} (${scheduleData.timezone})`,
+                              });
+
+                              setScheduleData({ timezone: "", date: "", time: "" });
+                              setShowScheduleDemo(false);
+                            } catch {
+                              toast({
+                                title: "Failed to schedule demo",
+                                variant: "destructive",
+                              });
+                            }
                           } else {
                             toast({
                               title: "Please fill all fields",
@@ -403,4 +436,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

@@ -19,7 +19,7 @@ export const PlatformHero = () => {
           className="mb-6"
         >
           <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full">
-            Platform
+            Agentic Architecture
           </span>
         </motion.div>
 
@@ -41,7 +41,7 @@ export const PlatformHero = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          A unified product studio to Build, Deploy, Govern, and Scale Autonomous AI agents across mission-critical business workflows.
+          A Unified Agentic Architecture enabling the Design, Deployment, Governance, and Scaling of Autonomous AI agents across mission-critical business workflows.
         </motion.p>
 
         {/* CTA Button */}

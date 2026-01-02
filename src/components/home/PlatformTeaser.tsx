@@ -105,7 +105,7 @@ export const PlatformTeaser = () => {
         >
           <Link to="/platform">
             <Button variant="heroOutline" size="lg" className="group">
-              View Platform
+              View Agentic Architecture
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

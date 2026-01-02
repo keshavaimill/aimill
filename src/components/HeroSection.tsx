@@ -67,7 +67,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.1 }}
                   className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-6"
                 >
-                  Agents that Execute{" "}
+                  Agents & ML Workflows That Execute{" "}
                   <span className="gradient-text-purple">Real Business Outcomes</span>
                 </motion.h1>
 
@@ -77,7 +77,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg md:text-xl text-muted-foreground mb-8"
                 >
-                  AI Mill builds autonomous AI agents that reason, plan, act, and collaborate with humans to drive revenue, efficiency, and operational intelligence at enterprise scale.
+                  AI Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
                 </motion.p>
 
                 {/* Value Bullets */}
@@ -99,6 +99,10 @@ export const HeroSection = () => {
                     <span className="w-2 h-2 rounded-full bg-purple" />
                     <span className="text-sm font-semibold">Industry-specialized agents</span>
                   </div>
+                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
+                    <span className="w-2 h-2 rounded-full bg-green" />
+                    <span className="text-sm font-semibold">Distinguished AI Consulting Practice</span>
+                  </div>
                 </motion.div>
 
                 {/* CTA Buttons */}
@@ -117,7 +121,7 @@ export const HeroSection = () => {
                   </Link>
                   <Link to="/platform">
                     <Button variant="heroOutline" size="lg">
-                      Explore the Platform
+                      Explore the Agentic Architecture
                     </Button>
                   </Link>
                 </motion.div>
