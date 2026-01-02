@@ -17,6 +17,10 @@ import PredictiveMaintenance from "./pages/solutions/PredictiveMaintenance";
 import Solutions from "./pages/Solutions";
 import Consulting from "./pages/Consulting";
 import Industries from "./pages/Industries";
+import Lending from "./pages/industries/Lending";
+import Agriculture from "./pages/industries/Agriculture";
+import SupplyChain from "./pages/industries/SupplyChain";
+import Manufacturing from "./pages/industries/Manufacturing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -44,6 +48,10 @@ const App = () => (
           <Route path="/solutions/predictive-maintenance" element={<PredictiveMaintenance />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/lending" element={<Lending />} />
+          <Route path="/industries/agriculture" element={<Agriculture />} />
+          <Route path="/industries/supply-chain" element={<SupplyChain />} />
+          <Route path="/industries/manufacturing" element={<Manufacturing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
