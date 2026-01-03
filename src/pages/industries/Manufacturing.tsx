@@ -428,79 +428,92 @@ const Manufacturing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="mb-[48px] last:mb-0"
+                className="mb-32 last:mb-0 relative"
               >
-                <div className="flex flex-col lg:flex-row gap-12 items-start">
-                  {/* Number Badge */}
+                {/* Section Header with Number Badge */}
+                <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 mb-12">
                   <div className="flex-shrink-0">
-                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center text-foreground text-4xl font-bold shadow-xl">
+                    <div
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full shadow-[0_0_30px_-5px_rgba(168,85,247,0.4)] flex items-center justify-center text-white text-3xl md:text-4xl font-bold border-4 border-black/50"
+                      style={{ backgroundImage: "var(--gradient-purple-pink)" }}
+                    >
                       {solution.number}
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.5]">
+                    {solution.title}
+                  </h3>
+                </div>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-10">
-                      {/* Challenge Box */}
-                      <div className="glass border-l-4 border-destructive p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-destructive font-bold mb-3 block">
-                          THE CHALLENGE
-                        </span>
-                        <p className="text-base text-white leading-relaxed">{solution.challenge}</p>
-                      </div>
-
-                      {/* Solution Box */}
-                      <div className="glass border-l-4 border-purple p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-purple font-bold mb-3 block">
-                          AI MILL SOLUTION
-                        </span>
-                        <p className="text-base text-white leading-relaxed">{solution.solution}</p>
-                      </div>
-                    </div>
-
-                    {/* How Agentic AI Works */}
-                    <div className="mb-10 glass border border-purple/30 p-8 rounded-xl bg-purple-950/10">
-                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-purple-400">HOW AGENTIC AI WORKS</h4>
-                      <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => (
-                          <motion.div
-                            key={itemIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                            className="flex items-start gap-4"
-                          >
-                            <div className="w-6 h-6 rounded-full bg-purple flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <item.icon className="w-4 h-4 text-white" />
-                            </div>
-                            <p className="text-gray-400">
-                              <span className="font-semibold text-white">{item.text.split(" ").slice(0, 3).join(" ")}</span>
-                              {" " + item.text.split(" ").slice(3).join(" ")}
-                            </p>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {solution.metrics.map((metric, metricIdx) => (
-                        <motion.div
-                          key={metricIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-purple/30 border border-border/50 transition-all group text-center"
-                        >
-                          <div className={`text-2xl font-bold text-white mb-3 group-hover:scale-110 transition-transform`}>
-                            {metric.value}
-                          </div>
-                          <p className="text-sm font-medium text-gray-400">{metric.label}</p>
-                        </motion.div>
-                      ))}
-                    </div>
+                {/* Challenge & Solution Grid */}
+                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+                  {/* Challenge Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-red-500/80" />
+                    <span className="text-xs font-bold text-red-400 uppercase tracking-[0.2em] mb-4 block">
+                      The Challenge
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      {solution.challenge}
+                    </p>
                   </div>
+
+                  {/* Solution Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
+                    <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
+                      AI Mill Solution
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
+                      {solution.solution}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Agentic Workflow - Striped Rows */}
+                <div className="bg-[#06070a] border border-white/5 rounded-3xl overflow-hidden mb-12">
+                  <div className="px-8 py-6 border-b border-white/5 bg-white/[0.02]">
+                    <h4 className="text-sm font-bold text-purple-400 uppercase tracking-[0.2em]">
+                      How Agentic AI Works
+                    </h4>
+                  </div>
+                  <div className="divide-y divide-white/5">
+                    {solution.howItWorks.map((item, itemIdx) => (
+                      <div
+                        key={itemIdx}
+                        className={`px-8 py-5 flex items-start md:items-center gap-4 group transition-colors hover:bg-white/[0.02] ${itemIdx % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.01]'
+                          }`}
+                      >
+                        <div className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
+                          <item.icon className="w-4 h-4 text-purple-400" />
+                        </div>
+                        <div className="text-base text-gray-400">
+                          <span className="font-semibold text-white group-hover:text-purple-300 transition-colors">
+                            {item.text.split(" ").slice(0, 3).join(" ")}
+                          </span>
+                          {" " + item.text.split(" ").slice(3).join(" ")}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* KPI Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {solution.metrics.map((metric, metricIdx) => (
+                    <div
+                      key={metricIdx}
+                      className="bg-[#0f111a] border border-white/5 rounded-2xl p-6 hover:border-purple/30 transition-all duration-300 group"
+                    >
+                      <div className={`text-4xl font-bold mb-2 ${metric.color} tracking-tight`}>
+                        {metric.value}
+                      </div>
+                      <div className="text-sm font-medium text-gray-500 uppercase tracking-widest group-hover:text-gray-400 transition-colors">
+                        {metric.label}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
@@ -584,7 +597,7 @@ const Manufacturing = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Manufacturing?</h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built for manufacturing with industrial-grade reliability and seamless system integration.
               </p>

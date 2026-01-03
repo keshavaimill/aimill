@@ -630,7 +630,7 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill for Financial Services?</h2>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for financial services with security, compliance, and performance at the core.
               </p>

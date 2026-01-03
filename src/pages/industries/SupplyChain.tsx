@@ -220,81 +220,98 @@ const SupplyChain = () => {
                 className="relative"
               >
                 {/* Elevated Product Card */}
-                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(59,130,246,0.2)] border border-white/40 overflow-hidden">
+                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#0f111a] rounded-[32px] p-8 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7),0_0_50px_-10px_rgba(59,130,246,0.1)] border border-white/10 overflow-hidden">
 
-                  {/* Grid Pattern Texture */}
-                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
+                  {/* Subtle Grain Texture */}
+                  <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")` }} />
 
-                  {/* Dashboard Content */}
-                  <div className="relative h-full flex flex-col">
-                    <div className="flex justify-between items-center mb-12">
+                  {/* Ambient Gradient Glow */}
+                  <div className="absolute -top-20 -right-20 w-60 h-60 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
+                  <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none" />
+
+                  <div className="relative h-full flex flex-col z-10">
+                    {/* Header */}
+                    <div className="flex justify-between items-center mb-10">
                       <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-red-500/80 shadow-[0_0_8px_rgba(239,68,68,0.6)]" />
+                        <div className="w-3 h-3 rounded-full bg-amber-500/80 shadow-[0_0_8px_rgba(245,158,11,0.6)]" />
+                        <div className="w-3 h-3 rounded-full bg-emerald-500/80 shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
                       </div>
-                      <div className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest">
-                        Supply System Active
+
+                      {/* Active Status Pill */}
+                      <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-md shadow-lg">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                        </span>
+                        <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">
+                          Supply System Active
+                        </span>
                       </div>
                     </div>
 
-                    {/* Metric Cards Grid */}
-                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
+                    {/* Metric Grid */}
+                    <div className="grid grid-cols-2 gap-5 flex-1 content-start">
                       {[
-                        { icon: Package, label: "Inv. Accuracy", value: "99.8%", color: "blue" },
-                        { icon: Truck, label: "On-Time Rate", value: "97.4%", color: "indigo" },
-                        { icon: Activity, label: "Cycle Time", value: "-24%", color: "emerald" },
-                        { icon: BarChart, label: "Demand Bias", value: "0.4%", color: "blue" },
-                        { icon: Database, label: "Data Flow", value: "Real-time", color: "violet" },
-                        { icon: CheckCircle, label: "Fulfillment", value: "Optimal", color: "blue" },
+                        { icon: Package, label: "Inv. Accuracy", value: "99.8%", color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+                        { icon: Truck, label: "On-Time Rate", value: "97.4%", color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
+                        { icon: Activity, label: "Cycle Time", value: "-24%", color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+                        { icon: BarChart, label: "Demand Bias", value: "0.4%", color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+                        { icon: Database, label: "Data Flow", value: "Real-time", color: "text-pink-400", bg: "bg-pink-500/10", border: "border-pink-500/20" },
+                        { icon: CheckCircle, label: "Fulfillment", value: "Optimal", color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
                       ].map((item, i) => (
                         <motion.div
                           key={i}
                           initial={{ opacity: 0, y: 15 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
-                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
+                          whileHover={{ y: -4, backgroundColor: "rgba(255,255,255,0.03)" }}
+                          className="bg-white/[0.02] rounded-2xl p-5 border border-white/5 hover:border-white/10 transition-all cursor-default group relative overflow-hidden"
                         >
-                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
-                            ${item.color === 'blue' ? 'bg-blue-50 text-blue-500 group-hover:bg-blue-100' : ''}
-                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
-                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
-                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
-                          `}>
-                            <item.icon className="w-5 h-5" />
+                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center ${item.bg} ${item.border} border shadow-inner`}>
+                            <item.icon className={`w-5 h-5 ${item.color}`} />
                           </div>
-                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
-                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
+                          <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1 group-hover:text-gray-400 transition-colors">
+                            {item.label}
+                          </div>
+                          <div className="text-xl font-bold text-gray-100 tracking-tight group-hover:text-white transition-colors">
+                            {item.value}
+                          </div>
                         </motion.div>
                       ))}
                     </div>
 
-                    {/* Bottom Status bar */}
-                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                    {/* Bottom Indicator */}
+                    <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="flex -space-x-2">
                           {[1, 2, 3].map(j => (
-                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
+                            <div key={j} className="w-7 h-7 rounded-full border border-black bg-gray-800 flex items-center justify-center text-[10px] text-gray-400">
+                              <Users className="w-3 h-3" />
+                            </div>
                           ))}
                         </div>
-                        <span className="text-xs font-bold text-slate-500">Logistics Agents</span>
+                        <span className="text-[11px] font-medium text-gray-500">
+                          Logistics Agents
+                        </span>
                       </div>
-                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
+                      <div className="h-1.5 w-20 bg-gray-800 rounded-full overflow-hidden">
+                        <div className="h-full bg-gradient-to-r from-blue-500 to-purple-500 w-2/3 animate-pulse" />
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Floating Decorative Elements */}
                 <motion.div
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-10 -right-10 w-32 h-32 bg-cyan/20 rounded-full blur-2xl z-10"
+                  animate={{ y: [0, -15, 0], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-12 -right-12 w-40 h-40 bg-blue-600/20 rounded-full blur-[60px] pointer-events-none"
                 />
                 <motion.div
-                  animate={{ y: [0, 20, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl z-10"
+                  animate={{ y: [0, 15, 0], opacity: [0.5, 0.8, 0.5] }}
+                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-600/20 rounded-full blur-[60px] pointer-events-none"
                 />
               </motion.div>
 
@@ -390,83 +407,92 @@ const SupplyChain = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="mb-[48px] last:mb-0"
+                className="mb-32 last:mb-0 relative"
               >
-                <div className="flex flex-col lg:flex-row gap-12 items-start">
-                  {/* Number Badge */}
+                {/* Section Header with Number Badge */}
+                <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 mb-12">
                   <div className="flex-shrink-0">
-                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center text-foreground text-4xl font-bold shadow-xl">
+                    <div
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full shadow-[0_0_30px_-5px_rgba(168,85,247,0.4)] flex items-center justify-center text-white text-3xl md:text-4xl font-bold border-4 border-black/50"
+                      style={{ backgroundImage: "var(--gradient-purple-pink)" }}
+                    >
                       {solution.number}
                     </div>
                   </div>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.5]">
+                    {solution.title}
+                  </h3>
+                </div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
-
-                    <div className="grid md:grid-cols-2 gap-6 mb-10">
-                      {/* Challenge Box */}
-                      <div className="glass border-l-4 border-destructive p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-destructive font-bold mb-3 block">
-                          THE CHALLENGE
-                        </span>
-                        <p className="text-base text-white leading-relaxed">{solution.challenge}</p>
-                      </div>
-
-                      {/* Solution Box */}
-                      <div className="glass border-l-4 border-purple p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-purple font-bold mb-3 block">
-                          AI MILL SOLUTION
-                        </span>
-                        <p className="text-base text-white leading-relaxed">{solution.solution}</p>
-                      </div>
-                    </div>
-
-                    {/* How Agentic AI Works */}
-                    <div className="mb-10 glass border border-purple/30 p-8 rounded-xl bg-purple-950/10">
-                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-purple-400">HOW AGENTIC AI WORKS</h4>
-                      <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => (
-                          <motion.div
-                            key={itemIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                            className="flex items-start gap-4"
-                          >
-                            <div className="w-6 h-6 rounded-full bg-purple flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <item.icon className="w-4 h-4 text-white" />
-                            </div>
-                            <p className="text-gray-400">
-                              <span className="font-semibold text-white">{item.text.split(" ").slice(0, 2).join(" ")}</span>
-                              {" " + item.text.split(" ").slice(2).join(" ")}
-                            </p>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                    </div>
-
-                    {/* Business Impact Cards */}
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {solution.metrics.map((metric, metricIdx) => (
-                        <motion.div
-                          key={metricIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-purple/30 border border-border/50 transition-all group text-center"
-                        >
-                          <div className={`text-2xl font-bold text-white mb-3 group-hover:scale-110 transition-transform`}>
-                            {metric.value}
-                          </div>
-                          <p className="text-sm font-medium text-gray-400">{metric.label}</p>
-                        </motion.div>
-                      ))}
-                    </div>
+                {/* Challenge & Solution Grid */}
+                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+                  {/* Challenge Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-red-500/80" />
+                    <span className="text-xs font-bold text-red-400 uppercase tracking-[0.2em] mb-4 block">
+                      The Challenge
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      {solution.challenge}
+                    </p>
                   </div>
+
+                  {/* Solution Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
+                    <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
+                      AI Mill Solution
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
+                      {solution.solution}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Agentic Workflow - Striped Rows */}
+                <div className="bg-[#06070a] border border-white/5 rounded-3xl overflow-hidden mb-12">
+                  <div className="px-8 py-6 border-b border-white/5 bg-white/[0.02]">
+                    <h4 className="text-sm font-bold text-purple-400 uppercase tracking-[0.2em]">
+                      How Agentic AI Works
+                    </h4>
+                  </div>
+                  <div className="divide-y divide-white/5">
+                    {solution.howItWorks.map((item, itemIdx) => (
+                      <div
+                        key={itemIdx}
+                        className={`px-8 py-5 flex items-start md:items-center gap-4 group transition-colors hover:bg-white/[0.02] ${itemIdx % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.01]'
+                          }`}
+                      >
+                        <div className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
+                          <item.icon className="w-4 h-4 text-purple-400" />
+                        </div>
+                        <div className="text-base text-gray-400">
+                          <span className="font-semibold text-white group-hover:text-purple-300 transition-colors">
+                            {item.text.split(" ").slice(0, 2).join(" ")}
+                          </span>
+                          {" " + item.text.split(" ").slice(2).join(" ")}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* KPI Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {solution.metrics.map((metric, metricIdx) => (
+                    <div
+                      key={metricIdx}
+                      className="bg-[#0f111a] border border-white/5 rounded-2xl p-6 hover:border-purple/30 transition-all duration-300 group"
+                    >
+                      <div className={`text-4xl font-bold mb-2 tracking-tight ${metric.color}`}>
+                        {metric.value}
+                      </div>
+                      <div className="text-sm font-medium text-gray-500 uppercase tracking-widest group-hover:text-gray-400 transition-colors">
+                        {metric.label}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
@@ -611,7 +637,7 @@ const SupplyChain = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Supply Chain?</h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built for supply chain operations with end-to-end visibility and real-time optimization.
               </p>
