@@ -143,6 +143,13 @@ export const Navbar = () => {
                         Lending & Financial Services
                       </Link>
                       <Link
+                        to="/industries/insurance"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Insurance
+                      </Link>
+                      <Link
                         to="/industries/agriculture"
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
@@ -162,6 +169,27 @@ export const Navbar = () => {
                         onClick={() => setActiveDropdown(null)}
                       >
                         Manufacturing
+                      </Link>
+                      <Link
+                        to="/industries/media"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Media
+                      </Link>
+                      <Link
+                        to="/industries/healthcare"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Healthcare
+                      </Link>
+                      <Link
+                        to="/industries/retail"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Retail
                       </Link>
                     </div>
                   </motion.div>
@@ -282,6 +310,13 @@ export const Navbar = () => {
                                     Lending & Financial Services
                                   </Link>
                                   <Link
+                                    to="/industries/insurance"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Insurance
+                                  </Link>
+                                  <Link
                                     to="/industries/agriculture"
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
@@ -301,6 +336,27 @@ export const Navbar = () => {
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
                                     Manufacturing
+                                  </Link>
+                                  <Link
+                                    to="/industries/media"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Media
+                                  </Link>
+                                  <Link
+                                    to="/industries/healthcare"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Healthcare
+                                  </Link>
+                                  <Link
+                                    to="/industries/retail"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Retail
                                   </Link>
                                 </>
                               )}

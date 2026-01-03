@@ -12,8 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const SupplyChain = () => {
-  const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
-
   const challenges = [
     { icon: TrendingDown, text: "Inaccurate demand forecasts leading to stockouts or excess inventory", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
     { icon: DollarSign, text: "Capital locked in slow-moving inventory", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
@@ -23,8 +21,6 @@ const SupplyChain = () => {
     { icon: AlertTriangle, text: "Direct impact on service levels, margins, and working capital efficiency", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
   ];
 
-  const solutionIcons = [Brain, Activity, Zap];
-
   const solutions = [
     {
       number: "01",
@@ -32,9 +28,9 @@ const SupplyChain = () => {
       challenge: "Most demand forecasts rely on historical averages and static assumptions, failing during promotions, seasonality shifts, or market volatility.",
       solution: "We develop advanced forecasting models using time-series analysis, machine learning, and external demand signals.",
       howItWorks: [
-        { agent: "Forecast agents", action: "continuously monitor demand patterns" },
-        { agent: "Agents", action: "detect bias, anomalies, and demand shifts" },
-        { agent: "Models", action: "automatically retrain without human intervention" },
+        { icon: Brain, text: "Forecast agents continuously monitor demand patterns" },
+        { icon: Activity, text: "Agents detect bias, anomalies, and demand shifts" },
+        { icon: Zap, text: "Models automatically retrain without human intervention" },
       ],
       metrics: [
         { value: "20-40% ↑", label: "Forecast Accuracy", color: "text-cyan", borderColor: "border-t-cyan" },
@@ -49,9 +45,9 @@ const SupplyChain = () => {
       challenge: "Overstocking increases holding costs, while understocking leads to lost sales and customer dissatisfaction.",
       solution: "We implement probabilistic inventory models that calculate optimal safety stock and reorder points.",
       howItWorks: [
-        { agent: "Inventory agents", action: "recommend optimal replenishment quantities" },
-        { agent: "Redistribution agents", action: "rebalance stock across locations" },
-        { agent: "Exception agents", action: "respond to supply disruptions automatically" },
+        { icon: Brain, text: "Inventory agents recommend optimal replenishment quantities" },
+        { icon: Activity, text: "Redistribution agents rebalance stock across locations" },
+        { icon: Zap, text: "Exception agents respond to supply disruptions automatically" },
       ],
       metrics: [
         { value: "25-35% ↓", label: "Inventory Holding Costs", color: "text-green", borderColor: "border-t-green" },
@@ -66,9 +62,9 @@ const SupplyChain = () => {
       challenge: "Decisions are made in silos with limited real-time visibility.",
       solution: "We build AI-powered control towers aggregating data across suppliers, warehouses, transportation, and sales.",
       howItWorks: [
-        { agent: "Monitoring agents", action: "detect risks and delays" },
-        { agent: "Decision agents", action: "recommend corrective actions" },
-        { agent: "Scenario agents", action: "simulate outcomes before execution" },
+        { icon: Brain, text: "Monitoring agents detect risks and delays" },
+        { icon: Activity, text: "Decision agents recommend corrective actions" },
+        { icon: Zap, text: "Scenario agents simulate outcomes before execution" },
       ],
       metrics: [
         { value: "Faster Response", label: "To Disruptions", color: "text-purple", borderColor: "border-t-purple" },
@@ -452,7 +448,10 @@ const SupplyChain = () => {
                           );
                         })}
                       </div>
-                    </div>
+                      <div className={`text-2xl font-extrabold ${item.color}`}>{item.value}</div>
+                    </motion.div>
+                  ))}
+                </div>
 
                     {/* Business Impact Cards */}
                     <div className="grid md:grid-cols-3 gap-6">
@@ -473,7 +472,59 @@ const SupplyChain = () => {
                       ))}
                     </div>
                   </div>
+                  <div className="h-2 bg-slate-800/50 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: "94%" }}
+                      transition={{ duration: 1.5, delay: 0.8 }}
+                      className="h-full bg-gradient-to-r from-orange-500 to-purple-500 rounded-full"
+                    />
+                  </div>
+                  <div className="flex justify-between mt-2">
+                    <span className="text-xs text-slate-500">Operational Efficiency</span>
+                    <span className="text-xs font-bold text-orange-400">94%</span>
+                  </div>
                 </div>
+              </div>
+
+              {/* Floating Decorative Elements */}
+              <motion.div
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-6 -right-6 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl -z-10"
+              />
+              <motion.div
+                animate={{ y: [0, 15, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -z-10"
+              />
+            </motion.div>
+          </div>
+        </section>
+
+        {/* INDUSTRY CHALLENGES SECTION */}
+        <section className="py-[120px] px-6 lg:px-20 bg-slate-950 text-center">
+          <div className="max-w-[900px] mx-auto mb-20">
+            <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-6">Industry Challenges</h2>
+            <p className="text-lg lg:text-[20px] text-slate-400 leading-relaxed">
+              Supply chain leaders operate in an environment defined by uncertainty: fluctuating demand, supplier instability, logistics disruptions, and rising inventory costs.
+            </p>
+          </div>
+          <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-8">
+            {challenges.map((c, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 p-10 rounded-2xl flex items-center gap-6 text-left hover:border-slate-700 transition-all"
+              >
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0`} style={{ background: c.bgColor }}>
+                  <c.icon className="text-white w-6 h-6" />
+                </div>
+                <p className="text-lg lg:text-[20px] font-medium text-slate-300 leading-snug">{c.text}</p>
               </motion.div>
             ))}
           </div>
@@ -552,6 +603,12 @@ const SupplyChain = () => {
                       </td>
                     </motion.tr>
                   ))}
+                  <tr className="bg-gradient-to-r from-amber-950/50 to-amber-900/30 border-2 border-amber-500/50">
+                    <td className="p-6 font-bold text-white flex items-center gap-2">
+                      <Award className="text-amber-400" /> Payback Period
+                    </td>
+                    <td className="p-6 font-bold text-2xl lg:text-[28px] text-amber-400">3–6 months</td>
+                  </tr>
                 </tbody>
               </table>
             </motion.div>
@@ -628,6 +685,7 @@ const SupplyChain = () => {
               `,
             }} />
           </div>
+        </section>
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <motion.div

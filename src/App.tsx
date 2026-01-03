@@ -22,6 +22,9 @@ import Agriculture from "./pages/industries/Agriculture";
 import SupplyChain from "./pages/industries/SupplyChain";
 import Manufacturing from "./pages/industries/Manufacturing";
 import Insurance from "./pages/industries/Insurance";
+import Media from "./pages/industries/Media";
+import Healthcare from "./pages/industries/Healthcare";
+import Retail from "./pages/industries/Retail";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -54,6 +57,9 @@ const App = () => (
           <Route path="/industries/supply-chain" element={<SupplyChain />} />
           <Route path="/industries/manufacturing" element={<Manufacturing />} />
           <Route path="/industries/insurance" element={<Insurance />} />
+          <Route path="/industries/media" element={<Media />} />
+          <Route path="/industries/healthcare" element={<Healthcare />} />
+          <Route path="/industries/retail" element={<Retail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 

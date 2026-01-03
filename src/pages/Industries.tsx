@@ -53,7 +53,7 @@ const Industries = () => {
       description: "Inventory optimization, customer service, and personalization",
       useCases: ["Demand forecasting", "Customer support", "Personalization"],
       outcomes: ["Higher sales", "Lower inventory", "Better CX"],
-      href: null,
+      href: "/industries/retail",
     },
     {
       icon: Heart,
@@ -61,7 +61,7 @@ const Industries = () => {
       description: "Patient care coordination, administrative automation, and diagnostics",
       useCases: ["Care coordination", "Admin automation", "Diagnostic support"],
       outcomes: ["Better outcomes", "Lower costs", "Faster care"],
-      href: null,
+      href: "/industries/healthcare",
     },
     {
       icon: Film,
@@ -69,7 +69,7 @@ const Industries = () => {
       description: "Content creation, audience engagement, and distribution optimization",
       useCases: ["Content generation", "Audience analysis", "Distribution"],
       outcomes: ["More engagement", "Faster production", "Better reach"],
-      href: null,
+      href: "/industries/media",
     },
   ];
 

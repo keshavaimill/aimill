@@ -29,13 +29,14 @@ const Manufacturing = () => {
   const solutions = [
     {
       number: "01",
-      title: "Predictive Maintenance & Asset Intelligence",
-      challenge: "Most manufacturers rely on reactive or preventive maintenance, leading to either costly breakdowns or unnecessary servicing.",
-      solution: "We build machine-level predictive models using historical sensor data, vibration signals, temperature, and operational logs.",
+      title: "Demand Intelligence & Autonomous Planning",
+      challenge: "Volatile demand patterns drive stockouts, excess inventory, and margin erosion across product lines.",
+      solution: "AI Mill combines predictive analytics with agentic AI to forecast demand scenarios and continuously rebalance plans with automated corrective actions.",
       howItWorks: [
-        { agent: "Autonomous monitoring agents", action: "continuously analyze equipment health" },
-        { agent: "Failure-prediction agents", action: "trigger maintenance actions before breakdowns" },
-        { agent: "Root-cause agents", action: "learn which conditions lead to failures" },
+        { icon: Brain, text: "Demand Sensing Agents analyze sales, market signals, and external factors" },
+        { icon: Activity, text: "Scenario Planning Agents generate probabilistic demand scenarios" },
+        { icon: Zap, text: "Inventory Optimization Agents rebalance stock across warehouses automatically" },
+        { icon: CheckCircle, text: "Order Fulfillment Agents prioritize and execute customer orders optimally" },
       ],
       metrics: [
         { value: "30-50% ↓", label: "Unplanned Downtime", color: "text-green", borderColor: "border-t-green" },
@@ -46,13 +47,14 @@ const Manufacturing = () => {
     },
     {
       number: "02",
-      title: "AI-Driven Quality Inspection & Defect Prevention",
-      challenge: "Manual inspections are slow, inconsistent, and miss defects until it's too late.",
-      solution: "Computer Vision models inspect products in real time across assembly lines.",
+      title: "Production Optimization & Predictive Maintenance",
+      challenge: "Production inefficiencies and unplanned downtime reduce throughput, asset utilization, and service levels.",
+      solution: "Advanced analytics identify optimization opportunities while autonomous agents detect deviations and adjust schedules in real-time.",
       howItWorks: [
-        { agent: "Vision agents", action: "detect surface defects, misalignment, and anomalies" },
-        { agent: "Decision agents", action: "auto-flag defective batches" },
-        { agent: "Learning agents", action: "improve detection accuracy continuously" },
+        { icon: Brain, text: "Capacity Planning Agents optimize schedules across multiple plants" },
+        { icon: Activity, text: "Predictive Maintenance Agents forecast equipment failures and schedule repairs" },
+        { icon: Zap, text: "Production Adjustment Agents autonomously adjust lines for demand changes" },
+        { icon: CheckCircle, text: "Quality Control Agents monitor output and trigger corrections" },
       ],
       metrics: [
         { value: "Up to 90%", label: "Defect Detection Accuracy", color: "text-green", borderColor: "border-t-green" },
@@ -63,13 +65,32 @@ const Manufacturing = () => {
     },
     {
       number: "03",
-      title: "Autonomous Production Planning & Scheduling",
-      challenge: "Static production schedules fail to adapt to real-world disruptions like machine failures or demand fluctuations.",
-      solution: "We deploy optimization and forecasting models that continuously align demand, capacity, and constraints.",
+      title: "Supply Chain Resilience & Risk Management",
+      challenge: "Global supply chain disruptions create delays, expedited costs, and revenue risk across networks.",
+      solution: "AI Mill scores suppliers, predicts disruptions, and autonomously reroutes materials to maintain flow.",
       howItWorks: [
-        { agent: "Scheduling agents", action: "dynamically replan production" },
-        { agent: "Capacity agents", action: "rebalance workloads across lines" },
-        { agent: "Exception agents", action: "resolve conflicts autonomously" },
+        { icon: Brain, text: "Supplier Risk Agents continuously score supplier reliability" },
+        { icon: Activity, text: "Disruption Prediction Agents forecast supply chain bottlenecks" },
+        { icon: Zap, text: "Routing Optimization Agents reroute shipments in real-time" },
+        { icon: CheckCircle, text: "Inventory Reallocation Agents shift stock to mitigate shortages" },
+      ],
+      metrics: [
+        { value: "40%", label: "On-Time Delivery ↑", color: "text-emerald-400", border: "#10b981" },
+        { value: "22%", label: "Expedite Costs ↓", color: "text-cyan-400", border: "#06b6d4" },
+        { value: "28%", label: "Risk Exposure ↓", color: "text-purple-400", border: "#a855f7" },
+      ],
+      badgeGradient: "from-blue-500 to-indigo-500",
+    },
+    {
+      number: "04",
+      title: "Quality Intelligence & Process Control",
+      challenge: "Quality variability and scrap impact yield, compliance requirements, and customer trust.",
+      solution: "Data science identifies defect patterns while agentic AI enforces real-time corrections and learns from outcomes.",
+      howItWorks: [
+        { icon: Brain, text: "Defect Pattern Agents identify root causes across production lines" },
+        { icon: Activity, text: "Process Adjustment Agents fine-tune parameters automatically" },
+        { icon: Zap, text: "Quality Assurance Agents validate output against specifications" },
+        { icon: CheckCircle, text: "Continuous Learning Agents improve predictions from outcomes" },
       ],
       metrics: [
         { value: "15-25% ↑", label: "Production Throughput", color: "text-green", borderColor: "border-t-green" },
@@ -78,6 +99,15 @@ const Manufacturing = () => {
       ],
       badgeGradient: "from-purple to-cyan",
     },
+  ];
+
+  const challenges = [
+    { icon: TrendingDown, text: "Demand volatility & forecast inaccuracy" },
+    { icon: Clock, text: "Production inefficiencies & downtime" },
+    { icon: AlertCircle, text: "Supply chain disruptions & risk exposure" },
+    { icon: BarChart, text: "Quality variability & scrap rates" },
+    { icon: Shield, text: "Slow, manual decision cycles" },
+    { icon: TrendingDownIcon, text: "Rising operational costs & margin erosion" },
   ];
 
   const roiMetrics = [
@@ -282,6 +312,17 @@ const Manufacturing = () => {
                       <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
                     </div>
                   </div>
+                  <div className="mt-8 pt-8 border-t border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3, 4].map(j => (
+                          <div key={j} className="w-8 h-8 rounded-full border-2 border-slate-700 bg-slate-800" />
+                        ))}
+                      </div>
+                      <span className="text-xs font-bold text-slate-500">Plant Network</span>
+                    </div>
+                    <div className="h-6 w-24 bg-slate-800 rounded-md animate-pulse" />
+                  </div>
                 </div>
 
                 {/* Floating Decorative Elements */}
@@ -388,8 +429,6 @@ const Manufacturing = () => {
                       {solution.number}
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1">
                     <h3 className="text-3xl sm:text-4xl font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
 
@@ -439,7 +478,6 @@ const Manufacturing = () => {
                       </div>
                     </div>
 
-                    {/* Business Impact Cards */}
                     <div className="grid md:grid-cols-3 gap-6">
                       {solution.metrics.map((metric, metricIdx) => (
                         <motion.div
@@ -519,11 +557,17 @@ const Manufacturing = () => {
                           </span>
                         </div>
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
+                  <tr className="bg-gradient-to-r from-amber-950/50 to-amber-900/30 border-2 border-amber-500/50">
+                    <td className="p-6 font-bold text-white flex items-center gap-2">
+                      <Award className="text-amber-400" /> {roiMetrics[4].metric}
+                    </td>
+                    <td className={`p-6 font-bold text-2xl lg:text-3xl ${roiMetrics[4].color}`}>{roiMetrics[4].improvement}</td>
+                  </tr>
                 </tbody>
               </table>
-            </motion.div>
+            </div>
           </div>
         </section>
 
