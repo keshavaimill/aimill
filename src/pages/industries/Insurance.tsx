@@ -172,7 +172,7 @@ const Insurance = () => {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
                 >
-                  Insurance <span className="gradient-text">AI Solutions</span>
+                  Insurance <span className="gradient-text-purple">AI Solutions</span>
                 </motion.h1>
 
                 {/* Supporting Text */}

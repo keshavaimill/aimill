@@ -157,7 +157,7 @@ const SupplyChain = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-8"
                 >
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-cyan font-bold opacity-80">
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-purple font-bold opacity-80">
                     Autonomous Supply Chain Intelligence
                   </span>
                 </motion.div>
@@ -169,7 +169,7 @@ const SupplyChain = () => {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
                 >
-                  Supply Chain <span className="gradient-text">AI Solutions</span>
+                  Supply Chain <span className="gradient-text-purple">AI Solutions</span>
                 </motion.h1>
 
                 {/* Supporting Text */}
@@ -347,10 +347,10 @@ const SupplyChain = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group glass rounded-xl p-8 border border-border/50 hover:border-cyan/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="group glass rounded-xl p-8 border border-border/50 hover:border-purple/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center mb-4 group-hover:bg-cyan/30 transition-colors">
-                    <challenge.icon className="w-6 h-6 text-cyan" />
+                  <div className="w-12 h-12 rounded-xl bg-purple/20 flex items-center justify-center mb-4 group-hover:bg-purple/30 transition-colors">
+                    <challenge.icon className="w-6 h-6 text-purple" />
                   </div>
                   <p className="text-base lg:text-lg text-white leading-relaxed">{challenge.text}</p>
                 </motion.div>
@@ -395,7 +395,7 @@ const SupplyChain = () => {
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
                   {/* Number Badge */}
                   <div className="flex-shrink-0">
-                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-cyan to-green flex items-center justify-center text-foreground text-4xl font-bold shadow-xl">
+                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center text-foreground text-4xl font-bold shadow-xl">
                       {solution.number}
                     </div>
                   </div>
@@ -414,8 +414,8 @@ const SupplyChain = () => {
                       </div>
 
                       {/* Solution Box */}
-                      <div className="glass border-l-4 border-cyan p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-cyan font-bold mb-3 block">
+                      <div className="glass border-l-4 border-purple p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <span className="text-xs uppercase tracking-wider text-purple font-bold mb-3 block">
                           AI MILL SOLUTION
                         </span>
                         <p className="text-base text-white leading-relaxed">{solution.solution}</p>
@@ -423,8 +423,8 @@ const SupplyChain = () => {
                     </div>
 
                     {/* How Agentic AI Works */}
-                    <div className="mb-10 glass border border-green/30 p-8 rounded-xl bg-green-950/10">
-                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-cyan">HOW AGENTIC AI WORKS</h4>
+                    <div className="mb-10 glass border border-purple/30 p-8 rounded-xl bg-purple-950/10">
+                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-purple-400">HOW AGENTIC AI WORKS</h4>
                       <div className="space-y-4">
                         {solution.howItWorks.map((item, itemIdx) => (
                           <motion.div
@@ -435,7 +435,7 @@ const SupplyChain = () => {
                             transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
                             className="flex items-start gap-4"
                           >
-                            <div className="w-6 h-6 rounded-full bg-cyan flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-6 h-6 rounded-full bg-purple flex items-center justify-center flex-shrink-0 mt-0.5">
                               <item.icon className="w-4 h-4 text-white" />
                             </div>
                             <p className="text-gray-400">
@@ -457,7 +457,7 @@ const SupplyChain = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-cyan/30 border border-border/50 transition-all group text-center"
+                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-purple/30 border border-border/50 transition-all group text-center"
                         >
                           <div className={`text-2xl font-bold text-white mb-3 group-hover:scale-110 transition-transform`}>
                             {metric.value}
@@ -545,7 +545,7 @@ const SupplyChain = () => {
               className="glass rounded-2xl shadow-2xl overflow-hidden border border-border"
             >
               <table className="w-full border-collapse">
-                <thead className="bg-gradient-to-r from-cyan to-green">
+                <thead className="bg-gradient-to-r from-purple to-cyan">
                   <tr>
                     <th className="px-8 py-5 text-left text-white font-bold text-sm uppercase tracking-wider">Metric</th>
                     <th className="px-8 py-5 text-right text-white font-bold text-sm uppercase tracking-wider">Typical Improvement</th>
@@ -560,7 +560,7 @@ const SupplyChain = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
                       className={`${idx % 2 === 0 ? "bg-card/50" : "bg-card/30"
-                        } ${row.highlight ? "bg-cyan-500/10 border-l-4 border-cyan-500" : ""} hover:bg-cyan-500/10 transition-all`}
+                        } ${row.highlight ? "bg-purple-500/10 border-l-4 border-purple-500" : ""} hover:bg-purple-500/10 transition-all`}
                     >
                       <td className="px-8 py-6 font-semibold text-[18px] text-white">{row.metric}</td>
                       <td className="px-8 py-6 text-right">
@@ -627,7 +627,7 @@ const SupplyChain = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="group glass rounded-2xl p-10 shadow-md hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-cyan to-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-[1.4]">{item.title}</h3>
