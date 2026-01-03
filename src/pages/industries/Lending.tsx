@@ -130,25 +130,33 @@ const Lending = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-950">
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-32">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#030712]">
+          {/* Noise/Grain Overlay */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+
+          {/* Ambient Glows */}
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
+
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center py-20 lg:py-32">
               {/* Left Content - 50% */}
+              {/* Left Content Area */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col items-start"
               >
-                {/* Icon with gradient circle */}
+                {/* Upper Label */}
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="mb-6"
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mb-8"
                 >
-                  <span className="text-[12px] uppercase tracking-[2px] text-blue-600 font-semibold">
-                    FROM RULE-BASED DECISIONS TO AUTONOMOUS FINANCIAL INTELLIGENCE
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-blue-400 font-bold opacity-80">
+                    Enterprise Financial Intelligence
                   </span>
                 </motion.div>
 
@@ -156,98 +164,139 @@ const Lending = () => {
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-[60px] font-extrabold leading-[1.1] text-white mb-6"
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
                 >
-                  Lending & Financial Services AI Solutions
+                  Scale <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Autonomy</span> <br />
+                  Across Your <br />
+                  Lending Stack
                 </motion.h1>
 
-                {/* Subheading */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-[22px] font-normal leading-[1.6] text-gray-300 max-w-[600px] mb-6"
-                >
-                  The future of financial services belongs to institutions that can make faster, smarter, and safer decisions at scale.
-                </motion.p>
-
-                {/* Description */}
+                {/* Supporting Text */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-[18px] leading-[1.7] text-gray-400 max-w-[580px] mb-8"
+                  className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  AI Mill enables banks, NBFCs, fintechs, and lenders to move beyond static rules and legacy scoring models by deploying Data Science and Agentic AI systems that continuously assess risk, prevent fraud, and optimize portfolios — autonomously and in real time.
+                  Deploy agentic AI systems that transform static risk models into dynamic execution engines. Modernize underwriting, monitoring, and recovery with bank-grade intelligence.
                 </motion.p>
 
-                {/* CTA Button */}
+                {/* CTA Area */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
+                  className="flex flex-col sm:flex-row gap-5"
                 >
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 h-[56px] text-lg font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
+                    className="group relative bg-white text-black hover:bg-gray-100 px-8 h-14 text-base font-bold transition-all duration-300 rounded-lg overflow-hidden"
                     asChild
                   >
                     <Link to="/contact">
-                      Talk to Financial AI Experts
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                      <span className="relative z-10 flex items-center">
+                        Talk to Our Experts
+                        <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
                     </Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/10 text-white hover:bg-white/5 px-8 h-14 text-base font-bold transition-all rounded-lg"
+                    asChild
+                  >
+                    <Link to="/solutions">View Platform</Link>
                   </Button>
                 </motion.div>
               </motion.div>
 
               {/* Right Visual - 50% */}
+              {/* Right Visual Area */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative h-[600px] lg:h-[700px]"
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                className="relative"
               >
-                {/* Animated gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-blue-600/30 rounded-3xl blur-3xl animate-pulse" />
+                {/* Elevated Product Card */}
+                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(59,130,246,0.2)] border border-white/40 overflow-hidden">
 
-                {/* Main visual container */}
-                <div className="relative h-full bg-gradient-to-br from-blue-50 via-purple-50/50 to-blue-100 rounded-3xl p-8 flex items-center justify-center border border-blue-200/50 shadow-2xl overflow-hidden">
-                  {/* Abstract financial visualization */}
-                  <div className="absolute inset-0 opacity-20">
-                    <svg className="w-full h-full" viewBox="0 0 400 400">
-                      <defs>
-                        <pattern id="circuit" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-                          <circle cx="20" cy="20" r="1.5" fill="#3b82f6" />
-                        </pattern>
-                      </defs>
-                      <rect width="100%" height="100%" fill="url(#circuit)" />
-                    </svg>
-                  </div>
+                  {/* Grid Pattern Texture */}
+                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
 
-                  {/* Floating card elements */}
-                  <div className="relative z-10 grid grid-cols-3 gap-4 w-full max-w-md">
-                    {[
-                      { icon: BarChart, label: "Credit Score", value: "750" },
-                      { icon: TrendingUp, label: "Risk Level", value: "Low" },
-                      { icon: Shield, label: "Status", value: "Approved" },
-                      { icon: Activity, label: "Transactions", value: "Active" },
-                      { icon: Database, label: "Portfolio", value: "Healthy" },
-                      { icon: CheckCircle, label: "Compliance", value: "Pass" },
-                    ].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 2 + i * 0.3, repeat: Infinity, delay: i * 0.2 }}
-                        className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-blue-100 hover:shadow-xl transition-all"
-                      >
-                        <item.icon className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                        <div className="text-xs text-gray-600 text-center mb-1">{item.label}</div>
-                        <div className="text-sm font-bold text-blue-600 text-center">{item.value}</div>
-                      </motion.div>
-                    ))}
+                  {/* Dashboard Content */}
+                  <div className="relative h-full flex flex-col">
+                    <div className="flex justify-between items-center mb-12">
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
+                      </div>
+                      <div className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                        System Active
+                      </div>
+                    </div>
+
+                    {/* Metric Cards Grid */}
+                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
+                      {[
+                        { icon: BarChart, label: "Credit Alpha", value: "94.2%", color: "blue" },
+                        { icon: TrendingUp, label: "Port. Growth", value: "+28%", color: "indigo" },
+                        { icon: Shield, label: "Risk Mitigation", value: "Active", color: "emerald" },
+                        { icon: Activity, label: "Live Nodes", value: "1,240", color: "blue" },
+                        { icon: Database, label: "Data Flow", value: "Real-time", color: "violet" },
+                        { icon: CheckCircle, label: "Compliance", value: "Certified", color: "blue" },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, y: 15 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
+                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
+                        >
+                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
+                            ${item.color === 'blue' ? 'bg-blue-50 text-blue-500 group-hover:bg-blue-100' : ''}
+                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
+                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
+                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
+                          `}>
+                            <item.icon className="w-5 h-5" />
+                          </div>
+                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
+                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Bottom Status bar */}
+                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex -space-x-2">
+                          {[1, 2, 3].map(j => (
+                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
+                          ))}
+                        </div>
+                        <span className="text-xs font-bold text-slate-500">Agent Network</span>
+                      </div>
+                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
+                    </div>
                   </div>
                 </div>
+
+                {/* Floating Decorative Elements */}
+                <motion.div
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl z-10"
+                />
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl z-10"
+                />
               </motion.div>
             </div>
           </div>
