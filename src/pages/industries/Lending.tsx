@@ -139,20 +139,7 @@ const Lending = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-<<<<<<< Updated upstream
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#030712]">
-          {/* Noise/Grain Overlay */}
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
 
-          {/* Ambient Glows */}
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/5 rounded-full blur-[100px] pointer-events-none" />
-
-          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center py-20 lg:py-32">
-              {/* Left Content - 50% */}
-              {/* Left Content Area */}
-=======
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-800 to-slate-900">
           {/* Background Effects */}
           <div className="absolute inset-0 overflow-hidden">
@@ -166,46 +153,22 @@ const Lending = () => {
           <div className="container mx-auto max-w-[1400px] px-[80px] relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center py-20">
               {/* Left Content */}
->>>>>>> Stashed changes
+
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-<<<<<<< Updated upstream
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-start"
-              >
-                {/* Upper Label */}
-=======
+
                 transition={{ duration: 0.6 }}
                 className="space-y-8"
               >
->>>>>>> Stashed changes
+
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-8"
                 >
-<<<<<<< Updated upstream
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-blue-400 font-bold opacity-80">
-                    Enterprise Financial Intelligence
-                  </span>
-                </motion.div>
 
-                {/* Main Headline */}
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
-                >
-                  Scale <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Autonomy</span> <br />
-                  Across Your <br />
-                  Lending Stack
-                </motion.h1>
-
-                {/* Supporting Text */}
-=======
                   <span className="text-[12px] uppercase tracking-[2px] text-blue-500 font-semibold">
                     FROM RULE-BASED DECISIONS TO AUTONOMOUS FINANCIAL INTELLIGENCE
                   </span>
@@ -241,40 +204,28 @@ const Lending = () => {
                   The future of financial services belongs to institutions that can make faster, smarter, and safer decisions at scale.
                 </motion.p>
                 
->>>>>>> Stashed changes
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< Updated upstream
-                  className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[540px] mb-12 font-medium"
-=======
+
                   className="text-[18px] leading-[1.7] text-slate-400 max-w-[580px] mb-12"
->>>>>>> Stashed changes
+
                 >
                   Deploy agentic AI systems that transform static risk models into dynamic execution engines. Modernize underwriting, monitoring, and recovery with bank-grade intelligence.
                 </motion.p>
-<<<<<<< Updated upstream
 
-                {/* CTA Area */}
-=======
-                
->>>>>>> Stashed changes
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="flex flex-col sm:flex-row gap-5"
                 >
-<<<<<<< Updated upstream
-                  <Button
-                    size="lg"
-                    className="group relative bg-white text-black hover:bg-gray-100 px-8 h-14 text-base font-bold transition-all duration-300 rounded-lg overflow-hidden"
-=======
+
                   <Button 
                     size="lg" 
                     className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 h-[56px] text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 rounded-xl"
->>>>>>> Stashed changes
+
                     asChild
                   >
                     <Link to="/contact">
@@ -295,79 +246,6 @@ const Lending = () => {
                 </motion.div>
               </motion.div>
 
-<<<<<<< Updated upstream
-              {/* Right Visual - 50% */}
-              {/* Right Visual Area */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                className="relative"
-              >
-                {/* Elevated Product Card */}
-                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(59,130,246,0.2)] border border-white/40 overflow-hidden">
-
-                  {/* Grid Pattern Texture */}
-                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
-
-                  {/* Dashboard Content */}
-                  <div className="relative h-full flex flex-col">
-                    <div className="flex justify-between items-center mb-12">
-                      <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
-                      </div>
-                      <div className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest">
-                        System Active
-                      </div>
-                    </div>
-
-                    {/* Metric Cards Grid */}
-                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
-                      {[
-                        { icon: BarChart, label: "Credit Alpha", value: "94.2%", color: "blue" },
-                        { icon: TrendingUp, label: "Port. Growth", value: "+28%", color: "indigo" },
-                        { icon: Shield, label: "Risk Mitigation", value: "Active", color: "emerald" },
-                        { icon: Activity, label: "Live Nodes", value: "1,240", color: "blue" },
-                        { icon: Database, label: "Data Flow", value: "Real-time", color: "violet" },
-                        { icon: CheckCircle, label: "Compliance", value: "Certified", color: "blue" },
-                      ].map((item, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, y: 15 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
-                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
-                        >
-                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
-                            ${item.color === 'blue' ? 'bg-blue-50 text-blue-500 group-hover:bg-blue-100' : ''}
-                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
-                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
-                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
-                          `}>
-                            <item.icon className="w-5 h-5" />
-                          </div>
-                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
-                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
-                        </motion.div>
-                      ))}
-                    </div>
-
-                    {/* Bottom Status bar */}
-                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="flex -space-x-2">
-                          {[1, 2, 3].map(j => (
-                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
-                          ))}
-                        </div>
-                        <span className="text-xs font-bold text-slate-500">Agent Network</span>
-                      </div>
-                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
-                    </div>
-=======
               {/* Right Visual */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
@@ -396,7 +274,7 @@ const Lending = () => {
                         <div className={`text-xl font-bold ${item.color} text-center`}>{item.value}</div>
                       </motion.div>
                     ))}
->>>>>>> Stashed changes
+
                   </div>
                 </div>
 
@@ -460,13 +338,10 @@ const Lending = () => {
         </section>
 
         {/* Solutions Section */}
-<<<<<<< Updated upstream
-        <section className="relative py-[120px] bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900">
-          <div className="container mx-auto max-w-7xl px-[80px]">
-=======
+
         <section className="relative py-[120px] bg-slate-50">
           <div className="container mx-auto max-w-[1200px] px-[80px]">
->>>>>>> Stashed changes
+
             {solutions.map((solution, idx) => (
               <motion.div
                 key={idx}
@@ -486,29 +361,12 @@ const Lending = () => {
 
                   {/* Content */}
                   <div className="flex-1">
-<<<<<<< Updated upstream
-                    <h3 className="text-[36px] font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
-=======
+
                     <h3 className="text-[40px] font-bold text-slate-900 mb-10 leading-[1.2]">{solution.title}</h3>
->>>>>>> Stashed changes
 
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
                       {/* Challenge Box */}
-<<<<<<< Updated upstream
-                      <div className="bg-red-950/30 border-l-4 border-red-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-red-600 font-bold mb-3 block">
-                          THE CHALLENGE
-                        </span>
-                        <p className="text-base text-gray-300 leading-relaxed">{solution.challenge}</p>
-                      </div>
 
-                      {/* Solution Box */}
-                      <div className="bg-blue-950/30 border-l-4 border-blue-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-blue-600 font-bold mb-3 block">
-                          AI MILL SOLUTION
-                        </span>
-                        <p className="text-base text-gray-300 leading-relaxed">{solution.solution}</p>
-=======
                       <div className="bg-red-50 border-l-4 border-red-500 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
                         <span className="text-xs uppercase tracking-wider text-red-600 font-bold mb-3 block">
                           THE CHALLENGE
@@ -522,34 +380,12 @@ const Lending = () => {
                           AI MILL SOLUTION
                         </span>
                         <p className="text-[18px] text-gray-800 leading-[1.6]">{solution.solution}</p>
->>>>>>> Stashed changes
+
                       </div>
                     </div>
 
                     {/* How Agentic AI Operates */}
-<<<<<<< Updated upstream
-                    <div className="mb-10 bg-green-950/20 p-8 rounded-xl border border-green-900/30">
-                      <h4 className="text-xl font-semibold text-white mb-6">How Agentic AI Operates</h4>
-                      <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => (
-                          <motion.div
-                            key={itemIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                            className="flex items-start gap-4"
-                          >
-                            <div className="w-6 h-6 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <CheckCircle className="w-4 h-4 text-white" />
-                            </div>
-                            <div>
-                              <span className="font-semibold text-white">{item.agent}</span>
-                              <span className="text-gray-400"> → {item.action}</span>
-                            </div>
-                          </motion.div>
-                        ))}
-=======
+
                     <div className="mb-10 bg-green-50 border border-green-300 p-10 rounded-xl">
                       <h4 className="text-base font-bold text-green-700 uppercase tracking-wider mb-6">HOW AGENTIC AI OPERATES</h4>
                       <div className="space-y-5">
@@ -574,7 +410,7 @@ const Lending = () => {
                             </motion.div>
                           );
                         })}
->>>>>>> Stashed changes
+
                       </div>
                     </div>
 
@@ -587,11 +423,9 @@ const Lending = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-<<<<<<< Updated upstream
-                          className="bg-gray-800/50 rounded-xl p-8 shadow-md hover:shadow-xl hover:border-blue-500/30 border border-gray-700/50 transition-all group"
-=======
+
                           className="bg-white rounded-xl p-8 shadow-md border border-gray-200 hover:shadow-xl hover:translate-y-[-8px] transition-all text-center"
->>>>>>> Stashed changes
+
                         >
                           <div className={`border-t-[3px] ${metric.borderColor} pt-6`}>
                             <div className={`text-[48px] font-bold ${metric.color} mb-3`}>
@@ -599,10 +433,7 @@ const Lending = () => {
                             </div>
                             <p className="text-base font-medium text-slate-600 leading-[1.4]">{metric.label}</p>
                           </div>
-<<<<<<< Updated upstream
-                          <p className="text-sm font-medium text-gray-400">{metric.label}</p>
-=======
->>>>>>> Stashed changes
+
                         </motion.div>
                       ))}
                     </div>
@@ -614,13 +445,10 @@ const Lending = () => {
         </section>
 
         {/* ROI Metrics Table */}
-<<<<<<< Updated upstream
-        <section className="relative py-[120px] bg-gradient-to-b from-gray-900 to-gray-950">
-          <div className="container mx-auto max-w-[800px] px-[80px]">
-=======
+
         <section className="relative py-[100px] bg-white">
           <div className="container mx-auto max-w-[900px] px-[80px]">
->>>>>>> Stashed changes
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -628,13 +456,10 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-<<<<<<< Updated upstream
-              <h2 className="text-[44px] font-bold text-white mb-4 leading-[1.2]">ROI Metrics</h2>
-              <p className="text-[20px] text-gray-400 max-w-2xl mx-auto leading-[1.6]">
-=======
+
               <h2 className="text-[44px] font-bold text-slate-900 mb-4 leading-[1.2]">ROI & Measurable Outcomes</h2>
               <p className="text-[20px] text-slate-600 max-w-2xl mx-auto leading-[1.6]">
->>>>>>> Stashed changes
+
                 Measurable improvements across key lending metrics
               </p>
             </motion.div>
@@ -661,32 +486,24 @@ const Lending = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
-<<<<<<< Updated upstream
-                      className={`${idx % 2 === 0 ? "bg-white" : "bg-[#f9fafb]"
-                        } ${row.highlight ? "bg-yellow-50 border-l-4 border-yellow-500" : ""} hover:bg-blue-50/50 hover:scale-[1.01] transition-all`}
-=======
+
                       className={`${
                         idx % 2 === 0 ? "bg-white" : "bg-slate-50"
                       } ${row.highlight ? "bg-gradient-to-r from-amber-50 to-amber-100 border-l-4 border-amber-500" : ""} hover:bg-blue-50 hover:scale-[1.01] transition-all`}
->>>>>>> Stashed changes
+
                     >
                       <td className="px-8 py-6 font-semibold text-[18px] text-gray-900">{row.metric}</td>
                       <td className="px-8 py-6 text-right">
                         <div className="flex items-center justify-end gap-3">
                           {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-600" />}
                           {row.trend === "down" && <ArrowDown className="w-5 h-5 text-red-600" />}
-<<<<<<< Updated upstream
-                          <span className={`text-[24px] font-bold ${row.trend === "up" ? "text-green-600" :
-                            row.trend === "down" ? "text-red-600" :
-                              "text-yellow-600"
-                            }`}>
-=======
+
                           <span className={`text-[28px] font-bold ${
                             row.trend === "up" ? "text-green-600" : 
                             row.trend === "down" ? "text-red-600" : 
                             "text-amber-600"
                           }`}>
->>>>>>> Stashed changes
+
                             {row.improvement}
                           </span>
                         </div>
@@ -700,13 +517,10 @@ const Lending = () => {
         </section>
 
         {/* Why AI Mill Section */}
-<<<<<<< Updated upstream
-        <section className="relative py-[120px] bg-gray-900">
-          <div className="container mx-auto max-w-7xl px-[80px]">
-=======
+
         <section className="relative py-[100px] bg-slate-100">
           <div className="container mx-auto max-w-[1200px] px-[80px]">
->>>>>>> Stashed changes
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -714,15 +528,11 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-20"
             >
-<<<<<<< Updated upstream
-              <h2 className="text-[44px] font-bold text-white mb-4 leading-[1.2]">Why AI Mill</h2>
-              <p className="text-[20px] text-gray-400 max-w-2xl mx-auto leading-[1.6]">
-                Built specifically for financial services with security, compliance, and performance at the core.
-=======
+
               <h2 className="text-[44px] font-bold text-slate-900 mb-4 leading-[1.2]">Why AI Mill for Financial Services?</h2>
               <p className="text-[20px] text-slate-600 max-w-2xl mx-auto leading-[1.6]">
                 Built for financial services with industrial-grade reliability and seamless system integration.
->>>>>>> Stashed changes
+
               </p>
             </motion.div>
 
