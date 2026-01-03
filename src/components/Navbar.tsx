@@ -125,13 +125,43 @@ export const Navbar = () => {
                             bg-background/90 backdrop-blur-md
                             border border-border shadow-lg"
                   >
-                    <div className="space-y-1">
+                    <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
                         to="/industries"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm font-semibold"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm font-semibold text-primary"
                         onClick={() => setActiveDropdown(null)}
                       >
                         View All Industries →
+                      </Link>
+                    </div>
+                    <div className="space-y-1">
+                      <Link
+                        to="/industries/lending"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Lending & Financial Services
+                      </Link>
+                      <Link
+                        to="/industries/agriculture"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Agriculture
+                      </Link>
+                      <Link
+                        to="/industries/supply-chain"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Supply Chain
+                      </Link>
+                      <Link
+                        to="/industries/manufacturing"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Manufacturing
                       </Link>
                     </div>
                   </motion.div>
@@ -236,13 +266,43 @@ export const Navbar = () => {
                                 </>
                               )}
                               {item.label === "Industries" && (
-                                <Link
-                                  to="/industries"
-                                  className="block text-sm text-primary font-semibold"
-                                  onClick={() => setMobileMenuOpen(false)}
-                                >
-                                  View All Industries →
-                                </Link>
+                                <>
+                                  <Link
+                                    to="/industries"
+                                    className="block text-sm text-primary font-semibold"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    View All Industries →
+                                  </Link>
+                                  <Link
+                                    to="/industries/lending"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Lending & Financial Services
+                                  </Link>
+                                  <Link
+                                    to="/industries/agriculture"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Agriculture
+                                  </Link>
+                                  <Link
+                                    to="/industries/supply-chain"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Supply Chain
+                                  </Link>
+                                  <Link
+                                    to="/industries/manufacturing"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Manufacturing
+                                  </Link>
+                                </>
                               )}
                             </div>
                           </motion.div>
