@@ -45,7 +45,7 @@ const Industries = () => {
       description: "Claims processing, underwriting, and customer service automation",
       useCases: ["FNOL processing", "Claims validation", "Policy management"],
       outcomes: ["Faster claims", "Lower costs", "Better accuracy"],
-      href: null,
+      href: "/industries/insurance",
     },
     {
       icon: ShoppingBag,
