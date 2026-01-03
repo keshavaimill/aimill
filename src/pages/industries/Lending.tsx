@@ -172,7 +172,7 @@ const Lending = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-8"
                 >
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-cyan font-bold opacity-80">
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-purple font-bold opacity-80">
                     Enterprise Financial Intelligence
                   </span>
                 </motion.div>
@@ -184,7 +184,7 @@ const Lending = () => {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-foreground mb-8"
                 >
-                  Scale <span className="gradient-text">Autonomy</span> <br />
+                  Scale <span className="gradient-text-purple">Autonomy</span> <br />
                   Across Your <br />
                   Lending Stack
                 </motion.h1>
@@ -228,68 +228,89 @@ const Lending = () => {
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="relative"
               >
-                {/* Elevated Product Card */}
-                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(59,130,246,0.2)] border border-white/40 overflow-hidden">
+                {/* Elevated Product Card - Dark Premium Redesign */}
+                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-gradient-to-br from-[#1a1f35] to-[#0b0f19] rounded-[32px] p-8 sm:p-10 shadow-[0_0_50px_-10px_rgba(0,0,0,0.7),0_0_30px_rgba(124,58,237,0.15)] border border-white/10 overflow-hidden group">
 
-                  {/* Grid Pattern Texture */}
-                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
+                  {/* Noise/Grain Texture */}
+                  <div className="absolute inset-0 opacity-[0.07]" style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
+                  }} />
+
+                  {/* Soft Vignette/Glow */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
                   {/* Dashboard Content */}
-                  <div className="relative h-full flex flex-col">
-                    <div className="flex justify-between items-center mb-12">
+                  <div className="relative h-full flex flex-col z-10">
+
+                    {/* Header */}
+                    <div className="flex justify-between items-center mb-10">
                       <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
-                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-slate-700/50 border border-slate-600/50" />
+                        <div className="w-3 h-3 rounded-full bg-slate-700/50 border border-slate-600/50" />
+                        <div className="w-3 h-3 rounded-full bg-slate-700/50 border border-slate-600/50" />
                       </div>
-                      <div className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest">
-                        System Active
+
+                      {/* Status Pill */}
+                      <div className="relative group/pill">
+                        <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[8px] opacity-50 group-hover/pill:opacity-80 transition-opacity" />
+                        <div className="relative px-4 py-1.5 bg-slate-900/40 backdrop-blur-md border border-blue-500/30 rounded-full flex items-center gap-2">
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                          </span>
+                          <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest">System Active</span>
+                        </div>
                       </div>
                     </div>
 
                     {/* Metric Cards Grid */}
-                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
+                    <div className="grid grid-cols-2 gap-4 flex-1 content-start">
                       {[
-                        { icon: BarChart, label: "Credit Alpha", value: "94.2%", color: "blue" },
-                        { icon: TrendingUp, label: "Port. Growth", value: "+28%", color: "indigo" },
-                        { icon: Shield, label: "Risk Mitigation", value: "Active", color: "emerald" },
-                        { icon: Activity, label: "Live Nodes", value: "1,240", color: "blue" },
-                        { icon: Database, label: "Data Flow", value: "Real-time", color: "violet" },
-                        { icon: CheckCircle, label: "Compliance", value: "Certified", color: "blue" },
+                        { icon: BarChart, label: "Credit Alpha", value: "94.2%", color: "text-blue-400", bg: "bg-blue-500/10", border: "border-blue-500/20" },
+                        { icon: TrendingUp, label: "Port. Growth", value: "+28%", color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+                        { icon: Shield, label: "Risk Mitigation", value: "Active", color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+                        { icon: Activity, label: "Live Nodes", value: "1,240", color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+                        { icon: Database, label: "Data Flow", value: "Real-time", color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
+                        { icon: CheckCircle, label: "Compliance", value: "Certified", color: "text-violet-400", bg: "bg-violet-500/10", border: "border-violet-500/20" },
                       ].map((item, i) => (
                         <motion.div
                           key={i}
                           initial={{ opacity: 0, y: 15 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
-                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
+                          transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                          whileHover={{ y: -4, backgroundColor: "rgba(255,255,255,0.08)" }}
+                          className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/5 hover:border-white/10 transition-all cursor-default group/card overflow-hidden"
                         >
-                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
-                            ${item.color === 'blue' ? 'bg-blue-50 text-blue-500 group-hover:bg-blue-100' : ''}
-                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
-                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
-                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
-                          `}>
-                            <item.icon className="w-5 h-5" />
+                          <div className="flex items-start justify-between mb-4">
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${item.bg} ${item.border} border`}>
+                              <item.icon className={`w-5 h-5 ${item.color}`} />
+                            </div>
+                            <div className={`w-1.5 h-1.5 rounded-full ${item.bg.replace('/10', '/50')}`} />
                           </div>
-                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
-                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
+                          <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">{item.label}</div>
+                          <div className="text-xl font-bold text-white tracking-tight">{item.value}</div>
+
+                          {/* Subtle Gradient Glow on Hover */}
+                          <div className={`absolute -right-10 -bottom-10 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover/card:opacity-20 transition-opacity ${item.bg.replace('/10', '')}`} />
                         </motion.div>
                       ))}
                     </div>
 
                     {/* Bottom Status bar */}
-                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="flex -space-x-2">
                           {[1, 2, 3].map(j => (
-                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
+                            <div key={j} className="w-8 h-8 rounded-full border border-slate-800 bg-slate-800/80 backdrop-blur flex items-center justify-center text-[10px] text-slate-400 font-bold">
+                              AG
+                            </div>
                           ))}
                         </div>
-                        <span className="text-xs font-bold text-slate-500">Agent Network</span>
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Agents Online</span>
                       </div>
-                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
+                      <div className="h-1.5 w-24 bg-slate-800 rounded-full overflow-hidden">
+                        <div className="h-full w-2/3 bg-purple-500 rounded-full animate-pulse" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -316,7 +337,7 @@ const Lending = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Rich gradient base */}
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
-            
+
             {/* Visible mesh gradient */}
             <div className="absolute inset-0 opacity-50" style={{
               backgroundImage: `
@@ -325,12 +346,12 @@ const Lending = () => {
                 radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
               `,
             }} />
-            
+
             {/* Visible dot pattern */}
             <div className="absolute inset-0 opacity-40" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
             }} />
-            
+
             {/* Visible grid */}
             <div className="absolute inset-0 opacity-20" style={{
               backgroundImage: `
@@ -362,10 +383,10 @@ const Lending = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group glass rounded-xl p-8 border border-border/50 hover:border-cyan/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="group glass rounded-xl p-8 border border-border/50 hover:border-purple/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center mb-4 group-hover:bg-cyan/30 transition-colors">
-                    <challenge.icon className="w-6 h-6 text-cyan group-hover:text-cyan" />
+                  <div className="w-12 h-12 rounded-xl bg-purple/20 flex items-center justify-center mb-4 group-hover:bg-purple/30 transition-colors">
+                    <challenge.icon className="w-6 h-6 text-purple group-hover:text-purple" />
                   </div>
                   <p className="text-base lg:text-lg text-foreground leading-relaxed">{challenge.text}</p>
                 </motion.div>
@@ -404,82 +425,93 @@ const Lending = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="mb-[48px] last:mb-0"
+                className="mb-32 last:mb-0 relative"
               >
-                <div className="flex flex-col lg:flex-row gap-12 items-start">
-                  {/* Number Badge - 120px diameter, circular gradient, sticky on scroll */}
+                {/* Section Header with Number Badge */}
+                <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-8 mb-12">
                   <div className="flex-shrink-0">
-                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-cyan to-green flex items-center justify-center text-foreground text-4xl font-bold shadow-xl hover:shadow-2xl transition-all">
+                    <div
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full shadow-[0_0_30px_-5px_rgba(168,85,247,0.4)] flex items-center justify-center text-white text-3xl md:text-4xl font-bold border-4 border-black/50"
+                      style={{ backgroundImage: "var(--gradient-purple-pink)" }}
+                    >
                       {solution.number}
                     </div>
                   </div>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-[1.5]">
+                    {solution.title}
+                  </h3>
+                </div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-10 leading-[1.3]">{solution.title}</h3>
-
-                    <div className="grid md:grid-cols-2 gap-6 mb-10">
-                      {/* Challenge Box */}
-                      <div className="glass border-l-4 border-destructive p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-destructive font-bold mb-3 block">
-                          THE CHALLENGE
-                        </span>
-                        <p className="text-base text-foreground leading-relaxed">{solution.challenge}</p>
-                      </div>
-
-                      {/* Solution Box */}
-                      <div className="glass border-l-4 border-cyan p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-cyan font-bold mb-3 block">
-                          AI MILL SOLUTION
-                        </span>
-                        <p className="text-base text-foreground leading-relaxed">{solution.solution}</p>
-                      </div>
-                    </div>
-
-                    {/* How Agentic AI Operates */}
-                    <div className="mb-10 glass border border-green/30 p-8 rounded-xl">
-                      <h4 className="text-xl font-semibold text-foreground mb-6">How Agentic AI Operates</h4>
-                      <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => (
-                          <motion.div
-                            key={itemIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                            className="flex items-start gap-4"
-                          >
-                            <div className="w-6 h-6 rounded-full bg-green flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <CheckCircle className="w-4 h-4 text-foreground" />
-                            </div>
-                            <div>
-                              <span className="font-semibold text-foreground">{item.agent}</span>
-                              <span className="text-muted-foreground"> → {item.action}</span>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Business Impact Cards */}
-                    <div className="grid md:grid-cols-3 gap-6">
-                      {solution.metrics.map((metric, metricIdx) => (
-                        <motion.div
-                          key={metricIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-cyan/30 border border-border/50 transition-all group"
-                        >
-                          <div className={`text-2xl font-bold ${metric.color} mb-3 group-hover:scale-110 transition-transform`}>
-                            {metric.value}
-                          </div>
-                          <p className="text-sm font-medium text-muted-foreground">{metric.label}</p>
-                        </motion.div>
-                      ))}
-                    </div>
+                {/* Challenge & Solution Grid */}
+                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+                  {/* Challenge Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-red-500/80" />
+                    <span className="text-xs font-bold text-red-400 uppercase tracking-[0.2em] mb-4 block">
+                      The Challenge
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed">
+                      {solution.challenge}
+                    </p>
                   </div>
+
+                  {/* Solution Box */}
+                  <div className="bg-[#0f111a] border border-white/5 rounded-2xl p-8 relative overflow-hidden group">
+                    <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
+                    <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
+                      AI Mill Solution
+                    </span>
+                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
+                      {solution.solution}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Agentic Workflow - Striped Rows */}
+                <div className="bg-[#06070a] border border-white/5 rounded-3xl overflow-hidden mb-12">
+                  <div className="px-8 py-6 border-b border-white/5 bg-white/[0.02]">
+                    <h4 className="text-sm font-bold text-purple-400 uppercase tracking-[0.2em]">
+                      How Agentic AI Works
+                    </h4>
+                  </div>
+                  <div className="divide-y divide-white/5">
+                    {solution.howItWorks.map((item, itemIdx) => (
+                      <div
+                        key={itemIdx}
+                        className={`px-8 py-5 flex items-start md:items-center gap-4 group transition-colors hover:bg-white/[0.02] ${itemIdx % 2 === 0 ? 'bg-transparent' : 'bg-white/[0.01]'
+                          }`}
+                      >
+                        <div className="w-8 h-8 rounded-full bg-purple/10 flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
+                          <CheckCircle className="w-4 h-4 text-purple-400" />
+                        </div>
+                        <div className="flex flex-col md:flex-row gap-1 md:gap-3 text-base">
+                          <span className="font-semibold text-white">{item.agent}</span>
+                          <span className="hidden md:inline text-gray-600">→</span>
+                          <span className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                            {item.action}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* KPI Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {solution.metrics.map((metric, metricIdx) => (
+                    <div
+                      key={metricIdx}
+                      className="bg-[#0f111a] border border-white/5 rounded-2xl p-6 hover:border-purple/30 transition-all duration-300 group"
+                    >
+                      <div className={`text-4xl font-bold mb-2 ${metric.color} tracking-tight`}>
+                        {metric.value}
+                      </div>
+                      <div className="text-sm font-medium text-gray-500 uppercase tracking-widest group-hover:text-gray-400 transition-colors">
+                        {metric.label}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
@@ -530,7 +562,7 @@ const Lending = () => {
               className="glass rounded-2xl shadow-2xl overflow-hidden border border-border"
             >
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-cyan to-green">
+                <thead className="bg-gradient-to-r from-purple to-cyan">
                   <tr>
                     <th className="px-6 py-5 text-left text-foreground font-bold text-lg">Metric</th>
                     <th className="px-6 py-5 text-right text-foreground font-bold text-lg">Improvement</th>
@@ -545,7 +577,7 @@ const Lending = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
                       className={`${idx % 2 === 0 ? "bg-card/50" : "bg-card/30"
-                        } ${row.highlight ? "bg-yellow/10 border-l-4 border-yellow-500" : ""} hover:bg-cyan/10 hover:scale-[1.01] transition-all`}
+                        } ${row.highlight ? "bg-purple-500/10 border-l-4 border-purple-500" : ""} hover:bg-purple-500/10 transition-all`}
                     >
                       <td className="px-6 py-5 font-semibold text-foreground text-base">{row.metric}</td>
                       <td className="px-6 py-5 text-right">
@@ -614,7 +646,7 @@ const Lending = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="group glass rounded-2xl p-10 shadow-md hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan to-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple to-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <item.icon className="w-7 h-7 text-foreground" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 leading-[1.4]">{item.title}</h3>

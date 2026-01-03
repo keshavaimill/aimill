@@ -178,7 +178,7 @@ const Agriculture = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-8"
                 >
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-cyan font-bold opacity-80">
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-purple font-bold opacity-80">
                     FROM EXPERIENCE-DRIVEN FARMING TO AUTONOMOUS PRECISION AGRICULTURE
                   </span>
                 </motion.div>
@@ -189,7 +189,7 @@ const Agriculture = () => {
                   transition={{ duration: 0.6, delay: 0.3 }}
                   className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-foreground mb-8"
                 >
-                  Agriculture <span className="gradient-text">AI Solutions</span>
+                  Agriculture <span className="gradient-text-purple">AI Solutions</span>
                 </motion.h1>
 
                 <motion.p
@@ -362,10 +362,10 @@ const Agriculture = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group glass rounded-xl p-8 border border-border/50 hover:border-cyan/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  className="group glass rounded-xl p-8 border border-border/50 hover:border-purple/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-cyan/20 flex items-center justify-center mb-4 group-hover:bg-cyan/30 transition-colors">
-                    <challenge.icon className="w-6 h-6 text-cyan" />
+                  <div className="w-12 h-12 rounded-xl bg-purple/20 flex items-center justify-center mb-4 group-hover:bg-purple/30 transition-colors">
+                    <challenge.icon className="w-6 h-6 text-purple" />
                   </div>
                   <p className="text-base lg:text-lg text-foreground leading-relaxed">{challenge.text}</p>
                 </motion.div>
@@ -409,7 +409,7 @@ const Agriculture = () => {
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
                   {/* Number Badge */}
                   <div className="flex-shrink-0">
-                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-cyan to-green flex items-center justify-center text-foreground text-4xl font-bold shadow-xl hover:shadow-2xl transition-all">
+                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center text-foreground text-4xl font-bold shadow-xl hover:shadow-2xl transition-all">
                       {solution.number}
                     </div>
                   </div>
@@ -428,8 +428,8 @@ const Agriculture = () => {
                       </div>
 
                       {/* Solution Box */}
-                      <div className="glass border-l-4 border-cyan p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-cyan font-bold mb-3 block">
+                      <div className="glass border-l-4 border-purple p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <span className="text-xs uppercase tracking-wider text-purple font-bold mb-3 block">
                           AI MILL SOLUTION
                         </span>
                         <p className="text-base text-foreground leading-relaxed">{solution.solution}</p>
@@ -438,7 +438,7 @@ const Agriculture = () => {
 
                     {/* How Agentic AI Operates */}
                     <div className="mb-10 glass border border-green/30 p-8 rounded-xl">
-                      <h4 className="text-xl font-semibold text-foreground mb-6">How Agentic AI Operates</h4>
+                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-purple-400">HOW AGENTIC AI WORKS</h4>
                       <div className="space-y-5">
                         {solution.howItWorks.map((item, itemIdx) => {
                           const Icon = solutionIcons[itemIdx % solutionIcons.length];
@@ -473,7 +473,7 @@ const Agriculture = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-cyan/30 border border-border/50 transition-all group"
+                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-purple/30 border border-border/50 transition-all group"
                         >
                           <div className={`text-2xl font-bold ${metric.color.includes('green') ? 'text-green' : metric.color.includes('sky') ? 'text-cyan' : metric.color.includes('amber') ? 'text-yellow-500' : metric.color.includes('red') ? 'text-destructive' : 'text-foreground'} mb-3 group-hover:scale-110 transition-transform`}>
                             {metric.value}
@@ -533,7 +533,7 @@ const Agriculture = () => {
               className="glass rounded-2xl shadow-2xl overflow-hidden border border-border"
             >
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-cyan to-green">
+                <thead className="bg-gradient-to-r from-purple to-cyan">
                   <tr>
                     <th className="px-6 py-5 text-left text-foreground font-bold text-lg">Metric</th>
                     <th className="px-6 py-5 text-right text-foreground font-bold text-lg">Typical Improvement</th>
@@ -548,7 +548,7 @@ const Agriculture = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
                       className={`${idx % 2 === 0 ? "bg-card/50" : "bg-card/30"
-                        } ${row.highlight ? "bg-cyan-500/10 border-l-4 border-cyan-500" : ""} hover:bg-cyan-500/10 transition-all`}
+                        } ${row.highlight ? "bg-purple-500/10 border-l-4 border-purple-500" : ""} hover:bg-purple-500/10 transition-all`}
                     >
                       <td className="px-6 py-5 font-semibold text-foreground text-base">{row.metric}</td>
                       <td className="px-6 py-5 text-right">
@@ -557,7 +557,7 @@ const Agriculture = () => {
                           {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
                           <span className={`text-2xl font-bold ${row.trend === "up" ? "text-green" :
                             row.trend === "down" ? "text-destructive" :
-                              "text-cyan-500"
+                              "text-cyan"
                             }`}>
                             {row.improvement}
                           </span>
@@ -617,7 +617,7 @@ const Agriculture = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="group glass rounded-2xl p-10 shadow-md hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-cyan to-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-purple to-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 leading-[1.4]">{item.title}</h3>
