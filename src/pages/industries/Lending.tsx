@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { 
+import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
   Target, TrendingUp, Shield, Zap, BarChart, CheckCircle,
   CreditCard, Wallet, FileText, ArrowUp, ArrowDown, Brain,
@@ -130,7 +130,7 @@ const Lending = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-gray-950">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-20 lg:py-32">
               {/* Left Content - 50% */}
@@ -151,45 +151,45 @@ const Lending = () => {
                     FROM RULE-BASED DECISIONS TO AUTONOMOUS FINANCIAL INTELLIGENCE
                   </span>
                 </motion.div>
-                
+
                 {/* Main Headline */}
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-[60px] font-extrabold leading-[1.1] text-[#0f0f0f] mb-6"
+                  className="text-[60px] font-extrabold leading-[1.1] text-white mb-6"
                 >
                   Lending & Financial Services AI Solutions
                 </motion.h1>
-                
+
                 {/* Subheading */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-[22px] font-normal leading-[1.6] text-[#4b5563] max-w-[600px] mb-6"
+                  className="text-[22px] font-normal leading-[1.6] text-gray-300 max-w-[600px] mb-6"
                 >
                   The future of financial services belongs to institutions that can make faster, smarter, and safer decisions at scale.
                 </motion.p>
-                
+
                 {/* Description */}
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-[18px] leading-[1.7] text-[#6b7280] max-w-[580px] mb-8"
+                  className="text-[18px] leading-[1.7] text-gray-400 max-w-[580px] mb-8"
                 >
                   AI Mill enables banks, NBFCs, fintechs, and lenders to move beyond static rules and legacy scoring models by deploying Data Science and Agentic AI systems that continuously assess risk, prevent fraud, and optimize portfolios — autonomously and in real time.
                 </motion.p>
-                
+
                 {/* CTA Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-8 h-[56px] text-lg font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl"
                     asChild
                   >
@@ -210,7 +210,7 @@ const Lending = () => {
               >
                 {/* Animated gradient background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-blue-600/30 rounded-3xl blur-3xl animate-pulse" />
-                
+
                 {/* Main visual container */}
                 <div className="relative h-full bg-gradient-to-br from-blue-50 via-purple-50/50 to-blue-100 rounded-3xl p-8 flex items-center justify-center border border-blue-200/50 shadow-2xl overflow-hidden">
                   {/* Abstract financial visualization */}
@@ -224,7 +224,7 @@ const Lending = () => {
                       <rect width="100%" height="100%" fill="url(#circuit)" />
                     </svg>
                   </div>
-                  
+
                   {/* Floating card elements */}
                   <div className="relative z-10 grid grid-cols-3 gap-4 w-full max-w-md">
                     {[
@@ -297,7 +297,7 @@ const Lending = () => {
         </section>
 
         {/* Solutions Section */}
-        <section className="relative py-[120px] bg-gradient-to-b from-white via-gray-50/50 to-white">
+        <section className="relative py-[120px] bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900">
           <div className="container mx-auto max-w-7xl px-[80px]">
             {solutions.map((solution, idx) => (
               <motion.div
@@ -318,29 +318,29 @@ const Lending = () => {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-[36px] font-bold text-black mb-10 leading-[1.3]">{solution.title}</h3>
+                    <h3 className="text-[36px] font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
 
                     <div className="grid md:grid-cols-2 gap-6 mb-10">
                       {/* Challenge Box */}
-                      <div className="bg-[#fef2f2] border-l-4 border-red-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                      <div className="bg-red-950/30 border-l-4 border-red-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
                         <span className="text-xs uppercase tracking-wider text-red-600 font-bold mb-3 block">
                           THE CHALLENGE
                         </span>
-                        <p className="text-base text-gray-700 leading-relaxed">{solution.challenge}</p>
+                        <p className="text-base text-gray-300 leading-relaxed">{solution.challenge}</p>
                       </div>
 
                       {/* Solution Box */}
-                      <div className="bg-blue-50/80 border-l-4 border-blue-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                      <div className="bg-blue-950/30 border-l-4 border-blue-500 p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
                         <span className="text-xs uppercase tracking-wider text-blue-600 font-bold mb-3 block">
                           AI MILL SOLUTION
                         </span>
-                        <p className="text-base text-gray-700 leading-relaxed">{solution.solution}</p>
+                        <p className="text-base text-gray-300 leading-relaxed">{solution.solution}</p>
                       </div>
                     </div>
 
                     {/* How Agentic AI Operates */}
-                    <div className="mb-10 bg-green-50/50 p-8 rounded-xl">
-                      <h4 className="text-xl font-semibold text-gray-900 mb-6">How Agentic AI Operates</h4>
+                    <div className="mb-10 bg-green-950/20 p-8 rounded-xl border border-green-900/30">
+                      <h4 className="text-xl font-semibold text-white mb-6">How Agentic AI Operates</h4>
                       <div className="space-y-4">
                         {solution.howItWorks.map((item, itemIdx) => (
                           <motion.div
@@ -355,8 +355,8 @@ const Lending = () => {
                               <CheckCircle className="w-4 h-4 text-white" />
                             </div>
                             <div>
-                              <span className="font-semibold text-gray-900">{item.agent}</span>
-                              <span className="text-gray-600"> → {item.action}</span>
+                              <span className="font-semibold text-white">{item.agent}</span>
+                              <span className="text-gray-400"> → {item.action}</span>
                             </div>
                           </motion.div>
                         ))}
@@ -372,12 +372,12 @@ const Lending = () => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl hover:border-blue-200 transition-all group"
+                          className="bg-gray-800/50 rounded-xl p-8 shadow-md hover:shadow-xl hover:border-blue-500/30 border border-gray-700/50 transition-all group"
                         >
                           <div className={`text-[24px] font-bold ${metric.color} mb-3 group-hover:scale-110 transition-transform`}>
                             {metric.value}
                           </div>
-                          <p className="text-sm font-medium text-gray-600">{metric.label}</p>
+                          <p className="text-sm font-medium text-gray-400">{metric.label}</p>
                         </motion.div>
                       ))}
                     </div>
@@ -389,7 +389,7 @@ const Lending = () => {
         </section>
 
         {/* ROI Metrics Table */}
-        <section className="relative py-[120px] bg-gradient-to-b from-gray-50 to-white">
+        <section className="relative py-[120px] bg-gradient-to-b from-gray-900 to-gray-950">
           <div className="container mx-auto max-w-[800px] px-[80px]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -398,8 +398,8 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-[44px] font-bold text-black mb-4 leading-[1.2]">ROI Metrics</h2>
-              <p className="text-[20px] text-gray-600 max-w-2xl mx-auto leading-[1.6]">
+              <h2 className="text-[44px] font-bold text-white mb-4 leading-[1.2]">ROI Metrics</h2>
+              <p className="text-[20px] text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Measurable improvements across key lending metrics
               </p>
             </motion.div>
@@ -426,20 +426,18 @@ const Lending = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
-                      className={`${
-                        idx % 2 === 0 ? "bg-white" : "bg-[#f9fafb]"
-                      } ${row.highlight ? "bg-yellow-50 border-l-4 border-yellow-500" : ""} hover:bg-blue-50/50 hover:scale-[1.01] transition-all`}
+                      className={`${idx % 2 === 0 ? "bg-white" : "bg-[#f9fafb]"
+                        } ${row.highlight ? "bg-yellow-50 border-l-4 border-yellow-500" : ""} hover:bg-blue-50/50 hover:scale-[1.01] transition-all`}
                     >
                       <td className="px-6 py-5 font-semibold text-gray-900 text-base">{row.metric}</td>
                       <td className="px-6 py-5 text-right">
                         <div className="flex items-center justify-end gap-3">
                           {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-600" />}
                           {row.trend === "down" && <ArrowDown className="w-5 h-5 text-red-600" />}
-                          <span className={`text-[24px] font-bold ${
-                            row.trend === "up" ? "text-green-600" : 
-                            row.trend === "down" ? "text-red-600" : 
-                            "text-yellow-600"
-                          }`}>
+                          <span className={`text-[24px] font-bold ${row.trend === "up" ? "text-green-600" :
+                            row.trend === "down" ? "text-red-600" :
+                              "text-yellow-600"
+                            }`}>
                             {row.improvement}
                           </span>
                         </div>
@@ -453,7 +451,7 @@ const Lending = () => {
         </section>
 
         {/* Why AI Mill Section */}
-        <section className="relative py-[120px] bg-white">
+        <section className="relative py-[120px] bg-gray-900">
           <div className="container mx-auto max-w-7xl px-[80px]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -462,8 +460,8 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-[44px] font-bold text-black mb-4 leading-[1.2]">Why AI Mill</h2>
-              <p className="text-[20px] text-gray-600 max-w-2xl mx-auto leading-[1.6]">
+              <h2 className="text-[44px] font-bold text-white mb-4 leading-[1.2]">Why AI Mill</h2>
+              <p className="text-[20px] text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for financial services with security, compliance, and performance at the core.
               </p>
             </motion.div>
