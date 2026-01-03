@@ -1,181 +1,120 @@
-import React, { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
-import { 
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
-  TrendingUp, Shield, BarChart3, CheckCircle, FileText, Activity, 
-  AlertTriangle, Sparkles, Zap, ShieldCheck, Cpu, 
-  ArrowUpRight, BarChart, Scale, Layers, ChevronDown, Calculator
+  Target, TrendingUp, Shield, Zap, BarChart3, CheckCircle,
+  FileText, ArrowUp, ArrowDown, Activity, AlertTriangle, Building2,
+  Sparkles, Brain
 } from "lucide-react";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
-// --- Data Structures ---
+const Insurance = () => {
+  const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
 
-const PROBLEMS = [
-  { 
-    icon: TrendingDown, 
-    title: "Loss Ratio Deterioration", 
-    desc: "Inaccurate pricing and delayed risk signals erode profitability.",
-    color: "text-rose-400",
-    bg: "bg-rose-500/5"
-  },
-  { 
-    icon: Clock, 
-    title: "FNOL Delays & Intake Quality", 
-    desc: "Slow, incomplete first notice drives leakage and customer frustration.",
-    color: "text-amber-400",
-    bg: "bg-amber-500/5"
-  },
-  { 
-    icon: AlertCircle, 
-    title: "Claims Leakage", 
-    desc: "Manual reviews increase fraud exposure and handling costs.",
-    color: "text-orange-400",
-    bg: "bg-orange-500/5"
-  },
-  { 
-    icon: FileText, 
-    title: "Underwriting Bottlenecks", 
-    desc: "Human-heavy processes slow growth and create inconsistency.",
-    color: "text-indigo-400",
-    bg: "bg-indigo-500/5"
-  },
-  { 
-    icon: Users, 
-    title: "Customer Churn", 
-    desc: "Reactive service and generic offers reduce retention.",
-    color: "text-sky-400",
-    bg: "bg-sky-500/5"
-  }
-];
+  const problems = [
+    { icon: TrendingDown, title: "Loss Ratio Deterioration", text: "Inaccurate pricing and delayed risk signals erode profitability.", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: Clock, title: "FNOL Delays", text: "Slow, incomplete first notice drives leakage and rework.", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: AlertCircle, title: "Claims Leakage", text: "Manual reviews increase fraud exposure and handling costs.", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: FileText, title: "Underwriting Bottlenecks", text: "Human-heavy processes slow growth and create inconsistency.", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Users, title: "Customer Churn", text: "Reactive service and generic offers reduce retention.", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: AlertTriangle, title: "Operational Risk", text: "Manual errors and compliance gaps drive rising costs.", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+  ];
 
-const SOLUTION_DETAILS = [
-  {
-    id: "loss-ratio",
-    title: "Loss Ratio & Risk Management",
-    ds: ["Risk scoring, pricing optimization, and loss forecasting.", "Explainable, portfolio-level insights."],
-    agentic: ["Monitors exposure and adjusts actions continuously.", "Automated pricing triggers based on real-time risk data."]
-  },
-  {
-    id: "fnol",
-    title: "FNOL & Intake Quality",
-    ds: ["Severity prediction and claim classification.", "Data completeness scoring at the point of intake."],
-    agentic: ["Guides FNOL in real time and validates inputs.", "Triggers next-best actions (triage/dispatch) instantly."]
-  },
-  {
-    id: "claims",
-    title: "Claims & Resolution",
-    ds: ["Fraud detection, triage, and settlement optimization.", "Predictive subrogation identifying potential recoveries early."],
-    agentic: ["Autonomously routes, escalates, or fast-tracks claims.", "Automates low-complexity settlement communications."]
-  },
-  {
-    id: "underwriting",
-    title: "Underwriting Efficiency",
-    ds: ["Automated risk assessment and appetite alignment.", "Multi-source data ingestion for holistic risk profiling."],
-    agentic: ["Executes straight-through underwriting (STP) within limits.", "Flags appetite exceptions to human underwriters instantly."]
-  },
-  {
-    id: "churn",
-    title: "Customer Retention & LTV",
-    ds: ["Churn prediction and cross-sell propensity modeling.", "Customer sentiment analysis from claims interactions."],
-    agentic: ["Activates personalized interventions across channels.", "Autonomous renewal outreach with optimized offer timing."]
-  }
-];
+  const solutionIcons = [Brain, Activity, Zap];
 
-const ROI_DATA = [
-  { metric: "Loss Ratio", value: "↓ 3–7%", color: "text-emerald-400" },
-  { metric: "FNOL-to-Settlement Cycle", value: "↓ 30–50%", color: "text-sky-400" },
-  { metric: "Claims Handling Costs", value: "↓ 20–35%", color: "text-indigo-400" },
-  { metric: "Underwriting Cycle Time", value: "↓ 40–60%", color: "text-purple-400" },
-  { metric: "Payback Period", value: "6–12 months", color: "text-amber-400" }
-];
+  const solutions = [
+    {
+      number: "01",
+      title: "AI-Powered Claims Intelligence & FNOL Optimization",
+      challenge: "Slow FNOL and manual claims triage lead to excessive leakage, higher settlement costs, and poor customer sentiment.",
+      solution: "We deploy predictive severity models and computer vision to intake, classify, and route claims automatically at the moment of loss.",
+      howItWorks: [
+        { agent: "Severity agents", action: "predict claim costs during first notice" },
+        { agent: "Triage agents", action: "route claims to optimized handling channels" },
+        { agent: "Fraud agents", action: "detect anomalies before settlement" },
+      ],
+      metrics: [
+        { value: "30-50% ↓", label: "Cycle Time Reduction", color: "text-green", borderColor: "border-t-green" },
+        { value: "↓ Leakage", label: "Reduced Claims Leakage", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "↑ CX Score", label: "Improved Sentiment", color: "text-purple", borderColor: "border-t-purple" },
+      ],
+      badgeGradient: "from-purple to-pink-500",
+    },
+    {
+      number: "02",
+      title: "Autonomous Underwriting & Risk Selection",
+      challenge: "Manual underwriting is slow and inconsistent, preventing rapid growth and accurate risk-adjusted pricing.",
+      solution: "We implement straight-through processing engines that use alternative data and ensemble models to score risk in real time.",
+      howItWorks: [
+        { agent: "Intake agents", action: "extract and validate submission data" },
+        { agent: "Risk agents", action: "score alignment with appetite" },
+        { agent: "Pricing agents", action: "optimize premiums based on risk" },
+      ],
+      metrics: [
+        { value: "40-60% ↓", label: "Underwriting Cycle Time", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "3-7% ↓", label: "Loss Ratio Improvement", color: "text-green", borderColor: "border-t-green" },
+        { value: "↑ GWP", label: "Increased Growth Potential", color: "text-purple", borderColor: "border-t-purple" },
+      ],
+      badgeGradient: "from-cyan to-blue-600",
+    },
+    {
+      number: "03",
+      title: "Predictive Pricing & Retention Intelligence",
+      challenge: "One-size-fits-all pricing and reactive retention strategies lead to adverse selection and customer churn.",
+      solution: "We build dynamic pricing elasticity models and churn prediction systems to deliver personalized offers.",
+      howItWorks: [
+        { agent: "Elasticity agents", action: "calculate price sensitivity" },
+        { agent: "Churn agents", action: "flag high-risk accounts early" },
+        { agent: "Offer agents", action: "generate personalized win-back offers" },
+      ],
+      metrics: [
+        { value: "↑ Retention", label: "Customer Lifetime Value", color: "text-purple", borderColor: "border-t-purple" },
+        { value: "Optimized", label: "Renewal Pricing Strategy", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Better Mix", label: "Improved Portfolio Quality", color: "text-green", borderColor: "border-t-green" },
+      ],
+      badgeGradient: "from-purple to-cyan",
+    },
+  ];
 
-// --- Sub-Components ---
+  const roiMetrics = [
+    { metric: "Loss Ratio", improvement: "↓ 3–7%", trend: "down", color: "text-destructive" },
+    { metric: "Claims Cycle Time", improvement: "↓ 30–50%", trend: "down", color: "text-cyan" },
+    { metric: "Handling Costs", improvement: "↓ 20–35%", trend: "down", color: "text-cyan" },
+    { metric: "Underwriting Time", improvement: "↓ 40–60%", trend: "down", color: "text-cyan" },
+    { metric: "Payback Period", improvement: "6–12 months", trend: "neutral", highlight: true, color: "text-cyan" },
+  ];
 
-interface SectionHeaderProps {
-  subtitle: string;
-  title: string;
-  description: string;
-  light?: boolean;
-}
-
-const SectionHeader = ({ subtitle, title, description, light = false }: SectionHeaderProps) => (
-  <div className="max-w-3xl mb-12">
-    <motion.h4 
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-sky-400 font-bold tracking-[0.2em] uppercase text-xs mb-4"
-    >
-      {subtitle}
-    </motion.h4>
-    <motion.h2 
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.1 }}
-      className={`text-3xl md:text-5xl font-bold mb-6 tracking-tight ${light ? 'text-slate-900' : 'text-white'}`}
-    >
-      {title}
-    </motion.h2>
-    <motion.p 
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2 }}
-      className={`text-lg leading-relaxed ${light ? 'text-slate-600' : 'text-slate-400'}`}
-    >
-      {description}
-    </motion.p>
-  </div>
-);
-
-// --- New Component: Interactive Loss Ratio Calculator ---
-
-const LossRatioCalculator = () => {
-  const [premium, setPremium] = useState(1000000);
-  const [losses, setLosses] = useState(650000);
-
-  const ratio = useMemo(() => Math.round((losses / premium) * 100), [premium, losses]);
-
-  const getStatus = () => {
-    if (ratio < 65) return { label: "Healthy Margin", color: "text-emerald-400", bg: "bg-emerald-500/10" };
-    if (ratio <= 80) return { label: "Under Performance", color: "text-amber-400", bg: "bg-amber-500/10" };
-    return { label: "Critical Risk", color: "text-rose-400", bg: "bg-rose-500/10" };
-  };
-
-  const status = getStatus();
-
-  return (
-    <motion.div 
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className="p-8 rounded-[2.5rem] bg-slate-900/50 border border-slate-800 shadow-2xl backdrop-blur-sm"
-    >
-      <div className="flex items-center gap-3 mb-8">
-        <div className="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center">
-          <Calculator className="text-sky-400" size={20} />
-        </div>
-        <h3 className="text-xl font-bold text-white tracking-tight">Loss Ratio Calculator</h3>
-      </div>
-
-      <div className="space-y-8">
-        {/* Premium Input */}
-        <div className="space-y-4">
-          <div className="flex justify-between items-end">
-            <label className="text-sm font-medium text-slate-400">Total Earned Premium</label>
-            <span className="text-lg font-mono text-white">${premium.toLocaleString()}</span>
-          </div>
-          <input 
-            type="range" min="100000" max="5000000" step="50000" 
-            value={premium} onChange={(e) => setPremium(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
-          />
-        </div>
+  const whyAIMill = [
+    {
+      icon: Database,
+      title: "Insurance Domain Expertise",
+      description: "Designed specifically for FNOL, claims, underwriting, and pricing data with deep industry context.",
+      gradient: "from-purple to-pink-500",
+    },
+    {
+      icon: Shield,
+      title: "Explainable Compliance",
+      description: "Transparent AI models aligned with regulatory expectations and audit requirements.",
+      gradient: "from-cyan to-blue-600",
+    },
+    {
+      icon: Activity,
+      title: "Autonomous Execution",
+      description: "Agentic AI enables real-time, autonomous actions across the entire insurance value chain.",
+      gradient: "from-cyan to-green",
+    },
+    {
+      icon: TrendingUp,
+      title: "Proven Impact",
+      description: "Measurable ROI benchmarks and rapid deployment within 6-12 months of implementation.",
+      gradient: "from-green to-cyan",
+    },
+  ];
 
         {/* Losses Input */}
         <div className="space-y-4">
@@ -214,266 +153,491 @@ const LossRatioCalculator = () => {
 
 const Insurance = () => {
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-300 selection:bg-sky-500/30 font-sans">
+    <div className="min-h-screen bg-[#030712]">
       <Navbar />
 
       <main>
-        {/* --- HERO SECTION --- */}
-        <section className="relative pt-32 pb-32 md:pt-48 md:pb-48 overflow-hidden">
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-sky-900/20 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-900/20 rounded-full blur-[120px] pointer-events-none" />
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-black">
+          {/* Background Texture Overlay */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Soft dot pattern */}
+            <div className="absolute inset-0 opacity-15" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='30' cy='10' r='1.5'/%3E%3Ccircle cx='10' cy='30' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+            {/* Subtle grain texture */}
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+            }} />
+            {/* Soft radial gradients for depth */}
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.05) 0%, transparent 70%)
+              `,
+            }} />
+          </div>
 
-          <div className="container mx-auto max-w-7xl px-6 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Ambient Glows */}
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-purple/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan/5 rounded-full blur-[100px] pointer-events-none" />
+
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center py-20 lg:py-32">
+              {/* Left Content Area */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col items-start"
               >
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold tracking-widest mb-8 uppercase">
-                  <Sparkles size={14} /> Autonomous Insurance Intelligence
-                </span>
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[1.05] mb-8">
-                  From Analytics to <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-400 to-emerald-400">
-                    Autonomous Action.
+                {/* Upper Label */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mb-8"
+                >
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-purple font-bold opacity-80">
+                    AUTONOMOUS INSURANCE INTELLIGENCE
                   </span>
-                </h1>
-                <p className="text-xl text-slate-400 max-w-xl leading-relaxed mb-10">
-                  Speed and accuracy now define competitiveness. AI Mill combines Data Science with Agentic AI to help insurance leaders protect margins and scale execution.
-                </p>
-                <div className="flex flex-wrap gap-5">
-                  <Button size="lg" className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl h-14 px-8 shadow-xl shadow-sky-500/20" asChild>
-                    <Link to="/contact" className="flex items-center gap-2">
-                      Talk to Insurance Experts <ArrowRight size={18} />
+                </motion.div>
+
+                {/* Main Headline */}
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
+                >
+                  Insurance <span className="gradient-text">AI Solutions</span>
+                </motion.h1>
+
+                {/* Supporting Text */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[540px] mb-12 font-medium"
+                >
+                  AI Mill combines Advanced Analytics with Agentic AI to enable faster decisions, lower risk, and scaled execution across claims, underwriting, and customer experience.
+                </motion.p>
+
+                {/* CTA Area */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="flex flex-col sm:flex-row gap-5"
+                >
+                  <Button
+                    size="lg"
+                    className="group relative bg-white text-black hover:bg-gray-100 px-8 h-14 text-base font-bold transition-all duration-300 rounded-lg overflow-hidden"
+                    asChild
+                  >
+                    <Link to="/contact">
+                      <span className="relative z-10 flex items-center">
+                        Modernize Your Stack
+                        <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                      </span>
                     </Link>
                   </Button>
-                </div>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white/10 text-white hover:bg-white/5 px-8 h-14 text-base font-bold transition-all rounded-lg"
+                    asChild
+                  >
+                    <Link to="/solutions">View Platform</Link>
+                  </Button>
+                </motion.div>
               </motion.div>
 
-              {/* Hero Dashboard Visual */}
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-[2.5rem] p-8 shadow-2xl"
+              {/* Right Visual Area */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                className="relative"
               >
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-rose-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-amber-500/50" />
-                    <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
-                  </div>
-                  <div className="text-[10px] uppercase tracking-widest font-bold text-slate-500">Live Risk Feed</div>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { label: "Claims Intake", val: "Optimized", color: "text-emerald-400" },
-                    { label: "Loss Ratio Signal", val: "Stable", color: "text-sky-400" },
-                    { label: "STP Underwriting", val: "Active", color: "text-indigo-400" }
-                  ].map((row, i) => (
-                    <div key={i} className="flex items-center justify-between p-4 bg-slate-950/50 border border-slate-800 rounded-2xl">
-                      <span className="text-sm font-medium">{row.label}</span>
-                      <span className={`text-xs font-bold uppercase ${row.color}`}>{row.val}</span>
+                {/* Elevated Product Card */}
+                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(139,92,246,0.2)] border border-white/40 overflow-hidden">
+                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
+
+                  <div className="relative h-full flex flex-col">
+                    <div className="flex justify-between items-center mb-12">
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
+                      </div>
+                      <div className="px-3 py-1 bg-purple-50 border border-purple-100 rounded-full text-[10px] font-bold text-purple-600 uppercase tracking-widest">
+                        Insurance Core Active
+                      </div>
                     </div>
-                  ))}
+
+                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
+                      {[
+                        { icon: FileText, label: "Claims Automation", value: "94.2%", color: "purple" },
+                        { icon: Shield, label: "Appetite Align", value: "Optimal", color: "indigo" },
+                        { icon: Activity, label: "Loss Severity", value: "-12.5%", color: "emerald" },
+                        { icon: CheckCircle, label: "UW Decisions", value: "Instant", color: "purple" },
+                        { icon: Database, label: "Risk Data", value: "Real-time", color: "violet" },
+                        { icon: TrendingUp, label: "Retention", value: "+18%", color: "purple" },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, y: 15 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
+                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
+                        >
+                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
+                            ${item.color === 'purple' ? 'bg-purple-50 text-purple-600 group-hover:bg-purple-100' : ''}
+                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
+                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
+                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
+                          `}>
+                            <item.icon className="w-5 h-5" />
+                          </div>
+                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
+                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex -space-x-2">
+                          {[1, 2, 3].map(j => (
+                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
+                          ))}
+                        </div>
+                        <span className="text-xs font-bold text-slate-500">Claims Agents</span>
+                      </div>
+                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-8 pt-8 border-t border-slate-800 flex justify-center">
-                  <Activity className="text-sky-500 animate-pulse" size={48} />
-                </div>
+
+                {/* Floating Decorative Elements */}
+                <motion.div
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-10 -right-10 w-32 h-32 bg-purple/20 rounded-full blur-2xl z-10"
+                />
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan/20 rounded-full blur-3xl z-10"
+                />
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* --- INSURANCE CONTEXT (FIXED WITH CALCULATOR) --- */}
-        <section className="py-24 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              {/* Left Column: Fixed space with Calculator */}
-              <div className="order-2 lg:order-1 relative">
-                <LossRatioCalculator />
-              </div>
-
-              {/* Right Column: Text Content */}
-              <div className="order-1 lg:order-2">
-                <SectionHeader 
-                  subtitle="Industry Context"
-                  title="The Real-Time Imperative"
-                  description="Modern insurance operates across complex cycles of pricing, risk, and claims. Legacy systems and manual workflows can’t respond fast enough to rising inflation or customer impatience."
-                />
-                <div className="grid gap-6">
-                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-2xl border border-slate-800">
-                    <ShieldCheck className="text-sky-400 shrink-0" size={24} />
-                    <div>
-                      <h4 className="text-white font-bold mb-1">Consistency at Scale</h4>
-                      <p className="text-sm text-slate-500">Eliminate variance in decision-making across underwriting and claims handling.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-2xl border border-slate-800">
-                    <Zap className="text-indigo-400 shrink-0" size={24} />
-                    <div>
-                      <h4 className="text-white font-bold mb-1">Instant Response</h4>
-                      <p className="text-sm text-slate-500">Deploy agents that react to new data signals within milliseconds, not months.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Challenges Section */}
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
+          {/* Elegant Grey Texture Background */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
+            <div className="absolute inset-0 opacity-50" style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
+              `,
+            }} />
+            <div className="absolute inset-0 opacity-40" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px)
+              `,
+            }} />
           </div>
-        </section>
 
-        {/* --- BUSINESS PROBLEMS GRID --- */}
-        <section className="py-32 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6 text-center">
-            <SectionHeader 
-              subtitle="The Challenges"
-              title="Critical Business Friction"
-              description="We identify and solve the core bottlenecks that erode carrier profitability."
-            />
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mt-16">
-              {PROBLEMS.map((prob, i) => (
-                <motion.div 
-                  key={i}
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Industry Challenges</h2>
+              <p className="text-lg sm:text-xl text-gray-400 max-w-[900px] mx-auto leading-[1.6]">
+                Modern insurance operates in real time—across claims, pricing, risk, and customer experience. Manual workflows can't respond fast enough.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {problems.map((problem, idx) => (
+                <motion.div
+                  key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-8 rounded-[2rem] bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition-all text-left"
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="group glass rounded-xl p-8 border border-border/50 hover:border-purple/30 hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className={`w-12 h-12 rounded-xl ${prob.bg} flex items-center justify-center mb-6`}>
-                    <prob.icon className={prob.color} size={24} />
+                  <div className="w-12 h-12 rounded-xl bg-purple/20 flex items-center justify-center mb-4 group-hover:bg-purple/30 transition-colors">
+                    <problem.icon className="w-6 h-6 text-purple" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3">{prob.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">{prob.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{problem.title}</h3>
+                  <p className="text-base text-gray-400 leading-relaxed">{problem.text}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* --- SOLUTION DEEP DIVE (DS + AGENTIC) --- */}
-        <section className="py-32 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
-            <div className="text-center mb-20">
-              <h2 className="text-sm font-bold text-sky-400 uppercase tracking-[0.3em] mb-4">The Solution Approach</h2>
-              <p className="text-4xl font-bold text-white tracking-tighter">Data Science + Agentic AI</p>
-            </div>
-
-            <div className="space-y-12">
-              {SOLUTION_DETAILS.map((sol, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-900/40 rounded-[3rem] border border-slate-800 overflow-hidden shadow-2xl"
-                >
-                  <div className="grid lg:grid-cols-12">
-                    <div className="lg:col-span-4 p-10 lg:p-14 bg-slate-900/80 border-r border-slate-800 flex flex-col justify-center">
-                      <span className="text-xs font-mono text-slate-500 mb-4 tracking-widest uppercase">Solution 0{i+1}</span>
-                      <h3 className="text-3xl font-bold text-white leading-tight">{sol.title}</h3>
-                    </div>
-                    <div className="lg:col-span-8 p-10 lg:p-14 grid md:grid-cols-2 gap-12 bg-slate-950/20">
-                      <div>
-                        <div className="flex items-center gap-2 text-indigo-400 font-bold text-xs uppercase tracking-widest mb-6">
-                          <BarChart3 size={16} /> Data Science & Analytics
-                        </div>
-                        <ul className="space-y-4">
-                          {sol.ds.map((item, idx) => (
-                            <li key={idx} className="text-slate-400 text-sm leading-relaxed flex gap-3">
-                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500/30 mt-1.5 shrink-0" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="p-8 bg-sky-500/5 rounded-[2rem] border border-sky-500/10">
-                        <div className="flex items-center gap-2 text-sky-400 font-bold text-xs uppercase tracking-widest mb-6">
-                          <Zap size={16} /> Agentic AI
-                        </div>
-                        <ul className="space-y-4">
-                          {sol.agentic.map((item, idx) => (
-                            <li key={idx} className="text-slate-300 text-sm leading-relaxed font-medium flex gap-3">
-                              <CheckCircle size={14} className="text-sky-500 mt-1 shrink-0" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+        {/* Solutions Section */}
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
+            <div className="absolute inset-0 opacity-50" style={{
+              backgroundImage: `
+                radial-gradient(circle at 80% 30%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 70%, rgba(128,128,128,0.15) 0%, transparent 50%)
+              `,
+            }} />
           </div>
-        </section>
 
-        {/* --- ROI BENCHMARKS --- */}
-        <section className="py-32 bg-[#020617]">
-          <div className="container mx-auto max-w-5xl px-6">
-            <div className="bg-slate-900 rounded-[3rem] border border-slate-800 shadow-3xl overflow-hidden">
-              <div className="p-12 text-center border-b border-slate-800">
-                <h2 className="text-3xl font-bold text-white mb-2">Performance Benchmarks</h2>
-                <p className="text-slate-500">Typical impact across our deployed AI Mill modules.</p>
-              </div>
-              <div className="divide-y divide-slate-800">
-                {ROI_DATA.map((row, i) => (
-                  <div key={i} className="flex flex-col md:flex-row items-center justify-between p-10 md:px-20 hover:bg-slate-800/20 transition-colors">
-                    <span className="text-xl font-medium text-slate-300 mb-4 md:mb-0">{row.metric}</span>
-                    <div className="text-center md:text-right">
-                      <div className={`text-4xl font-bold tracking-tight ${row.color}`}>{row.value}</div>
-                      <div className="text-[10px] uppercase font-bold text-slate-500 tracking-[0.2em] mt-1">Target Improvement</div>
+          <div className="container mx-auto max-w-7xl relative z-10">
+            {solutions.map((solution, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="mb-[48px] last:mb-0"
+              >
+                <div className="flex flex-col lg:flex-row gap-12 items-start">
+                  {/* Number Badge */}
+                  <div className="flex-shrink-0">
+                    <div className="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-purple to-pink-500 flex items-center justify-center text-foreground text-4xl font-bold shadow-xl">
+                      {solution.number}
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* --- WHY AI MILL --- */}
-        <section className="py-32 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
-            <SectionHeader 
-              subtitle="Why AI Mill"
-              title="Purpose-Built for Insurance"
-              description="Generic AI models fail in insurance. We build with domain specificity and regulatory alignment at the core."
-            />
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: Database, title: "Native Data Context", desc: "Designed for the nuances of FNOL, claims, and pricing data." },
-                { icon: Scale, title: "Explainable Decisions", desc: "Decision logs that align with regulatory audit expectations." },
-                { icon: Activity, title: "Continuous Execution", desc: "Agentic AI enables real-time response across the value chain." },
-                { icon: Zap, title: "Zero Disruption", desc: "Faster time-to-value without heavy operational overhaul." }
-              ].map((item, i) => (
-                <div key={i} className="space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center">
-                    <item.icon className="text-sky-400" size={24} />
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-3xl sm:text-4xl font-bold text-white mb-10 leading-[1.3]">{solution.title}</h3>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-10">
+                      <div className="glass border-l-4 border-destructive p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <span className="text-xs uppercase tracking-wider text-destructive font-bold mb-3 block">
+                          THE CHALLENGE
+                        </span>
+                        <p className="text-base text-white leading-relaxed">{solution.challenge}</p>
+                      </div>
+
+                      <div className="glass border-l-4 border-purple p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
+                        <span className="text-xs uppercase tracking-wider text-purple font-bold mb-3 block">
+                          AI MILL SOLUTION
+                        </span>
+                        <p className="text-base text-white leading-relaxed">{solution.solution}</p>
+                      </div>
+                    </div>
+
+                    <div className="mb-10 glass border border-purple/30 p-8 rounded-xl bg-purple-950/10">
+                      <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-purple-400">HOW AGENTIC AI WORKS</h4>
+                      <div className="space-y-4">
+                        {solution.howItWorks.map((item, itemIdx) => {
+                          const Icon = solutionIcons[itemIdx % solutionIcons.length];
+                          return (
+                            <motion.div
+                              key={itemIdx}
+                              initial={{ opacity: 0, x: -10 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
+                              className="flex items-start gap-4"
+                            >
+                              <div className="w-6 h-6 rounded-full bg-purple flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Icon className="w-4 h-4 text-white" />
+                              </div>
+                              <div>
+                                <span className="font-semibold text-white">{item.agent}</span>
+                                <span className="text-gray-400"> → {item.action}</span>
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {solution.metrics.map((metric, metricIdx) => (
+                        <motion.div
+                          key={metricIdx}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
+                          className="glass rounded-xl p-8 shadow-md hover:shadow-xl hover:border-purple/30 border border-border/50 transition-all group text-center"
+                        >
+                          <div className={`text-2xl font-bold text-white mb-3 group-hover:scale-110 transition-transform`}>
+                            {metric.value}
+                          </div>
+                          <p className="text-sm font-medium text-gray-400">{metric.label}</p>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
-                  <h4 className="text-white font-bold">{item.title}</h4>
-                  <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* ROI Metrics Table */}
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
+          </div>
+          <div className="container mx-auto max-w-[800px] relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">ROI Benchmarks</h2>
+              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
+                Measurable improvements across key insurance metrics
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="glass rounded-2xl shadow-2xl overflow-hidden border border-border"
+            >
+              <table className="w-full border-collapse">
+                <thead className="bg-gradient-to-r from-purple to-cyan">
+                  <tr>
+                    <th className="px-8 py-5 text-left text-white font-bold text-sm uppercase tracking-wider">Metric</th>
+                    <th className="px-8 py-5 text-right text-white font-bold text-sm uppercase tracking-wider">Typical Improvement</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {roiMetrics.map((row, idx) => (
+                    <motion.tr
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      className={`${idx % 2 === 0 ? "bg-card/50" : "bg-card/30"} ${row.highlight ? "bg-purple-500/10 border-l-4 border-purple-500" : ""} hover:bg-purple-500/10 transition-all`}
+                    >
+                      <td className="px-8 py-6 font-semibold text-[18px] text-white">{row.metric}</td>
+                      <td className="px-8 py-6 text-right">
+                        <div className="flex items-center justify-end gap-3">
+                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-500" />}
+                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
+                          <span className={`text-2xl font-bold text-white`}>
+                            {row.improvement}
+                          </span>
+                        </div>
+                      </td>
+                    </motion.tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why AI Mill Section */}
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden text-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
+          </div>
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill</h2>
+              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
+                Built for insurance with deep domain context and regulatory compliance at the core.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {whyAIMill.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="group glass rounded-2xl p-10 shadow-md hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-purple to-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                    <item.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-[1.4]">{item.title}</h3>
+                  <p className="text-base text-gray-400 leading-[1.6]">{item.description}</p>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* --- CALL TO ACTION --- */}
-        <section className="py-32 container mx-auto px-6">
-          <div className="bg-gradient-to-br from-sky-600 to-indigo-700 rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 left-0 w-full h-full bg-white/5 pointer-events-none" />
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight relative z-10">
-              Fix delays. Reduce leakage. <br className="hidden md:block" /> Protect your margins.
-            </h2>
-            <p className="text-sky-100 text-xl mb-12 max-w-2xl mx-auto leading-relaxed relative z-10">
-              Join leading carriers utilizing AI Mill to automate complexity and drive scaled efficiency.
-            </p>
-            <Button size="lg" className="bg-slate-950 text-white hover:bg-slate-900 rounded-2xl h-16 px-12 text-lg font-bold relative z-10 transition-transform hover:scale-105 active:scale-95 shadow-2xl" asChild>
-              <Link to="/contact">
-                Talk to AI Mill Insurance Experts
-              </Link>
-            </Button>
+        {/* CTA Section */}
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-black overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 opacity-40" style={{
+              backgroundImage: `
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(128,128,128,0.3) 2px, rgba(128,128,128,0.3) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(128,128,128,0.3) 2px, rgba(128,128,128,0.3) 4px),
+                radial-gradient(circle at 20% 50%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(128,128,128,0.15) 0%, transparent 50%)
+              `,
+            }} />
+          </div>
+
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Fix leakage and protect margins.
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Join leading insurance carriers already using AI Mill to transform claims, underwriting, and customer experience.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/contact">
+                  <Button size="lg" className="group rounded-xl bg-white text-black hover:bg-gray-100 h-14 px-8 font-bold">
+                    Transform Your Operations
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link to="/solutions">
+                  <Button variant="outline" size="lg" className="rounded-xl border-white/10 text-white hover:bg-white/5 h-14 px-8 font-bold">
+                    View Case Studies
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>

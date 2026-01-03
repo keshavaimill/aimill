@@ -78,19 +78,30 @@ const Industries = () => {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-40 pb-24 px-4 sm:px-8 lg:px-20">
-          {/* Dark Grey Texture Background */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/30 to-zinc-900/40" />
-            <div className="absolute inset-0 opacity-[0.1]" style={{
+        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-40 pb-24 px-4 sm:px-8 lg:px-20 bg-black">
+          {/* Background Texture Overlay - Matching Lending Page */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Soft dot pattern */}
+            <div className="absolute inset-0 opacity-15" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='30' cy='10' r='1.5'/%3E%3Ccircle cx='10' cy='30' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+            {/* Subtle grain texture */}
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+            }} />
+            {/* Soft radial gradients for depth */}
+            <div className="absolute inset-0 opacity-20" style={{
               backgroundImage: `
-                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px),
-                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px)
+                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.05) 0%, transparent 70%)
               `,
             }} />
           </div>
-          <div className="absolute inset-0 grid-pattern opacity-20" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
+
+          {/* Ambient Glows - Using Theme Colors */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple/10 rounded-full blur-[120px]" />
 
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
             <motion.div
@@ -98,10 +109,10 @@ const Industries = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-6">
+              <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-cyan bg-cyan/10 rounded-full mb-6">
                 Industries
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-8 text-foreground">
                 Agentic AI for{" "}
                 <span className="gradient-text">Every Industry</span>
               </h1>
@@ -114,37 +125,31 @@ const Industries = () => {
 
         {/* Industries Grid */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
-          {/* Elegant Dark Grey Texture Background */}
+          {/* Elegant Grey Texture Background - Matching Lending Page */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Rich gradient base */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/50 to-zinc-900/60" />
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
 
-            {/* Visible grid pattern */}
-            <div className="absolute inset-0 opacity-[0.2]" style={{
+            {/* Visible mesh gradient */}
+            <div className="absolute inset-0 opacity-50" style={{
               backgroundImage: `
-                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.05) 39px, rgba(255,255,255,0.05) 40px),
-                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.05) 39px, rgba(255,255,255,0.05) 40px)
+                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
               `,
             }} />
 
-            {/* Visible dots at grid intersections */}
-            <div className="absolute inset-0 opacity-[0.25]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Ccircle cx='0' cy='0' r='1'/%3E%3Ccircle cx='40' cy='0' r='1'/%3E%3Ccircle cx='0' cy='40' r='1'/%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
-              backgroundSize: '40px 40px',
+            {/* Visible dot pattern */}
+            <div className="absolute inset-0 opacity-40" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
             }} />
 
-            {/* Enhanced mesh for depth */}
-            <div className="absolute inset-0 opacity-[0.12]" style={{
+            {/* Visible grid */}
+            <div className="absolute inset-0 opacity-20" style={{
               backgroundImage: `
-                radial-gradient(circle at 20% 30%, rgba(128,128,128,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(128,128,128,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(128,128,128,0.06) 0%, transparent 70%)
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px)
               `,
-            }} />
-
-            {/* Additional texture overlay */}
-            <div className="absolute inset-0 opacity-[0.15]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }} />
           </div>
 
@@ -157,25 +162,25 @@ const Industries = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className={`glass rounded-2xl p-8 border border-zinc-800/50 bg-zinc-950/30 hover:border-zinc-700 hover:bg-zinc-950/50 transition-all group backdrop-blur-sm ${industry.href ? 'cursor-pointer' : ''}`}
+                    className={`glass rounded-2xl p-8 border border-border/50 hover:border-cyan/30 hover:scale-[1.02] hover:shadow-xl transition-all group ${industry.href ? 'cursor-pointer' : ''}`}
                   >
                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-white/5 border border-white/10 shadow-[0_0_15px_-5px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_-5px] transition-all duration-300 ${idx === 0 ? "group-hover:shadow-blue-500/30 group-hover:border-blue-500/30" :
-                        idx === 1 ? "group-hover:shadow-green-500/30 group-hover:border-green-500/30" :
-                          idx === 2 ? "group-hover:shadow-orange-500/30 group-hover:border-orange-500/30" :
-                            idx === 3 ? "group-hover:shadow-gray-500/30 group-hover:border-gray-500/30" :
-                              idx === 4 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
-                                idx === 5 ? "group-hover:shadow-pink/30 group-hover:border-pink/30" :
-                                  idx === 6 ? "group-hover:shadow-red-500/30 group-hover:border-red-500/30" :
-                                    "group-hover:shadow-teal/30 group-hover:border-teal/30"
+                      idx === 1 ? "group-hover:shadow-green-500/30 group-hover:border-green-500/30" :
+                        idx === 2 ? "group-hover:shadow-cyan-500/30 group-hover:border-cyan-500/30" :
+                          idx === 3 ? "group-hover:shadow-cyan-500/30 group-hover:border-cyan-500/30" :
+                            idx === 4 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
+                              idx === 5 ? "group-hover:shadow-pink/30 group-hover:border-pink/30" :
+                                idx === 6 ? "group-hover:shadow-red-500/30 group-hover:border-red-500/30" :
+                                  "group-hover:shadow-teal/30 group-hover:border-teal/30"
                       }`}>
                       <industry.icon className={`w-7 h-7 stroke-[1.5] ${idx === 0 ? "text-blue-500" :
-                          idx === 1 ? "text-green-500" :
-                            idx === 2 ? "text-orange-500" :
-                              idx === 3 ? "text-gray-400" :
-                                idx === 4 ? "text-purple" :
-                                  idx === 5 ? "text-pink" :
-                                    idx === 6 ? "text-red-400" :
-                                      "text-teal"
+                        idx === 1 ? "text-green-500" :
+                          idx === 2 ? "text-cyan" :
+                            idx === 3 ? "text-cyan" :
+                              idx === 4 ? "text-purple" :
+                                idx === 5 ? "text-pink" :
+                                  idx === 6 ? "text-red-400" :
+                                    "text-teal"
                         }`} />
                     </div>
                     <h3 className="text-2xl font-bold mb-3">{industry.name}</h3>
@@ -189,13 +194,13 @@ const Industries = () => {
                         {industry.useCases.map((useCase, i) => (
                           <li key={i} className="text-sm flex items-center gap-2">
                             <span className={`w-1.5 h-1.5 rounded-full ${idx === 0 ? "bg-blue-500" :
-                                idx === 1 ? "bg-green-500" :
-                                  idx === 2 ? "bg-orange-500" :
-                                    idx === 3 ? "bg-gray-400" :
-                                      idx === 4 ? "bg-purple" :
-                                        idx === 5 ? "bg-pink" :
-                                          idx === 6 ? "bg-red-400" :
-                                            "bg-teal"
+                              idx === 1 ? "bg-green-500" :
+                                idx === 2 ? "bg-cyan" :
+                                  idx === 3 ? "bg-cyan" :
+                                    idx === 4 ? "bg-purple" :
+                                      idx === 5 ? "bg-pink" :
+                                        idx === 6 ? "bg-red-400" :
+                                          "bg-teal"
                               }`} />
                             {useCase}
                           </li>
@@ -216,10 +221,10 @@ const Industries = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                     {industry.href && (
-                      <div className="mt-6 pt-6 border-t border-zinc-800/50">
-                        <div className="inline-flex items-center gap-2 text-sm font-semibold text-primary group/link">
+                      <div className="mt-6 pt-6 border-t border-border/50">
+                        <div className="inline-flex items-center gap-2 text-sm font-semibold text-cyan group/link">
                           Learn More
                           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                         </div>
@@ -241,14 +246,15 @@ const Industries = () => {
         </section>
 
         {/* CTA */}
-        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
-          {/* Dark Grey Texture Background */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-zinc-950/30 to-zinc-900/40" />
-            <div className="absolute inset-0 opacity-[0.08]" style={{
+        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-background overflow-hidden">
+          {/* Background texture matching Lending page */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 opacity-40" style={{
               backgroundImage: `
-                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px),
-                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.02) 60px, rgba(255,255,255,0.02) 61px)
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(128,128,128,0.3) 2px, rgba(128,128,128,0.3) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(128,128,128,0.3) 2px, rgba(128,128,128,0.3) 4px),
+                radial-gradient(circle at 20% 50%, rgba(128,128,128,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(128,128,128,0.15) 0%, transparent 50%)
               `,
             }} />
           </div>
