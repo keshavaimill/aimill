@@ -185,8 +185,33 @@ export const SolutionsGrid = () => {
 };
 
 const ServiceCard = ({ item, idx }: { item: any, idx: number }) => {
-  const Component = item.href.startsWith("/") ? Link : motion.div;
-  const props = item.href.startsWith("/") ? { to: item.href } : {};
+  const cardContent = (
+    <>
+      <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${item.color === "cyan" ? "bg-cyan/10" :
+        item.color === "purple" ? "bg-purple/10" :
+          item.color === "green" ? "bg-green/10" :
+            item.color === "pink" ? "bg-pink/10" :
+              "bg-teal/10"
+        }`}>
+        <item.icon className={`w-5 h-5 ${item.color === "cyan" ? "text-cyan" :
+          item.color === "purple" ? "text-purple" :
+            item.color === "green" ? "text-green" :
+              item.color === "pink" ? "text-pink" :
+                "text-teal"
+          }`} />
+      </div>
+      <h3 className="text-base font-bold mb-2">{item.title}</h3>
+      <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
+        {item.description}
+      </p>
+      <div className="flex items-center gap-2 text-xs font-semibold text-primary/80 group-hover:text-primary group-hover:gap-3 transition-all">
+        Learn more
+        <ArrowRight className="w-3 h-3" />
+      </div>
+    </>
+  );
+
+  const cardClassName = "rounded-xl p-5 h-full block bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all group backdrop-blur-sm";
 
   return (
     <motion.div
@@ -196,32 +221,15 @@ const ServiceCard = ({ item, idx }: { item: any, idx: number }) => {
       transition={{ duration: 0.5, delay: idx * 0.05 }}
       className="h-full"
     >
-      <Component
-        {...props}
-        className="rounded-xl p-5 h-full block bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all group backdrop-blur-sm"
-      >
-        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${item.color === "cyan" ? "bg-cyan/10" :
-          item.color === "purple" ? "bg-purple/10" :
-            item.color === "green" ? "bg-green/10" :
-              item.color === "pink" ? "bg-pink/10" :
-                "bg-teal/10"
-          }`}>
-          <item.icon className={`w-5 h-5 ${item.color === "cyan" ? "text-cyan" :
-            item.color === "purple" ? "text-purple" :
-              item.color === "green" ? "text-green" :
-                item.color === "pink" ? "text-pink" :
-                  "text-teal"
-            }`} />
+      {item.href.startsWith("/") ? (
+        <Link to={item.href} className={cardClassName}>
+          {cardContent}
+        </Link>
+      ) : (
+        <div className={cardClassName}>
+          {cardContent}
         </div>
-        <h3 className="text-base font-bold mb-2">{item.title}</h3>
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-2">
-          {item.description}
-        </p>
-        <div className="flex items-center gap-2 text-xs font-semibold text-primary/80 group-hover:text-primary group-hover:gap-3 transition-all">
-          Learn more
-          <ArrowRight className="w-3 h-3" />
-        </div>
-      </Component>
+      )}
     </motion.div>
   );
 };

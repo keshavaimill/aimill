@@ -129,7 +129,7 @@ const Industries = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Rich gradient base */}
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
-            
+
             {/* Visible mesh gradient */}
             <div className="absolute inset-0 opacity-50" style={{
               backgroundImage: `
@@ -138,12 +138,12 @@ const Industries = () => {
                 radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
               `,
             }} />
-            
+
             {/* Visible dot pattern */}
             <div className="absolute inset-0 opacity-40" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
             }} />
-            
+
             {/* Visible grid */}
             <div className="absolute inset-0 opacity-20" style={{
               backgroundImage: `
@@ -165,22 +165,22 @@ const Industries = () => {
                     className={`glass rounded-2xl p-8 border border-border/50 hover:border-cyan/30 hover:scale-[1.02] hover:shadow-xl transition-all group ${industry.href ? 'cursor-pointer' : ''}`}
                   >
                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-white/5 border border-white/10 shadow-[0_0_15px_-5px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_-5px] transition-all duration-300 ${idx === 0 ? "group-hover:shadow-blue-500/30 group-hover:border-blue-500/30" :
-                        idx === 1 ? "group-hover:shadow-green-500/30 group-hover:border-green-500/30" :
-                          idx === 2 ? "group-hover:shadow-orange-500/30 group-hover:border-orange-500/30" :
-                            idx === 3 ? "group-hover:shadow-gray-500/30 group-hover:border-gray-500/30" :
-                              idx === 4 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
-                                idx === 5 ? "group-hover:shadow-pink/30 group-hover:border-pink/30" :
-                                  idx === 6 ? "group-hover:shadow-red-500/30 group-hover:border-red-500/30" :
-                                    "group-hover:shadow-teal/30 group-hover:border-teal/30"
+                      idx === 1 ? "group-hover:shadow-green-500/30 group-hover:border-green-500/30" :
+                        idx === 2 ? "group-hover:shadow-cyan-500/30 group-hover:border-cyan-500/30" :
+                          idx === 3 ? "group-hover:shadow-cyan-500/30 group-hover:border-cyan-500/30" :
+                            idx === 4 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
+                              idx === 5 ? "group-hover:shadow-pink/30 group-hover:border-pink/30" :
+                                idx === 6 ? "group-hover:shadow-red-500/30 group-hover:border-red-500/30" :
+                                  "group-hover:shadow-teal/30 group-hover:border-teal/30"
                       }`}>
                       <industry.icon className={`w-7 h-7 stroke-[1.5] ${idx === 0 ? "text-blue-500" :
-                          idx === 1 ? "text-green-500" :
-                            idx === 2 ? "text-orange-500" :
-                              idx === 3 ? "text-gray-400" :
-                                idx === 4 ? "text-purple" :
-                                  idx === 5 ? "text-pink" :
-                                    idx === 6 ? "text-red-400" :
-                                      "text-teal"
+                        idx === 1 ? "text-green-500" :
+                          idx === 2 ? "text-cyan" :
+                            idx === 3 ? "text-cyan" :
+                              idx === 4 ? "text-purple" :
+                                idx === 5 ? "text-pink" :
+                                  idx === 6 ? "text-red-400" :
+                                    "text-teal"
                         }`} />
                     </div>
                     <h3 className="text-2xl font-bold mb-3">{industry.name}</h3>
@@ -194,13 +194,13 @@ const Industries = () => {
                         {industry.useCases.map((useCase, i) => (
                           <li key={i} className="text-sm flex items-center gap-2">
                             <span className={`w-1.5 h-1.5 rounded-full ${idx === 0 ? "bg-blue-500" :
-                                idx === 1 ? "bg-green-500" :
-                                  idx === 2 ? "bg-orange-500" :
-                                    idx === 3 ? "bg-gray-400" :
-                                      idx === 4 ? "bg-purple" :
-                                        idx === 5 ? "bg-pink" :
-                                          idx === 6 ? "bg-red-400" :
-                                            "bg-teal"
+                              idx === 1 ? "bg-green-500" :
+                                idx === 2 ? "bg-cyan" :
+                                  idx === 3 ? "bg-cyan" :
+                                    idx === 4 ? "bg-purple" :
+                                      idx === 5 ? "bg-pink" :
+                                        idx === 6 ? "bg-red-400" :
+                                          "bg-teal"
                               }`} />
                             {useCase}
                           </li>
@@ -221,7 +221,7 @@ const Industries = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                     {industry.href && (
                       <div className="mt-6 pt-6 border-t border-border/50">
                         <div className="inline-flex items-center gap-2 text-sm font-semibold text-cyan group/link">

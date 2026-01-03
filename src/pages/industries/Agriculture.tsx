@@ -2,12 +2,12 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { 
+import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
   Target, TrendingUp, Shield, Zap, BarChart, CheckCircle,
   Sprout, Wheat, ArrowUp, ArrowDown, CloudRain, Droplets, Sun,
   Thermometer, Bug, Satellite, Eye, Layers, Lightbulb, Brain,
-  Cpu, Leaf, Scale, DollarSign
+  Cpu, Leaf, Scale, DollarSign, Activity
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -16,12 +16,12 @@ const Agriculture = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
 
   const challenges = [
-    { icon: CloudRain, text: "Yield unpredictability due to weather and soil variability", gradient: "from-amber-500 to-amber-600", bgColor: "bg-amber-500/15" },
-    { icon: Droplets, text: "Overuse of water, fertilizer, and pesticides", gradient: "from-sky-500 to-sky-600", bgColor: "bg-sky-500/15" },
-    { icon: Bug, text: "Late detection of pests and diseases", gradient: "from-red-500 to-red-600", bgColor: "bg-red-500/15" },
-    { icon: Satellite, text: "Limited real-time field visibility", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: TrendingDown, text: "Difficulty scaling best practices across large farms", gradient: "from-orange-500 to-orange-600", bgColor: "bg-orange-500/15" },
-    { icon: DollarSign, text: "Lower productivity, higher costs, unsustainable resource usage", gradient: "from-amber-500 to-amber-600", bgColor: "bg-amber-500/15" },
+    { icon: CloudRain, text: "Yield unpredictability due to weather and soil variability", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: Droplets, text: "Overuse of water, fertilizer, and pesticides", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Bug, text: "Late detection of pests and diseases", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: Satellite, text: "Limited real-time field visibility", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: TrendingDown, text: "Difficulty scaling best practices across large farms", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: DollarSign, text: "Lower productivity, higher costs, unsustainable resource usage", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
   ];
 
   const solutionIcons = [Eye, Layers, Lightbulb, Brain];
@@ -39,11 +39,11 @@ const Agriculture = () => {
         { agent: "Learning agents", action: "adapt models to local field conditions" },
       ],
       metrics: [
-        { value: "15-30% ↑", label: "Crop Yield Increase", color: "text-green-700", borderColor: "border-t-green-700" },
-        { value: "20-35% ↓", label: "Water & Fertilizer Usage", color: "text-sky-600", borderColor: "border-t-sky-600" },
-        { value: "Healthier Crops", label: "Lower Stress Levels", color: "text-amber-600", borderColor: "border-t-amber-600" },
+        { value: "15-30% ↑", label: "Crop Yield Increase", color: "text-green", borderColor: "border-t-green" },
+        { value: "20-35% ↓", label: "Water & Fertilizer Usage", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Healthier Crops", label: "Lower Stress Levels", color: "text-purple", borderColor: "border-t-purple" },
       ],
-      badgeGradient: "from-amber-600 to-amber-500",
+      badgeGradient: "from-cyan to-green",
     },
     {
       number: "02",
@@ -56,11 +56,11 @@ const Agriculture = () => {
         { agent: "Planning agents", action: "optimize harvest schedules and logistics" },
       ],
       metrics: [
-        { value: "Better Planning", label: "Improved Supply Chain", color: "text-orange-600", borderColor: "border-t-orange-600" },
-        { value: "↓ Losses", label: "Reduced Post-Harvest Waste", color: "text-green-700", borderColor: "border-t-green-700" },
-        { value: "Price Optimization", label: "Better Realization", color: "text-amber-600", borderColor: "border-t-amber-600" },
+        { value: "Better Planning", label: "Improved Supply Chain", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "↓ Losses", label: "Reduced Post-Harvest Waste", color: "text-green", borderColor: "border-t-green" },
+        { value: "Price Optimization", label: "Better Realization", color: "text-purple", borderColor: "border-t-purple" },
       ],
-      badgeGradient: "from-sky-500 to-sky-600",
+      badgeGradient: "from-cyan to-blue-600",
     },
     {
       number: "03",
@@ -73,11 +73,11 @@ const Agriculture = () => {
         { agent: "Action agents", action: "recommend targeted treatment" },
       ],
       metrics: [
-        { value: "Significant ↓", label: "Crop Loss Reduction", color: "text-green-700", borderColor: "border-t-green-700" },
-        { value: "↓ Pesticides", label: "Lower Chemical Usage", color: "text-sky-600", borderColor: "border-t-sky-600" },
-        { value: "Faster Response", label: "Real-Time Alerts", color: "text-red-600", borderColor: "border-t-red-600" },
+        { value: "Significant ↓", label: "Crop Loss Reduction", color: "text-green", borderColor: "border-t-green" },
+        { value: "↓ Pesticides", label: "Lower Chemical Usage", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Faster Response", label: "Real-Time Alerts", color: "text-purple", borderColor: "border-t-purple" },
       ],
-      badgeGradient: "from-orange-600 to-red-600",
+      badgeGradient: "from-purple to-cyan",
     },
     {
       number: "04",
@@ -90,9 +90,9 @@ const Agriculture = () => {
         { agent: "Learning agents", action: "refine recommendations season after season" },
       ],
       metrics: [
-        { value: "↓ Labor", label: "Lower Dependency", color: "text-purple-600", borderColor: "border-t-purple-600" },
-        { value: "Consistent", label: "Best-Practice Execution", color: "text-sky-600", borderColor: "border-t-sky-600" },
-        { value: "↑ Profitability", label: "Improved Farm Income", color: "text-green-700", borderColor: "border-t-green-700" },
+        { value: "↓ Labor", label: "Lower Dependency", color: "text-purple", borderColor: "border-t-purple" },
+        { value: "Consistent", label: "Best-Practice Execution", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "↑ Profitability", label: "Improved Farm Income", color: "text-green", borderColor: "border-t-green" },
       ],
       badgeGradient: "from-purple-500 to-purple-600",
     },
@@ -111,25 +111,25 @@ const Agriculture = () => {
       icon: Scale,
       title: "Works Across Farm Sizes",
       description: "From small farms to large agribusinesses",
-      gradient: "from-amber-600 to-amber-500",
+      gradient: "from-cyan to-blue-600",
     },
     {
       icon: Layers,
       title: "System Integration",
       description: "Connects satellite, IoT, and farm management systems",
-      gradient: "from-sky-500 to-sky-600",
+      gradient: "from-cyan to-green",
     },
     {
       icon: Cpu,
       title: "Autonomous AI",
       description: "Advises, learns, and acts independently",
-      gradient: "from-purple-500 to-purple-600",
+      gradient: "from-purple to-cyan",
     },
     {
       icon: Leaf,
       title: "Sustainability Focus",
       description: "Built for long-term environmental impact",
-      gradient: "from-lime-500 to-lime-600",
+      gradient: "from-green to-cyan",
     },
   ];
 
@@ -182,7 +182,7 @@ const Agriculture = () => {
                     FROM EXPERIENCE-DRIVEN FARMING TO AUTONOMOUS PRECISION AGRICULTURE
                   </span>
                 </motion.div>
-                
+
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ const Agriculture = () => {
                 >
                   Agriculture <span className="gradient-text">AI Solutions</span>
                 </motion.h1>
-                
+
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -200,7 +200,7 @@ const Agriculture = () => {
                 >
                   Maximize crop yields, optimize resources, and reduce waste with AI-powered precision agriculture that learns from your fields and adapts to changing conditions in real-time.
                 </motion.p>
-                
+
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -223,34 +223,88 @@ const Agriculture = () => {
 
               {/* Right Visual */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative h-[520px]"
+                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                className="relative"
               >
-                <div className="absolute inset-0 bg-white rounded-3xl p-12 flex items-center justify-center border border-stone-200 shadow-2xl">
-                  <div className="grid grid-cols-3 gap-4 w-full max-w-md">
-                    {[
-                      { icon: Sun, label: "Soil Health", value: "Excellent", color: "text-green-800", iconColor: "text-amber-600" },
-                      { icon: Droplets, label: "Water Level", value: "Optimal", color: "text-sky-700", iconColor: "text-sky-600" },
-                      { icon: Thermometer, label: "Temperature", value: "22°C", color: "text-amber-700", iconColor: "text-amber-600" },
-                      { icon: Sprout, label: "Crop Health", value: "Healthy", color: "text-green-800", iconColor: "text-lime-600" },
-                      { icon: Bug, label: "Pest Alert", value: "None", color: "text-green-800", iconColor: "text-red-600" },
-                      { icon: TrendingUp, label: "Yield Forecast", value: "+18%", color: "text-amber-700", iconColor: "text-amber-600" },
-                    ].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 2 + i * 0.3, repeat: Infinity, delay: i * 0.2 }}
-                        className="bg-gradient-to-b from-yellow-50 to-white rounded-xl p-6 shadow-md border border-amber-200 hover:shadow-xl hover:border-amber-400 hover:translate-y-[-4px] transition-all"
-                      >
-                        <item.icon className={`w-6 h-6 ${item.iconColor} mx-auto mb-3`} />
-                        <div className="text-xs text-stone-700 text-center mb-2 font-medium">{item.label}</div>
-                        <div className={`text-xl font-bold ${item.color} text-center`}>{item.value}</div>
-                      </motion.div>
-                    ))}
+                {/* Elevated Product Card */}
+                <div className="relative z-20 w-full aspect-[4/5] max-w-[500px] mx-auto bg-[#f8fafc] rounded-[32px] p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5),0_0_80px_-10px_rgba(59,130,246,0.2)] border border-white/40 overflow-hidden">
+
+                  {/* Grid Pattern Texture */}
+                  <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23000' fill-rule='evenodd' opacity='.1'/%3E%3C/svg%3E")` }} />
+
+                  {/* Dashboard Content */}
+                  <div className="relative h-full flex flex-col">
+                    <div className="flex justify-between items-center mb-12">
+                      <div className="flex gap-2">
+                        <div className="w-3 h-3 rounded-full bg-red-400/20 border border-red-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-amber-400/20 border border-amber-400/30" />
+                        <div className="w-3 h-3 rounded-full bg-green-400/20 border border-green-400/30" />
+                      </div>
+                      <div className="px-3 py-1 bg-blue-50 border border-blue-100 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest">
+                        Farm System Active
+                      </div>
+                    </div>
+
+                    {/* Metric Cards Grid */}
+                    <div className="grid grid-cols-2 gap-6 flex-1 content-start">
+                      {[
+                        { icon: Sprout, label: "Soil Health", value: "94.2%", color: "blue" },
+                        { icon: Sun, label: "Yield Potential", value: "+28%", color: "indigo" },
+                        { icon: Droplets, label: "Irrigation", value: "Active", color: "emerald" },
+                        { icon: Activity, label: "Growth Nodes", value: "1,240", color: "blue" },
+                        { icon: Database, label: "Field Data", value: "Real-time", color: "violet" },
+                        { icon: CheckCircle, label: "Compliance", value: "Certified", color: "blue" },
+                      ].map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, y: 15 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                          whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.05)" }}
+                          className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm transition-all cursor-default group"
+                        >
+                          <div className={`w-10 h-10 rounded-xl mb-4 flex items-center justify-center transition-colors
+                            ${item.color === 'blue' ? 'bg-blue-50 text-blue-500 group-hover:bg-blue-100' : ''}
+                            ${item.color === 'indigo' ? 'bg-indigo-50 text-indigo-500 group-hover:bg-indigo-100' : ''}
+                            ${item.color === 'emerald' ? 'bg-emerald-50 text-emerald-500 group-hover:bg-emerald-100' : ''}
+                            ${item.color === 'violet' ? 'bg-violet-50 text-violet-500 group-hover:bg-violet-100' : ''}
+                          `}>
+                            <item.icon className="w-5 h-5" />
+                          </div>
+                          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
+                          <div className="text-lg font-bold text-slate-900">{item.value}</div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Bottom Status bar */}
+                    <div className="mt-auto pt-8 border-t border-slate-100 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="flex -space-x-2">
+                          {[1, 2, 3].map(j => (
+                            <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200" />
+                          ))}
+                        </div>
+                        <span className="text-xs font-bold text-slate-500">Field Agents</span>
+                      </div>
+                      <div className="h-6 w-24 bg-slate-100 rounded-md animate-pulse" />
+                    </div>
                   </div>
                 </div>
+
+                {/* Floating Decorative Elements */}
+                <motion.div
+                  animate={{ y: [0, -20, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-10 -right-10 w-32 h-32 bg-cyan/20 rounded-full blur-2xl z-10"
+                />
+                <motion.div
+                  animate={{ y: [0, 20, 0] }}
+                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple/20 rounded-full blur-3xl z-10"
+                />
               </motion.div>
             </div>
           </div>
@@ -262,7 +316,7 @@ const Agriculture = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Rich gradient base */}
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
-            
+
             {/* Visible mesh gradient */}
             <div className="absolute inset-0 opacity-50" style={{
               backgroundImage: `
@@ -271,12 +325,12 @@ const Agriculture = () => {
                 radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
               `,
             }} />
-            
+
             {/* Visible dot pattern */}
             <div className="absolute inset-0 opacity-40" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
             }} />
-            
+
             {/* Visible grid */}
             <div className="absolute inset-0 opacity-20" style={{
               backgroundImage: `
@@ -395,8 +449,8 @@ const Agriculture = () => {
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true }}
                               transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                            className="flex items-start gap-4"
-                          >
+                              className="flex items-start gap-4"
+                            >
                               <div className="w-6 h-6 rounded-full bg-green flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Icon className="w-4 h-4 text-foreground" />
                               </div>
@@ -494,16 +548,16 @@ const Agriculture = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: idx * 0.05 }}
                       className={`${idx % 2 === 0 ? "bg-card/50" : "bg-card/30"
-                        } ${row.highlight ? "bg-yellow/10 border-l-4 border-yellow-500" : ""} hover:bg-cyan/10 hover:scale-[1.01] transition-all`}
+                        } ${row.highlight ? "bg-cyan-500/10 border-l-4 border-cyan-500" : ""} hover:bg-cyan-500/10 transition-all`}
                     >
                       <td className="px-6 py-5 font-semibold text-foreground text-base">{row.metric}</td>
                       <td className="px-6 py-5 text-right">
                         <div className="flex items-center justify-end gap-3">
                           {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-cyan" />}
+                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
                           <span className={`text-2xl font-bold ${row.trend === "up" ? "text-green" :
-                            row.trend === "down" ? "text-cyan" :
-                              "text-yellow-500"
+                            row.trend === "down" ? "text-destructive" :
+                              "text-cyan-500"
                             }`}>
                             {row.improvement}
                           </span>
@@ -563,8 +617,8 @@ const Agriculture = () => {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="group glass rounded-2xl p-10 shadow-md hover:scale-[1.02] hover:shadow-xl transition-all duration-300 cursor-pointer"
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan to-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                    <item.icon className="w-7 h-7 text-foreground" />
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br from-cyan to-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                    <item.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 leading-[1.4]">{item.title}</h3>
                   <p className="text-base text-muted-foreground leading-[1.6]">{item.description}</p>
