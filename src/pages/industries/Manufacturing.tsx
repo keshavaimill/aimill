@@ -2,284 +2,216 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { 
+import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
   Target, TrendingUp, Shield, Zap, BarChart, CheckCircle,
-  Factory, Settings, ArrowUp, ArrowDown, Activity, AlertTriangle,
-  XCircle, BarChart2, Box, Package, Search, Network,
-  Eye, DollarSign, Gauge
+  CreditCard, Wallet, FileText, ArrowUp, ArrowDown, Brain,
+  Activity, TrendingDown as TrendingDownIcon, Factory, Package,
+  Truck, HardHat, FileBarChart, Settings, Bot, Award
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Manufacturing = () => {
-  const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
-
-  const challenges = [
-    { icon: AlertTriangle, text: "Unexpected machine failures disrupting production", gradient: "from-red-500 to-red-600", bgColor: "bg-red-500/15" },
-    { icon: XCircle, text: "Quality issues detected too late in the process", gradient: "from-orange-500 to-orange-600", bgColor: "bg-orange-500/15" },
-    { icon: BarChart2, text: "Inefficient production planning and capacity utilization", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: DollarSign, text: "High maintenance costs driven by calendar-based servicing", gradient: "from-amber-500 to-amber-600", bgColor: "bg-amber-500/15" },
-    { icon: Eye, text: "Limited real-time visibility across plants and lines", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: TrendingDown, text: "Impact on OEE, margins, delivery commitments, and customer trust", gradient: "from-red-500 to-red-600", bgColor: "bg-red-500/15" },
-  ];
-
-  const solutionIcons = [Activity, AlertCircle, Search];
-
   const solutions = [
     {
       number: "01",
-      title: "Predictive Maintenance & Asset Intelligence",
-      challenge: "Most manufacturers rely on reactive or preventive maintenance, leading to either costly breakdowns or unnecessary servicing.",
-      solution: "We build machine-level predictive models using historical sensor data, vibration signals, temperature, and operational logs.",
+      title: "Demand Intelligence & Autonomous Planning",
+      challenge: "Volatile demand patterns drive stockouts, excess inventory, and margin erosion across product lines.",
+      solution: "AI Mill combines predictive analytics with agentic AI to forecast demand scenarios and continuously rebalance plans with automated corrective actions.",
       howItWorks: [
-        { agent: "Autonomous monitoring agents", action: "continuously analyze equipment health" },
-        { agent: "Failure-prediction agents", action: "trigger maintenance actions before breakdowns" },
-        { agent: "Root-cause agents", action: "learn which conditions lead to failures" },
+        { icon: Brain, text: "Demand Sensing Agents analyze sales, market signals, and external factors" },
+        { icon: Activity, text: "Scenario Planning Agents generate probabilistic demand scenarios" },
+        { icon: Zap, text: "Inventory Optimization Agents rebalance stock across warehouses automatically" },
+        { icon: CheckCircle, text: "Order Fulfillment Agents prioritize and execute customer orders optimally" },
       ],
       metrics: [
-        { value: "30-50% ↓", label: "Unplanned Downtime", color: "text-green-600", borderColor: "border-t-green-500" },
-        { value: "20-35% ↓", label: "Maintenance Cost Savings", color: "text-cyan-600", borderColor: "border-t-cyan-500" },
-        { value: "Extended Life", label: "Asset Lifespan Improvement", color: "text-purple-600", borderColor: "border-t-purple-500" },
+        { value: "25%", label: "Forecast Accuracy ↑", color: "text-emerald-400", border: "#10b981" },
+        { value: "20%", label: "Inventory ↓", color: "text-cyan-400", border: "#06b6d4" },
+        { value: "35%", label: "Service Level ↑", color: "text-purple-400", border: "#a855f7" },
       ],
-      badgeGradient: "from-red-500 to-red-600",
+      badgeGradient: "from-emerald-500 to-cyan-500",
     },
     {
       number: "02",
-      title: "AI-Driven Quality Inspection & Defect Prevention",
-      challenge: "Manual inspections are slow, inconsistent, and miss defects until it's too late.",
-      solution: "Computer Vision models inspect products in real time across assembly lines.",
+      title: "Production Optimization & Predictive Maintenance",
+      challenge: "Production inefficiencies and unplanned downtime reduce throughput, asset utilization, and service levels.",
+      solution: "Advanced analytics identify optimization opportunities while autonomous agents detect deviations and adjust schedules in real-time.",
       howItWorks: [
-        { agent: "Vision agents", action: "detect surface defects, misalignment, and anomalies" },
-        { agent: "Decision agents", action: "auto-flag defective batches" },
-        { agent: "Learning agents", action: "improve detection accuracy continuously" },
+        { icon: Brain, text: "Capacity Planning Agents optimize schedules across multiple plants" },
+        { icon: Activity, text: "Predictive Maintenance Agents forecast equipment failures and schedule repairs" },
+        { icon: Zap, text: "Production Adjustment Agents autonomously adjust lines for demand changes" },
+        { icon: CheckCircle, text: "Quality Control Agents monitor output and trigger corrections" },
       ],
       metrics: [
-        { value: "Up to 90%", label: "Defect Detection Accuracy", color: "text-green-600", borderColor: "border-t-green-500" },
-        { value: "25-40% ↓", label: "Scrap & Rework Reduction", color: "text-orange-600", borderColor: "border-t-orange-500" },
-        { value: "↑ Satisfaction", label: "Improved Customer Quality", color: "text-cyan-600", borderColor: "border-t-cyan-500" },
+        { value: "30%", label: "Downtime ↓", color: "text-emerald-400", border: "#10b981" },
+        { value: "18%", label: "Throughput ↑", color: "text-cyan-400", border: "#06b6d4" },
+        { value: "25%", label: "Maintenance Cost ↓", color: "text-purple-400", border: "#a855f7" },
       ],
-      badgeGradient: "from-cyan-500 to-cyan-600",
+      badgeGradient: "from-cyan-500 to-blue-500",
     },
     {
       number: "03",
-      title: "Autonomous Production Planning & Scheduling",
-      challenge: "Static production schedules fail to adapt to real-world disruptions like machine failures or demand fluctuations.",
-      solution: "We deploy optimization and forecasting models that continuously align demand, capacity, and constraints.",
+      title: "Supply Chain Resilience & Risk Management",
+      challenge: "Global supply chain disruptions create delays, expedited costs, and revenue risk across networks.",
+      solution: "AI Mill scores suppliers, predicts disruptions, and autonomously reroutes materials to maintain flow.",
       howItWorks: [
-        { agent: "Scheduling agents", action: "dynamically replan production" },
-        { agent: "Capacity agents", action: "rebalance workloads across lines" },
-        { agent: "Exception agents", action: "resolve conflicts autonomously" },
+        { icon: Brain, text: "Supplier Risk Agents continuously score supplier reliability" },
+        { icon: Activity, text: "Disruption Prediction Agents forecast supply chain bottlenecks" },
+        { icon: Zap, text: "Routing Optimization Agents reroute shipments in real-time" },
+        { icon: CheckCircle, text: "Inventory Reallocation Agents shift stock to mitigate shortages" },
       ],
       metrics: [
-        { value: "15-25% ↑", label: "Production Throughput", color: "text-green-600", borderColor: "border-t-green-500" },
-        { value: "↓ Idle Time", label: "Reduced Equipment Downtime", color: "text-cyan-600", borderColor: "border-t-cyan-500" },
-        { value: "Faster Fulfillment", label: "Improved Delivery Times", color: "text-purple-600", borderColor: "border-t-purple-500" },
+        { value: "40%", label: "On-Time Delivery ↑", color: "text-emerald-400", border: "#10b981" },
+        { value: "22%", label: "Expedite Costs ↓", color: "text-cyan-400", border: "#06b6d4" },
+        { value: "28%", label: "Risk Exposure ↓", color: "text-purple-400", border: "#a855f7" },
       ],
-      badgeGradient: "from-slate-500 to-slate-600",
+      badgeGradient: "from-blue-500 to-indigo-500",
+    },
+    {
+      number: "04",
+      title: "Quality Intelligence & Process Control",
+      challenge: "Quality variability and scrap impact yield, compliance requirements, and customer trust.",
+      solution: "Data science identifies defect patterns while agentic AI enforces real-time corrections and learns from outcomes.",
+      howItWorks: [
+        { icon: Brain, text: "Defect Pattern Agents identify root causes across production lines" },
+        { icon: Activity, text: "Process Adjustment Agents fine-tune parameters automatically" },
+        { icon: Zap, text: "Quality Assurance Agents validate output against specifications" },
+        { icon: CheckCircle, text: "Continuous Learning Agents improve predictions from outcomes" },
+      ],
+      metrics: [
+        { value: "20%", label: "Scrap Reduction", color: "text-emerald-400", border: "#10b981" },
+        { value: "95%", label: "First Pass Yield ↑", color: "text-cyan-400", border: "#06b6d4" },
+        { value: "15%", label: "Quality Cost ↓", color: "text-purple-400", border: "#a855f7" },
+      ],
+      badgeGradient: "from-indigo-500 to-purple-500",
     },
   ];
 
+  const challenges = [
+    { icon: TrendingDown, text: "Demand volatility & forecast inaccuracy" },
+    { icon: Clock, text: "Production inefficiencies & downtime" },
+    { icon: AlertCircle, text: "Supply chain disruptions & risk exposure" },
+    { icon: BarChart, text: "Quality variability & scrap rates" },
+    { icon: Shield, text: "Slow, manual decision cycles" },
+    { icon: TrendingDownIcon, text: "Rising operational costs & margin erosion" },
+  ];
+
   const roiMetrics = [
-    { metric: "Unplanned Downtime", improvement: "↓ 30–50%", trend: "down", color: "text-green-600" },
-    { metric: "Maintenance Cost", improvement: "↓ 20–35%", trend: "down", color: "text-cyan-600" },
-    { metric: "Production Throughput", improvement: "↑ 15–25%", trend: "up", color: "text-green-600" },
-    { metric: "Quality Defects", improvement: "↓ 25–40%", trend: "down", color: "text-orange-600" },
-    { metric: "Payback Period", improvement: "3–6 months", trend: "neutral", highlight: true, color: "text-amber-600" },
+    { metric: "Forecast Accuracy", improvement: "↑ 25%", trend: "up", color: "text-emerald-400" },
+    { metric: "Inventory Levels", improvement: "↓ 20%", trend: "down", color: "text-cyan-400" },
+    { metric: "Unplanned Downtime", improvement: "↓ 30%", trend: "down", color: "text-emerald-400" },
+    { metric: "Operational Costs", improvement: "↓ 15%", trend: "down", color: "text-purple-400" },
+    { metric: "Payback Period", improvement: "9 months", trend: "neutral", highlight: true, color: "text-amber-400" },
   ];
 
   const whyAIMill = [
     {
-      icon: Database,
-      title: "Real Factory Data",
-      description: "Built for actual production environments, not lab models. Handles messy, real-world manufacturing data.",
-      gradient: "from-slate-500 to-slate-600",
+      icon: Factory,
+      title: "Multi-Plant Intelligence",
+      description: "Purpose-built for complex manufacturing data across global plant networks.",
+    },
+    {
+      icon: FileBarChart,
+      title: "Explainable Insights",
+      description: "Transparent analytics executives can trust and act upon confidently.",
+    },
+    {
+      icon: Bot,
+      title: "Autonomous Execution",
+      description: "Continuous decisioning that executes beyond static dashboards.",
     },
     {
       icon: Zap,
-      title: "Autonomous Action",
-      description: "Acts without waiting for human approval. Responds to issues in milliseconds, not hours.",
-      gradient: "from-red-500 to-red-600",
-    },
-    {
-      icon: Network,
-      title: "Scalable Deployment",
-      description: "Works across plants and geographies. Deploy once, scale everywhere with consistent results.",
-      gradient: "from-cyan-500 to-cyan-600",
-    },
-    {
-      icon: TrendingUp,
-      title: "Fast ROI",
-      description: "Measurable improvements within 3-6 months. Track savings, uptime, and quality in real-time.",
-      gradient: "from-green-500 to-green-600",
+      title: "Rapid Deployment",
+      description: "Fast time-to-value without platform sprawl or integration complexity.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#020617] text-slate-300">
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {/* Background Effects */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-slate-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-            <div className="absolute inset-0 opacity-[0.03]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
-          </div>
-
-          <div className="container mx-auto max-w-[1400px] px-[80px] relative z-10">
-            <div className="grid lg:grid-cols-2 gap-16 items-center py-20">
-              {/* Left Content */}
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-[#020617]">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="container mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-16 items-center py-20 lg:py-32">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-8"
+                transition={{ duration: 0.8 }}
+                className="flex flex-col items-start"
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="mb-6"
-                >
-                  <span className="text-[12px] uppercase tracking-[2px] text-slate-500 font-semibold">
-                    FROM REACTIVE OPERATIONS TO AUTONOMOUS MANUFACTURING
-                  </span>
-                </motion.div>
-                
-                {/* Optional Icon */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.15 }}
-                  className="mb-8"
-                >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-slate-500 to-cyan-500 flex items-center justify-center" style={{ background: 'rgba(100, 116, 139, 0.1)' }}>
-                    <Factory className="w-6 h-6 text-slate-500" />
-                  </div>
-                </motion.div>
-                
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-[64px] font-extrabold leading-[1.1] text-zinc-900 mb-8"
-                >
-                  Manufacturing Industry<br />AI Solutions
-                </motion.h1>
-                
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-[24px] font-normal leading-[1.5] text-zinc-600 max-w-[600px] mb-6"
-                >
-                  Manufacturing leaders are under pressure to produce more with less — less downtime, less waste, and less uncertainty.
-                </motion.p>
-                
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="text-[18px] leading-[1.7] text-zinc-500 max-w-[580px] mb-12"
-                >
-                  AI Mill enables manufacturers to transform traditional plants into self-optimizing, intelligent factories using advanced Data Science and Agentic AI systems that predict, decide, and act in real time.
-                </motion.p>
-                
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                >
-                  <Button 
-                    size="lg" 
-                    className="bg-gradient-to-r from-slate-500 via-cyan-500 to-indigo-500 hover:from-slate-600 hover:to-indigo-600 text-white px-8 h-[56px] text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 rounded-xl"
-                    asChild
-                  >
-                    <Link to="/contact">
-                      Transform Your Manufacturing
-                      <ArrowRight className="ml-2 w-5 h-5" />
+                <span className="text-xs uppercase tracking-widest text-emerald-400 font-bold mb-6">
+                  Autonomous Manufacturing Intelligence
+                </span>
+                <h1 className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-tight text-white mb-8">
+                  From <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Advanced Analytics</span> <br />
+                  to <br />
+                  Autonomous Manufacturing
+                </h1>
+                <p className="text-xl text-slate-400 leading-relaxed max-w-[540px] mb-12">
+                  Manufacturers face rising cost pressure, demand volatility, and operational risk. AI Mill enables lower risk and scalable execution using Data Science & Analytics + Agentic AI.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-5">
+                  <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl h-14 px-8 shadow-xl shadow-emerald-500/20" asChild>
+                    <Link to="/contact" className="flex items-center gap-2">
+                      Talk to Manufacturing Experts <ArrowRight className="w-5 h-5" />
                     </Link>
                   </Button>
-                </motion.div>
+                  <Button variant="outline" size="lg" className="border-slate-700 text-slate-300 hover:bg-slate-800 rounded-xl h-14 px-8" asChild>
+                    <Link to="/solutions">View Platform</Link>
+                  </Button>
+                </div>
               </motion.div>
 
-              {/* Right Visual - Factory Monitoring Dashboard */}
+              {/* Hero Dashboard Visual */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative h-[500px]"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-b from-neutral-50 to-white rounded-3xl p-12 flex flex-col justify-between border-2 border-zinc-200 shadow-2xl">
-                  {/* Top Metrics Row */}
-                  <div className="flex gap-3 mb-6">
-                    {[
-                      { icon: Activity, label: "OEE", value: "87%", color: "text-green-600", iconColor: "text-green-600" },
-                      { icon: Settings, label: "Uptime", value: "94%", color: "text-slate-500", iconColor: "text-slate-500" },
-                      { icon: AlertCircle, label: "Alerts", value: "2", color: "text-red-600", iconColor: "text-red-600" },
-                    ].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: -10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                        className="bg-white rounded-lg p-4 flex-1 border border-zinc-200 shadow-sm"
-                      >
-                        <item.icon className={`w-4 h-4 ${item.iconColor} mb-2`} />
-                        <div className="text-[10px] text-zinc-500 mb-1">{item.label}</div>
-                        <div className={`text-xl font-bold ${item.color}`}>{item.value}</div>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Main Visualization Area */}
-                  <div className="bg-gradient-to-b from-slate-50 to-white rounded-xl p-8 border border-zinc-200 flex-1 flex items-center justify-center mb-6">
-                    <div className="flex gap-6 items-center">
-                      {[
-                        { label: "Line 1", status: "Active", color: "bg-green-500" },
-                        { label: "Line 2", status: "Running", color: "bg-cyan-500" },
-                        { label: "Line 3", status: "Running", color: "bg-cyan-500" },
-                        { label: "Line 4", status: "Running", color: "bg-cyan-500" },
-                      ].map((line, i) => (
-                        <motion.div
-                          key={i}
-                          animate={line.status === "Active" ? { scale: [1, 1.05, 1] } : {}}
-                          transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
-                          className="flex flex-col items-center"
-                        >
-                          <div className={`w-16 h-16 ${line.color} rounded-full flex items-center justify-center mb-2 shadow-lg`}>
-                            <Box className="w-8 h-8 text-white" />
-                          </div>
-                          <div className="text-xs text-zinc-500 font-medium">{line.label}</div>
-                          <div className="text-xs text-zinc-400">{line.status}</div>
-                        </motion.div>
-                      ))}
+                <div className="bg-slate-900/80 backdrop-blur-xl rounded-[32px] p-10 border border-slate-800/50 shadow-2xl">
+                  <div className="flex justify-between items-center mb-8">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500/50" />
+                      <div className="w-3 h-3 rounded-full bg-amber-500/50" />
+                      <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
+                    </div>
+                    <div className="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-bold text-emerald-400 uppercase tracking-widest">
+                      Manufacturing Live
                     </div>
                   </div>
-
-                  {/* Bottom Status Row */}
-                  <div className="flex gap-3 mt-6">
+                  <div className="grid grid-cols-2 gap-4">
                     {[
-                      { icon: CheckCircle, label: "Quality", value: "Pass", color: "text-green-600", iconColor: "text-green-600" },
-                      { icon: Zap, label: "Output", value: "1.2K/hr", color: "text-cyan-600", iconColor: "text-cyan-600" },
-                      { icon: TrendingUp, label: "Efficiency", value: "+15%", color: "text-slate-500", iconColor: "text-slate-500" },
+                      { icon: TrendingUp, label: "Demand Signal", value: "92.8%", color: "text-emerald-400" },
+                      { icon: Factory, label: "Plant Uptime", value: "97.2%", color: "text-cyan-400" },
+                      { icon: Truck, label: "OTIF", value: "94%", color: "text-indigo-400" },
+                      { icon: Package, label: "Inventory Turns", value: "8.4x", color: "text-orange-400" },
+                      { icon: HardHat, label: "Safety Score", value: "99.1%", color: "text-emerald-400" },
+                      { icon: Settings, label: "OEE", value: "89%", color: "text-purple-400" },
                     ].map((item, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-                        className="bg-white rounded-lg p-4 flex-1 border border-zinc-200 shadow-sm"
-                      >
-                        <item.icon className={`w-4 h-4 ${item.iconColor} mb-2`} />
-                        <div className="text-[10px] text-zinc-500 mb-1">{item.label}</div>
-                        <div className={`text-base font-semibold ${item.color}`}>{item.value}</div>
-                      </motion.div>
+                      <div key={i} className="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                        <item.icon className={`w-5 h-5 ${item.color} mb-3`} />
+                        <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
+                        <div className={`text-lg font-bold ${item.color}`}>{item.value}</div>
+                      </div>
                     ))}
+                  </div>
+                  <div className="mt-8 pt-8 border-t border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="flex -space-x-2">
+                        {[1, 2, 3, 4].map(j => (
+                          <div key={j} className="w-8 h-8 rounded-full border-2 border-slate-700 bg-slate-800" />
+                        ))}
+                      </div>
+                      <span className="text-xs font-bold text-slate-500">Plant Network</span>
+                    </div>
+                    <div className="h-6 w-24 bg-slate-800 rounded-md animate-pulse" />
                   </div>
                 </div>
               </motion.div>
@@ -288,42 +220,34 @@ const Manufacturing = () => {
         </section>
 
         {/* Challenges Section */}
-        <section className="relative py-[120px] bg-gradient-to-b from-zinc-800 to-zinc-900 overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-[0.03]">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
-          </div>
-
-          <div className="container mx-auto max-w-7xl px-[80px] relative z-10">
+        <section className="py-24 lg:py-32 px-6 lg:px-20 bg-slate-950">
+          <div className="container mx-auto max-w-7xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-20"
+              className="text-center mb-16"
             >
-              <h2 className="text-[48px] font-bold text-neutral-50 mb-6 leading-[1.2]">Industry Challenges</h2>
-              <p className="text-[20px] text-zinc-300 max-w-[900px] mx-auto leading-[1.6]">
-                Manufacturing operations generate massive volumes of machine, sensor, and production data — yet most of it remains underutilized. Decision-making is often reactive, siloed, and dependent on manual intervention.
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Business Problems</h2>
+              <p className="text-xl text-slate-400 max-w-[900px] mx-auto">
+                Global supply chains, volatile demand, and asset-heavy operations demand faster, autonomous decisions.
               </p>
             </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-[1200px] mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {challenges.map((challenge, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group bg-neutral-50/5 backdrop-blur-md rounded-2xl p-10 border border-neutral-50/8 hover:bg-neutral-50/8 hover:border-slate-500/30 hover:translate-y-[-8px] hover:scale-[1.02] hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                  transition={{ delay: idx * 0.1 }}
+                  className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-8 border border-slate-800/50 hover:border-emerald-500/50 hover:scale-[1.02] transition-all"
                 >
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${challenge.gradient} ${challenge.bgColor} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
-                    <challenge.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-4">
+                    <challenge.icon className="w-6 h-6 text-emerald-400" />
                   </div>
-                  <p className="text-[20px] font-medium text-neutral-50 leading-[1.5]">{challenge.text}</p>
+                  <p className="text-lg text-slate-300 leading-relaxed">{challenge.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -331,8 +255,8 @@ const Manufacturing = () => {
         </section>
 
         {/* Solutions Section */}
-        <section className="relative py-[120px]">
-          <div className="container mx-auto max-w-[1200px] px-[80px]">
+        <section className="py-24 lg:py-32 px-6 lg:px-20 bg-[#020617]">
+          <div className="container mx-auto max-w-7xl">
             {solutions.map((solution, idx) => (
               <motion.div
                 key={idx}
@@ -340,101 +264,45 @@ const Manufacturing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className={`mb-[80px] last:mb-0 ${idx % 2 === 0 ? 'bg-white' : 'bg-neutral-50'} rounded-2xl p-[60px]`}
+                className="mb-24 last:mb-0"
               >
-                <div className="flex flex-col lg:flex-row gap-[60px] items-start">
-                  {/* Number Badge - Sticky on desktop */}
-                  <div className="flex-shrink-0">
-                    <div className={`w-[120px] h-[120px] rounded-full bg-gradient-to-br ${solution.badgeGradient} flex items-center justify-center text-white text-[56px] font-bold shadow-xl hover:shadow-2xl transition-all lg:sticky lg:top-[100px]`}>
-                      {solution.number}
+                <div className="flex flex-col lg:flex-row gap-12 items-start">
+                  <div className="flex-shrink-0 lg:sticky lg:top-[100px]">
+                    <div className={`w-[120px] h-[120px] rounded-full bg-gradient-to-br ${solution.badgeGradient} flex items-center justify-center shadow-lg shadow-emerald-500/20`}>
+                      <span className="text-5xl font-extrabold text-white">{solution.number}</span>
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-[40px] font-bold text-zinc-900 mb-10 leading-[1.2]">{solution.title}</h3>
-
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
-                      {/* Challenge Box */}
-                      <div className="bg-red-50 border-l-4 border-red-500 p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
-                        <span className="text-xs uppercase tracking-wider text-red-600 font-bold mb-3 block">
-                          THE CHALLENGE
-                        </span>
-                        <p className="text-[18px] text-zinc-900 leading-[1.6]">{solution.challenge}</p>
-                      </div>
-
-                      {/* Solution Box */}
-                      <div className={`border-l-4 p-8 rounded-lg shadow-sm hover:shadow-md transition-all ${
-                        idx === 0 ? "bg-blue-50 border-cyan-500" :
-                        idx === 1 ? "bg-cyan-50 border-cyan-500" :
-                        "bg-sky-50 border-sky-500"
-                      }`}>
-                        <span className={`text-xs uppercase tracking-wider font-bold mb-3 block ${
-                          idx === 0 ? "text-cyan-600" :
-                          idx === 1 ? "text-cyan-600" :
-                          "text-sky-600"
-                        }`}>
-                          AI MILL SOLUTION
-                        </span>
-                        <p className="text-[18px] text-zinc-900 leading-[1.6]">{solution.solution}</p>
-                      </div>
+                    <h3 className="text-4xl font-bold text-white mb-10">{solution.title}</h3>
+                    
+                    <div className="bg-red-950/30 border-l-4 border-orange-500 p-8 rounded-r-lg mb-6">
+                      <p className="text-xs font-bold text-orange-400 tracking-widest mb-3 uppercase">THE CHALLENGE</p>
+                      <p className="text-lg text-slate-300 leading-relaxed">{solution.challenge}</p>
                     </div>
 
-                    {/* How Agentic AI Works */}
-                    <div className={`mb-10 p-10 rounded-xl border ${
-                      idx === 0 ? "bg-purple-50 border-purple-300" :
-                      idx === 1 ? "bg-green-50 border-green-300" :
-                      "bg-yellow-50 border-yellow-300"
-                    }`}>
-                      <h4 className={`text-base font-bold uppercase tracking-wider mb-6 ${
-                        idx === 0 ? "text-purple-600" :
-                        idx === 1 ? "text-green-700" :
-                        "text-yellow-700"
-                      }`}>HOW AGENTIC AI WORKS{idx === 0 ? " HERE" : ""}</h4>
+                    <div className="bg-blue-950/30 border-l-4 border-cyan-500 p-8 rounded-r-lg mb-8">
+                      <p className="text-xs font-bold text-cyan-400 tracking-widest mb-3 uppercase">AI MILL SOLUTION</p>
+                      <p className="text-lg text-slate-300 leading-relaxed">{solution.solution}</p>
+                    </div>
+
+                    <div className="bg-amber-950/30 border border-amber-500/30 p-10 rounded-xl mb-10">
+                      <h4 className="text-base font-bold text-amber-400 tracking-widest mb-6 uppercase">HOW AGENTIC AI WORKS</h4>
                       <div className="space-y-5">
-                        {solution.howItWorks.map((item, itemIdx) => {
-                          const Icon = solutionIcons[itemIdx % solutionIcons.length];
-                          const iconColor = idx === 0 ? "bg-purple-500" : idx === 1 ? "bg-green-600" : "bg-yellow-500";
-                          return (
-                            <motion.div
-                              key={itemIdx}
-                              initial={{ opacity: 0, x: -10 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                              className="flex items-start gap-4"
-                            >
-                              <div className={`w-6 h-6 rounded-full ${iconColor} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                                <Icon className="w-4 h-4 text-white" />
-                              </div>
-                              <div>
-                                <span className="font-semibold text-[17px] text-zinc-900">{item.agent}</span>
-                                <span className="text-[17px] text-zinc-900"> {item.action}</span>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
+                        {solution.howItWorks.map((step, sIdx) => (
+                          <div key={sIdx} className="flex gap-4 items-center">
+                            <step.icon className="w-6 h-6 text-amber-400 flex-shrink-0" />
+                            <p className="text-lg font-medium text-slate-300">{step.text}</p>
+                          </div>
+                        ))}
                       </div>
                     </div>
 
-                    {/* Business Impact Cards */}
                     <div className="grid md:grid-cols-3 gap-6">
-                      {solution.metrics.map((metric, metricIdx) => (
-                        <motion.div
-                          key={metricIdx}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: metricIdx * 0.1 }}
-                          className="bg-white rounded-xl p-8 shadow-md border border-zinc-200 hover:shadow-xl hover:translate-y-[-8px] hover:border-slate-500 transition-all text-center"
-                        >
-                          <div className={`border-t-[3px] ${metric.borderColor} pt-6`}>
-                            <div className={`text-[48px] font-bold ${metric.color} mb-3`}>
-                              {metric.value}
-                            </div>
-                            <p className="text-base font-medium text-zinc-600 leading-[1.4]">{metric.label}</p>
-                          </div>
-                        </motion.div>
+                      {solution.metrics.map((m, mIdx) => (
+                        <div key={mIdx} style={{ borderTop: `3px solid ${m.border}` }} className="bg-slate-900/50 backdrop-blur-sm p-8 rounded-xl border border-slate-800/50 text-center hover:-translate-y-2 transition-transform">
+                          <div className={`text-3xl font-extrabold mb-2 ${m.color}`}>{m.value}</div>
+                          <div className="text-base font-medium text-slate-400">{m.label}</div>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -444,148 +312,84 @@ const Manufacturing = () => {
           </div>
         </section>
 
-        {/* ROI Metrics Table */}
-        <section className="relative py-[100px] bg-white">
-          <div className="container mx-auto max-w-[900px] px-[80px]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-[44px] font-bold text-zinc-900 mb-4 leading-[1.2]">ROI & Measurable Outcomes</h2>
-              <p className="text-[20px] text-zinc-600 max-w-2xl mx-auto leading-[1.6]">
-                Measurable improvements across key manufacturing metrics
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-zinc-200"
-            >
-              <table className="w-full border-collapse">
-                <thead className="bg-gradient-to-r from-slate-500 via-slate-600 to-cyan-500">
-                  <tr>
-                    <th className="px-8 py-5 text-left text-white font-bold text-sm uppercase tracking-wider">Metric</th>
-                    <th className="px-8 py-5 text-right text-white font-bold text-sm uppercase tracking-wider">Typical Improvement</th>
+        {/* ROI Metrics Section */}
+        <section className="py-24 lg:py-32 px-6 bg-slate-900">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white text-center mb-16">ROI & Measurable Outcomes</h2>
+            <div className="bg-slate-950/50 backdrop-blur-sm border border-slate-800/50 rounded-2xl overflow-hidden shadow-2xl">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 text-white">
+                    <th className="p-6 text-sm uppercase tracking-wider font-bold">Metric</th>
+                    <th className="p-6 text-sm uppercase tracking-wider font-bold">Improvement</th>
                   </tr>
                 </thead>
-                <tbody>
-                  {roiMetrics.map((row, idx) => (
-                    <motion.tr
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: idx * 0.05 }}
-                      className={`${
-                        idx % 2 === 0 ? "bg-white" : "bg-neutral-50"
-                      } ${row.highlight ? "bg-gradient-to-r from-amber-50 to-amber-100 border-l-4 border-amber-500" : ""} hover:bg-slate-100 hover:scale-[1.01] transition-all`}
-                    >
-                      <td className="px-8 py-6 font-semibold text-[18px] text-zinc-900">{row.metric}</td>
-                      <td className="px-8 py-6 text-right">
-                        <div className="flex items-center justify-end gap-3">
-                          {row.trend === "up" && <ArrowUp className={`w-5 h-5 ${row.color}`} />}
-                          {row.trend === "down" && <ArrowDown className={`w-5 h-5 ${row.color}`} />}
-                          <span className={`text-[28px] font-bold ${row.color}`}>
-                            {row.improvement}
-                          </span>
-                        </div>
+                <tbody className="text-lg">
+                  {roiMetrics.map((row, rIdx) => (
+                    <tr key={rIdx} className={rIdx % 2 === 0 ? 'bg-slate-900/30' : 'bg-slate-950/30'}>
+                      <td className="p-6 font-medium text-slate-300">{row.metric}</td>
+                      <td className={`p-6 font-bold text-2xl lg:text-3xl ${row.color}`}>
+                        {row.trend === "up" && <ArrowUp className="inline w-5 h-5 mr-2" />}
+                        {row.trend === "down" && <ArrowDown className="inline w-5 h-5 mr-2" />}
+                        {row.improvement}
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
+                  <tr className="bg-gradient-to-r from-amber-950/50 to-amber-900/30 border-2 border-amber-500/50">
+                    <td className="p-6 font-bold text-white flex items-center gap-2">
+                      <Award className="text-amber-400" /> {roiMetrics[4].metric}
+                    </td>
+                    <td className={`p-6 font-bold text-2xl lg:text-3xl ${roiMetrics[4].color}`}>{roiMetrics[4].improvement}</td>
+                  </tr>
                 </tbody>
               </table>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Why AI Mill Section */}
-        <section className="relative py-[100px] bg-neutral-50">
-          <div className="container mx-auto max-w-[1200px] px-[80px]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-[44px] font-bold text-zinc-900 mb-4 leading-[1.2]">Why AI Mill for Manufacturing?</h2>
-              <p className="text-[20px] text-zinc-600 max-w-2xl mx-auto leading-[1.6]">
-                Built for manufacturing with industrial-grade reliability and seamless system integration.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {whyAIMill.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group bg-white rounded-2xl p-12 shadow-md border border-zinc-200 hover:translate-y-[-8px] hover:shadow-xl hover:border-slate-500 transition-all duration-300 cursor-pointer"
-                >
-                  <div className={`w-18 h-18 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`} style={{ width: '72px', height: '72px' }}>
-                    <item.icon className="w-9 h-9 text-white" />
-                  </div>
-                  <h3 className="text-[24px] font-bold text-zinc-900 mb-4 leading-[1.4]">{item.title}</h3>
-                  <p className="text-[17px] text-zinc-600 leading-[1.6]">{item.description}</p>
-                </motion.div>
-              ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="relative py-[120px] bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700 to-zinc-600 overflow-hidden" style={{ background: 'linear-gradient(135deg, #18181b 0%, #27272a 30%, #3f3f46 60%, #52525b 100%)' }}>
-          {/* Background Effects */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute inset-0 opacity-[0.05]" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
+        {/* Why AI Mill Section */}
+        <section className="py-24 lg:py-32 px-6 lg:px-20 bg-slate-950">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white text-center mb-20">Why AI Mill for Manufacturing?</h2>
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyAIMill.map((feature, fIdx) => (
+              <motion.div
+                key={fIdx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: fIdx * 0.1 }}
+                className="bg-slate-900/50 backdrop-blur-sm p-12 rounded-2xl border border-slate-800/50 hover:border-emerald-500/50 hover:shadow-xl transition-all"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center mb-6 shadow-lg">
+                  <feature.icon className="text-white w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-lg text-slate-400 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
+        </section>
 
-          <div className="container mx-auto max-w-4xl px-[80px] text-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-[56px] font-bold text-white mb-6 leading-tight" style={{ textShadow: '0 2px 20px rgba(0, 0, 0, 0.3)' }}>
-                Transform your manufacturing operations into an intelligent, self-optimizing ecosystem.
-              </h2>
-              <p className="text-[22px] text-white/95 mb-12 max-w-[700px] mx-auto leading-relaxed">
-                Join leading manufacturers already using AI Mill to build smarter, more resilient factories.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-white text-slate-500 px-12 py-5 text-lg font-bold hover:bg-gray-100 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all rounded-xl"
-                  asChild
-                >
-                  <Link to="/contact">
-                    Talk to Manufacturing AI Experts
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-white/50 text-white px-10 py-5 text-lg font-semibold hover:bg-white/20 hover:border-white backdrop-blur-sm rounded-xl"
-                  asChild
-                >
-                  <Link to="/solutions">View Case Studies →</Link>
-                </Button>
-              </div>
-            </motion.div>
+        {/* CTA Section */}
+        <section className="py-24 lg:py-32 px-6 bg-gradient-to-br from-emerald-600 via-cyan-600 to-blue-600 text-center relative overflow-hidden">
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h80v80H10z' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E")` }} />
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+              Transform your manufacturing operations into an intelligent, self-optimizing ecosystem.
+            </h2>
+            <p className="text-xl lg:text-2xl text-white/95 max-w-[700px] mx-auto mb-12 leading-relaxed">
+              Join leading manufacturers already using AI Mill to build smarter, more resilient factories.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-5">
+              <Button size="lg" className="h-16 px-12 bg-white text-emerald-600 text-lg font-bold rounded-xl shadow-xl hover:scale-105 transition-transform" asChild>
+                <Link to="/contact" className="flex items-center gap-2">
+                  Talk to Manufacturing AI Experts <ArrowRight className="w-5 h-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="h-16 px-10 border-2 border-white/50 bg-transparent text-white text-lg font-semibold rounded-xl hover:bg-white/10 hover:border-white transition-all" asChild>
+                <Link to="/solutions">View Case Studies →</Link>
+              </Button>
+            </div>
           </div>
         </section>
       </main>
