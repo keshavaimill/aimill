@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { motion } from "framer-motion";
+import { motion, scale } from "framer-motion";
 import { useState } from "react";
 import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
@@ -26,7 +26,11 @@ const SupplyChain = () => {
       number: "01",
       title: "AI-Powered Demand Forecasting Intelligence",
       challenge: "Most demand forecasts rely on historical averages and static assumptions, failing during promotions, seasonality shifts, or market volatility.",
-      solution: "We develop advanced forecasting models using time-series analysis, machine learning, and external demand signals.",
+      solution: [
+        "Advanced time-series and machine learning models capturing seasonality, trends, and demand variability",
+        "Integration of external demand signals such as promotions, pricing changes, weather, and market indicators",
+        "SKU- and location-level forecasting models designed to scale across large assortments"
+      ],
       howItWorks: [
         { icon: Brain, text: "Forecast agents continuously monitor demand patterns" },
         { icon: Activity, text: "Agents detect bias, anomalies, and demand shifts" },
@@ -43,7 +47,11 @@ const SupplyChain = () => {
       number: "02",
       title: "Autonomous Inventory Optimization & Replenishment",
       challenge: "Overstocking increases holding costs, while understocking leads to lost sales and customer dissatisfaction.",
-      solution: "We implement probabilistic inventory models that calculate optimal safety stock and reorder points.",
+      solution: [
+        "Probabilistic inventory models accounting for demand uncertainty and lead-time variability",
+        "Safety stock and reorder point optimization by SKU, location, and service level",
+        "Cost-to-serve and service-level tradeoff modeling"
+      ],
       howItWorks: [
         { icon: Brain, text: "Inventory agents recommend optimal replenishment quantities" },
         { icon: Activity, text: "Redistribution agents rebalance stock across locations" },
@@ -60,7 +68,11 @@ const SupplyChain = () => {
       number: "03",
       title: "End-to-End Supply Chain Visibility & Control Tower",
       challenge: "Decisions are made in silos with limited real-time visibility.",
-      solution: "We build AI-powered control towers aggregating data across suppliers, warehouses, transportation, and sales.",
+      solution: [
+        "AI-powered control towers aggregating data from suppliers, warehouses, transportation, ERP, and sales systems",
+        "Event correlation and risk-scoring models identifying bottlenecks and delays",
+        "KPI analytics for service levels, lead times, and fulfillment performance"
+      ],
       howItWorks: [
         { icon: Brain, text: "Monitoring agents detect risks and delays" },
         { icon: Activity, text: "Decision agents recommend corrective actions" },
@@ -442,11 +454,16 @@ const SupplyChain = () => {
                     <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
                     <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
-                      AI Mill Solution
+                      Traditional Data Science Layer
                     </span>
-                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
-                      {solution.solution}
-                    </p>
+                    <ul className="space-y-3 relative z-10">
+                      {solution.solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 

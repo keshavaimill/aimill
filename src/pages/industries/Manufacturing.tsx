@@ -31,7 +31,11 @@ const Manufacturing = () => {
       number: "01",
       title: "Demand Intelligence & Autonomous Planning",
       challenge: "Volatile demand patterns drive stockouts, excess inventory, and margin erosion across product lines.",
-      solution: "AI Mill combines predictive analytics with agentic AI to forecast demand scenarios and continuously rebalance plans with automated corrective actions.",
+      solution: [
+        "Machine-level predictive models built on historical sensor data, vibration signals, temperature, and operational logs",
+        "Failure probability and remaining useful life (RUL) models estimating when assets are likely to fail",
+        "Pattern recognition models identifying early degradation signals across equipment types"
+      ],
       howItWorks: [
         { icon: Brain, text: "Demand Sensing Agents analyze sales, market signals, and external factors" },
         { icon: Activity, text: "Scenario Planning Agents generate probabilistic demand scenarios" },
@@ -49,7 +53,11 @@ const Manufacturing = () => {
       number: "02",
       title: "Production Optimization & Predictive Maintenance",
       challenge: "Production inefficiencies and unplanned downtime reduce throughput, asset utilization, and service levels.",
-      solution: "Advanced analytics identify optimization opportunities while autonomous agents detect deviations and adjust schedules in real-time.",
+      solution: [
+        "Computer Vision models inspecting products in real time across assembly and production lines",
+        "Image classification and anomaly detection models identifying defects beyond human perception",
+        "Defect pattern analytics linking quality issues to process parameters and equipment"
+      ],
       howItWorks: [
         { icon: Brain, text: "Capacity Planning Agents optimize schedules across multiple plants" },
         { icon: Activity, text: "Predictive Maintenance Agents forecast equipment failures and schedule repairs" },
@@ -67,7 +75,11 @@ const Manufacturing = () => {
       number: "03",
       title: "Supply Chain Resilience & Risk Management",
       challenge: "Global supply chain disruptions create delays, expedited costs, and revenue risk across networks.",
-      solution: "AI Mill scores suppliers, predicts disruptions, and autonomously reroutes materials to maintain flow.",
+      solution: [
+        "Demand forecasting models aligned with production capacity and constraints",
+        "Optimization models balancing throughput, changeovers, labor, and delivery priorities",
+        "Constraint-based planning models accounting for machine, material, and labor availability"
+      ],
       howItWorks: [
         { icon: Brain, text: "Supplier Risk Agents continuously score supplier reliability" },
         { icon: Activity, text: "Disruption Prediction Agents forecast supply chain bottlenecks" },
@@ -85,7 +97,11 @@ const Manufacturing = () => {
       number: "04",
       title: "Quality Intelligence & Process Control",
       challenge: "Quality variability and scrap impact yield, compliance requirements, and customer trust.",
-      solution: "Data science identifies defect patterns while agentic AI enforces real-time corrections and learns from outcomes.",
+      solution: [
+        "Computer vision and anomaly detection quality models",
+        "Process parameter correlation and root cause analysis",
+        "Statistical process control (SPC) and real-time telemetry"
+      ],
       howItWorks: [
         { icon: Brain, text: "Defect Pattern Agents identify root causes across production lines" },
         { icon: Activity, text: "Process Adjustment Agents fine-tune parameters automatically" },
@@ -463,11 +479,16 @@ const Manufacturing = () => {
                     <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
                     <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
-                      AI Mill Solution
+                      Traditional Data Science Layer
                     </span>
-                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
-                      {solution.solution}
-                    </p>
+                    <ul className="space-y-3 relative z-10">
+                      {solution.solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
