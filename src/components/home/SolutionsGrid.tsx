@@ -30,7 +30,7 @@ const services: ServiceItem[] = [
     icon: Lightbulb,
     title: 'AI Strategy & Transformation',
     description:
-      'Define where AI creates real business value, align it with enterprise goals, and build a clear transformation roadmap.',
+      'Define where AI creates real business value and build a clear transformation roadmap.',
     href: '/consulting',
     color: 'cyan',
   },
@@ -38,7 +38,7 @@ const services: ServiceItem[] = [
     icon: Database,
     title: 'Data & Analytics Foundation',
     description:
-      'Design and modernize data platforms, pipelines, and governance to make analytics and AI reliable at scale.',
+      'Design and modernize data platforms, pipelines, and governance for reliable AI at scale.',
     href: '/consulting',
     color: 'purple',
   },
@@ -46,7 +46,7 @@ const services: ServiceItem[] = [
     icon: Brain,
     title: 'Applied Data Science',
     description:
-      'Build predictive, prescriptive, and optimization models that directly impact operational and financial outcomes.',
+      'Build predictive and optimization models that directly impact operational outcomes.',
     href: '/consulting',
     color: 'green',
   },
@@ -54,7 +54,7 @@ const services: ServiceItem[] = [
     icon: Bot,
     title: 'Agentic AI Systems Design',
     description:
-      'Design and deploy autonomous AI agents that observe, decide, and act across enterprise workflows.',
+      'Design and deploy autonomous AI agents that observe, decide, and act across workflows.',
     href: '/consulting',
     color: 'pink',
   },
@@ -62,7 +62,7 @@ const services: ServiceItem[] = [
     icon: Cog,
     title: 'AI Engineering & Deployment',
     description:
-      'Productionize AI models with MLOps, system integration, security, and scalability built in.',
+      'Productionize AI models with MLOps, system integration, security, and scalability.',
     href: '/consulting',
     color: 'teal',
   },
@@ -70,7 +70,7 @@ const services: ServiceItem[] = [
     icon: ShieldCheck,
     title: 'Governance & Responsible AI',
     description:
-      'Enable trustworthy AI with explainability, monitoring, compliance, and human oversight.',
+      'Enable trustworthy AI with explainability, monitoring, compliance, and oversight.',
     href: '/consulting',
     color: 'cyan',
   },

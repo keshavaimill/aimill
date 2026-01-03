@@ -4,16 +4,21 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   industry: [
     { label: "All Industries", href: "/industries" },
-    { label: "Healthcare", href: "/industries/healthcare" },
-    { label: "Financial Services", href: "/industries/financial-services" },
+    { label: "Lending & Financial Services", href: "/industries/lending" },
+    { label: "Agriculture", href: "/industries/agriculture" },
+    { label: "Supply Chain", href: "/industries/supply-chain" },
+    { label: "Manufacturing", href: "/industries/manufacturing" },
+    { label: "Insurance", href: "/industries/insurance" },
     { label: "Retail", href: "/industries/retail" },
   ],
   solutions: [
     { label: "All Solutions", href: "/solutions" },
-    { label: "Marketing Agent", href: "/solutions/marketing-agent" },
-    { label: "Lexflow AI", href: "/solutions/lexflow-ai" },
-    { label: "Ecommerce Intelligence", href: "/solutions/ecommerce-intelligence" },
-    { label: "HR Bot", href: "/solutions/hr-bot" },
+    { label: "GrowthAI", href: "/solutions/marketing-agent" },
+    { label: "LexAgent", href: "/solutions/lexflow-ai" },
+    { label: "CommerceIQ", href: "/solutions/ecommerce-intelligence" },
+    { label: "PeopleAgent", href: "/solutions/hr-bot" },
+    { label: "InboxAgent", href: "/solutions/customer-email-ai" },
+    { label: "ClaimAgent", href: "/solutions/insurance-fnol" },
   ],
   resources: [
     { label: "Documentation", href: "#" },

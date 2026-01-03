@@ -80,35 +80,42 @@ export const Navbar = () => {
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        Marketing Agent
+                        GrowthAI
                       </Link>
                       <Link
                         to="/solutions/lexflow-ai"
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        Lexflow AI
+                        LexAgent
                       </Link>
                       <Link
                         to="/solutions/ecommerce-intelligence"
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        Ecommerce Intelligence
+                        CommerceIQ
                       </Link>
                       <Link
                         to="/solutions/hr-bot"
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        HR Bot
+                        PeopleAgent
                       </Link>
                       <Link
                         to="/solutions/customer-email-ai"
                         className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        Customer Email AI
+                        InboxAgent
+                      </Link>
+                      <Link
+                        to="/solutions/insurance-fnol"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        ClaimAgent
                       </Link>
                     </div>
                   </motion.div>
@@ -261,35 +268,42 @@ export const Navbar = () => {
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    Marketing Agent
+                                    GrowthAI
                                   </Link>
                                   <Link
                                     to="/solutions/lexflow-ai"
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    Lexflow AI
+                                    LexAgent
                                   </Link>
                                   <Link
                                     to="/solutions/ecommerce-intelligence"
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    Ecommerce Intelligence
+                                    CommerceIQ
                                   </Link>
                                   <Link
                                     to="/solutions/hr-bot"
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    HR Bot
+                                    PeopleAgent
                                   </Link>
                                   <Link
                                     to="/solutions/customer-email-ai"
                                     className="block text-sm text-foreground/80 hover:text-foreground"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    Customer Email AI
+                                    InboxAgent
+                                  </Link>
+                                  <Link
+                                    to="/solutions/insurance-fnol"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    ClaimAgent
                                   </Link>
                                 </>
                               )}
