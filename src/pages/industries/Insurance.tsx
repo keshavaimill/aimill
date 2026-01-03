@@ -8,10 +8,8 @@ import {
   FileText, ArrowUp, ArrowDown, Activity, AlertTriangle, Building2,
   Sparkles, Brain
 } from "lucide-react";
-
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Insurance = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
@@ -116,46 +114,9 @@ const Insurance = () => {
     },
   ];
 
-        {/* Losses Input */}
-        <div className="space-y-4">
-          <div className="flex justify-between items-end">
-            <label className="text-sm font-medium text-slate-400">Incurred Losses</label>
-            <span className="text-lg font-mono text-white">${losses.toLocaleString()}</span>
-          </div>
-          <input 
-            type="range" min="50000" max="5000000" step="25000" 
-            value={losses} onChange={(e) => setLosses(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500"
-          />
-        </div>
-
-        {/* Result Area */}
-        <div className="pt-8 border-t border-slate-800 text-center">
-          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Projected Loss Ratio</p>
-          <motion.div 
-            key={ratio}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className={`text-7xl font-bold tracking-tighter mb-4 ${status.color}`}
-          >
-            {ratio}%
-          </motion.div>
-          <div className={`inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest ${status.bg} ${status.color}`}>
-            {status.label}
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
-// --- Main Page Component ---
-
-const Insurance = () => {
   return (
     <div className="min-h-screen bg-[#030712]">
       <Navbar />
-
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-black">
@@ -641,7 +602,6 @@ const Insurance = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
