@@ -8,7 +8,7 @@ import { ArrowRight, Target, Scale, ShoppingBag, Users, Mail, TrendingUp, Shield
 const allSolutions = [
   {
     icon: Target,
-    title: "Marketing Agent",
+    title: "GrowthAI",
     description: "Autonomous marketing execution from insight to impact",
     href: "/solutions/marketing-agent",
     color: "cyan",
@@ -16,7 +16,7 @@ const allSolutions = [
   },
   {
     icon: Scale,
-    title: "Lexflow AI",
+    title: "LexAgent",
     description: "The agentic legal command center",
     href: "/solutions/lexflow-ai",
     color: "purple",
@@ -24,7 +24,7 @@ const allSolutions = [
   },
   {
     icon: ShoppingBag,
-    title: "Ecommerce Intelligence",
+    title: "CommerceIQ",
     description: "AI agents powering ecommerce operations",
     href: "/solutions/ecommerce-intelligence",
     color: "green",
@@ -32,7 +32,7 @@ const allSolutions = [
   },
   {
     icon: Users,
-    title: "HR Bot",
+    title: "PeopleAgent",
     description: "HR operations automated through conversation",
     href: "/solutions/hr-bot",
     color: "pink",
@@ -40,7 +40,7 @@ const allSolutions = [
   },
   {
     icon: Mail,
-    title: "Customer Email AI",
+    title: "InboxAgent",
     description: "Autonomous backend customer support team",
     href: "/solutions/customer-email-ai",
     color: "teal",
@@ -56,7 +56,7 @@ const allSolutions = [
   },
   {
     icon: Shield,
-    title: "Insurance FNOL Agent",
+    title: "ClaimAgent",
     description: "Faster, smarter claims processing",
     href: "/solutions/insurance-fnol",
     color: "purple",
@@ -86,7 +86,7 @@ const Solutions = () => {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-40 pb-24 px-4 sm:px-8 lg:px-20">
+        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-32 pb-16 px-4 sm:px-8 lg:px-20">
           <div className="absolute inset-0 grid-pattern opacity-30" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
           
@@ -96,14 +96,14 @@ const Solutions = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-6">
+              <span className="inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-4">
                 Solutions
               </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6">
                 AI Agents for{" "}
-                <span className="gradient-text">Every Business Function</span>
+                <span className="gradient-text-purple">Every Business Function</span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
                 Specialized solutions built for production deployment
               </p>
             </motion.div>
@@ -111,7 +111,7 @@ const Solutions = () => {
         </section>
 
         {/* Category Filter */}
-        <section className="relative py-8 px-4 sm:px-8 lg:px-20 border-b border-border/50">
+        <section className="relative py-6 px-4 sm:px-8 lg:px-20 border-b border-border/50">
           <div className="container mx-auto max-w-6xl">
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
@@ -132,7 +132,7 @@ const Solutions = () => {
         </section>
 
         {/* Solutions Grid */}
-        <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
+        <section className="relative py-16 sm:py-20 px-4 sm:px-8 lg:px-20">
           {/* Elegant Grey Texture Background */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             {/* Soft gradient base */}
