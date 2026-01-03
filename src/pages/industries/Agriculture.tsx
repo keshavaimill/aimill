@@ -31,7 +31,11 @@ const Agriculture = () => {
       number: "01",
       title: "Precision Farming & Crop Intelligence",
       challenge: "Uniform treatment of fields ignores local variability in soil, moisture, and crop health.",
-      solution: "We combine satellite imagery, drone data, IoT sensors, and historical farm data to build crop intelligence models.",
+      solution: [
+        "Satellite, drone, and multispectral image analytics to assess crop vigor and stress patterns",
+        "IoT-driven soil and climate analytics modeling moisture, nutrients, and microclimate variability",
+        "Historical yield and agronomic data modeling to establish field-level baselines and benchmarks"
+      ],
       howItWorks: [
         { agent: "Crop monitoring agents", action: "assess plant health continuously" },
         { agent: "Soil intelligence agents", action: "analyze moisture and nutrient levels" },
@@ -49,7 +53,11 @@ const Agriculture = () => {
       number: "02",
       title: "Yield Forecasting & Harvest Planning",
       challenge: "Unreliable yield estimates disrupt supply contracts and pricing.",
-      solution: "Predictive models forecast yield at field, crop, and regional levels.",
+      solution: [
+        "Predictive yield models combining weather data, crop growth stages, and historical yields",
+        "Time-series forecasting at field, farm, and regional levels",
+        "Scenario-based modeling incorporating climate variability and agronomic factors"
+      ],
       howItWorks: [
         { agent: "Forecast agents", action: "update predictions throughout the growing season" },
         { agent: "Scenario agents", action: "simulate weather and disease impacts" },
@@ -66,7 +74,11 @@ const Agriculture = () => {
       number: "03",
       title: "Pest & Disease Early Detection",
       challenge: "Late detection leads to rapid spread and significant crop losses.",
-      solution: "Computer Vision and anomaly detection models identify early signs of pest and disease stress.",
+      solution: [
+        "Computer vision models detecting early visual symptoms from field and drone imagery",
+        "Anomaly detection identifying deviations in crop growth and health indicators",
+        "Disease and pest classification models trained on regional crop patterns"
+      ],
       howItWorks: [
         { agent: "Vision agents", action: "scan crop images" },
         { agent: "Alert agents", action: "notify farmers instantly" },
@@ -83,7 +95,11 @@ const Agriculture = () => {
       number: "04",
       title: "Autonomous Farm Operations & Advisory",
       challenge: "Farm decisions are labor-intensive and experience-dependent.",
-      solution: "Agentic AI systems act as always-on digital agronomists.",
+      solution: [
+        "Agronomic recommendation models based on crop type, growth stage, and environmental data",
+        "Optimization models for irrigation, spraying, and harvesting schedules",
+        "Performance benchmarking models comparing outcomes across seasons and fields"
+      ],
       howItWorks: [
         { agent: "Advisory agents", action: "provide daily actionable insights" },
         { agent: "Operations agents", action: "coordinate irrigation, spraying, and harvesting" },
@@ -456,11 +472,16 @@ const Agriculture = () => {
                     <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
                     <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
-                      AI Mill Solution
+                      Traditional Data Science Layer
                     </span>
-                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
-                      {solution.solution}
-                    </p>
+                    <ul className="space-y-3 relative z-10">
+                      {solution.solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 

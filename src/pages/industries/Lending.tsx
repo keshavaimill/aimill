@@ -28,7 +28,11 @@ const Lending = () => {
       number: "01",
       title: "Credit Risk Intelligence & Autonomous Underwriting",
       challenge: "Traditional credit scoring models fail to adapt to changing economic conditions and borrower behaviors, leading to inaccurate risk assessments.",
-      solution: "AI Mill's agentic AI continuously analyzes credit data, market signals, and borrower patterns to provide dynamic risk scoring that updates in real-time, reducing defaults by 25-40%.",
+      solution: [
+        "Advanced ML credit risk models",
+        "Transactional analysis, repayment behavior, income patterns",
+        "Alternative and non-traditional data integration"
+      ],
       howItWorks: [
         { agent: "Risk Assessment Agents", action: "Analyze credit history, income patterns, and market conditions" },
         { agent: "Behavioral Analysis Agents", action: "Monitor spending patterns and early warning signals" },
@@ -45,7 +49,11 @@ const Lending = () => {
       number: "02",
       title: "Portfolio Monitoring & Early Warning Systems",
       challenge: "Lenders struggle to identify at-risk accounts early enough to take preventive action, resulting in higher write-offs.",
-      solution: "Autonomous monitoring agents track portfolio health 24/7, flagging accounts showing early distress signals and recommending intervention strategies.",
+      solution: [
+        "Predictive early warning models that identify borrower stress signals well before default",
+        "Time-series and behavioral analytics tracking repayment trends, utilization shifts, and cash-flow volatility",
+        "Risk scoring frameworks that segment portfolios by deterioration probability and severity"
+      ],
       howItWorks: [
         { agent: "Early Warning Agents", action: "Detect payment pattern changes and risk indicators" },
         { agent: "Collection Strategy Agents", action: "Optimize outreach timing and methods" },
@@ -62,7 +70,11 @@ const Lending = () => {
       number: "03",
       title: "Fraud Detection & Financial Crime Prevention",
       challenge: "Sophisticated fraud schemes evolve faster than rule-based systems can adapt, leading to significant financial losses.",
-      solution: "AI agents learn from fraud patterns across the network, detecting anomalies and suspicious behaviors in real-time before funds are disbursed.",
+      solution: [
+        "Real-time anomaly detection models that surface suspicious transaction behavior across channels",
+        "Graph and network analytics that expose hidden relationships, mule accounts, and coordinated fraud activity",
+        "Behavioral risk models profiling users, devices, and transaction patterns to generate accurate fraud scores"
+      ],
       howItWorks: [
         { agent: "Pattern Detection Agents", action: "Identify unusual application patterns and anomalies" },
         { agent: "Identity Verification Agents", action: "Cross-reference data across multiple sources" },
@@ -79,7 +91,11 @@ const Lending = () => {
       number: "04",
       title: "Regulatory & Compliance Intelligence",
       challenge: "Regulatory requirements change frequently, and manual compliance processes are error-prone and resource-intensive.",
-      solution: "Autonomous compliance agents monitor regulatory updates, audit loan decisions, and ensure all processes meet current standards automatically.",
+      solution: [
+        "AI-driven compliance analytics monitoring transactions, controls, and policy adherence across the enterprise",
+        "Rules-enhanced machine learning models detecting anomalies, threshold breaches, and compliance deviations",
+        "Regulatory mapping and classification models aligning transactions and behaviors to applicable regulatory requirements"
+      ],
       howItWorks: [
         { agent: "Regulatory Monitoring Agents", action: "Track regulatory changes and updates in real-time" },
         { agent: "Audit Agents", action: "Review all loan decisions for compliance" },
@@ -460,11 +476,16 @@ const Lending = () => {
                     <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
                     <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
-                      AI Mill Solution
+                      Traditional Data Science Layer
                     </span>
-                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
-                      {solution.solution}
-                    </p>
+                    <ul className="space-y-3 relative z-10">
+                      {solution.solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
