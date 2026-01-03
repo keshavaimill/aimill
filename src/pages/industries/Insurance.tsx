@@ -30,7 +30,11 @@ const Insurance = () => {
       number: "01",
       title: "AI-Powered Claims Intelligence & FNOL Optimization",
       challenge: "Slow FNOL and manual claims triage lead to excessive leakage, higher settlement costs, and poor customer sentiment.",
-      solution: "We deploy predictive severity models and computer vision to intake, classify, and route claims automatically at the moment of loss.",
+      solution: [
+        "Predictive severity models estimating claim cost and complexity at FNOL",
+        "Computer Vision models analyzing images, videos, and documents for damage assessment",
+        "Historical claims analytics identifying leakage drivers and handling inefficiencies"
+      ],
       howItWorks: [
         { agent: "Severity agents", action: "predict claim costs during first notice" },
         { agent: "Triage agents", action: "route claims to optimized handling channels" },
@@ -47,7 +51,11 @@ const Insurance = () => {
       number: "02",
       title: "Autonomous Underwriting & Risk Selection",
       challenge: "Manual underwriting is slow and inconsistent, preventing rapid growth and accurate risk-adjusted pricing.",
-      solution: "We implement straight-through processing engines that use alternative data and ensemble models to score risk in real time.",
+      solution: [
+        "Ensemble risk models combining traditional and alternative data sources",
+        "Risk segmentation models aligning submissions to underwriting appetite",
+        "Predictive loss models supporting risk-adjusted pricing decisions"
+      ],
       howItWorks: [
         { agent: "Intake agents", action: "extract and validate submission data" },
         { agent: "Risk agents", action: "score alignment with appetite" },
@@ -64,7 +72,11 @@ const Insurance = () => {
       number: "03",
       title: "Predictive Pricing & Retention Intelligence",
       challenge: "One-size-fits-all pricing and reactive retention strategies lead to adverse selection and customer churn.",
-      solution: "We build dynamic pricing elasticity models and churn prediction systems to deliver personalized offers.",
+      solution: [
+        "Pricing elasticity models estimating customer sensitivity to price changes",
+        "Churn prediction models identifying high-risk policies before renewal",
+        "Portfolio analytics measuring profitability and customer lifetime value"
+      ],
       howItWorks: [
         { agent: "Elasticity agents", action: "calculate price sensitivity" },
         { agent: "Churn agents", action: "flag high-risk accounts early" },
@@ -434,11 +446,16 @@ const Insurance = () => {
                     <div className="absolute top-0 left-0 w-1 h-full bg-purple" />
                     <div className="absolute inset-0 bg-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <span className="text-xs font-bold text-purple-400 uppercase tracking-[0.2em] mb-4 block relative z-10">
-                      AI Mill Solution
+                      Traditional Data Science Layer
                     </span>
-                    <p className="text-lg text-gray-300 leading-relaxed relative z-10">
-                      {solution.solution}
-                    </p>
+                    <ul className="space-y-3 relative z-10">
+                      {solution.solution.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
