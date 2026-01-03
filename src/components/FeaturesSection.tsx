@@ -122,8 +122,7 @@ export const FeaturesSection = () => {
           className="mb-16"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900 tracking-wide text-left">
-            AI Mill designs and delivers intelligent systems that combine agentic execution with rigorous data science—{" "}
-            <span className="text-zinc-600">Turning predictions into decisions and decisions into action within existing enterprise environments.</span>
+            AI Mill Designs Intelligent Systems Where Agentic Execution & Data Science Turn Predictions Into Action !!
           </h2>
         </motion.div>
 

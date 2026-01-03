@@ -197,7 +197,7 @@ export const SolutionsGrid = () => {
             <div className="flex items-center gap-3 mb-8">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/50" />
               <h3 className="text-2xl font-bold text-center min-w-max">
-                Agentic AI Solutions for Industry
+                Agentic Solutions Built for Industry
               </h3>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/50" />
             </div>

@@ -46,7 +46,7 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex justify-start mb-8"
+                className="flex justify-start mb-12"
               >
                 <Link
                   to="/contact"
@@ -65,7 +65,7 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-6"
+                  className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-10"
                 >
                   Agents & ML Workflows That Execute{" "}
                   <span className="gradient-text-purple">Real Business Outcomes</span>
@@ -75,9 +75,9 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-lg md:text-xl text-muted-foreground mb-8"
+                  className="text-lg md:text-xl text-muted-foreground mb-12"
                 >
-                  AI Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
+                  AI Mill Consults Enterprises on AI, Data Science, & Analytics—Delivering Custom Agentic Solutions & Accelerators Built To Solve Complex Industry Problems
                 </motion.p>
 
                 {/* Value Bullets */}
@@ -85,7 +85,7 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="flex flex-wrap items-center gap-4 mb-10"
+                  className="flex flex-wrap items-center gap-4 mb-14"
                 >
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
                     <span className="w-2 h-2 rounded-full bg-green" />
