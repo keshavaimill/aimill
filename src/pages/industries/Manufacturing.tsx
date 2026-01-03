@@ -101,14 +101,7 @@ const Manufacturing = () => {
     },
   ];
 
-  const challenges = [
-    { icon: TrendingDown, text: "Demand volatility & forecast inaccuracy" },
-    { icon: Clock, text: "Production inefficiencies & downtime" },
-    { icon: AlertCircle, text: "Supply chain disruptions & risk exposure" },
-    { icon: BarChart, text: "Quality variability & scrap rates" },
-    { icon: Shield, text: "Slow, manual decision cycles" },
-    { icon: TrendingDownIcon, text: "Rising operational costs & margin erosion" },
-  ];
+
 
   const roiMetrics = [
     { metric: "Unplanned Downtime", improvement: "↓ 30–50%", trend: "down", color: "text-destructive" },
@@ -454,27 +447,24 @@ const Manufacturing = () => {
                     <div className="mb-10 glass border border-green/30 p-8 rounded-xl bg-green-950/10">
                       <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-cyan">HOW AGENTIC AI WORKS</h4>
                       <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => {
-                          const Icon = solutionIcons[itemIdx % solutionIcons.length];
-                          return (
-                            <motion.div
-                              key={itemIdx}
-                              initial={{ opacity: 0, x: -10 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                              className="flex items-start gap-4"
-                            >
-                              <div className="w-6 h-6 rounded-full bg-cyan flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <Icon className="w-4 h-4 text-white" />
-                              </div>
-                              <div>
-                                <span className="font-semibold text-white">{item.agent}</span>
-                                <span className="text-gray-400"> → {item.action}</span>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
+                        {solution.howItWorks.map((item, itemIdx) => (
+                          <motion.div
+                            key={itemIdx}
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
+                            className="flex items-start gap-4"
+                          >
+                            <div className="w-6 h-6 rounded-full bg-cyan flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <item.icon className="w-4 h-4 text-white" />
+                            </div>
+                            <p className="text-gray-400">
+                              <span className="font-semibold text-white">{item.text.split(" ").slice(0, 3).join(" ")}</span>
+                              {" " + item.text.split(" ").slice(3).join(" ")}
+                            </p>
+                          </motion.div>
+                        ))}
                       </div>
                     </div>
 
@@ -557,17 +547,11 @@ const Manufacturing = () => {
                           </span>
                         </div>
                       </td>
-                    </tr>
+                    </motion.tr>
                   ))}
-                  <tr className="bg-gradient-to-r from-amber-950/50 to-amber-900/30 border-2 border-amber-500/50">
-                    <td className="p-6 font-bold text-white flex items-center gap-2">
-                      <Award className="text-amber-400" /> {roiMetrics[4].metric}
-                    </td>
-                    <td className={`p-6 font-bold text-2xl lg:text-3xl ${roiMetrics[4].color}`}>{roiMetrics[4].improvement}</td>
-                  </tr>
                 </tbody>
               </table>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -656,7 +640,7 @@ const Manufacturing = () => {
         </section>
       </main>
       <Footer />
-    </div>
+    </div >
   );
 };
 

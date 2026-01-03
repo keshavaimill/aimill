@@ -426,32 +426,27 @@ const SupplyChain = () => {
                     <div className="mb-10 glass border border-green/30 p-8 rounded-xl bg-green-950/10">
                       <h4 className="text-base font-bold uppercase tracking-wider mb-6 text-cyan">HOW AGENTIC AI WORKS</h4>
                       <div className="space-y-4">
-                        {solution.howItWorks.map((item, itemIdx) => {
-                          const Icon = solutionIcons[itemIdx % solutionIcons.length];
-                          return (
-                            <motion.div
-                              key={itemIdx}
-                              initial={{ opacity: 0, x: -10 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
-                              className="flex items-start gap-4"
-                            >
-                              <div className="w-6 h-6 rounded-full bg-cyan flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <Icon className="w-4 h-4 text-white" />
-                              </div>
-                              <div>
-                                <span className="font-semibold text-white">{item.agent}</span>
-                                <span className="text-gray-400"> → {item.action}</span>
-                              </div>
-                            </motion.div>
-                          );
-                        })}
+                        {solution.howItWorks.map((item, itemIdx) => (
+                          <motion.div
+                            key={itemIdx}
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3, delay: itemIdx * 0.1 }}
+                            className="flex items-start gap-4"
+                          >
+                            <div className="w-6 h-6 rounded-full bg-cyan flex items-center justify-center flex-shrink-0 mt-0.5">
+                              <item.icon className="w-4 h-4 text-white" />
+                            </div>
+                            <p className="text-gray-400">
+                              <span className="font-semibold text-white">{item.text.split(" ").slice(0, 2).join(" ")}</span>
+                              {" " + item.text.split(" ").slice(2).join(" ")}
+                            </p>
+                          </motion.div>
+                        ))}
                       </div>
-                      <div className={`text-2xl font-extrabold ${item.color}`}>{item.value}</div>
-                    </motion.div>
-                  ))}
-                </div>
+
+                    </div>
 
                     {/* Business Impact Cards */}
                     <div className="grid md:grid-cols-3 gap-6">
@@ -472,33 +467,9 @@ const SupplyChain = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="h-2 bg-slate-800/50 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: "94%" }}
-                      transition={{ duration: 1.5, delay: 0.8 }}
-                      className="h-full bg-gradient-to-r from-orange-500 to-purple-500 rounded-full"
-                    />
-                  </div>
-                  <div className="flex justify-between mt-2">
-                    <span className="text-xs text-slate-500">Operational Efficiency</span>
-                    <span className="text-xs font-bold text-orange-400">94%</span>
-                  </div>
                 </div>
-              </div>
-
-              {/* Floating Decorative Elements */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-6 -right-6 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl -z-10"
-              />
-              <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -z-10"
-              />
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </section>
 
@@ -512,8 +483,8 @@ const SupplyChain = () => {
           </div>
           <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-8">
             {challenges.map((c, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -603,12 +574,7 @@ const SupplyChain = () => {
                       </td>
                     </motion.tr>
                   ))}
-                  <tr className="bg-gradient-to-r from-amber-950/50 to-amber-900/30 border-2 border-amber-500/50">
-                    <td className="p-6 font-bold text-white flex items-center gap-2">
-                      <Award className="text-amber-400" /> Payback Period
-                    </td>
-                    <td className="p-6 font-bold text-2xl lg:text-[28px] text-amber-400">3–6 months</td>
-                  </tr>
+
                 </tbody>
               </table>
             </motion.div>
@@ -685,7 +651,7 @@ const SupplyChain = () => {
               `,
             }} />
           </div>
-        </section>
+
 
           <div className="container mx-auto max-w-4xl text-center relative z-10">
             <motion.div
@@ -716,9 +682,9 @@ const SupplyChain = () => {
             </motion.div>
           </div>
         </section>
-      </main>
+      </main >
       <Footer />
-    </div>
+    </div >
   );
 };
 
