@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ShieldCheck, FileText, Lock, UserCheck } from "lucide-react";
 
 interface SolutionGovernanceProps {
@@ -31,15 +30,10 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
 
   return (
     <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-background">
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left: Integrations */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className={`inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase mb-6 ${
               themeColor === "cyan" ? "text-cyan" :
               themeColor === "purple" ? "text-purple" :
@@ -57,7 +51,7 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
             </p>
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
-                <div key={i} className="aspect-square glass rounded-xl flex items-center justify-center border border-border/50 hover:border-primary/30 transition-colors">
+                <div key={i} className="aspect-square bg-card rounded-xl flex items-center justify-center border border-border/50">
                   <div className="w-8 h-8 bg-secondary/50 rounded" />
                 </div>
               ))}
@@ -71,15 +65,10 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
             } hover:underline inline-flex items-center gap-2`}>
               View all integrations →
             </a>
-          </motion.div>
+          </div>
 
           {/* Right: Governance */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className={`inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase mb-6 ${
               themeColor === "cyan" ? "text-cyan" :
               themeColor === "purple" ? "text-purple" :
@@ -94,13 +83,9 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
             </h2>
             <div className="space-y-6">
               {features.map((feature, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className={`flex gap-4 p-5 glass rounded-xl border-l-4 ${
+                  className={`flex gap-4 p-5 bg-card rounded-xl border-l-4 ${
                     themeColor === "cyan" ? "border-cyan" :
                     themeColor === "purple" ? "border-purple" :
                     themeColor === "green" ? "border-green" :
@@ -109,11 +94,11 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
                   }`}
                 >
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                    themeColor === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :
-                    themeColor === "purple" ? "bg-gradient-to-br from-purple/30 to-purple/20" :
-                    themeColor === "green" ? "bg-gradient-to-br from-green/30 to-green/20" :
-                    themeColor === "pink" ? "bg-gradient-to-br from-pink/30 to-pink/20" :
-                    "bg-gradient-to-br from-teal/30 to-teal/20"
+                    themeColor === "cyan" ? "bg-cyan/20" :
+                    themeColor === "purple" ? "bg-purple/20" :
+                    themeColor === "green" ? "bg-green/20" :
+                    themeColor === "pink" ? "bg-pink/20" :
+                    "bg-teal/20"
                   }`}>
                     <feature.icon className={`w-6 h-6 ${
                       themeColor === "cyan" ? "text-cyan" :
@@ -129,10 +114,10 @@ export const SolutionGovernance = ({ themeColor }: SolutionGovernanceProps) => {
                       {feature.description}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
