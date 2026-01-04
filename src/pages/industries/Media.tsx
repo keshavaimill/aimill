@@ -26,10 +26,10 @@ const Media = () => {
       title: "Audience Intelligence & Dynamic Segmentation",
       challenge: "Media organizations struggle to track fragmented audiences across platforms, leading to wasted spend and missed engagement.",
       solution: [
-       "Audience segmentation models based on demographics, viewing behavior, and content affinity",
-       "Predictive models estimating content reach, watch time, engagement depth, and churn risk",
-       "Cross-platform analytics integrating OTT, TV, social, and web consumption data",
-       "Trend detection models identifying emerging genres, formats, and audience shifts",
+        "Audience segmentation models based on demographics, viewing behavior, and content affinity",
+        "Predictive models estimating content reach, watch time, engagement depth, and churn risk",
+        "Cross-platform analytics integrating OTT, TV, social, and web consumption data",
+        "Trend detection models identifying emerging genres, formats, and audience shifts",
       ],
       howItWorks: [
         { agent: "Demand Sensing Agents", action: "Monitor platform performance and audience shifts" },
@@ -48,9 +48,9 @@ const Media = () => {
       title: "AI-Powered Content & Programming Optimization",
       challenge: "Publishers can't produce or adapt content fast enough to capture viral trends, resulting in missed monetization windows.",
       solution: [
-       "Demand forecasting models for ad inventory across time slots and platforms",
-       "Audience-value scoring based on engagement, demographics, and intent signals",
-       "Pricing optimization models for CPM, sponsorships, and programmatic inventory",
+        "Demand forecasting models for ad inventory across time slots and platforms",
+        "Audience-value scoring based on engagement, demographics, and intent signals",
+        "Pricing optimization models for CPM, sponsorships, and programmatic inventory",
       ],
       howItWorks: [
         { agent: "Trend Analysis Agents", action: "Identify surfacing content themes and formats" },
@@ -386,8 +386,8 @@ const Media = () => {
                     <ul className="space-y-3 relative z-10">
                       {solution.solution.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
-                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2.5 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">• {item}</span>
                         </li>
                       ))}
                     </ul>

@@ -454,8 +454,8 @@ const Insurance = () => {
                     <ul className="space-y-3 relative z-10">
                       {solution.solution.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2 flex-shrink-0" />
-                          <span className="text-lg text-gray-300 leading-relaxed">{item}</span>
+                          <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mt-2.5 flex-shrink-0" />
+                          <span className="text-lg text-gray-300 leading-relaxed">• {item}</span>
                         </li>
                       ))}
                     </ul>
