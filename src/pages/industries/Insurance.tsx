@@ -466,7 +466,7 @@ const Insurance = () => {
                 <div className="bg-[#06070a] border border-white/5 rounded-3xl overflow-hidden mb-12">
                   <div className="px-8 py-6 border-b border-white/5 bg-white/[0.02]">
                     <h4 className="text-sm font-bold text-purple-400 uppercase tracking-[0.2em]">
-                      How Agentic AI Works
+                      Outcome-Driven Agentic AI Layer
                     </h4>
                   </div>
                   <div className="divide-y divide-white/5">
