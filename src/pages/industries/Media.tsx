@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { motion } from "framer-motion";
+import { motion, time } from "framer-motion";
 import { useState } from "react";
 import {
   ArrowRight, TrendingDown, Clock, Database, Users, AlertCircle,
@@ -26,9 +26,10 @@ const Media = () => {
       title: "Audience Intelligence & Dynamic Segmentation",
       challenge: "Media organizations struggle to track fragmented audiences across platforms, leading to wasted spend and missed engagement.",
       solution: [
-       "Audience segmentation models using demographics, viewing history, and content affinity",
-       "Predictive analytics for content performance (reach, watch time, churn risk)",
-       "Cross-platform analytics combining OTT, TV, social, and web behavior",
+       "Audience segmentation models based on demographics, viewing behavior, and content affinity",
+       "Predictive models estimating content reach, watch time, engagement depth, and churn risk",
+       "Cross-platform analytics integrating OTT, TV, social, and web consumption data",
+       "Trend detection models identifying emerging genres, formats, and audience shifts",
       ],
       howItWorks: [
         { agent: "Demand Sensing Agents", action: "Monitor platform performance and audience shifts" },

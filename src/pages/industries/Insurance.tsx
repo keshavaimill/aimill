@@ -31,9 +31,10 @@ const Insurance = () => {
       title: "AI-Powered Claims Intelligence & FNOL Optimization",
       challenge: "Slow FNOL and manual claims triage lead to excessive leakage, higher settlement costs, and poor customer sentiment.",
       solution: [
-        "Predictive severity models estimating claim cost and complexity at FNOL",
-        "Computer Vision models analyzing images, videos, and documents for damage assessment",
-        "Historical claims analytics identifying leakage drivers and handling inefficiencies"
+        "Claim severity models estimating cost and complexity at FNOL",
+        "Computer vision models for automated damage and document assessment",
+        "Claims leakage analytics identifying overpayment and inefficiency drivers",
+        "Claim segmentation models enabling straight-through vs. adjuster handling"
       ],
       howItWorks: [
         { agent: "Severity agents", action: "predict claim costs during first notice" },
@@ -52,9 +53,10 @@ const Insurance = () => {
       title: "Autonomous Underwriting & Risk Selection",
       challenge: "Manual underwriting is slow and inconsistent, preventing rapid growth and accurate risk-adjusted pricing.",
       solution: [
-        "Ensemble risk models combining traditional and alternative data sources",
-        "Risk segmentation models aligning submissions to underwriting appetite",
-        "Predictive loss models supporting risk-adjusted pricing decisions"
+        "Ensemble risk models using traditional and alternative data",
+        "Risk segmentation aligned to underwriting appetite",
+        "Predictive loss models for risk-adjusted pricing",
+        "Portfolio exposure and concentration analytics"
       ],
       howItWorks: [
         { agent: "Intake agents", action: "extract and validate submission data" },
@@ -73,9 +75,10 @@ const Insurance = () => {
       title: "Predictive Pricing & Retention Intelligence",
       challenge: "One-size-fits-all pricing and reactive retention strategies lead to adverse selection and customer churn.",
       solution: [
-        "Pricing elasticity models estimating customer sensitivity to price changes",
-        "Churn prediction models identifying high-risk policies before renewal",
-        "Portfolio analytics measuring profitability and customer lifetime value"
+        "Price elasticity models estimating premium sensitivity",
+        "Churn prediction models identifying at-risk policies pre-renewal",
+        "Profitability and customer lifetime value analytics",
+        "Renewal pricing optimization models balancing margin and retention"
       ],
       howItWorks: [
         { agent: "Elasticity agents", action: "calculate price sensitivity" },

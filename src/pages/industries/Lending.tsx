@@ -50,9 +50,9 @@ const Lending = () => {
       title: "Portfolio Monitoring & Early Warning Systems",
       challenge: "Lenders struggle to identify at-risk accounts early enough to take preventive action, resulting in higher write-offs.",
       solution: [
-        "Predictive early warning models that identify borrower stress signals well before default",
-        "Time-series and behavioral analytics tracking repayment trends, utilization shifts, and cash-flow volatility",
-        "Risk scoring frameworks that segment portfolios by deterioration probability and severity"
+        "Predictive early-warning models identifying pre-default stress signals",
+        "Time-series behavioral analytics capturing repayment, utilization, and cash-flow volatility",
+        "Probabilistic risk scoring segmenting portfolios by likelihood and severity of deterioration"
       ],
       howItWorks: [
         { agent: "Early Warning Agents", action: "Detect payment pattern changes and risk indicators" },
@@ -71,9 +71,9 @@ const Lending = () => {
       title: "Fraud Detection & Financial Crime Prevention",
       challenge: "Sophisticated fraud schemes evolve faster than rule-based systems can adapt, leading to significant financial losses.",
       solution: [
-        "Real-time anomaly detection models that surface suspicious transaction behavior across channels",
-        "Graph and network analytics that expose hidden relationships, mule accounts, and coordinated fraud activity",
-        "Behavioral risk models profiling users, devices, and transaction patterns to generate accurate fraud scores"
+        "Real-time anomaly detection models identifying abnormal transaction behavior",
+        "Graph and network analytics uncovering linked accounts, mule networks, and coordinated fraud",
+        "Behavioral profiling models analyzing user, device, and transaction patterns"
       ],
       howItWorks: [
         { agent: "Pattern Detection Agents", action: "Identify unusual application patterns and anomalies" },
@@ -92,9 +92,9 @@ const Lending = () => {
       title: "Regulatory & Compliance Intelligence",
       challenge: "Regulatory requirements change frequently, and manual compliance processes are error-prone and resource-intensive.",
       solution: [
-        "AI-driven compliance analytics monitoring transactions, controls, and policy adherence across the enterprise",
-        "Rules-enhanced machine learning models detecting anomalies, threshold breaches, and compliance deviations",
-        "Regulatory mapping and classification models aligning transactions and behaviors to applicable regulatory requirements"
+        "Compliance analytics monitoring transactions, controls, and policy adherence",
+        "Rules-enhanced ML models detecting anomalies, threshold breaches, and violations",
+        "Classification models mapping transactions and behaviors to regulatory requirements"
       ],
       howItWorks: [
         { agent: "Regulatory Monitoring Agents", action: "Track regulatory changes and updates in real-time" },

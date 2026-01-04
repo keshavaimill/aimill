@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { types } from "util";
 
 const Manufacturing = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
@@ -32,8 +33,8 @@ const Manufacturing = () => {
       title: "Demand Intelligence & Autonomous Planning",
       challenge: "Volatile demand patterns drive stockouts, excess inventory, and margin erosion across product lines.",
       solution: [
-        "Machine-level predictive models built on historical sensor data, vibration signals, temperature, and operational logs",
-        "Failure probability and remaining useful life (RUL) models estimating when assets are likely to fail",
+        "ML driven predictive models using sensor data, vibration signals, temperature, and operational logs",
+        "Failure probability and Remaining Useful Life (RUL) models estimating asset failure timelines",
         "Pattern recognition models identifying early degradation signals across equipment types"
       ],
       howItWorks: [
@@ -54,8 +55,8 @@ const Manufacturing = () => {
       title: "Production Optimization & Predictive Maintenance",
       challenge: "Production inefficiencies and unplanned downtime reduce throughput, asset utilization, and service levels.",
       solution: [
-        "Computer Vision models inspecting products in real time across assembly and production lines",
-        "Image classification and anomaly detection models identifying defects beyond human perception",
+        "Computer vision models inspecting products in real time across production lines",
+        "Image classification and anomaly detection models identifying defects beyond human visibility",
         "Defect pattern analytics linking quality issues to process parameters and equipment"
       ],
       howItWorks: [

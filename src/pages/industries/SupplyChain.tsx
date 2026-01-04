@@ -28,8 +28,8 @@ const SupplyChain = () => {
       challenge: "Most demand forecasts rely on historical averages and static assumptions, failing during promotions, seasonality shifts, or market volatility.",
       solution: [
         "Advanced time-series and machine learning models capturing seasonality, trends, and demand variability",
-        "Integration of external demand signals such as promotions, pricing changes, weather, and market indicators",
-        "SKU- and location-level forecasting models designed to scale across large assortments"
+        "Integration of external demand signals including promotions, pricing, weather, and market indicators",
+        "SKU- and location-level forecasting models scalable across large assortments"
       ],
       howItWorks: [
         { icon: Brain, text: "Forecast agents continuously monitor demand patterns" },
@@ -48,9 +48,9 @@ const SupplyChain = () => {
       title: "Autonomous Inventory Optimization & Replenishment",
       challenge: "Overstocking increases holding costs, while understocking leads to lost sales and customer dissatisfaction.",
       solution: [
-        "Probabilistic inventory models accounting for demand uncertainty and lead-time variability",
+        "Probabilistic inventory models accounting for demand and lead-time uncertainty",
         "Safety stock and reorder point optimization by SKU, location, and service level",
-        "Cost-to-serve and service-level tradeoff modeling"
+        "Cost-to-serve and service-level trade-off modeling"
       ],
       howItWorks: [
         { icon: Brain, text: "Inventory agents recommend optimal replenishment quantities" },
@@ -69,8 +69,8 @@ const SupplyChain = () => {
       title: "End-to-End Supply Chain Visibility & Control Tower",
       challenge: "Decisions are made in silos with limited real-time visibility.",
       solution: [
-        "AI-powered control towers aggregating data from suppliers, warehouses, transportation, ERP, and sales systems",
-        "Event correlation and risk-scoring models identifying bottlenecks and delays",
+        "Control tower analytics integrating data from suppliers, warehouses, transportation, ERP, and sales systems",
+        "Event correlation and risk-scoring models identifying delays and bottlenecks",
         "KPI analytics for service levels, lead times, and fulfillment performance"
       ],
       howItWorks: [

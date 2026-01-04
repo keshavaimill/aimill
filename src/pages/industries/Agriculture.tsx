@@ -32,9 +32,9 @@ const Agriculture = () => {
       title: "Precision Farming & Crop Intelligence",
       challenge: "Uniform treatment of fields ignores local variability in soil, moisture, and crop health.",
       solution: [
-        "Satellite, drone, and multispectral image analytics to assess crop vigor and stress patterns",
-        "IoT-driven soil and climate analytics modeling moisture, nutrients, and microclimate variability",
-        "Historical yield and agronomic data modeling to establish field-level baselines and benchmarks"
+        "Satellite, drone, and multispectral image analytics assessing crop vigor and stress",
+        "IoT-driven soil and climate analytics modeling moisture, nutrients, and microclimate variation",
+        "Historical yield and agronomic data modeling for field-level baselines"
       ],
       howItWorks: [
         { agent: "Crop monitoring agents", action: "assess plant health continuously" },
@@ -54,9 +54,9 @@ const Agriculture = () => {
       title: "Yield Forecasting & Harvest Planning",
       challenge: "Unreliable yield estimates disrupt supply contracts and pricing.",
       solution: [
-        "Predictive yield models combining weather data, crop growth stages, and historical yields",
+        "Predictive yield models combining weather, crop growth stages, and historical yields",
         "Time-series forecasting at field, farm, and regional levels",
-        "Scenario-based modeling incorporating climate variability and agronomic factors"
+        "Scenario-based modeling incorporating climate and agronomic variability"
       ],
       howItWorks: [
         { agent: "Forecast agents", action: "update predictions throughout the growing season" },
@@ -96,9 +96,9 @@ const Agriculture = () => {
       title: "Autonomous Farm Operations & Advisory",
       challenge: "Farm decisions are labor-intensive and experience-dependent.",
       solution: [
-        "Agronomic recommendation models based on crop type, growth stage, and environmental data",
+        "Agronomic recommendation models based on crop type, growth stage, and environment",
         "Optimization models for irrigation, spraying, and harvesting schedules",
-        "Performance benchmarking models comparing outcomes across seasons and fields"
+        "Performance benchmarking models comparing outcomes across fields and seasons"
       ],
       howItWorks: [
         { agent: "Advisory agents", action: "provide daily actionable insights" },
