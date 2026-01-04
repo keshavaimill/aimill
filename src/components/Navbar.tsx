@@ -17,7 +17,7 @@ export const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-background/95 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 glass border-b border-border/50">
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -62,8 +62,8 @@ export const Navbar = () => {
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
-                            bg-background/90 backdrop-blur-md
-                            border border-border shadow-lg"
+                            glass
+                            border border-border/50"
                   >
                     <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
@@ -77,56 +77,56 @@ export const Navbar = () => {
                     <div className="space-y-1">
                       <Link
                         to="/solutions/marketing-agent"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         GrowthAI
                       </Link>
                       <Link
                         to="/solutions/lexflow-ai"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         LexAgent
                       </Link>
                       <Link
                         to="/solutions/ecommerce-intelligence"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         CommerceIQ
                       </Link>
                       <Link
                         to="/solutions/hr-bot"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         PeopleAgent
                       </Link>
                       <Link
                         to="/solutions/customer-email-ai"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         InboxAgent
                       </Link>
                       <Link
                         to="/solutions/insurance-fnol"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         ClaimAgent
                       </Link>
                       <Link
                         to="/solutions/forecasting-engine"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Forecasting Engine
                       </Link>
                       <Link
                         to="/solutions/predictive-maintenance"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Predictive Maintenance
@@ -143,8 +143,8 @@ export const Navbar = () => {
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
-                            bg-background/90 backdrop-blur-md
-                            border border-border shadow-lg"
+                            glass
+                            border border-border/50"
                   >
                     <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
@@ -158,56 +158,56 @@ export const Navbar = () => {
                     <div className="space-y-1">
                       <Link
                         to="/industries/lending"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Lending & Financial Services
                       </Link>
                       <Link
                         to="/industries/insurance"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Insurance
                       </Link>
                       <Link
                         to="/industries/agriculture"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Agriculture
                       </Link>
                       <Link
                         to="/industries/supply-chain"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Supply Chain
                       </Link>
                       <Link
                         to="/industries/manufacturing"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Manufacturing
                       </Link>
                       <Link
                         to="/industries/media"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Media
                       </Link>
                       <Link
                         to="/industries/healthcare"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Healthcare
                       </Link>
                       <Link
                         to="/industries/retail"
-                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary/50 transition-colors text-sm"
                         onClick={() => setActiveDropdown(null)}
                       >
                         Retail
@@ -245,7 +245,7 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border"
+            className="lg:hidden glass border-b border-border/50"
           >
             <div className="container mx-auto px-6 py-4 space-y-4">
               {navItems.map((item) => (

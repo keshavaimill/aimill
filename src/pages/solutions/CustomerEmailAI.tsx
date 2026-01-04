@@ -57,7 +57,24 @@ const CustomerEmailAI = () => {
   const channels = ["Email", "Helpdesk", "CRM", "Ticketing Systems", "Slack", "APIs"];
 
   return (
-    <div className="min-h-screen bg-[#020617] text-slate-300">
+    <div className="min-h-screen bg-[#020617] text-slate-300 relative">
+      {/* Soothing Background Texture */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 opacity-[0.08]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Ccircle cx='15' cy='15' r='1'/%3E%3Ccircle cx='45' cy='15' r='1'/%3E%3Ccircle cx='15' cy='45' r='1'/%3E%3Ccircle cx='45' cy='45' r='1'/%3E%3Ccircle cx='30' cy='30' r='0.8'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.3'/%3E%3C/svg%3E")`,
+        }} />
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `
+            radial-gradient(circle at 15% 25%, rgba(255,255,255,0.02) 0%, transparent 40%),
+            radial-gradient(circle at 85% 75%, rgba(255,255,255,0.02) 0%, transparent 40%),
+            radial-gradient(circle at 50% 50%, rgba(255,255,255,0.015) 0%, transparent 60%)
+          `,
+        }} />
+      </div>
+      <div className="relative z-10">
       <Navbar />
       <main>
         <style>{`
@@ -85,27 +102,39 @@ const CustomerEmailAI = () => {
         `}</style>
 
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-[#020617] pt-20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/30 rounded-full blur-3xl pointer-events-none animate-pulse" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-600/30 rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-amber-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
-          
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20">
+          {/* Subtle Texture Overlay */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3Ccircle cx='30' cy='10' r='1.5'/%3E%3Ccircle cx='10' cy='30' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} />
+            <div className="absolute inset-0 opacity-5" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
+            }} />
+            <div className="absolute inset-0 opacity-15" style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(180, 83, 9, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(180, 83, 9, 0.05) 0%, transparent 50%)
+              `,
+            }} />
+          </div>
+
           <div className="container mx-auto max-w-7xl px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold tracking-widest mb-6 uppercase shadow-lg shadow-amber-500/20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-muted-foreground text-xs font-bold tracking-widest mb-6 uppercase hover:text-foreground hover:border-amber-500/50 transition-all">
                   CUSTOMER SUPPORT AI
                 </div>
                 <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   Your Autonomous<br />Backend Customer<br />Support Team
                 </h1>
-                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-6 max-w-[600px]">
+                <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   AI agents that read, reason, retrieve data, and respond to customer emails — with human oversight only when required.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-12">
                   <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full border border-amber-500/40 shadow-md shadow-amber-500/10 hover:bg-amber-500/30 transition-all">
                     <Zap className="w-4 h-4 text-amber-300" />
-                    <span className="text-sm font-semibold text-amber-300">Near-instant responses</span>
+                    <span className="text-sm font-semibold text-amber-300">Near-Instant responses</span>
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full border border-amber-500/40 shadow-md shadow-amber-500/10 hover:bg-amber-500/30 transition-all">
                     <TrendingUp className="w-4 h-4 text-amber-300" />
@@ -116,9 +145,9 @@ const CustomerEmailAI = () => {
                     <span className="text-sm font-semibold text-yellow-400">95% CSAT improvement</span>
                   </div>
                 </div>
-                <Link 
+                <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-amber-500 via-amber-600 to-yellow-600 text-white rounded-xl shadow-xl shadow-amber-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 transition-all"
+                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-amber-700 via-amber-800 to-amber-800 text-white rounded-xl hover:scale-105 transition-all"
                 >
                   Talk to Support AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -126,78 +155,78 @@ const CustomerEmailAI = () => {
 
               {/* Support Dashboard */}
               <div className="animate-scaleIn delay-200 opacity-0">
-                <div className="bg-slate-900/90 backdrop-blur-xl rounded-[28px] p-10 border border-amber-500/30 shadow-2xl shadow-amber-500/10">
-                  <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
+                <div className="glass rounded-2xl p-10 border border-border/50">
+                  <div className="flex items-center justify-between mb-8 pb-6 border-b border-border/50">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
-                        <Mail className="w-5 h-5 text-white" />
+                      <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+                        <Mail className="w-5 h-5 text-amber-500" />
                       </div>
                       <div>
-                        <div className="text-white font-bold">Support Dashboard</div>
-                        <div className="text-xs text-slate-400">Live Ticket Processing</div>
+                        <div className="font-bold">Support Dashboard</div>
+                        <div className="text-xs text-muted-foreground">Live Ticket Processing</div>
                       </div>
                     </div>
                     <div className="px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
                       <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Active</span>
                     </div>
                   </div>
-                  
+
                   {/* Active Tickets */}
                   <div className="space-y-4 mb-6">
-                    <div className="bg-gradient-to-r from-amber-500/20 to-yellow-600/20 rounded-xl p-4 border border-amber-500/40 shadow-lg shadow-amber-500/10">
+                    <div className="glass rounded-xl p-4 border border-border/50">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
-                          <MessageSquare className="w-4 h-4 text-amber-300" />
-                          <span className="text-xs font-bold text-amber-300">AI PROCESSING</span>
+                          <MessageSquare className="w-4 h-4 text-amber-500" />
+                          <span className="text-xs font-bold text-muted-foreground">AI PROCESSING</span>
                         </div>
-                        <div className="px-2 py-1 bg-emerald-500/30 rounded-full border border-emerald-500/50">
-                          <span className="text-[10px] font-bold text-emerald-300">RESOLVED</span>
+                        <div className="px-2 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">
+                          <span className="text-[10px] font-bold text-emerald-500">RESOLVED</span>
                         </div>
                       </div>
-                      <p className="text-sm text-white font-medium mb-2">Order Status Inquiry - Ticket #1247</p>
-                      <div className="flex items-center gap-2 text-xs text-emerald-300">
+                      <p className="text-sm font-medium mb-2">Order Status Inquiry - Ticket #1247</p>
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Clock className="w-3 h-3" />
                         <span>Responded in 12 seconds</span>
                       </div>
                     </div>
-                    
-                    <div className="bg-slate-800/60 rounded-xl p-4 border border-slate-700/50">
+
+                    <div className="glass rounded-xl p-4 border border-border/50">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
-                          <Brain className="w-4 h-4 text-amber-300" />
-                          <span className="text-xs font-bold text-amber-300">ANALYZING</span>
+                          <Brain className="w-4 h-4 text-amber-500" />
+                          <span className="text-xs font-bold text-muted-foreground">ANALYZING</span>
                         </div>
-                        <div className="px-2 py-1 bg-amber-500/30 rounded-full border border-amber-500/50">
-                          <span className="text-[10px] font-bold text-amber-300">IN PROGRESS</span>
+                        <div className="px-2 py-1 bg-amber-500/10 rounded-full border border-amber-500/20">
+                          <span className="text-[10px] font-bold text-amber-500">IN PROGRESS</span>
                         </div>
                       </div>
-                      <p className="text-sm text-slate-200 mb-2">Refund Request - Ticket #1248</p>
-                      <div className="text-xs text-slate-300">Retrieving order data...</div>
+                      <p className="text-sm mb-2">Refund Request - Ticket #1248</p>
+                      <div className="text-xs text-muted-foreground">Retrieving order data...</div>
                     </div>
 
-                    <div className="bg-slate-800/50 rounded-xl p-4">
+                    <div className="glass rounded-xl p-4 border border-border/50">
                       <div className="flex items-center gap-3 mb-2">
-                        <Users className="w-4 h-4 text-amber-400" />
-                        <span className="text-xs font-bold text-slate-400">TICKET METRICS</span>
+                        <Users className="w-4 h-4 text-amber-500" />
+                        <span className="text-xs font-bold text-muted-foreground">TICKET METRICS</span>
                       </div>
-                      <p className="text-sm text-slate-300">247 tickets processed today</p>
+                      <p className="text-sm">247 tickets processed today</p>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3 pt-6 border-t border-slate-800/50">
-                    <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/10 rounded-xl p-4 border border-amber-500/30">
+                  <div className="grid grid-cols-2 gap-3 pt-6 border-t border-border/50">
+                    <div className="glass rounded-xl p-4 border border-border/50">
                       <div className="flex items-center gap-2 mb-2">
-                        <Zap className="w-3 h-3 text-amber-300" />
-                        <span className="text-[10px] font-bold text-slate-400 uppercase">Response Time</span>
+                        <Zap className="w-3 h-3 text-amber-500" />
+                        <span className="text-[10px] font-bold text-muted-foreground uppercase">Response Time</span>
                       </div>
-                      <div className="text-xl font-bold text-amber-300">&lt;30s</div>
+                      <div className="text-xl font-bold text-foreground">&lt;30s</div>
                     </div>
-                    <div className="bg-gradient-to-br from-yellow-600/10 to-yellow-700/10 rounded-xl p-4 border border-yellow-600/30">
+                    <div className="glass rounded-xl p-4 border border-border/50">
                       <div className="flex items-center gap-2 mb-2">
-                        <BarChart3 className="w-3 h-3 text-yellow-400" />
-                        <span className="text-[10px] font-bold text-slate-400 uppercase">Satisfaction</span>
+                        <BarChart3 className="w-3 h-3 text-amber-500" />
+                        <span className="text-[10px] font-bold text-muted-foreground uppercase">Satisfaction</span>
                       </div>
-                      <div className="text-xl font-bold text-yellow-400">95%</div>
+                      <div className="text-xl font-bold text-foreground">95%</div>
                     </div>
                   </div>
                 </div>
@@ -243,17 +272,17 @@ const CustomerEmailAI = () => {
           <div className="container mx-auto max-w-6xl px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                This agent operates as an autonomous support specialist
+                This Agent Operates As An Autonomous Support Specialist
               </h2>
               <p className="text-lg text-slate-400 max-w-3xl mx-auto">
                 It continuously reads incoming emails, understands intent, retrieves necessary data, drafts personalized responses, and escalates complex cases to humans when needed.
               </p>
             </div>
-            
+
             <div className="bg-slate-900/70 backdrop-blur-sm rounded-[2.5rem] border border-amber-500/20 p-12 shadow-xl shadow-amber-500/5">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">What it does:</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">What it does?</h3>
                   <ul className="space-y-4">
                     {[
             "Reads incoming emails and understands intent",
@@ -291,7 +320,7 @@ const CustomerEmailAI = () => {
         <section className="py-20 bg-[#020617]">
           <div className="container mx-auto max-w-7xl px-6">
             <div className="text-center mb-12">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">How It Works</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">How It Works?</h2>
             </div>
             <div className="grid md:grid-cols-5 gap-6">
               {[
@@ -300,52 +329,54 @@ const CustomerEmailAI = () => {
               icon: Mail,
               title: "Email Ingestion",
               description: "Reads incoming customer emails",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               number: "02",
               icon: Brain,
               title: "Intent Identification",
               description: "Identifies intent and required data",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               number: "03",
               icon: Database,
               title: "Data Retrieval",
               description: "Fetches information via MCP integrations",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               number: "04",
                   icon: FileText,
               title: "Response Drafting",
               description: "Drafts accurate responses using context",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               number: "05",
               icon: Send,
               title: "Escalation & Delivery",
               description: "Sends response or escalates to humans",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
                 },
               ].map((step, i) => (
                 <div
                   key={i}
-                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 p-8 rounded-2xl text-center"
+                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 p-8 rounded-2xl text-center relative overflow-hidden"
                 >
-                  <div className={`w-16 h-16 rounded-xl ${step.bg} flex items-center justify-center mx-auto mb-4 border border-amber-500/20`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-7xl font-black text-slate-800/30 leading-none select-none">{step.number}</div>
+                  </div>
+                  <div className={`w-16 h-16 rounded-xl ${step.bg} flex items-center justify-center mx-auto mb-4 border border-amber-500/10 relative z-10`}>
                     <step.icon className={step.color} size={28} />
                   </div>
-                  <div className="text-4xl font-black text-slate-800 mb-4">{step.number}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-2 relative z-10">{step.title}</h3>
+                  <p className="text-sm text-slate-400 leading-relaxed relative z-10">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -364,43 +395,43 @@ const CustomerEmailAI = () => {
               icon: Mail,
               title: "Email Reading & Understanding",
               description: "NLP-powered email comprehension",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               icon: Database,
-              title: "Multi-system Data Retrieval",
+              title: "Multi-System Data Retrieval",
               description: "Fetches data from CRM, orders, accounts",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               icon: FileText,
               title: "Contextual Response Generation",
               description: "Generates personalized, accurate responses",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               icon: Brain,
               title: "Intelligent Escalation",
               description: "Routes complex cases to human agents",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
                   icon: MessageSquare,
               title: "Multi-language Support",
               description: "Handles emails in multiple languages",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
             },
             {
               icon: BarChart3,
               title: "Performance Analytics",
               description: "Tracks resolution rates and satisfaction",
-                  color: "text-amber-400",
-                  bg: "bg-amber-500/10",
+                  color: "text-amber-300",
+                  bg: "bg-amber-500/5",
                 },
               ].map((capability, i) => (
                 <div
@@ -428,11 +459,11 @@ const CustomerEmailAI = () => {
               </div>
               <div className="divide-y divide-slate-800">
                 {[
-                  { metric: "Response Times", improvement: "Near-instant", color: "text-amber-300" },
+                  { metric: "Response Times", improvement: "Near-Instant", color: "text-amber-300" },
                   { metric: "Support Costs", improvement: "↓ 60%", color: "text-yellow-400" },
                   { metric: "Customer Satisfaction", improvement: "+95%", color: "text-amber-300" },
-                  { metric: "Ticket Throughput", improvement: "3x higher", color: "text-yellow-400" },
-                  { metric: "ROI Period", improvement: "3-6 months", color: "text-amber-300", highlight: true },
+                  { metric: "Ticket Throughput", improvement: "3X Higher", color: "text-yellow-400" },
+                  { metric: "ROI Period", improvement: "3-6 Months", color: "text-amber-300", highlight: true },
                 ].map((row, i) => (
                   <div
                     key={i}
@@ -456,16 +487,16 @@ const CustomerEmailAI = () => {
 
         {/* CTA Section */}
         <section className="py-20 container mx-auto px-6">
-          <div className="bg-gradient-to-br from-amber-600 via-amber-500 to-yellow-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl shadow-amber-500/30">
+          <div className="bg-gradient-to-br from-amber-800 via-amber-800 to-amber-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/40 blur-[100px] animate-pulse" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/40 blur-[100px] animate-pulse" style={{ animationDelay: '0.5s' }} />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
-              Respond faster — without adding headcount.
+              Respond Faster — Without Adding Headcount.
             </h2>
             <p className="text-slate-100 text-lg mb-10 max-w-xl mx-auto relative z-10">
               See Customer Email AI in action with a personalized demo.
             </p>
-            <Link 
+            <Link
               to="/contact"
               className="inline-flex items-center justify-center bg-white text-slate-900 hover:bg-slate-100 rounded-2xl h-14 px-10 font-bold transition-all relative z-10"
             >
@@ -475,6 +506,7 @@ const CustomerEmailAI = () => {
         </section>
       </main>
       <Footer />
+      </div>
     </div>
   );
 };

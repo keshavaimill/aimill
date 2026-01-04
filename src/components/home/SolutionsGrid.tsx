@@ -133,7 +133,7 @@ export const SolutionsGrid = () => {
         <div
           className="absolute inset-0 opacity-50"
           style={{
-            backgroundImage: `
+          backgroundImage: `
             radial-gradient(circle at 20% 30%, rgba(128,128,128,0.15) 0%, transparent 50%),
             radial-gradient(circle at 80% 70%, rgba(128,128,128,0.15) 0%, transparent 50%),
             radial-gradient(circle at 50% 50%, rgba(128,128,128,0.1) 0%, transparent 70%)
@@ -143,13 +143,13 @@ export const SolutionsGrid = () => {
         <div
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.25'%3E%3Ccircle cx='15' cy='15' r='1.5'/%3E%3Ccircle cx='45' cy='15' r='1.5'/%3E%3Ccircle cx='15' cy='45' r='1.5'/%3E%3Ccircle cx='45' cy='45' r='1.5'/%3E%3Ccircle cx='30' cy='30' r='1.2'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `
+          backgroundImage: `
             repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px),
             repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.08) 60px, rgba(255,255,255,0.08) 61px)
           `,
@@ -248,7 +248,7 @@ const ServiceCard = ({ item, idx }: { item: ServiceItem; idx: number }) => {
       <p className="text-sm text-muted-foreground leading-snug line-clamp-2 flex-grow min-h-[2.5rem]">
         {item.description}
       </p>
-    </div>
+      </div>
   );
 
   const cardClassName =

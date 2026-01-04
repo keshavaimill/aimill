@@ -71,11 +71,11 @@ export const SolutionProblem = ({ problems, callout, themeColor }: SolutionProbl
 
           {/* Callout */}
           <div className={`rounded-xl p-6 text-center border ${
-            themeColor === "cyan" ? "bg-cyan/5 border-cyan/20" :
-            themeColor === "purple" ? "bg-purple/5 border-purple/20" :
-            themeColor === "green" ? "bg-green/5 border-green/20" :
-            themeColor === "pink" ? "bg-pink/5 border-pink/20" :
-            "bg-teal/5 border-teal/20"
+              themeColor === "cyan" ? "bg-cyan/5 border-cyan/20" :
+              themeColor === "purple" ? "bg-purple/5 border-purple/20" :
+              themeColor === "green" ? "bg-green/5 border-green/20" :
+              themeColor === "pink" ? "bg-pink/5 border-pink/20" :
+              "bg-teal/5 border-teal/20"
           }`}>
             <p className={`text-xl font-semibold italic ${
               themeColor === "cyan" ? "text-cyan" :
