@@ -81,8 +81,8 @@ const Media = () => {
       ],
       metrics: [
         { value: "18%", label: "Revenue Lift", color: "text-green" },
-        { value: "↑ Fill Rate", label: "Better Utilization", color: "text-cyan" },
-        { value: "↓ Leakage", label: "Reduced Revenue Loss", color: "text-purple" },
+        { value: "Fill Rate ↑", label: "Better Utilization", color: "text-cyan" },
+        { value: "Leakage ↓", label: "Reduced Revenue Loss", color: "text-purple" },
       ],
     },
   ];

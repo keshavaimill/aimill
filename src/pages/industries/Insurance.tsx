@@ -66,7 +66,7 @@ const Insurance = () => {
       metrics: [
         { value: "40-60% ↓", label: "Underwriting Cycle Time", color: "text-cyan", borderColor: "border-t-cyan" },
         { value: "3-7% ↓", label: "Loss Ratio Improvement", color: "text-green", borderColor: "border-t-green" },
-        { value: "↑ GWP", label: "Increased Growth Potential", color: "text-purple", borderColor: "border-t-purple" },
+        { value: "GWP ↑", label: "Increased Growth Potential", color: "text-purple", borderColor: "border-t-purple" },
       ],
       badgeGradient: "from-cyan to-blue-600",
     },
@@ -86,7 +86,7 @@ const Insurance = () => {
         { agent: "Offer agents", action: "generate personalized win-back offers" },
       ],
       metrics: [
-        { value: "↑ Retention", label: "Customer Lifetime Value", color: "text-purple", borderColor: "border-t-purple" },
+        { value: "Retention ↑", label: "Customer Lifetime Value", color: "text-purple", borderColor: "border-t-purple" },
         { value: "Optimized", label: "Renewal Pricing Strategy", color: "text-cyan", borderColor: "border-t-cyan" },
         { value: "Better Mix", label: "Improved Portfolio Quality", color: "text-green", borderColor: "border-t-green" },
       ],

@@ -59,8 +59,8 @@ const Healthcare = () => {
       ],
       metrics: [
         { value: "25–40% ↑", label: "Resource Utilization", color: "text-green" },
-        { value: "↓ Waits", label: "Wait Times & Delays", color: "text-cyan" },
-        { value: "↑ Control", label: "Operational Efficiency", color: "text-purple" }
+        { value: "Waits ↓", label: "Wait Times & Delays", color: "text-cyan" },
+        { value: "Control ↑", label: "Operational Efficiency", color: "text-purple" }
       ],
     },
     {
@@ -100,7 +100,7 @@ const Healthcare = () => {
         { agent: "Learning Agents", action: "stay aligned with evolving regulations and standards" }
       ],
       metrics: [
-        { value: "↓ Risk", label: "Regulatory Risk & Penalties", color: "text-green" },
+        { value: "Risk ↓", label: "Regulatory Risk & Penalties", color: "text-green" },
         { value: "Speed ↑", label: "Audit & Reporting Cycles", color: "text-cyan" },
         { value: "Scores ↑", label: "Care Quality & Accreditation", color: "text-purple" }
       ],
