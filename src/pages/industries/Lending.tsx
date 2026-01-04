@@ -605,11 +605,8 @@ const Lending = () => {
                       <td className="px-6 py-5 text-right">
                         <div className="flex items-center justify-end gap-3">
                           {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
-                          <span className={`text-2xl font-bold ${row.trend === "up" ? "text-green" :
-                            row.trend === "down" ? "text-destructive" :
-                              "text-yellow-500"
-                            }`}>
+                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-green" />}
+                          <span className="text-2xl font-bold text-green">
                             {row.improvement}
                           </span>
                         </div>
