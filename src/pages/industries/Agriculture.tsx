@@ -85,7 +85,7 @@ const Agriculture = () => {
         { agent: "Action agents", action: "recommend targeted treatment" },
       ],
       metrics: [
-        { value: "Significant ↓", label: "Crop Loss Reduction", color: "text-green", borderColor: "border-t-green" },
+        { value: "↓ Significant", label: "Crop Loss Reduction", color: "text-green", borderColor: "border-t-green" },
         { value: "↓ Pesticides", label: "Lower Chemical Usage", color: "text-cyan", borderColor: "border-t-cyan" },
         { value: "Faster Response", label: "Real-Time Alerts", color: "text-purple", borderColor: "border-t-purple" },
       ],
@@ -115,10 +115,10 @@ const Agriculture = () => {
   ];
 
   const roiMetrics = [
-    { metric: "Crop Yield", improvement: "↑ 15–30%", trend: "up" },
-    { metric: "Input Costs", improvement: "↓ 20–35%", trend: "down" },
-    { metric: "Crop Loss", improvement: "↓ significantly", trend: "down" },
-    { metric: "Water Usage", improvement: "↓ up to 30%", trend: "down" },
+    { metric: "Crop Yield", improvement: "15–30%", trend: "up" },
+    { metric: "Input Costs", improvement: "20–35%", trend: "down" },
+    { metric: "Crop Loss", improvement: "significantly", trend: "down" },
+    { metric: "Water Usage", improvement: "up to 30%", trend: "down" },
     { metric: "Payback Period", improvement: "1–2 seasons", trend: "neutral", highlight: true },
   ];
 
@@ -602,12 +602,13 @@ const Agriculture = () => {
                       <td className="px-6 py-5 font-semibold text-foreground text-base">{row.metric}</td>
                       <td className="px-6 py-5 text-right">
                         <div className="flex items-center justify-end gap-3">
-                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
-                          <span className={`text-2xl font-bold ${row.trend === "up" ? "text-green" :
-                            row.trend === "down" ? "text-destructive" :
-                              "text-cyan"
-                            }`}>
+                          {row.trend === "up" && (
+                            <ArrowUp className={`w-5 h-5 ${row.improvement === "significantly" ? "text-destructive" : "text-green"}`} />
+                          )}
+                          {row.trend === "down" && (
+                            <ArrowDown className={`w-5 h-5 ${row.improvement === "significantly" ? "text-destructive" : "text-green"}`} />
+                          )}
+                          <span className={`text-2xl font-bold ${row.improvement === "significantly" ? "text-destructive" : "text-green"}`}>
                             {row.improvement}
                           </span>
                         </div>

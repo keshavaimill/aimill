@@ -60,7 +60,7 @@ const SupplyChain = () => {
       metrics: [
         { value: "25-35% ↓", label: "Inventory Holding Costs", color: "text-green", borderColor: "border-t-green" },
         { value: "30% ↓", label: "Fewer Stockouts", color: "text-purple", borderColor: "border-t-purple" },
-        { value: "↑ Turns", label: "Improved Inventory Velocity", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Turns ↑", label: "Improved Inventory Velocity", color: "text-cyan", borderColor: "border-t-cyan" },
       ],
       badgeGradient: "from-cyan to-blue-600",
     },
@@ -88,9 +88,9 @@ const SupplyChain = () => {
   ];
 
   const roiMetrics = [
-    { metric: "Forecast Accuracy", improvement: "↑ 20–40%", trend: "up", color: "text-green" },
-    { metric: "Inventory Costs", improvement: "↓ 25–35%", trend: "down", color: "text-cyan" },
-    { metric: "Stockouts", improvement: "↓ ~30%", trend: "down", color: "text-purple" },
+    { metric: "Forecast Accuracy", improvement: "20–40%", trend: "up", color: "text-green" },
+    { metric: "Inventory Costs", improvement: "25–35%", trend: "down", color: "text-cyan" },
+    { metric: "Stockouts", improvement: "~30%", trend: "down", color: "text-purple" },
     { metric: "Working Capital", improvement: "10–25% released", trend: "down", color: "text-cyan" },
     { metric: "Payback Period", improvement: "3–6 months", trend: "neutral", highlight: true, color: "text-cyan" },
   ];
@@ -608,9 +608,9 @@ const SupplyChain = () => {
                       <td className="px-8 py-6 font-semibold text-[18px] text-white">{row.metric}</td>
                       <td className="px-8 py-6 text-right">
                         <div className="flex items-center justify-end gap-3">
-                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-500" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
-                          <span className={`text-2xl font-bold text-white`}>
+                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green" />}
+                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-green" />}
+                          <span className="text-2xl font-bold text-green">
                             {row.improvement}
                           </span>
                         </div>

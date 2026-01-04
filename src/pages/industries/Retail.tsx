@@ -40,7 +40,7 @@ const Retail = () => {
       metrics: [
         { value: "20–35% ↓", label: "Stockout Reduction", color: "text-green" },
         { value: "15–30% ↓", label: "Excess Inventory", color: "text-cyan" },
-        { value: "↑ Uplift", label: "Revenue & Availability", color: "text-purple" }
+        { value: "Uplift ↑", label: "Revenue & Availability", color: "text-purple" }
       ],
     },
     {
@@ -60,8 +60,8 @@ const Retail = () => {
       ],
       metrics: [
         { value: "25–40% ↑", label: "Conversion Rates", color: "text-green" },
-        { value: "↑ Size", label: "Basket Size & Repeat", color: "text-cyan" },
-        { value: "↑ Loyalty", label: "Customer Retention", color: "text-purple" }
+        { value: "Size ↑", label: "Basket Size & Repeat", color: "text-cyan" },
+        { value: "Loyalty ↑", label: "Customer Retention", color: "text-purple" }
       ],
     },
     {
@@ -81,8 +81,8 @@ const Retail = () => {
       ],
       metrics: [
         { value: "5–15% ↑", label: "Margin Improvement", color: "text-green" },
-        { value: "↓ Losses", label: "Markdown Losses", color: "text-cyan" },
-        { value: "↑ Speed", label: "Market Response", color: "text-purple" }
+        { value: "Losses ↓", label: "Markdown Losses", color: "text-cyan" },
+        { value: "Speed ↑", label: "Market Response", color: "text-purple" }
       ],
     },
     {
@@ -102,8 +102,8 @@ const Retail = () => {
       ],
       metrics: [
         { value: "30–50% ↓", label: "Fraud & Shrinkage", color: "text-green" },
-        { value: "↑ Resilience", label: "Supply-Chain Stability", color: "text-cyan" },
-        { value: "↑ Control", label: "Operational Visibility", color: "text-purple" }
+        { value: "Resilience ↑", label: "Supply-Chain Stability", color: "text-cyan" },
+        { value: "Control ↑", label: "Operational Visibility", color: "text-purple" }
       ],
     },
   ];

@@ -38,8 +38,8 @@ const Healthcare = () => {
       ],
       metrics: [
         { value: "20–35% ↓", label: "Preventable Readmissions", color: "text-green" },
-        { value: "↑ Score", label: "Patient Outcomes & Quality", color: "text-cyan" },
-        { value: "↓ Workload", label: "Clinician Workload", color: "text-purple" }
+        { value: "Score ↑", label: "Patient Outcomes & Quality", color: "text-cyan" },
+        { value: "Workload ↓", label: "Clinician Workload", color: "text-purple" }
       ],
     },
     {
@@ -80,8 +80,8 @@ const Healthcare = () => {
       ],
       metrics: [
         { value: "40–60% ↓", label: "Fraud & Leakage", color: "text-green" },
-        { value: "↑ Speed", label: "Claim Adjudication", color: "text-cyan" },
-        { value: "↑ Trust", label: "Payer-Provider Trust", color: "text-purple" }
+        { value: "Speed ↑", label: "Claim Adjudication", color: "text-cyan" },
+        { value: "Trust ↑", label: "Payer-Provider Trust", color: "text-purple" }
       ],
     },
     {
@@ -101,8 +101,8 @@ const Healthcare = () => {
       ],
       metrics: [
         { value: "↓ Risk", label: "Regulatory Risk & Penalties", color: "text-green" },
-        { value: "↑ Speed", label: "Audit & Reporting Cycles", color: "text-cyan" },
-        { value: "↑ Scores", label: "Care Quality & Accreditation", color: "text-purple" }
+        { value: "Speed ↑", label: "Audit & Reporting Cycles", color: "text-cyan" },
+        { value: "Scores ↑", label: "Care Quality & Accreditation", color: "text-purple" }
       ],
     },
   ];
@@ -111,7 +111,7 @@ const Healthcare = () => {
     { metric: "Care Delivery Efficiency", improvement: "25%", trend: "up" },
     { metric: "Operating & Admin Costs", improvement: "15%", trend: "down" },
     { metric: "Decision Cycle Time", improvement: "50%", trend: "down" },
-    { metric: "Audit Pass Rate", improvement: "↑ 20%", trend: "up" },
+    { metric: "Audit Pass Rate", improvement: "20%", trend: "up" },
     { metric: "Payback Period", improvement: "9 months", trend: "neutral", highlight: true },
   ];
 

@@ -95,10 +95,10 @@ const Insurance = () => {
   ];
 
   const roiMetrics = [
-    { metric: "Loss Ratio", improvement: "↓ 3–7%", trend: "down", color: "text-destructive" },
-    { metric: "Claims Cycle Time", improvement: "↓ 30–50%", trend: "down", color: "text-cyan" },
-    { metric: "Handling Costs", improvement: "↓ 20–35%", trend: "down", color: "text-cyan" },
-    { metric: "Underwriting Time", improvement: "↓ 40–60%", trend: "down", color: "text-cyan" },
+    { metric: "Loss Ratio", improvement: "3–7%", trend: "down", color: "text-destructive" },
+    { metric: "Claims Cycle Time", improvement: "30–50%", trend: "down", color: "text-cyan" },
+    { metric: "Handling Costs", improvement: "20–35%", trend: "down", color: "text-cyan" },
+    { metric: "Underwriting Time", improvement: "40–60%", trend: "down", color: "text-cyan" },
     { metric: "Payback Period", improvement: "6–12 months", trend: "neutral", highlight: true, color: "text-cyan" },
   ];
 
@@ -561,9 +561,13 @@ const Insurance = () => {
                       <td className="px-8 py-6 font-semibold text-[18px] text-white">{row.metric}</td>
                       <td className="px-8 py-6 text-right">
                         <div className="flex items-center justify-end gap-3">
-                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-500" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
-                          <span className={`text-2xl font-bold text-white`}>
+                          {row.trend === "up" && (
+                            <ArrowUp className={`w-5 h-5 ${row.metric === "Loss Ratio" ? "text-destructive" : "text-green"}`} />
+                          )}
+                          {row.trend === "down" && (
+                            <ArrowDown className={`w-5 h-5 ${row.metric === "Loss Ratio" ? "text-destructive" : "text-green"}`} />
+                          )}
+                          <span className={`text-2xl font-bold ${row.metric === "Loss Ratio" ? "text-destructive" : "text-green"}`}>
                             {row.improvement}
                           </span>
                         </div>

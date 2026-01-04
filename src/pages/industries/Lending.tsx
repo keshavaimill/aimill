@@ -92,9 +92,10 @@ const Lending = () => {
       title: "Regulatory & Compliance Intelligence",
       challenge: "Regulatory requirements change frequently, and manual compliance processes are error-prone and resource-intensive.",
       solution: [
-        "Compliance analytics monitoring transactions, controls, and policy adherence",
-        "Rules-enhanced ML models detecting anomalies, threshold breaches, and violations",
-        "Classification models mapping transactions and behaviors to regulatory requirements"
+        "Compliance monitoring agents continuously detect policy and regulatory deviations",
+        "Reporting agents generate audit-ready reports and regulatory submissions",
+        "Alert agents trigger corrective actions and escalation workflows",
+        "Learning agents update compliance logic as regulations and policies change"
       ],
       howItWorks: [
         { agent: "Regulatory Monitoring Agents", action: "Track regulatory changes and updates in real-time" },

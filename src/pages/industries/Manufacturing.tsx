@@ -68,7 +68,7 @@ const Manufacturing = () => {
       metrics: [
         { value: "Up to 90%", label: "Defect Detection Accuracy", color: "text-green", borderColor: "border-t-green" },
         { value: "25-40% ↓", label: "Scrap & Rework Reduction", color: "text-blue-500", borderColor: "border-t-blue-500" },
-        { value: "↑ Satisfaction", label: "Improved Customer Quality", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Satisfaction ↑", label: "Improved Customer Quality", color: "text-cyan", borderColor: "border-t-cyan" },
       ],
       badgeGradient: "from-cyan to-blue-600",
     },
@@ -111,7 +111,7 @@ const Manufacturing = () => {
       ],
       metrics: [
         { value: "15-25% ↑", label: "Production Throughput", color: "text-green", borderColor: "border-t-green" },
-        { value: "↓ Idle Time", label: "Reduced Equipment Downtime", color: "text-cyan", borderColor: "border-t-cyan" },
+        { value: "Idle Time ↓", label: "Reduced Equipment Downtime", color: "text-cyan", borderColor: "border-t-cyan" },
         { value: "Faster Fulfillment", label: "Improved Delivery Times", color: "text-sky-500", borderColor: "border-t-sky-500" },
       ],
       badgeGradient: "from-blue-600 to-cyan",
@@ -121,10 +121,10 @@ const Manufacturing = () => {
 
 
   const roiMetrics = [
-    { metric: "Unplanned Downtime", improvement: "↓ 30–50%", trend: "down", color: "text-destructive" },
-    { metric: "Maintenance Cost", improvement: "↓ 20–35%", trend: "down", color: "text-cyan" },
-    { metric: "Production Throughput", improvement: "↑ 15–25%", trend: "up", color: "text-green" },
-    { metric: "Quality Defects", improvement: "↓ 25–40%", trend: "down", color: "text-destructive" },
+    { metric: "Unplanned Downtime", improvement: "30–50%", trend: "down", color: "text-destructive" },
+    { metric: "Maintenance Cost", improvement: "20–35%", trend: "down", color: "text-cyan" },
+    { metric: "Production Throughput", improvement: "15–25%", trend: "up", color: "text-green" },
+    { metric: "Quality Defects", improvement: "25–40%", trend: "down", color: "text-destructive" },
     { metric: "Payback Period", improvement: "3–6 months", trend: "neutral", highlight: true, color: "text-cyan" },
   ];
 
@@ -590,9 +590,9 @@ const Manufacturing = () => {
                       <td className="px-8 py-6 font-semibold text-[18px] text-white">{row.metric}</td>
                       <td className="px-8 py-6 text-right">
                         <div className="flex items-center justify-end gap-3">
-                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green-500" />}
-                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-destructive" />}
-                          <span className={`text-2xl font-bold text-white`}>
+                          {row.trend === "up" && <ArrowUp className="w-5 h-5 text-green" />}
+                          {row.trend === "down" && <ArrowDown className="w-5 h-5 text-green" />}
+                          <span className="text-2xl font-bold text-green">
                             {row.improvement}
                           </span>
                         </div>
