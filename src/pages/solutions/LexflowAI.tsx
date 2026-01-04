@@ -23,8 +23,8 @@ const LexflowAI = () => {
       icon: FileText,
       title: "Fragmented documents",
       desc: "Legal documents scattered across systems, hard to track and manage",
-      color: "text-orange-400",
-      bg: "bg-orange-500/10",
+      color: "text-amber-400",
+      bg: "bg-amber-500/10",
     },
     {
       icon: Edit,
@@ -37,15 +37,15 @@ const LexflowAI = () => {
       icon: Calendar,
       title: "Missed deadlines",
       desc: "Critical dates slip through cracks without automated tracking",
-      color: "text-yellow-400",
-      bg: "bg-yellow-500/10",
+      color: "text-amber-400",
+      bg: "bg-amber-500/10",
     },
     {
       icon: Mail,
       title: "Slow communication",
       desc: "Delayed responses impact client satisfaction and case outcomes",
-      color: "text-orange-400",
-      bg: "bg-orange-500/10",
+      color: "text-amber-400",
+      bg: "bg-amber-500/10",
     },
   ];
 
@@ -81,38 +81,39 @@ const LexflowAI = () => {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-[#020617] pt-20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/30 rounded-full blur-3xl pointer-events-none animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-600/30 rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-amber-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
           
-          <div className="container mx-auto max-w-7xl px-6 py-16">
+          <div className="container mx-auto max-w-7xl px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold tracking-widest mb-6 uppercase">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold tracking-widest mb-6 uppercase shadow-lg shadow-amber-500/20">
                   LEGAL TECH AI
                 </div>
-                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-6 tracking-tight">
+                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   The Agentic<br />Legal Command<br />Center
                 </h1>
-                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-8 max-w-[600px]">
+                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   Lexflow AI gives legal teams a unified workspace to manage documents, draft responses, conduct research, and communicate with clients — all powered by governed AI agents.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-orange-500/10 rounded-full border border-orange-500/20">
-                    <Zap className="w-4 h-4 text-orange-400" />
-                    <span className="text-sm font-semibold text-orange-400">90% faster drafting</span>
+                <div className="flex flex-wrap gap-4 mb-12">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full border border-amber-500/40 shadow-md shadow-amber-500/10 hover:bg-amber-500/30 transition-all">
+                    <Zap className="w-4 h-4 text-amber-300" />
+                    <span className="text-sm font-semibold text-amber-300">90% faster drafting</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/10 rounded-full border border-amber-500/20">
-                    <CheckCircle className="w-4 h-4 text-amber-400" />
-                    <span className="text-sm font-semibold text-amber-400">Zero missed deadlines</span>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full border border-amber-500/40 shadow-md shadow-amber-500/10 hover:bg-amber-500/30 transition-all">
+                    <CheckCircle className="w-4 h-4 text-amber-300" />
+                    <span className="text-sm font-semibold text-amber-300">Zero missed deadlines</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/10 rounded-full border border-yellow-500/20">
-                    <TrendingUp className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm font-semibold text-yellow-400">60% cost reduction</span>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full border border-amber-500/40 shadow-md shadow-amber-500/10 hover:bg-amber-500/30 transition-all">
+                    <TrendingUp className="w-4 h-4 text-amber-300" />
+                    <span className="text-sm font-semibold text-amber-300">60% cost reduction</span>
                   </div>
                 </div>
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-orange-500 via-amber-600 to-amber-700 text-white rounded-xl shadow-xl shadow-orange-500/20 hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-amber-500 via-amber-600 to-amber-600 text-white rounded-xl shadow-xl shadow-amber-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 transition-all"
                 >
                   Talk to Legal AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -120,10 +121,10 @@ const LexflowAI = () => {
 
               {/* Legal Workspace Dashboard */}
               <div className="animate-scaleIn delay-200 opacity-0">
-                <div className="bg-slate-900/80 backdrop-blur-xl rounded-[28px] p-10 border border-slate-800/50 shadow-2xl">
+                <div className="bg-slate-900/90 backdrop-blur-xl rounded-[28px] p-10 border border-amber-500/30 shadow-2xl shadow-amber-500/10">
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
                         <FileText className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -138,14 +139,14 @@ const LexflowAI = () => {
                   
                   {/* Active Tasks */}
                   <div className="space-y-4 mb-6">
-                    <div className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 rounded-xl p-4 border border-orange-500/20">
+                    <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/10 rounded-xl p-4 border border-amber-500/20">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
-                          <Edit className="w-4 h-4 text-orange-400" />
-                          <span className="text-xs font-bold text-orange-400">AI DRAFTING</span>
+                          <Edit className="w-4 h-4 text-amber-400" />
+                          <span className="text-xs font-bold text-amber-400">AI DRAFTING</span>
                         </div>
-                        <div className="px-2 py-1 bg-orange-500/20 rounded-full">
-                          <span className="text-[10px] font-bold text-orange-300">IN PROGRESS</span>
+                        <div className="px-2 py-1 bg-amber-500/20 rounded-full">
+                          <span className="text-[10px] font-bold text-amber-300">IN PROGRESS</span>
                         </div>
                       </div>
                       <p className="text-sm text-white font-medium mb-2">Reply to Notice - Section 138</p>
@@ -171,7 +172,7 @@ const LexflowAI = () => {
 
                     <div className="bg-slate-800/50 rounded-xl p-4">
                       <div className="flex items-center gap-3 mb-2">
-                        <Calendar className="w-4 h-4 text-yellow-400" />
+                        <Calendar className="w-4 h-4 text-amber-400" />
                         <span className="text-xs font-bold text-slate-400">UPCOMING DEADLINE</span>
                       </div>
                       <p className="text-sm text-slate-300">Filing deadline - Jan 15, 2026</p>
@@ -181,10 +182,10 @@ const LexflowAI = () => {
                   <div className="grid grid-cols-2 gap-3 pt-6 border-t border-slate-800/50">
                     <div className="bg-slate-800/30 rounded-xl p-4">
                       <div className="flex items-center gap-2 mb-2">
-                        <FileText className="w-3 h-3 text-orange-400" />
+                        <FileText className="w-3 h-3 text-amber-400" />
                         <span className="text-[10px] font-bold text-slate-500 uppercase">Documents</span>
                       </div>
-                      <div className="text-xl font-bold text-orange-400">47</div>
+                      <div className="text-xl font-bold text-amber-400">47</div>
                     </div>
                     <div className="bg-slate-800/30 rounded-xl p-4">
                       <div className="flex items-center gap-2 mb-2">
@@ -204,7 +205,7 @@ const LexflowAI = () => {
         <section className="py-16 bg-slate-950">
           <div className="container mx-auto max-w-4xl px-6 text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
-              Legal teams struggle with fragmented documents, manual drafting, and missed deadlines. Traditional tools can't handle the complexity of legal workflows or provide the speed modern practices demand. <span className="text-orange-400 font-semibold">Legal teams need automation that understands context and compliance.</span>
+              Legal teams struggle with fragmented documents, manual drafting, and missed deadlines. Traditional tools can't handle the complexity of legal workflows or provide the speed modern practices demand. <span className="text-amber-400 font-semibold">Legal teams need automation that understands context and compliance.</span>
             </p>
           </div>
         </section>
@@ -219,7 +220,7 @@ const LexflowAI = () => {
               {problems.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 p-10 rounded-2xl hover:border-orange-500/30 hover:-translate-y-2 hover:scale-[1.02] transition-all"
+                  className="bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 p-10 rounded-2xl hover:border-amber-500/30 hover:-translate-y-2 hover:scale-[1.02] transition-all"
                 >
                   <div className={`w-12 h-12 rounded-xl ${item.bg} flex items-center justify-center mb-6`}>
                     <item.icon className={item.color} size={24} />
@@ -257,14 +258,14 @@ const LexflowAI = () => {
                       "Streamlines client communication",
                     ].map((item, i) => (
                       <li key={i} className="flex gap-3 items-start">
-                        <CheckCircle className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                         <span className="text-slate-300">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="bg-orange-500/5 rounded-2xl p-8 border border-orange-500/10">
-                  <h4 className="text-sm font-bold text-orange-400 uppercase tracking-wider mb-4">Integration Points</h4>
+                <div className="bg-amber-500/5 rounded-2xl p-8 border border-amber-500/10">
+                  <h4 className="text-sm font-bold text-amber-400 uppercase tracking-wider mb-4">Integration Points</h4>
                   <div className="flex flex-wrap gap-2">
                     {channels.map((channel, i) => (
                       <span
@@ -291,19 +292,19 @@ const LexflowAI = () => {
               </div>
               <div className="divide-y divide-slate-800">
                 {[
-                  { metric: "Legal Turnaround Time", improvement: "↓ 90%", color: "text-orange-400" },
+                  { metric: "Legal Turnaround Time", improvement: "↓ 90%", color: "text-amber-400" },
                   { metric: "Drafting Effort", improvement: "↓ 60%", color: "text-amber-400" },
-                  { metric: "Deadline Compliance", improvement: "100%", color: "text-yellow-400" },
-                  { metric: "Client Experience", improvement: "3x better", color: "text-orange-400" },
-                  { metric: "ROI Period", improvement: "3-6 months", color: "text-orange-400", highlight: true },
+                  { metric: "Deadline Compliance", improvement: "100%", color: "text-amber-400" },
+                  { metric: "Client Experience", improvement: "3x better", color: "text-amber-400" },
+                  { metric: "ROI Period", improvement: "3-6 months", color: "text-amber-400", highlight: true },
                 ].map((row, i) => (
                   <div
                     key={i}
-                    className={`flex items-center justify-between p-8 hover:bg-slate-800/20 transition-colors ${row.highlight ? "bg-orange-500/5" : ""}`}
+                    className={`flex items-center justify-between p-8 hover:bg-slate-800/20 transition-colors ${row.highlight ? "bg-amber-500/5" : ""}`}
                   >
                     <span className="text-lg font-medium text-slate-300">{row.metric}</span>
                     <div className="text-right">
-                      <div className={`text-2xl font-bold ${row.highlight ? "text-orange-400" : row.color}`}>
+                      <div className={`text-2xl font-bold ${row.highlight ? "text-amber-400" : row.color}`}>
                         {row.improvement}
                       </div>
                       <div className="text-xs uppercase font-bold text-slate-500 tracking-tighter">
@@ -319,8 +320,8 @@ const LexflowAI = () => {
 
         {/* CTA Section */}
         <section className="py-20 container mx-auto px-6">
-          <div className="bg-gradient-to-br from-orange-600 to-amber-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 blur-[100px]" />
+          <div className="bg-gradient-to-br from-amber-600 to-amber-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/20 blur-[100px]" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
               Modernize legal operations with confidence.
             </h2>

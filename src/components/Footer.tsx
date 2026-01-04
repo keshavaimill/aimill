@@ -19,6 +19,8 @@ const footerLinks = {
     { label: "PeopleAgent", href: "/solutions/hr-bot" },
     { label: "InboxAgent", href: "/solutions/customer-email-ai" },
     { label: "ClaimAgent", href: "/solutions/insurance-fnol" },
+    { label: "Forecasting Engine", href: "/solutions/forecasting-engine" },
+    { label: "Predictive Maintenance", href: "/solutions/predictive-maintenance" },
   ],
   resources: [
     { label: "Documentation", href: "#" },

@@ -117,6 +117,20 @@ export const Navbar = () => {
                       >
                         ClaimAgent
                       </Link>
+                      <Link
+                        to="/solutions/forecasting-engine"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Forecasting Engine
+                      </Link>
+                      <Link
+                        to="/solutions/predictive-maintenance"
+                        className="block px-3 py-2 rounded-lg hover:bg-secondary transition-colors text-sm"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        Predictive Maintenance
+                      </Link>
                     </div>
                   </motion.div>
                 )}
@@ -304,6 +318,20 @@ export const Navbar = () => {
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
                                     ClaimAgent
+                                  </Link>
+                                  <Link
+                                    to="/solutions/forecasting-engine"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Forecasting Engine
+                                  </Link>
+                                  <Link
+                                    to="/solutions/predictive-maintenance"
+                                    className="block text-sm text-foreground/80 hover:text-foreground"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    Predictive Maintenance
                                   </Link>
                                 </>
                               )}

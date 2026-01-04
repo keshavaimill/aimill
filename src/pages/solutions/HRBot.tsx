@@ -28,8 +28,8 @@ const HRBot = () => {
       icon: MessageSquare,
       title: "High-volume employee queries",
       desc: "HR teams overwhelmed by repetitive questions about policies, benefits, and procedures.",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
             },
             {
               icon: Clock,
@@ -42,22 +42,22 @@ const HRBot = () => {
       icon: AlertCircle,
       title: "Inconsistent information delivery",
       desc: "Different answers from different HR staff, leading to confusion and frustration.",
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
+      color: "text-pink-400",
+      bg: "bg-pink-500/10",
     },
     {
       icon: Calendar,
       title: "Limited availability",
       desc: "HR support only during business hours, leaving employees without answers.",
-      color: "text-indigo-400",
-      bg: "bg-indigo-500/10",
+      color: "text-fuchsia-400",
+      bg: "bg-fuchsia-500/10",
     },
     {
       icon: FileText,
       title: "Administrative overhead",
       desc: "HR teams spend too much time on routine tasks instead of strategic initiatives.",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
     },
   ];
 
@@ -67,24 +67,24 @@ const HRBot = () => {
       icon: MessageSquare,
       title: "Natural Conversation",
       description: "Employees interact with HR Bot through chat, voice, or email",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
             },
             {
               number: "02",
               icon: Brain,
       title: "Intent Understanding",
       description: "AI understands context and extracts relevant information from queries",
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
+      color: "text-pink-400",
+      bg: "bg-pink-500/10",
             },
             {
               number: "03",
               icon: Database,
       title: "Knowledge Retrieval",
       description: "Accesses HR policies, employee data, and system information",
-      color: "text-indigo-400",
-      bg: "bg-indigo-500/10",
+      color: "text-fuchsia-400",
+      bg: "bg-fuchsia-500/10",
             },
             {
               number: "04",
@@ -99,8 +99,8 @@ const HRBot = () => {
               icon: CheckCircle,
               title: "Continuous Learning",
       description: "Improves accuracy and expands knowledge base from each interaction",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
     },
   ];
 
@@ -109,22 +109,22 @@ const HRBot = () => {
       icon: MessageSquare,
       title: "24/7 Employee Support",
       description: "Instant answers to HR questions via chat, voice, or email",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
     },
     {
       icon: FileText,
       title: "Request Processing",
       description: "Automated handling of leave, expense, and document requests",
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
+      color: "text-pink-400",
+      bg: "bg-pink-500/10",
     },
     {
       icon: Users,
       title: "Policy & Benefits Information",
       description: "Accurate, up-to-date information about company policies and benefits",
-      color: "text-indigo-400",
-      bg: "bg-indigo-500/10",
+      color: "text-fuchsia-400",
+      bg: "bg-fuchsia-500/10",
     },
     {
       icon: Calendar,
@@ -137,15 +137,15 @@ const HRBot = () => {
       icon: Briefcase,
       title: "Onboarding & Offboarding",
       description: "Guides new hires and manages exit processes",
-      color: "text-pink-400",
-      bg: "bg-pink-500/10",
+      color: "text-rose-400",
+      bg: "bg-rose-500/10",
             },
             {
               icon: BarChart3,
       title: "HR Analytics",
       description: "Insights into common queries, request patterns, and employee satisfaction",
-      color: "text-purple-400",
-      bg: "bg-purple-500/10",
+      color: "text-pink-400",
+      bg: "bg-pink-500/10",
     },
   ];
 
@@ -242,12 +242,13 @@ const HRBot = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-[#020617] pt-20">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="container mx-auto max-w-7xl px-6 py-16">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-rose-500/30 rounded-full blur-3xl pointer-events-none animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-600/30 rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-rose-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+        <div className="container mx-auto max-w-7xl px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fadeInLeft">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold tracking-widest mb-6 uppercase">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 text-xs font-bold tracking-widest mb-6 uppercase shadow-lg shadow-rose-500/20">
                 HR AI AUTOMATION
               </div>
               <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
@@ -257,22 +258,22 @@ const HRBot = () => {
                 Transform HR workflows with an AI agent that handles employee queries, processes requests, and automates administrative tasks — all through natural conversation.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
-                <div className="flex items-center gap-2 px-4 py-2 bg-pink-500/10 rounded-full border border-pink-500/20">
-                  <Zap className="w-4 h-4 text-pink-400" />
-                  <span className="text-sm font-semibold text-pink-400">70% faster response</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-rose-500/20 rounded-full border border-rose-500/40 shadow-md shadow-rose-500/10 hover:bg-rose-500/30 transition-all">
+                  <Zap className="w-4 h-4 text-rose-300" />
+                  <span className="text-sm font-semibold text-rose-300">70% faster response</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-purple-500/10 rounded-full border border-purple-500/20">
-                  <TrendingUp className="w-4 h-4 text-purple-400" />
-                  <span className="text-sm font-semibold text-purple-400">50% cost reduction</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-pink-500/20 rounded-full border border-pink-500/40 shadow-md shadow-pink-500/10 hover:bg-pink-500/30 transition-all">
+                  <TrendingUp className="w-4 h-4 text-pink-300" />
+                  <span className="text-sm font-semibold text-pink-300">50% cost reduction</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-indigo-500/10 rounded-full border border-indigo-500/20">
-                  <CheckCircle className="w-4 h-4 text-indigo-400" />
-                  <span className="text-sm font-semibold text-indigo-400">90% query resolution</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-fuchsia-600/20 rounded-full border border-fuchsia-600/40 shadow-md shadow-fuchsia-600/10 hover:bg-fuchsia-600/30 transition-all">
+                  <CheckCircle className="w-4 h-4 text-fuchsia-400" />
+                  <span className="text-sm font-semibold text-fuchsia-400">90% query resolution</span>
                 </div>
               </div>
               <Link 
                 to="/contact"
-                className="inline-flex items-center gap-2 h-[56px] px-8 text-lg font-semibold bg-gradient-to-br from-pink-500 via-pink-600 to-purple-600 text-white rounded-xl shadow-xl shadow-pink-500/20 hover:scale-105 transition-all"
+                className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-rose-400 via-pink-500 to-fuchsia-600 text-white rounded-xl shadow-xl shadow-rose-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/50 transition-all"
               >
                 Talk to HR AI Experts <ArrowRight className="w-5 h-5" />
               </Link>
@@ -280,10 +281,10 @@ const HRBot = () => {
 
             {/* Right Side: Chat Interface Visual */}
             <div className="animate-scaleIn delay-200 opacity-0">
-              <div className="bg-slate-900/80 backdrop-blur-xl rounded-[28px] p-10 border border-slate-800/50 shadow-2xl">
+              <div className="bg-slate-900/90 backdrop-blur-xl rounded-[28px] p-10 border border-rose-500/30 shadow-2xl shadow-rose-500/10">
                 <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center">
                       <MessageSquare className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -301,7 +302,7 @@ const HRBot = () => {
                     <p className="text-sm text-slate-300">Hi! How many vacation days do I have left?</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-2xl rounded-tr-sm p-4 ml-auto max-w-[80%] animate-fadeInRight delay-700 opacity-0">
+                  <div className="bg-gradient-to-br from-rose-500/20 to-fuchsia-500/20 border border-rose-500/30 rounded-2xl rounded-tr-sm p-4 ml-auto max-w-[80%] animate-fadeInRight delay-700 opacity-0">
                     <p className="text-sm text-white font-medium mb-2">You have 12 vacation days remaining for 2026.</p>
                     <div className="flex gap-2">
                       <button className="px-3 py-1.5 bg-pink-500/20 hover:bg-pink-500/30 rounded-lg text-xs font-semibold text-pink-300 transition-all">
@@ -338,7 +339,7 @@ const HRBot = () => {
       </section>
 
       {/* Context Section */}
-      <section className="py-16 bg-slate-950">
+      <section className="py-24 bg-slate-950">
         <div className="container mx-auto max-w-4xl px-6">
           <div className="text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
@@ -372,9 +373,9 @@ const HRBot = () => {
       </section>
 
       {/* Solution Overview */}
-      <section className="py-20 bg-slate-950">
-        <div className="container mx-auto max-w-6xl px-6">
-          <div className="text-center mb-12">
+      <section className="py-32 bg-slate-950">
+          <div className="container mx-auto max-w-6xl px-6">
+            <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-4">
               The HR Bot operates as your 24/7 HR assistant
             </h2>
@@ -439,7 +440,7 @@ const HRBot = () => {
                   <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
                 </div>
                 {i < howItWorks.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-pink-500/50 to-transparent" />
+                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-rose-500/50 to-transparent" />
                 )}
               </div>
             ))}
@@ -541,7 +542,7 @@ const HRBot = () => {
 
       {/* CTA Section */}
       <section className="py-20 container mx-auto px-6">
-        <div className="bg-gradient-to-br from-pink-600 to-purple-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+        <div className="bg-gradient-to-br from-rose-600 to-fuchsia-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/20 blur-[100px]" />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
             Transform HR from reactive to proactive — through conversation.

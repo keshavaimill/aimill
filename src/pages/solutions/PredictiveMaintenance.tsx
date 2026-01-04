@@ -83,38 +83,39 @@ const PredictiveMaintenance = () => {
 
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-[#020617] pt-20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/30 rounded-full blur-3xl pointer-events-none animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-600/30 rounded-full blur-3xl pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
           
-          <div className="container mx-auto max-w-7xl px-6 py-16">
+          <div className="container mx-auto max-w-7xl px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold tracking-widest mb-6 uppercase">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold tracking-widest mb-6 uppercase shadow-lg shadow-emerald-500/20">
                   MANUFACTURING AI
                 </div>
-                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-6 tracking-tight">
+                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   Prevent Failures<br />Before They<br />Happen
                 </h1>
-                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-8 max-w-[600px]">
+                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   Agentic AI that analyzes sensor data, predicts failures, and optimizes maintenance schedules — reducing downtime and extending asset lifespan.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/20">
-                    <Zap className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-semibold text-green-400">50% less downtime</span>
+                <div className="flex flex-wrap gap-4 mb-12">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-emerald-500/20 rounded-full border border-emerald-500/40 shadow-md shadow-emerald-500/10 hover:bg-emerald-500/30 transition-all">
+                    <Zap className="w-4 h-4 text-emerald-300" />
+                    <span className="text-sm font-semibold text-emerald-300">50% less downtime</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/10 rounded-full border border-yellow-500/20">
-                    <DollarSign className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm font-semibold text-yellow-400">40% lower costs</span>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-emerald-700/20 rounded-full border border-emerald-700/40 shadow-md shadow-emerald-700/10 hover:bg-emerald-700/30 transition-all">
+                    <DollarSign className="w-4 h-4 text-emerald-300" />
+                    <span className="text-sm font-semibold text-emerald-300">40% lower costs</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20">
-                    <TrendingUp className="w-4 h-4 text-cyan-400" />
-                    <span className="text-sm font-semibold text-cyan-400">30% longer asset life</span>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-slate-600/20 rounded-full border border-slate-600/40 shadow-md shadow-slate-600/10 hover:bg-slate-600/30 transition-all">
+                    <TrendingUp className="w-4 h-4 text-slate-300" />
+                    <span className="text-sm font-semibold text-slate-300">30% longer asset life</span>
                   </div>
                 </div>
                 <Link 
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-green-500 via-emerald-600 to-emerald-700 text-white rounded-xl shadow-xl shadow-green-500/20 hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-emerald-500 via-emerald-700 to-slate-600 text-white rounded-xl shadow-xl shadow-emerald-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all"
                 >
                   Talk to Manufacturing AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -122,7 +123,7 @@ const PredictiveMaintenance = () => {
 
               {/* Maintenance Dashboard */}
               <div className="animate-scaleIn delay-200 opacity-0">
-                <div className="bg-slate-900/80 backdrop-blur-xl rounded-[28px] p-10 border border-slate-800/50 shadow-2xl">
+                <div className="bg-slate-900/90 backdrop-blur-xl rounded-[28px] p-10 border border-emerald-500/30 shadow-2xl shadow-emerald-500/10">
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
@@ -400,7 +401,7 @@ const PredictiveMaintenance = () => {
 
         {/* CTA Section */}
         <section className="py-20 container mx-auto px-6">
-          <div className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-emerald-600 to-slate-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/20 blur-[100px]" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">
               Move from reactive to predictive operations.
