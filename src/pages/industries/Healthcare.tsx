@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 
 const Healthcare = () => {
   const challenges = [
-    { icon: Users, text: "Care demand volatility and capacity imbalance" },
-    { icon: TrendingDown, text: "Rising operating and administrative costs" },
-    { icon: Shield, text: "Clinical and operational risk exposure" },
-    { icon: Clock, text: "Slow, fragmented decision-making across departments" },
-    { icon: AlertTriangle, text: "Supply chain disruptions in critical care assets" },
-    { icon: Activity, text: "Difficulty monitoring real-time patient outcomes at scale" },
+    { icon: Users, text: "Care Demand Volatility And Capacity Imbalance" },
+    { icon: TrendingDown, text: "Rising Operating And Administrative Costs" },
+    { icon: Shield, text: "Clinical And Operational Risk Exposure" },
+    { icon: Clock, text: "Slow, Fragmented Decision-Making Across Departments" },
+    { icon: AlertTriangle, text: "Supply Chain Disruptions In Critical Care Assets" },
+    { icon: Activity, text: "Difficulty Monitoring Real-Time Patient Outcomes At Scale" },
   ];
 
   const solutions = [
@@ -31,10 +31,10 @@ const Healthcare = () => {
         "Population health models stratifying patients by severity and intervention urgency"
       ],
       howItWorks: [
-        { agent: "Clinical Risk Agents", action: "continuously assess patient health trajectories" },
-        { agent: "Care Planning Agents", action: "simulate intervention scenarios and outcomes" },
-        { agent: "Decision Agents", action: "recommend personalized care pathways" },
-        { agent: "Learning Agents", action: "recalibrate models as patient conditions evolve" }
+        { agent: "Clinical Risk Agents", action: "Continuously assess patient health trajectories" },
+        { agent: "Care Planning Agents", action: "Simulate intervention scenarios and outcomes" },
+        { agent: "Decision Agents", action: "Recommend personalized care pathways" },
+        { agent: "Learning Agents", action: "Recalibrate models as patient conditions evolve" }
       ],
       metrics: [
         { value: "20–35% ↓", label: "Preventable Readmissions", color: "text-green" },
@@ -52,10 +52,10 @@ const Healthcare = () => {
         "Throughput analytics tracking bottlenecks across departments"
       ],
       howItWorks: [
-        { agent: "Capacity Monitoring Agents", action: "track real-time operational signals" },
-        { agent: "Optimization Agents", action: "recommend staffing and bed allocation adjustments" },
-        { agent: "Action Agents", action: "trigger scheduling changes and alerts" },
-        { agent: "Learning Agents", action: "improve forecasts using historical and live data" }
+        { agent: "Capacity Monitoring Agents", action: "Track real-time operational signals" },
+        { agent: "Optimization Agents", action: "Recommend staffing and bed allocation adjustments" },
+        { agent: "Action Agents", action: "Trigger scheduling changes and alerts" },
+        { agent: "Learning Agents", action: "Improve forecasts using historical and live data" }
       ],
       metrics: [
         { value: "25–40% ↑", label: "Resource Utilization", color: "text-green" },
@@ -73,10 +73,10 @@ const Healthcare = () => {
         "Behavioral models profiling providers and members"
       ],
       howItWorks: [
-        { agent: "FWA Detection Agents", action: "monitor claims in near real time" },
-        { agent: "Network Agents", action: "expose coordinated abuse patterns" },
-        { agent: "Response Agents", action: "flag, pause, or escalate suspicious claims" },
-        { agent: "Learning Agents", action: "adapt to emerging fraud tactics" }
+        { agent: "FWA Detection Agents", action: "Monitor claims in near real time" },
+        { agent: "Network Agents", action: "Expose coordinated abuse patterns" },
+        { agent: "Response Agents", action: "Flag, pause, or escalate suspicious claims" },
+        { agent: "Learning Agents", action: "Adapt to emerging fraud tactics" }
       ],
       metrics: [
         { value: "40–60% ↓", label: "Fraud & Leakage", color: "text-green" },
@@ -94,10 +94,10 @@ const Healthcare = () => {
         "Quality scoring models aligned with value-based care metrics"
       ],
       howItWorks: [
-        { agent: "Compliance Agents", action: "detect deviations in real time" },
-        { agent: "Reporting Agents", action: "generate audit- and regulator-ready documentation" },
-        { agent: "Alert Agents", action: "ensure timely corrective actions" },
-        { agent: "Learning Agents", action: "stay aligned with evolving regulations and standards" }
+        { agent: "Compliance Agents", action: "Detect deviations in real time" },
+        { agent: "Reporting Agents", action: "Generate audit- and regulator-ready documentation" },
+        { agent: "Alert Agents", action: "Ensure timely corrective actions" },
+        { agent: "Learning Agents", action: "Stay aligned with evolving regulations and standards" }
       ],
       metrics: [
         { value: "↓ Risk", label: "Regulatory Risk & Penalties", color: "text-green" },
@@ -540,7 +540,7 @@ const Healthcare = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Healthcare?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Healthcare?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for complex health ecosystems with safety, security, and scale at the core.
               </p>
@@ -588,7 +588,7 @@ const Healthcare = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Solve cost, capacity, and risk challenges—without adding complexity.
+                Solve Cost, Capacity, And Risk Challenges—Without Adding Complexity.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading healthcare organizations using AI Mill to transform healthcare operations.

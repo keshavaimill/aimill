@@ -13,12 +13,12 @@ import { channel } from "diagnostics_channel";
 
 const Retail = () => {
   const challenges = [
-    { icon: TrendingDown, text: "Demand volatility and forecast inaccuracy" },
-    { icon: Package, text: "Inventory imbalance across channels" },
-    { icon: DollarSign, text: "Promotion and pricing ineffectiveness" },
-    { icon: Users, text: "Customer experience gaps (Online & In-Store)" },
-    { icon: Clock, text: "Slow decision cycles in merchandising" },
-    { icon: Activity, text: "Difficulty monitoring real-time sell-through at scale" },
+    { icon: TrendingDown, text: "Demand Volatility And Forecast Inaccuracy" },
+    { icon: Package, text: "Inventory Imbalance Across Channels" },
+    { icon: DollarSign, text: "Promotion And Pricing Ineffectiveness" },
+    { icon: Users, text: "Customer Experience Gaps (Online & In-Store)" },
+    { icon: Clock, text: "Slow Decision Cycles In Merchandising" },
+    { icon: Activity, text: "Difficulty Monitoring Real-Time Sell-Through At Scale" },
   ];
 
   const solutions = [
@@ -32,10 +32,10 @@ const Retail = () => {
         "Inventory optimization models balancing service levels, holding costs, and replenishment cycles"
       ],
       howItWorks: [
-        { agent: "Demand Intelligence Agents", action: "continuously monitor sales and demand signals" },
-        { agent: "Scenario Simulation Agents", action: "test promotions, pricing, and supply disruptions" },
-        { agent: "Decision Agents", action: "recommend reorder quantities, allocations, and replenishment timing" },
-        { agent: "Learning Agents", action: "adapt forecasts as customer behavior and market conditions shift" }
+        { agent: "Demand Intelligence Agents", action: "Continuously monitor sales and demand signals" },
+        { agent: "Scenario Simulation Agents", action: "Test promotions, pricing, and supply disruptions" },
+        { agent: "Decision Agents", action: "Recommend reorder quantities, allocations, and replenishment timing" },
+        { agent: "Learning Agents", action: "Adapt forecasts as customer behavior and market conditions shift" }
       ],
       metrics: [
         { value: "20–35% ↓", label: "Stockout Reduction", color: "text-green" },
@@ -53,10 +53,10 @@ const Retail = () => {
         "Customer lifetime value (CLV) and churn prediction models"
       ],
       howItWorks: [
-        { agent: "Customer Intelligence Agents", action: "track real-time behavior across touchpoints" },
-        { agent: "Personalization Agents", action: "deliver dynamic offers, content, and pricing" },
-        { agent: "Engagement Agents", action: "optimize loyalty campaigns and communications" },
-        { agent: "Learning Agents", action: "refine personalization strategies continuously" }
+        { agent: "Customer Intelligence Agents", action: "Track real-time behavior across touchpoints" },
+        { agent: "Personalization Agents", action: "Deliver dynamic offers, content, and pricing" },
+        { agent: "Engagement Agents", action: "Optimize loyalty campaigns and communications" },
+        { agent: "Learning Agents", action: "Refine personalization strategies continuously" }
       ],
       metrics: [
         { value: "25–40% ↑", label: "Conversion Rates", color: "text-green" },
@@ -74,10 +74,10 @@ const Retail = () => {
         "Markdown and margin optimization analytics"
       ],
       howItWorks: [
-        { agent: "Pricing Agents", action: "dynamically adjust prices based on demand, inventory, and competition" },
-        { agent: "Promotion Agents", action: "simulate and optimize campaigns before launch" },
-        { agent: "Decision Agents", action: "recommend optimal markdown and bundling strategies" },
-        { agent: "Learning Agents", action: "improve pricing models with live performance feedback" }
+        { agent: "Pricing Agents", action: "Dynamically adjust prices based on demand, inventory, and competition" },
+        { agent: "Promotion Agents", action: "Simulate and optimize campaigns before launch" },
+        { agent: "Decision Agents", action: "Recommend optimal markdown and bundling strategies" },
+        { agent: "Learning Agents", action: "Improve pricing models with live performance feedback" }
       ],
       metrics: [
         { value: "5–15% ↑", label: "Margin Improvement", color: "text-green" },
@@ -95,10 +95,10 @@ const Retail = () => {
         "Supply-chain risk models monitoring vendor reliability and disruptions"
       ],
       howItWorks: [
-        { agent: "Fraud Detection Agents", action: "monitor transactions and returns in real time" },
-        { agent: "Shrinkage Intelligence Agents", action: "flag high-risk stores and products" },
-        { agent: "Response Agents", action: "trigger alerts, blocks, or investigations" },
-        { agent: "Learning Agents", action: "adapt to new fraud and theft patterns" }
+        { agent: "Fraud Detection Agents", action: "Monitor transactions and returns in real time" },
+        { agent: "Shrinkage Intelligence Agents", action: "Flag high-risk stores and products" },
+        { agent: "Response Agents", action: "Trigger alerts, blocks, or investigations" },
+        { agent: "Learning Agents", action: "Adapt to new fraud and theft patterns" }
       ],
       metrics: [
         { value: "30–50% ↓", label: "Fraud & Shrinkage", color: "text-green" },
@@ -541,7 +541,7 @@ const Retail = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Retail?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Retail?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for high-velocity omnichannel ecosystems with yield and margin at the core.
               </p>
@@ -589,7 +589,7 @@ const Retail = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Solve demand volatility, inventory risk, and CX gaps—without adding complexity.
+                Solve Demand Volatility, Inventory Risk, And CX Gaps—Without Adding Complexity.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading retailers using AI Mill to transform retail operations.

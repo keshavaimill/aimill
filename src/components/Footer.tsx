@@ -58,9 +58,7 @@ export const Footer = () => {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="text-primary-foreground font-bold text-xl">A</span>
-              </div>
+              <img src="/image.png" alt="AI Mill Logo" className="w-10 h-10 rounded-lg object-contain group-hover:scale-105 transition-transform" />
               <span className="text-2xl font-bold text-foreground">AI Mill</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed max-w-xs">
@@ -169,10 +167,6 @@ export const Footer = () => {
             
             {/* Right side - Certifications and links */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm">
-              <div className="flex items-center gap-2 text-foreground">
-                <span className="text-green font-semibold">✓</span>
-                <span>SOC 2 Certified</span>
-              </div>
               <p className="text-muted-foreground">
                 © 2025 AI Mill. All rights reserved.
               </p>

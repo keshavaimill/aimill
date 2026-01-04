@@ -16,12 +16,12 @@ const Agriculture = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
 
   const challenges = [
-    { icon: CloudRain, text: "Yield unpredictability due to weather and soil variability", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: Droplets, text: "Overuse of water, fertilizer, and pesticides", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: Bug, text: "Late detection of pests and diseases", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
-    { icon: Satellite, text: "Limited real-time field visibility", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: TrendingDown, text: "Difficulty scaling best practices across large farms", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: DollarSign, text: "Lower productivity, higher costs, unsustainable resource usage", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: CloudRain, text: "Yield Unpredictability Due To Weather And Soil Variability", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: Droplets, text: "Overuse Of Water, Fertilizer, And Pesticides", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Bug, text: "Late Detection Of Pests And Diseases", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: Satellite, text: "Limited Real-Time Field Visibility", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: TrendingDown, text: "Difficulty Scaling Best Practices Across Large  Farms", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: DollarSign, text: "Lower Productivity, Higher Costs, Unsustainable Resource Usage", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
   ];
 
   const solutionIcons = [Eye, Layers, Lightbulb, Brain];
@@ -37,10 +37,10 @@ const Agriculture = () => {
         "Historical yield and agronomic data modeling for field-level baselines"
       ],
       howItWorks: [
-        { agent: "Crop monitoring agents", action: "assess plant health continuously" },
-        { agent: "Soil intelligence agents", action: "analyze moisture and nutrient levels" },
-        { agent: "Recommendation agents", action: "prescribe variable-rate irrigation and fertilization" },
-        { agent: "Learning agents", action: "adapt models to local field conditions" },
+        { agent: "Crop monitoring agents", action: "Assess plant health continuously" },
+        { agent: "Soil intelligence agents", action: "Analyze moisture and nutrient levels" },
+        { agent: "Recommendation agents", action: "Prescribe variable-rate irrigation and fertilization" },
+        { agent: "Learning agents", action: "Adapt models to local field conditions" },
       ],
       metrics: [
         { value: "15-30% ↑", label: "Crop Yield Increase", color: "text-green", borderColor: "border-t-green" },
@@ -59,9 +59,9 @@ const Agriculture = () => {
         "Scenario-based modeling incorporating climate and agronomic variability"
       ],
       howItWorks: [
-        { agent: "Forecast agents", action: "update predictions throughout the growing season" },
-        { agent: "Scenario agents", action: "simulate weather and disease impacts" },
-        { agent: "Planning agents", action: "optimize harvest schedules and logistics" },
+        { agent: "Forecast agents", action: "Update predictions throughout the growing season" },
+        { agent: "Scenario agents", action: "Simulate weather and disease impacts" },
+        { agent: "Planning agents", action: "Optimize harvest schedules and logistics" },
       ],
       metrics: [
         { value: "Better Planning", label: "Improved Supply Chain", color: "text-cyan", borderColor: "border-t-cyan" },
@@ -80,9 +80,9 @@ const Agriculture = () => {
         "Disease and pest classification models trained on regional crop patterns"
       ],
       howItWorks: [
-        { agent: "Vision agents", action: "scan crop images" },
-        { agent: "Alert agents", action: "notify farmers instantly" },
-        { agent: "Action agents", action: "recommend targeted treatment" },
+        { agent: "Vision agents", action: "Scan crop images" },
+        { agent: "Alert agents", action: "Notify farmers instantly" },
+        { agent: "Action agents", action: "Recommend targeted treatment" },
       ],
       metrics: [
         { value: "↓ Significant", label: "Crop Loss Reduction", color: "text-green", borderColor: "border-t-green" },
@@ -101,9 +101,9 @@ const Agriculture = () => {
         "Performance benchmarking models comparing outcomes across fields and seasons"
       ],
       howItWorks: [
-        { agent: "Advisory agents", action: "provide daily actionable insights" },
-        { agent: "Operations agents", action: "coordinate irrigation, spraying, and harvesting" },
-        { agent: "Learning agents", action: "refine recommendations season after season" },
+        { agent: "Advisory agents", action: "Provide daily actionable insights" },
+        { agent: "Operations agents", action: "Coordinate irrigation, spraying, and harvesting" },
+        { agent: "Learning agents", action: "Refine recommendations season after season" },
       ],
       metrics: [
         { value: "↓ Labor", label: "Lower Dependency", color: "text-purple", borderColor: "border-t-purple" },
@@ -651,7 +651,7 @@ const Agriculture = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill for Agriculture?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill For Agriculture?</h2>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-[1.6]">
                 Built for agriculture with field-tested solutions that adapt to your unique farming operations.
               </p>
@@ -700,7 +700,7 @@ const Agriculture = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Farm smarter, grow more, and waste less with AI Mill.
+                Farm Smarter, Grow More, And Waste Less With AI Mill.
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading farmers and agribusinesses already using AI Mill to transform agricultural operations.

@@ -17,12 +17,12 @@ const Manufacturing = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
 
   const challenges = [
-    { icon: AlertTriangle, text: "Unexpected machine failures disrupting production", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
-    { icon: XCircle, text: "Quality issues detected too late in the process", gradient: "from-sky-500 to-sky-600", bgColor: "bg-sky-500/15" },
-    { icon: BarChart2, text: "Inefficient production planning and capacity utilization", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: DollarSign, text: "High maintenance costs driven by calendar-based servicing", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: Eye, text: "Limited real-time visibility across plants and lines", gradient: "from-blue-500 to-blue-600", bgColor: "bg-blue-500/15" },
-    { icon: TrendingDown, text: "Impact on OEE, margins, delivery commitments, and customer trust", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: AlertTriangle, text: "Unexpected Machine Failures Disrupting Production", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: XCircle, text: "Quality Issues Detected Too Late In The Process", gradient: "from-sky-500 to-sky-600", bgColor: "bg-sky-500/15" },
+    { icon: BarChart2, text: "Inefficient Production Planning And Capacity Utilization", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: DollarSign, text: "High Maintenance Costs Driven By Calendar-Based Servicing", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Eye, text: "Limited Real-Time Visibility Across Plants And Lines", gradient: "from-blue-500 to-blue-600", bgColor: "bg-blue-500/15" },
+    { icon: TrendingDown, text: "Impact On OEE, Margins, Delivery Commitments, And Customer Trust", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
   ];
 
   const solutionIcons = [Brain, Activity, Zap];
@@ -667,7 +667,7 @@ const Manufacturing = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Self-optimizing factory ecosystem.
+                Self-Optimizing Factory Ecosystem.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading manufacturers already using AI Mill to build smarter, more resilient factories.
