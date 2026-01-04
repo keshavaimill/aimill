@@ -35,11 +35,11 @@ const metrics = [
 
 export const AgenticAISection = () => {
   return (
-    <section className="py-12 md:py-24 flex justify-center relative bg-transparent">
+    <section className="py-16 md:py-32 flex justify-center relative bg-transparent">
       {/* Split Background to bridge the Hero (Black) and Content (Theme Background) */}
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-black from-50% to-background to-50%" />
 
-      <div className="container px-4 md:px-6 relative z-10">
+      <div className="container px-4 md:px-8 relative z-10">
         <div className="flex flex-col md:flex-row w-full overflow-hidden rounded-3xl">
           {/* Left Side - 45% - Light Lavender Background */}
           <motion.div
@@ -47,7 +47,7 @@ export const AgenticAISection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="md:w-[45%] bg-[#f5f3f8] p-12 md:p-[60px] lg:p-20 flex flex-col"
+            className="md:w-[45%] bg-[#f5f3f8] p-12 md:p-16 lg:p-24 flex flex-col"
           >
             {/* Large Heading */}
             <motion.h2
@@ -55,7 +55,7 @@ export const AgenticAISection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-[48px] lg:text-[56px] font-bold text-black mb-[60px]"
+              className="text-4xl sm:text-5xl md:text-[48px] lg:text-[56px] font-bold text-black mb-16"
               style={{ lineHeight: "1.1", fontWeight: 700 }}
             >
               From Automation To Autonomy
@@ -70,25 +70,23 @@ export const AgenticAISection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="flex flex-col mb-[50px] last:mb-0"
+                  className="flex flex-col mb-12 last:mb-0"
                 >
                   {/* Bold Metric */}
                   <div 
-                    className="text-2xl sm:text-3xl md:text-[28px] lg:text-[32px] font-bold text-black"
-                    style={{ marginBottom: "12px" }}
+                    className="text-2xl sm:text-3xl md:text-[28px] lg:text-[32px] font-bold text-black mb-4"
                   >
                     {item.metric}
                   </div>
                   
                   {/* Colored Uppercase Label */}
                   <div 
-                    className="uppercase font-semibold"
+                    className="uppercase font-semibold mb-3"
                     style={{ 
                       fontSize: "13px",
                       color: item.color,
                       letterSpacing: "1px",
                       fontWeight: 600,
-                      marginBottom: "10px"
                     }}
                   >
                     {item.label}
@@ -99,7 +97,7 @@ export const AgenticAISection = () => {
                     className="text-[15px] md:text-[16px]"
                     style={{ 
                       color: "#6b7280",
-                      lineHeight: "1.5"
+                      lineHeight: "1.6"
                     }}
                   >
                     {item.description}

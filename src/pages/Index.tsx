@@ -17,11 +17,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <SolutionsGrid />
         <AnnouncementSection />
         <TrustSection />
         <AgenticAISection />
         <PlatformTeaser />
-        <SolutionsGrid />
         <WhyAIMILL />
         <FeaturesSection />
         <ArchitectureSection />

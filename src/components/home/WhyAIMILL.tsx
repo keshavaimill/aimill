@@ -69,7 +69,7 @@ export const WhyAIMILL = () => {
       </div>
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
           {/* Left Column - Benefits */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -77,12 +77,12 @@ export const WhyAIMILL = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             style={{ backgroundColor: "#D1FAE5" }}
-            className="rounded-2xl p-12 pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24"
+            className="rounded-2xl p-8 lg:p-10 flex flex-col"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-black">
-              Why AI Mill
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 text-black">
+              Why AI Mill?
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6 flex-grow">
               {benefits.map((benefit, idx) => (
                 <motion.div
                   key={idx}
@@ -130,7 +130,7 @@ export const WhyAIMILL = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-2xl p-6 lg:p-8 border border-border/50 hover:border-primary/30 transition-all duration-300"
+            className="glass rounded-2xl p-8 lg:p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col"
           >
             <motion.h3 
               initial={{ opacity: 0, y: -10 }}
@@ -141,7 +141,7 @@ export const WhyAIMILL = () => {
             >
               Your Journey
             </motion.h3>
-            <div className="relative">
+            <div className="relative flex-grow">
               <div className="space-y-0">
                 {steps.map((step, idx) => {
                   const isExpanded = !collapsed && idx < activeIndex;

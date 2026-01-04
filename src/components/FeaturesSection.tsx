@@ -119,11 +119,10 @@ export const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900 tracking-wide text-center">
-            AI Mill designs and delivers intelligent systems that combine agentic execution with rigorous data science—{" "}
-            <span className="text-zinc-600">turning predictions into decisions and decisions into action within existing enterprise environments.</span>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900 tracking-wide text-left">
+            AI Mill Designs Intelligent Systems Where Agentic Execution & Data Science Turn Predictions Into Action !!
           </h2>
         </motion.div>
 

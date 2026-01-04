@@ -114,7 +114,7 @@ const Industries = () => {
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-8 text-foreground">
                 Agentic AI for{" "}
-                <span className="gradient-text">Every Industry</span>
+                <span className="gradient-text-purple">Every Industry</span>
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
                 Specialized solutions built for the unique challenges of your vertical

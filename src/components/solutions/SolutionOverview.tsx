@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 interface SolutionOverviewProps {
@@ -11,13 +10,8 @@ interface SolutionOverviewProps {
 export const SolutionOverview = ({ title, description, capabilities, themeColor }: SolutionOverviewProps) => {
   return (
     <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-background">
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+      <div className="container mx-auto max-w-6xl">
+        <div>
           <span className={`inline-block px-4 py-2 text-sm font-bold tracking-widest uppercase mb-6 ${
             themeColor === "cyan" ? "text-cyan" :
             themeColor === "purple" ? "text-purple" :
@@ -32,17 +26,13 @@ export const SolutionOverview = ({ title, description, capabilities, themeColor 
             {title}
           </h2>
 
-          <p className="text-xl text-muted-foreground mb-4">It:</p>
+          <p className="text-xl text-muted-foreground mb-4">{description}</p>
 
           {/* Capabilities List */}
           <div className="grid sm:grid-cols-2 gap-4 mb-12">
             {capabilities.map((capability, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
                 className="flex items-start gap-3"
               >
                 <Check className={`w-6 h-6 flex-shrink-0 mt-0.5 ${
@@ -53,18 +43,12 @@ export const SolutionOverview = ({ title, description, capabilities, themeColor 
                   "text-teal"
                 }`} />
                 <span className="text-lg text-foreground leading-relaxed">{capability}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Flow Diagram */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="glass rounded-2xl p-8 border border-border/50"
-          >
+          <div className="bg-card rounded-2xl p-8 border border-border/50">
             <div className="flex flex-wrap items-center justify-center gap-4">
               {["Data Input", "Analysis", "Decision", "Execution", "Learning"].map((step, idx) => (
                 <div key={idx} className="flex items-center gap-4">
@@ -83,8 +67,8 @@ export const SolutionOverview = ({ title, description, capabilities, themeColor 
                 </div>
               ))}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

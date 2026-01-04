@@ -46,7 +46,7 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex justify-start mb-8"
+                className="flex justify-start mb-12"
               >
                 <Link
                   to="/contact"
@@ -54,7 +54,7 @@ export const HeroSection = () => {
                 >
 
                   <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-                  Community support, daily live office hours, and thousands of builders
+                  Enterprise AI Advisory, Agentic Accelerators, & Built By Experts
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -77,7 +77,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg md:text-xl text-muted-foreground mb-8"
                 >
-                  AI Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
+                  AI Mill Consults Enterprises on AI, Data Science, & Analytics—Delivering Custom Agentic Solutions & Accelerators Built To Solve Complex Industry Problems
                 </motion.p>
 
                 {/* Value Bullets */}
@@ -85,7 +85,7 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="flex flex-wrap items-center gap-4 mb-10"
+                  className="flex flex-wrap items-center gap-4 mb-8"
                 >
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
                     <span className="w-2 h-2 rounded-full bg-green" />
