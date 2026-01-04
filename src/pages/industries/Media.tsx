@@ -12,12 +12,12 @@ import { Link } from "react-router-dom";
 
 const Media = () => {
   const challenges = [
-    { icon: Users, text: "Audience fragmentation leading to inconsistent reach" },
-    { icon: Film, text: "Difficulty scaling content production at market speed" },
-    { icon: TrendingDown, text: "Suboptimal advertising yield and monetization" },
-    { icon: Clock, text: "Operational bottlenecks in content launching" },
-    { icon: AlertCircle, text: "Decision latency driven by siloed performance data" },
-    { icon: Eye, text: "Limited real-time visibility across distribution channels" },
+    { icon: Users, text: "Audience Fragmentation Leading To Inconsistent Reach" },
+    { icon: Film, text: "Difficulty Scaling Content Production At Market Speed" },
+    { icon: TrendingDown, text: "Suboptimal Advertising Yield And Monetization" },
+    { icon: Clock, text: "Operational Bottlenecks In Content Launching" },
+    { icon: AlertCircle, text: "Decision Latency Driven By Siloed Performance Data" },
+    { icon: Eye, text: "Limited Real-Time Visibility Across Distribution Channels" },
   ];
 
   const solutions = [
@@ -520,7 +520,7 @@ const Media = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Media?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Media?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for multi-channel media ecosystems with scale and brand safety at the core.
               </p>
@@ -568,7 +568,7 @@ const Media = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Scale content, audiences, and revenue without increasing risk.
+                Scale Content, Audiences, And Revenue Without Increasing Risk.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading media organizations using AI Mill to transform reach, yield, and operations.

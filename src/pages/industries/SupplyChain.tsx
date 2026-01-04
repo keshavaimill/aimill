@@ -13,12 +13,12 @@ import { Link } from "react-router-dom";
 
 const SupplyChain = () => {
   const challenges = [
-    { icon: TrendingDown, text: "Inaccurate demand forecasts leading to stockouts or excess inventory", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: DollarSign, text: "Capital locked in slow-moving inventory", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: Clock, text: "Long planning cycles unable to react to disruptions", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: Eye, text: "Limited end-to-end visibility across suppliers, warehouses, and channels", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
-    { icon: BarChart, text: "Human planners overwhelmed by data complexity", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
-    { icon: AlertTriangle, text: "Direct impact on service levels, margins, and working capital efficiency", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
+    { icon: TrendingDown, text: "Inaccurate Demand Forecasts Leading To Stockouts Or Excess Inventory", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: DollarSign, text: "Capital Locked In Slow-Moving Inventory", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Clock, text: "Long Planning Cycles Unable To React To Disruptions", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: Eye, text: "Limited End-to-End Visibility Across Suppliers, Warehouses, And Channels", gradient: "from-cyan-500 to-cyan-600", bgColor: "bg-cyan-500/15" },
+    { icon: BarChart, text: "Human Planners Overwhelmed By Data Complexity", gradient: "from-purple-500 to-purple-600", bgColor: "bg-purple-500/15" },
+    { icon: AlertTriangle, text: "Direct Impact On Service Levels, Margins, And Working Capital Efficiency", gradient: "from-destructive to-red-700", bgColor: "bg-destructive/15" },
   ];
 
   const solutions = [
@@ -704,7 +704,7 @@ const SupplyChain = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Build a supply chain that heals itself.
+                Build A Supply Chain That Heals Itself.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading supply chain organizations already using AI Mill to create autonomous, resilient networks.

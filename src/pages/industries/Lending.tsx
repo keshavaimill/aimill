@@ -15,12 +15,12 @@ const Lending = () => {
   const [expandedSolution, setExpandedSolution] = useState<number | null>(null);
 
   const challenges = [
-    { icon: TrendingDown, text: "High default rates due to incomplete risk assessment" },
-    { icon: Clock, text: "Slow and manual underwriting processes" },
-    { icon: AlertCircle, text: "Rising fraud losses and sophisticated fraud patterns" },
-    { icon: BarChart, text: "Credit decisions based on static, backward-looking data" },
-    { icon: Shield, text: "Difficulty balancing growth with regulatory compliance" },
-    { icon: TrendingDownIcon, text: "Lost revenue, rising NPAs, operational inefficiencies" },
+    { icon: TrendingDown, text: "High Default Rates Due to Incomplete Risk Assessment" },
+    { icon: Clock, text: "Slow and Manual Underwriting Processes" },
+    { icon: AlertCircle, text: "Rising Fraud Losses and Sophisticated Fraud Patterns" },
+    { icon: BarChart, text: "Credit Decisions Based on Static, Backward-Looking Data" },
+    { icon: Shield, text: "Difficulty Balancing Growth with Regulatory Compliance" },
+    { icon: TrendingDownIcon, text: "Lost Revenue, Rising NPAs, Operational Inefficiencies" },
   ];
 
   const solutions = [
@@ -698,7 +698,7 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Grow your loan portfolio without growing risk.
+                Grow Your Loan Portfolio Without Growing Risk.
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading financial institutions using AI Mill to reduce defaults, detect fraud, and streamline operations.

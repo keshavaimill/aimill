@@ -50,11 +50,11 @@ export const HeroSection = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all group pointer-events-auto"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900/80 backdrop-blur-sm border border-zinc-700/50 text-sm text-foreground hover:text-foreground hover:border-primary/70 hover:bg-zinc-800/80 transition-all group pointer-events-auto shadow-lg"
                 >
 
                   <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-                  Community support, daily live office hours, and thousands of builders
+                  Enterprise AI consulting with dedicated support and proven outcomes
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>

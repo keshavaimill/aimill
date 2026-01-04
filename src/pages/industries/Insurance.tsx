@@ -37,9 +37,9 @@ const Insurance = () => {
         "Claim segmentation models enabling straight-through vs. adjuster handling"
       ],
       howItWorks: [
-        { agent: "Severity agents", action: "predict claim costs during first notice" },
-        { agent: "Triage agents", action: "route claims to optimized handling channels" },
-        { agent: "Fraud agents", action: "detect anomalies before settlement" },
+        { agent: "Severity agents", action: "Predict claim costs during first notice" },
+        { agent: "Triage agents", action: "Route claims to optimized handling channels" },
+        { agent: "Fraud agents", action: "Detect anomalies before settlement" },
       ],
       metrics: [
         { value: "30-50% ↓", label: "Cycle Time Reduction", color: "text-green", borderColor: "border-t-green" },
@@ -59,9 +59,9 @@ const Insurance = () => {
         "Portfolio exposure and concentration analytics"
       ],
       howItWorks: [
-        { agent: "Intake agents", action: "extract and validate submission data" },
-        { agent: "Risk agents", action: "score alignment with appetite" },
-        { agent: "Pricing agents", action: "optimize premiums based on risk" },
+        { agent: "Intake agents", action: "Extract and validate submission data" },
+        { agent: "Risk agents", action: "Score alignment with appetite" },
+        { agent: "Pricing agents", action: "Optimize premiums based on risk" },
       ],
       metrics: [
         { value: "40-60% ↓", label: "Underwriting Cycle Time", color: "text-cyan", borderColor: "border-t-cyan" },
@@ -81,9 +81,9 @@ const Insurance = () => {
         "Renewal pricing optimization models balancing margin and retention"
       ],
       howItWorks: [
-        { agent: "Elasticity agents", action: "calculate price sensitivity" },
-        { agent: "Churn agents", action: "flag high-risk accounts early" },
-        { agent: "Offer agents", action: "generate personalized win-back offers" },
+        { agent: "Elasticity agents", action: "Calculate price sensitivity" },
+        { agent: "Churn agents", action: "Flag high-risk accounts early" },
+        { agent: "Offer agents", action: "Generate personalized win-back offers" },
       ],
       metrics: [
         { value: "Retention ↑", label: "Customer Lifetime Value", color: "text-purple", borderColor: "border-t-purple" },
@@ -593,7 +593,7 @@ const Insurance = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for insurance?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Insurance?</h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built for insurance with deep domain context and regulatory compliance at the core.
               </p>
@@ -641,7 +641,7 @@ const Insurance = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Fix leakage and protect margins.
+                Fix Leakage And Protect Margins.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join leading insurance carriers already using AI Mill to transform claims, underwriting, and customer experience.
