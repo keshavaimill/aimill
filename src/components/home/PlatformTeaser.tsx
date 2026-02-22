@@ -48,7 +48,7 @@ export const PlatformTeaser = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-            The AI Mill Agentic Ecosystem
+            The Ai Mill Agentic Ecosystem
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Design, Orchestrate, Deploy, and Monitor AI agents across your Enterprise.

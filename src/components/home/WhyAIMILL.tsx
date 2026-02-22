@@ -80,7 +80,7 @@ export const WhyAIMILL = () => {
             className="rounded-2xl p-8 lg:p-10 flex flex-col"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 text-black">
-              Why AI Mill?
+              Why Ai Mill?
             </h2>
             <div className="space-y-6 flex-grow">
               {benefits.map((benefit, idx) => (

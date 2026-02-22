@@ -52,10 +52,10 @@ export const CTASection = () => {
               <div className="flex items-center gap-4 lg:gap-6">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.9] tracking-tight">
                   <span className="bg-gradient-to-r from-cyan via-blue-400 to-purple bg-clip-text text-transparent">
-                    AI Mill
+                    Ai Mill
                   </span>
                 </h2>
-                {/* Circular Get Started Button - Aligned with AI Mill */}
+                {/* Circular Get Started Button - Aligned with Ai Mill */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -94,7 +94,7 @@ export const CTASection = () => {
 
                 <motion.img
                   src="/image f.png"
-                  alt="AI Mill illustration"
+                  alt="Ai Mill illustration"
                   className="relative w-full h-auto object-contain rounded-2xl"
                   initial={{ scale: 1.05, opacity: 0.9 }}
                   whileInView={{ scale: 1, opacity: 1 }}

@@ -129,7 +129,7 @@ const MarketingAgent = () => {
                   Autonomous Marketing<br />Execution — From<br />Insight to Impact
                 </h1>
                 <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
-                  AI Mill's Marketing Agent identifies the right customers, creates high-performing content, and executes campaigns autonomously across channels — reducing time-to-market while increasing ROI.
+                  Ai Mill's Marketing Agent identifies the right customers, creates high-performing content, and executes campaigns autonomously across channels — reducing time-to-market while increasing ROI.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-12">
                   <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-sky-500/50 transition-all">

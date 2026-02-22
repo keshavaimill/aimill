@@ -621,7 +621,7 @@ const Agriculture = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
           {/* Elegant Grey Texture Background - Matching Lending Page */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -651,7 +651,7 @@ const Agriculture = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill For Agriculture?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why Ai Mill For Agriculture?</h2>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-[1.6]">
                 Built for agriculture with field-tested solutions that adapt to your unique farming operations.
               </p>
@@ -700,10 +700,10 @@ const Agriculture = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-                Farm Smarter, Grow More, And Waste Less With AI Mill.
+                Farm Smarter, Grow More, And Waste Less With Ai Mill.
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading farmers and agribusinesses already using AI Mill to transform agricultural operations.
+                Join leading farmers and agribusinesses already using Ai Mill to transform agricultural operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

@@ -58,8 +58,8 @@ export const Footer = () => {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
-              <img src="/image.png" alt="AI Mill Logo" className="w-10 h-10 rounded-lg object-contain group-hover:scale-105 transition-transform" />
-              <span className="text-2xl font-bold text-foreground">AI Mill</span>
+              <img src="/image.png" alt="Ai Mill Logo" className="w-10 h-10 rounded-lg object-contain group-hover:scale-105 transition-transform" />
+              <span className="text-2xl font-bold text-foreground">Ai Mill</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed max-w-xs">
               Building The Future With AI Agents.
@@ -168,7 +168,7 @@ export const Footer = () => {
             {/* Right side - Certifications and links */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm">
               <p className="text-muted-foreground">
-                © 2025 AI Mill. All rights reserved.
+                © 2025 Ai Mill. All rights reserved.
               </p>
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-muted-foreground">
                 <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>

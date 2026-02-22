@@ -185,7 +185,7 @@ const Media = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  Media leaders face margin pressure and fragmented audiences. AI Mill combines Data Science & Analytics with Agentic AI to move from insight to action—continuously.
+                  Media leaders face margin pressure and fragmented audiences. Ai Mill combines Data Science & Analytics with Agentic AI to move from insight to action—continuously.
                 </motion.p>
 
                 {/* CTA Area */}
@@ -507,7 +507,7 @@ const Media = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
@@ -520,7 +520,7 @@ const Media = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Media?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why Ai Mill For Media?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for multi-channel media ecosystems with scale and brand safety at the core.
               </p>
@@ -571,7 +571,7 @@ const Media = () => {
                 Scale Content, Audiences, And Revenue Without Increasing Risk.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading media organizations using AI Mill to transform reach, yield, and operations.
+                Join leading media organizations using Ai Mill to transform reach, yield, and operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

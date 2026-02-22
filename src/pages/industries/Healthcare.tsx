@@ -205,7 +205,7 @@ const Healthcare = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  Healthcare leaders face rising costs and staffing shortages. AI Mill combines Data Science & Analytics with Agentic AI to turn clinical insights into autonomous operational action.
+                  Healthcare leaders face rising costs and staffing shortages. Ai Mill combines Data Science & Analytics with Agentic AI to turn clinical insights into autonomous operational action.
                 </motion.p>
 
                 {/* CTA Area */}
@@ -527,7 +527,7 @@ const Healthcare = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
@@ -540,7 +540,7 @@ const Healthcare = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Healthcare?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why Ai Mill For Healthcare?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for complex health ecosystems with safety, security, and scale at the core.
               </p>
@@ -591,7 +591,7 @@ const Healthcare = () => {
                 Solve Cost, Capacity, And Risk Challenges—Without Adding Complexity.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading healthcare organizations using AI Mill to transform healthcare operations.
+                Join leading healthcare organizations using Ai Mill to transform healthcare operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

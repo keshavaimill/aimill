@@ -206,7 +206,7 @@ const Retail = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  Retailers face margin pressure and volatile demand. AI Mill combines Data Science with Agentic AI to turn omnichannel insights into autonomous execution—scaling yield, not risk.
+                  Retailers face margin pressure and volatile demand. Ai Mill combines Data Science with Agentic AI to turn omnichannel insights into autonomous execution—scaling yield, not risk.
                 </motion.p>
 
                 {/* CTA Area */}
@@ -528,7 +528,7 @@ const Retail = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
@@ -541,7 +541,7 @@ const Retail = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Retail?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why Ai Mill For Retail?</h2>
               <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for high-velocity omnichannel ecosystems with yield and margin at the core.
               </p>
@@ -592,7 +592,7 @@ const Retail = () => {
                 Solve Demand Volatility, Inventory Risk, And CX Gaps—Without Adding Complexity.
               </h2>
               <p className="text-lg sm:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading retailers using AI Mill to transform retail operations.
+                Join leading retailers using Ai Mill to transform retail operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

@@ -223,7 +223,7 @@ const Manufacturing = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  AI Mill enables manufacturers to transform traditional plants into self-optimizing, intelligent factories using advanced Data Science and Agentic AI systems that predict, decide, and act in real time.
+                  Ai Mill enables manufacturers to transform traditional plants into self-optimizing, intelligent factories using advanced Data Science and Agentic AI systems that predict, decide, and act in real time.
                 </motion.p>
 
                 {/* CTA Area */}
@@ -605,7 +605,7 @@ const Manufacturing = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
           {/* Elegant Grey Texture Background */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -619,7 +619,7 @@ const Manufacturing = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill for Manufacturing?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why Ai Mill for Manufacturing?</h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built for manufacturing with industrial-grade reliability and seamless system integration.
               </p>
@@ -670,7 +670,7 @@ const Manufacturing = () => {
                 Self-Optimizing Factory Ecosystem.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading manufacturers already using AI Mill to build smarter, more resilient factories.
+                Join leading manufacturers already using Ai Mill to build smarter, more resilient factories.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

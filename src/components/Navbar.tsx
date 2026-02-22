@@ -21,8 +21,8 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/image.png" alt="AI Mill Logo" className="w-8 h-8 rounded-lg object-contain" />
-          <span className="text-xl font-bold text-foreground">AI Mill</span>
+          <img src="/image.png" alt="Ai Mill Logo" className="w-8 h-8 rounded-lg object-contain" />
+          <span className="text-xl font-bold text-foreground">Ai Mill</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -57,14 +57,16 @@ export const Navbar = () => {
               <AnimatePresence>
                 {item.label === "Solutions" && activeDropdown === "Solutions" && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 10, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.97 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
-                            glass
-                            border border-border/50"
+                            bg-background/95 backdrop-blur-xl border border-border
+                            shadow-xl hover:shadow-2xl transition-shadow duration-200
+                            origin-top-left"
                   >
+                    <div className="transition-transform duration-200 hover:scale-[1.02]">
                     <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
                         to="/solutions"
@@ -132,20 +134,23 @@ export const Navbar = () => {
                         Predictive Maintenance
                       </Link>
                     </div>
+                    </div>
                   </motion.div>
                 )}
 
                 {/* Industries Dropdown */}
                 {item.label === "Industries" && activeDropdown === "Industries" && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 10, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.97 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 p-4 rounded-xl
-                            glass
-                            border border-border/50"
+                            bg-background/95 backdrop-blur-xl border border-border
+                            shadow-xl hover:shadow-2xl transition-shadow duration-200
+                            origin-top-left"
                   >
+                    <div className="transition-transform duration-200 hover:scale-[1.02]">
                     <div className="mb-2 pb-2 border-b border-border/50">
                       <Link
                         to="/industries"
@@ -212,6 +217,7 @@ export const Navbar = () => {
                       >
                         Retail
                       </Link>
+                    </div>
                     </div>
                   </motion.div>
                 )}

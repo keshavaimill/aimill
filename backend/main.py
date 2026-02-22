@@ -15,7 +15,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("AI_Mill_System")
 
-app = FastAPI(title="AI Mill Central API")
+app = FastAPI(title="Ai Mill Central API")
 
 # CORS - Ready for your Frontend integration
 app.add_middleware(
@@ -41,7 +41,7 @@ async def init_databases():
             with open(file, mode='w', newline='', encoding='utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames=cols)
                 writer.writeheader()
-            logger.info(f"🚀 AI Mill Database Initialized: {file}")
+            logger.info(f"🚀 Ai Mill Database Initialized: {file}")
 
 # --- DATA MODELS ---
 
@@ -79,7 +79,7 @@ def send_ai_mill_notification(subject, html_content):
         )
         sg.send(message)
     except Exception as e:
-        logger.error(f"AI Mill Mailer Error: {e}")
+        logger.error(f"Ai Mill Mailer Error: {e}")
 
 # --- ENDPOINTS ---
 
@@ -99,15 +99,15 @@ async def handle_contact(req: ContactRequest):
     # Branded Email
     email_html = f"""
     <div style="font-family: Arial, sans-serif; border: 1px solid #1a1a1a; padding: 20px; border-radius: 10px;">
-        <h2 style="background: #1a1a1a; color: #ffffff; padding: 10px; text-align: center;">AI Mill: New Inquiry</h2>
+        <h2 style="background: #1a1a1a; color: #ffffff; padding: 10px; text-align: center;">Ai Mill: New Inquiry</h2>
         <p><b>Client:</b> {req.name}</p>
         <p><b>Company:</b> {req.company}</p>
         <p><b>Interest:</b> {req.problem_solving}</p>
         <p><b>Message:</b> {req.message}</p>
     </div>
     """
-    send_ai_mill_notification(f"AI Mill Lead: {req.name}", email_html)
-    return {"status": "success", "message": "Inquiry recorded in AI Mill Database"}
+    send_ai_mill_notification(f"Ai Mill Lead: {req.name}", email_html)
+    return {"status": "success", "message": "Inquiry recorded in Ai Mill Database"}
 
 @app.post("/api/schedule-demo")
 async def handle_demo(req: DemoBooking):
@@ -125,7 +125,7 @@ async def handle_demo(req: DemoBooking):
     # Branded Email
     email_html = f"""
     <div style="font-family: Arial, sans-serif; border: 2px solid #1a1a1a; padding: 20px; border-radius: 10px;">
-        <h2 style="background: #1a1a1a; color: #00d4ff; padding: 10px; text-align: center;">AI Mill: Demo Scheduled</h2>
+        <h2 style="background: #1a1a1a; color: #00d4ff; padding: 10px; text-align: center;">Ai Mill: Demo Scheduled</h2>
         <p><b>Client:</b> {req.name} ({req.company})</p>
         <p><b>Date:</b> {req.date}</p>
         <p><b>Time:</b> {req.preferred_time} ({req.time_zone})</p>
@@ -135,8 +135,8 @@ async def handle_demo(req: DemoBooking):
         </div>
     </div>
     """
-    send_ai_mill_notification(f"AI Mill Demo Request: {req.name}", email_html)
-    return {"status": "success", "message": "Demo recorded in AI Mill Schedule"}
+    send_ai_mill_notification(f"Ai Mill Demo Request: {req.name}", email_html)
+    return {"status": "success", "message": "Demo recorded in Ai Mill Schedule"}
 
 if __name__ == "__main__":
     import uvicorn

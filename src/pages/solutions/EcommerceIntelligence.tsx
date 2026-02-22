@@ -279,7 +279,7 @@ const EcommerceIntelligence = () => {
                 End-To-End Catalog Intelligence
               </h2>
               <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-                AI Mill's Agents don't just assist; they take ownership of the repetitive, high-volume tasks that slow your team down.
+                Ai Mill's Agents don't just assist; they take ownership of the repetitive, high-volume tasks that slow your team down.
               </p>
             </div>
 

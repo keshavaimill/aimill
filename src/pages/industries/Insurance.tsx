@@ -197,7 +197,7 @@ const Insurance = () => {
                   transition={{ duration: 0.6, delay: 0.4 }}
                   className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-[540px] mb-12 font-medium"
                 >
-                  AI Mill combines Advanced Analytics with Agentic AI to enable faster decisions, lower risk, and scaled execution across claims, underwriting, and customer experience.
+                  Ai Mill combines Advanced Analytics with Agentic AI to enable faster decisions, lower risk, and scaled execution across claims, underwriting, and customer experience.
                 </motion.p>
 
                 {/* CTA Area */}
@@ -580,7 +580,7 @@ const Insurance = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
@@ -593,7 +593,7 @@ const Insurance = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why AI Mill For Insurance?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-[1.2]">Why Ai Mill For Insurance?</h2>
               <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-[1.6]">
                 Built for insurance with deep domain context and regulatory compliance at the core.
               </p>
@@ -644,7 +644,7 @@ const Insurance = () => {
                 Fix Leakage And Protect Margins.
               </h2>
               <p className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading insurance carriers already using AI Mill to transform claims, underwriting, and customer experience.
+                Join leading insurance carriers already using Ai Mill to transform claims, underwriting, and customer experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

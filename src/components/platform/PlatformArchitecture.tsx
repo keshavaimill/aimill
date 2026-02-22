@@ -100,7 +100,7 @@ export const PlatformArchitecture = () => {
             Built for Trust, Scale, and Execution
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground">
-            AI Mill's Solutions are architected for real-world Enterprise Environments.
+            Ai Mill's Solutions are architected for real-world Enterprise Environments.
           </p>
         </motion.div>
 

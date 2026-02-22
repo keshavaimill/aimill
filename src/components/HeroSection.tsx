@@ -77,7 +77,7 @@ export const HeroSection = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-lg md:text-xl text-muted-foreground mb-8"
                 >
-                  AI Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
+                  Ai Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
                 </motion.p>
 
                 {/* Value Bullets */}

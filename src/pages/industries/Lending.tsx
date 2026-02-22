@@ -619,7 +619,7 @@ const Lending = () => {
           </div>
         </section>
 
-        {/* Why AI Mill Section */}
+        {/* Why Ai Mill Section */}
         <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
           {/* Elegant Grey Texture Background - Matching Main Page */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -649,7 +649,7 @@ const Lending = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why AI Mill for Financial Services?</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 leading-[1.2]">Why Ai Mill for Financial Services?</h2>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-[1.6]">
                 Built specifically for financial services with security, compliance, and performance at the core.
               </p>
@@ -701,7 +701,7 @@ const Lending = () => {
                 Grow Your Loan Portfolio Without Growing Risk.
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-                Join leading financial institutions using AI Mill to reduce defaults, detect fraud, and streamline operations.
+                Join leading financial institutions using Ai Mill to reduce defaults, detect fraud, and streamline operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
