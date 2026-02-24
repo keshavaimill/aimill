@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { getApiUrl } from "@/lib/env";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,47 +31,42 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Please fill in all required fields",
         variant: "destructive",
       });
-      setIsSubmitting(false);
       return;
     }
-
-    // Simulate API call
-    const response = await fetch("/api/send-message", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        company: formData.company || "N/A",
-        problem_solving: formData.problem,
-        message: formData.message,
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error("Failed to send message");
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(getApiUrl("/api/send-message"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || "N/A",
+          problem_solving: formData.problem,
+          message: formData.message,
+        }),
+      });
+      if (!response.ok) throw new Error("Failed to send message");
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", company: "", problem: "", message: "" });
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you soon.",
+      });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
-
-
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you soon.",
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", company: "", problem: "", message: "" });
   };
 
   if (isSubmitted) {
@@ -379,23 +375,19 @@ const Contact = () => {
                             formData.email
                           ) {
                             try {
-                              const res = await fetch(
-                                "http://127.0.0.1:8000/api/schedule-demo",
-                                {
-                                  method: "POST",
-                                  headers: { "Content-Type": "application/json" },
-                                  body: JSON.stringify({
-                                    name: formData.name,
-                                    email: formData.email,
-                                    company: formData.company || "N/A",
-                                    date: scheduleData.date,
-                                    preferred_time: scheduleData.time,
-                                    time_zone: scheduleData.timezone.toUpperCase(),
-                                    duration: "30 mins",
-                                  }),
-                                }
-                              );
-
+                              const res = await fetch(getApiUrl("/api/schedule-demo"), {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                  name: formData.name,
+                                  email: formData.email,
+                                  company: formData.company || "N/A",
+                                  date: scheduleData.date,
+                                  preferred_time: scheduleData.time,
+                                  time_zone: scheduleData.timezone.toUpperCase(),
+                                  duration: "30 mins",
+                                }),
+                              });
                               if (!res.ok) throw new Error();
 
                               toast({

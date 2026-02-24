@@ -17,7 +17,13 @@ export const Navbar = () => {
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 glass border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 glass border-b border-border/50" aria-label="Main navigation">
+      <a
+        href="#main-content"
+        className="absolute left-4 top-4 z-[100] -translate-y-20 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground opacity-0 transition focus:translate-y-0 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background"
+      >
+        Skip to main content
+      </a>
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">

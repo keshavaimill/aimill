@@ -50,6 +50,13 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Production build
+
+- **Build:** `npm run build` — output in `dist/`.
+- **Environment:** Copy `.env.example` to `.env` and set `VITE_API_URL` to your backend base URL (e.g. `https://api.aimill.in`) if you use a separate API. Leave unset to use same-origin `/api` (proxy in dev, or your server in prod).
+- **Error handling:** The app is wrapped in an error boundary; uncaught errors show a recovery screen instead of a blank page.
+- **Performance:** Routes are lazy-loaded and vendor chunks (React, router, framer-motion, react-query) are split for better caching.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
