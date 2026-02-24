@@ -28,7 +28,7 @@ export const TeamSection = () => {
   return (
     <section
       id={TEAM_SECTION_ID}
-      className="relative py-16 sm:py-24 px-4 sm:px-8 lg:px-20 overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-8 lg:px-20 overflow-hidden"
       aria-labelledby="team-heading"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden>
@@ -46,7 +46,7 @@ export const TeamSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16 sm:mb-20"
         >
           <span className="inline-block px-4 py-2 text-xs font-bold tracking-widest uppercase text-primary bg-primary/10 rounded-full mb-4 border border-primary/20">
             The People
@@ -75,7 +75,8 @@ export const TeamSection = () => {
                       <img
                         src={member.imageSrc}
                         alt={member.name}
-                        className="h-32 w-32 rounded-full object-cover object-center border border-white/10 shadow-md"
+                        className="h-32 w-32 rounded-2xl object-cover border border-white/10 shadow-md"
+                        style={{ objectPosition: "center 5%" }}
                         loading="lazy"
                       />
                     </div>
