@@ -50,11 +50,18 @@ export default function HoverGridBackground() {
       }
     };
 
-    createGrid();
+    // Defer grid creation until after idle so initial page load stays fast
+    const useIdle = typeof requestIdleCallback !== "undefined";
+    const id = useIdle
+      ? requestIdleCallback(createGrid, { timeout: 800 })
+      : window.setTimeout(createGrid, 100);
 
-    // Recreate grid on resize
     window.addEventListener("resize", createGrid);
-    return () => window.removeEventListener("resize", createGrid);
+    return () => {
+      if (useIdle && typeof cancelIdleCallback !== "undefined") cancelIdleCallback(id);
+      else clearTimeout(id);
+      window.removeEventListener("resize", createGrid);
+    };
   }, []);
 
   return (
