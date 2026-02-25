@@ -106,7 +106,7 @@ export const PlatformArchitecture = () => {
 
         {/* Architecture Diagram */}
         <div className="relative max-w-6xl mx-auto">
-          <div className="glass rounded-3xl border border-border/50 p-8 sm:p-12 lg:p-16">
+            <div className="glass rounded-2xl sm:rounded-3xl border border-border/50 p-4 sm:p-8 md:p-12 lg:p-16">
             <div className="space-y-8 sm:space-y-10">
               {layers.map((layer, layerIndex) => (
                 <motion.div
@@ -139,7 +139,7 @@ export const PlatformArchitecture = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: (layerIndex * 0.1) + (itemIndex * 0.05) }}
-                        className="glass rounded-xl p-4 sm:p-5 flex items-center gap-3 hover:bg-card/50 transition-all group min-w-[140px] flex-1"
+                        className="glass rounded-xl p-3 sm:p-4 md:p-5 flex items-center gap-2 sm:gap-3 hover:bg-card/50 transition-all group min-w-0 sm:min-w-[140px] flex-1"
                       >
                         <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center flex-shrink-0 ${
                           layer.color === "cyan" ? "bg-gradient-to-br from-cyan/30 to-cyan/20" :

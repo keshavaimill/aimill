@@ -38,7 +38,7 @@ export const SolutionHero = ({ category, headline, subheadline, keyOutcomes, the
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1] mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-[1.05] mb-6">
               {headline}
             </h1>
 
@@ -48,14 +48,14 @@ export const SolutionHero = ({ category, headline, subheadline, keyOutcomes, the
             </p>
 
             {/* Key Outcomes */}
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-10">
               {keyOutcomes.map((outcome, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-full border border-border/50"
+                  className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-secondary rounded-full border border-border/50"
                 >
-                  <span className="text-lg">{outcome.icon}</span>
-                  <span className="text-sm sm:text-base font-semibold">{outcome.text}</span>
+                  <span className="text-base sm:text-lg">{outcome.icon}</span>
+                  <span className="text-xs sm:text-sm md:text-base font-semibold">{outcome.text}</span>
                 </div>
               ))}
             </div>
@@ -63,7 +63,7 @@ export const SolutionHero = ({ category, headline, subheadline, keyOutcomes, the
             {/* CTA Button */}
             <div>
               <Link to="/contact">
-                <Button variant="hero" size="lg" className="group h-14 px-10 text-lg">
+                <Button variant="hero" size="lg" className="group h-12 sm:h-14 px-6 sm:px-10 text-base sm:text-lg">
                   Book a Demo
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

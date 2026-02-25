@@ -126,7 +126,7 @@ const products: ServiceItem[] = [
 
 export const SolutionsGrid = () => {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20">
+    <section className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-20 overflow-x-hidden">
       {/* Elegant Grey Texture Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
@@ -157,35 +157,35 @@ export const SolutionsGrid = () => {
         />
       </div>
 
-      <div className="container mx-auto max-w-[1400px] relative z-10">
+      <div className="container mx-auto max-w-[1400px] relative z-10 w-full min-w-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-0"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 break-words">
             Everything you need to{' '}
             <span className="gradient-text-purple">scale autonomy</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground break-words max-w-full">
             Strategic guidance and powerful tools to accelerate your AI journey
           </p>
         </motion.div>
 
-        <div className="grid xl:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid xl:grid-cols-2 gap-16 lg:gap-24 min-w-0">
           {/* Services Column */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/50" />
-              <h3 className="text-2xl font-bold text-center min-w-max">
+          <div className="min-w-0">
+            <div className="flex flex-col sm:flex-row items-center gap-3 mb-8 min-w-0">
+              <div className="hidden sm:block h-px flex-1 min-w-0 bg-gradient-to-r from-transparent to-border/50" />
+              <h3 className="text-base sm:text-lg md:text-2xl font-bold text-center shrink-0 max-w-full break-words">
                 Enterprise AI Advisory & Transformation
               </h3>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/50" />
+              <div className="hidden sm:block h-px flex-1 min-w-0 bg-gradient-to-l from-transparent to-border/50" />
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid sm:grid-cols-2 gap-3 min-w-0">
               {services.map((service, idx) => (
                 <ServiceCard key={idx} item={service} idx={idx} />
               ))}
@@ -193,13 +193,13 @@ export const SolutionsGrid = () => {
           </div>
 
           {/* Products Column */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/50" />
-              <h3 className="text-2xl font-bold text-center min-w-max">
+          <div className="min-w-0">
+            <div className="flex flex-col sm:flex-row items-center gap-3 mb-8 min-w-0">
+              <div className="hidden sm:block h-px flex-1 min-w-0 bg-gradient-to-r from-transparent to-border/50" />
+              <h3 className="text-base sm:text-lg md:text-2xl font-bold text-center shrink-0 max-w-full break-words">
                 Agentic Solutions Built for Industry
               </h3>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/50" />
+              <div className="hidden sm:block h-px flex-1 min-w-0 bg-gradient-to-l from-transparent to-border/50" />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-3">
@@ -216,7 +216,7 @@ export const SolutionsGrid = () => {
 
 const ServiceCard = ({ item, idx }: { item: ServiceItem; idx: number }) => {
   const cardContent = (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full min-w-0">
       <div
         className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 flex-shrink-0 ${
           item.color === 'cyan'
@@ -244,15 +244,15 @@ const ServiceCard = ({ item, idx }: { item: ServiceItem; idx: number }) => {
           }`}
         />
       </div>
-      <h3 className="text-base font-bold mb-2 flex-shrink-0">{item.title}</h3>
-      <p className="text-sm text-muted-foreground leading-snug line-clamp-2 flex-grow min-h-[2.5rem]">
+      <h3 className="text-base font-bold mb-2 flex-shrink-0 break-words">{item.title}</h3>
+      <p className="text-sm text-muted-foreground leading-snug line-clamp-2 flex-grow min-h-[2.5rem] break-words min-w-0 overflow-hidden">
         {item.description}
       </p>
       </div>
   );
 
   const cardClassName =
-    'rounded-xl p-5 h-[200px] flex flex-col bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all group backdrop-blur-sm';
+    'rounded-xl p-4 sm:p-5 min-h-[180px] sm:h-[200px] flex flex-col bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 hover:bg-zinc-800/50 transition-all group backdrop-blur-sm';
 
   return (
     <motion.div
@@ -260,8 +260,9 @@ const ServiceCard = ({ item, idx }: { item: ServiceItem; idx: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: idx * 0.05 }}
+      className="min-w-0"
     >
-      <div className={cardClassName}>{cardContent}</div>
+      <div className={`${cardClassName} min-w-0 overflow-hidden`}>{cardContent}</div>
     </motion.div>
   );
 };

@@ -36,7 +36,7 @@ export const SolutionCapabilities = ({ capabilities, channels, themeColor }: Sol
           {capabilities.map((capability, idx) => (
             <div
               key={idx}
-              className="bg-card rounded-2xl p-8 border border-border/50 min-h-[240px] flex flex-col"
+              className="bg-card rounded-2xl p-6 sm:p-8 border border-border/50 min-h-[200px] sm:min-h-[240px] flex flex-col"
             >
               {/* Icon */}
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${

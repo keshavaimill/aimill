@@ -103,7 +103,7 @@ const Contact = () => {
         {/* Hero */}
         <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-32 pb-16 px-4 sm:px-8 lg:px-20">
           <div className="absolute inset-0 grid-pattern opacity-30" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-primary/20 rounded-full blur-[120px]" />
           
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
             <motion.div

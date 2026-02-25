@@ -60,7 +60,7 @@ const Consulting = () => {
             }} />
           </div>
           <div className="absolute inset-0 grid-pattern opacity-20" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple/20 rounded-full blur-[120px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-purple/20 rounded-full blur-[120px]" />
 
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
             <motion.div
@@ -79,7 +79,7 @@ const Consulting = () => {
                 Build AI systems that actually work. Expert guidance from strategy to execution.
               </p>
               <Link to="/contact">
-                <Button variant="hero" size="lg" className="group h-16 px-12 text-lg">
+                <Button variant="hero" size="lg" className="group h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-lg">
                   Talk to an Expert
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -148,7 +148,7 @@ const Consulting = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="glass rounded-2xl p-8 border border-zinc-800/50 bg-zinc-950/30 hover:border-zinc-700 hover:bg-zinc-950/50 transition-all group backdrop-blur-sm"
+                  className="glass rounded-2xl p-6 sm:p-8 border border-zinc-800/50 bg-zinc-950/30 hover:border-zinc-700 hover:bg-zinc-950/50 transition-all group backdrop-blur-sm"
                 >
                   <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-white/5 border border-white/10 shadow-[0_0_15px_-5px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_25px_-5px] transition-all duration-300 ${idx === 0 ? "group-hover:shadow-cyan/30 group-hover:border-cyan/30" :
                       idx === 1 ? "group-hover:shadow-purple/30 group-hover:border-purple/30" :
@@ -248,7 +248,7 @@ const Consulting = () => {
                 Let's discuss how agentic AI can transform your operations
               </p>
               <Link to="/contact">
-                <Button variant="hero" size="lg" className="group h-16 px-12 text-lg">
+                <Button variant="hero" size="lg" className="group h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-lg">
                   Talk to an Expert
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

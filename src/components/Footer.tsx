@@ -53,8 +53,8 @@ export const Footer = () => {
     <footer className="relative border-t border-border/50 bg-zinc-950/50 backdrop-blur-sm">
 
       {/* Main footer */}
-      <div className="container mx-auto px-6 md:px-8 py-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-16">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
@@ -157,7 +157,7 @@ export const Footer = () => {
 
       {/* Bottom bar with status */}
       <div className="border-t border-border/50 bg-zinc-900/30">
-        <div className="container mx-auto px-6 md:px-8 py-6">
+          <div className="container mx-auto px-4 sm:px-6 md:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             {/* Left side - Status */}
             <div className="flex items-center gap-2 text-sm">

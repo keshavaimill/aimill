@@ -60,7 +60,7 @@ export const WhyAIMILL = () => {
   }, [activeIndex, collapsed, steps.length]);
 
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
+    <section className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg overflow-x-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -77,7 +77,7 @@ export const WhyAIMILL = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             style={{ backgroundColor: "#D1FAE5" }}
-            className="rounded-2xl p-8 lg:p-10 flex flex-col"
+            className="rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 text-black">
               Why Ai Mill?
@@ -130,7 +130,7 @@ export const WhyAIMILL = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-2xl p-8 lg:p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col"
+            className="glass rounded-2xl p-6 sm:p-8 lg:p-10 border border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col"
           >
             <motion.h3 
               initial={{ opacity: 0, y: -10 }}

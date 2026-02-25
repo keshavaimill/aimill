@@ -9,7 +9,7 @@ import HoverGridBackground from "./HoverGridBackground";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
+    <section className="relative min-h-[78vh] lg:min-h-screen flex items-start lg:items-center justify-center overflow-hidden pt-16 lg:pt-20 pb-20 lg:pb-0 bg-black">
       {/* BACKGROUND GRID */}
       <HoverGridBackground />
 
@@ -37,8 +37,8 @@ export const HeroSection = () => {
       <div className="relative z-10 pointer-events-none">
         <FloatingObjects />
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-5 sm:px-6 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Content */}
             <div>
               {/* Announcement pill */}
@@ -46,11 +46,11 @@ export const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex justify-start mb-8"
+                className="flex justify-start mb-7 sm:mb-8"
               >
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900/80 backdrop-blur-sm border border-zinc-700/50 text-sm text-foreground hover:text-foreground hover:border-primary/70 hover:bg-zinc-800/80 transition-all group pointer-events-auto shadow-lg"
+                  className="inline-flex items-center gap-2 px-3 py-2 sm:px-5 sm:py-2.5 rounded-full bg-zinc-900/80 backdrop-blur-sm border border-zinc-700/50 text-xs sm:text-sm text-foreground hover:text-foreground hover:border-primary/70 hover:bg-zinc-800/80 transition-all group pointer-events-auto shadow-lg"
                 >
 
                   <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
@@ -65,7 +65,7 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1] tracking-tight mb-6"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight mb-7 sm:mb-6"
                 >
                   Agents & ML Workflows That Execute{" "}
                   <span className="gradient-text-purple">Real Business Outcomes</span>
@@ -75,7 +75,7 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="text-lg md:text-xl text-muted-foreground mb-8"
+                  className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 sm:mb-8"
                 >
                   Ai Mill delivers AI, Agentic, and traditional Data Science consulting and products to help enterprises build, deploy, and scale intelligent systems with real business impact.
                 </motion.p>
@@ -85,23 +85,23 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="flex flex-wrap items-center gap-4 mb-10"
+                  className="flex flex-wrap items-center gap-4 mb-12 sm:mb-10"
                 >
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
-                    <span className="w-2 h-2 rounded-full bg-green" />
-                    <span className="text-sm font-semibold">Outcome-driven agentic systems</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50">
+                    <span className="w-2 h-2 shrink-0 rounded-full bg-green" />
+                    <span className="text-xs sm:text-sm font-semibold">Outcome-driven agentic systems</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
-                    <span className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-sm font-semibold">Production-grade, secure, auditable</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50">
+                    <span className="w-2 h-2 shrink-0 rounded-full bg-primary" />
+                    <span className="text-xs sm:text-sm font-semibold">Production-grade, secure, auditable</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
-                    <span className="w-2 h-2 rounded-full bg-purple" />
-                    <span className="text-sm font-semibold">Industry-specialized agents</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50">
+                    <span className="w-2 h-2 shrink-0 rounded-full bg-purple" />
+                    <span className="text-xs sm:text-sm font-semibold">Industry-specialized agents</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50">
-                    <span className="w-2 h-2 rounded-full bg-green" />
-                    <span className="text-sm font-semibold">Distinguished AI Consulting Practice</span>
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50">
+                    <span className="w-2 h-2 shrink-0 rounded-full bg-green" />
+                    <span className="text-xs sm:text-sm font-semibold">Distinguished AI Consulting Practice</span>
                   </div>
                 </motion.div>
 
@@ -110,17 +110,17 @@ export const HeroSection = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row items-start gap-4 pointer-events-auto"
+                  className="flex flex-col sm:flex-row items-stretch sm:items-start gap-5 sm:gap-4 pointer-events-auto"
                 >
 
-                  <Link to="/contact">
-                    <Button variant="hero" size="lg" className="group">
+                  <Link to="/contact" className="w-full sm:w-auto">
+                    <Button variant="hero" size="lg" className="group w-full sm:w-auto">
                       Book a Demo
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </Link>
-                  <Link to="/platform">
-                    <Button variant="heroOutline" size="lg">
+                  <Link to="/platform" className="w-full sm:w-auto">
+                    <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
                       Explore the Agentic Architecture
                     </Button>
                   </Link>
@@ -140,12 +140,12 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - hidden on mobile, visible on laptop+ */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:block"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

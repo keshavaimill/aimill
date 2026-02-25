@@ -213,42 +213,42 @@ const InsuranceFNOL = () => {
             `,
           }} />
         </div>
-        <div className="container mx-auto max-w-7xl px-6 py-20">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fadeInLeft">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-muted-foreground text-xs font-bold tracking-widest mb-6 uppercase hover:text-foreground hover:border-violet-500/50 transition-all">
                 INSURANCE AI AUTOMATION
               </div>
-              <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                 Faster, Smarter<br />Claims Processing<br />From FNOL
               </h1>
-              <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
+              <p className="text-base sm:text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                 The FNOL Agent reads claim emails, extracts policy data, validates coverage, and processes claims — dramatically reducing processing time while improving accuracy.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
-                <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
+                <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
                   <span className="w-2 h-2 rounded-full bg-violet-500" />
                   <span className="text-sm font-semibold">90% faster processing</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
+                <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
                   <span className="w-2 h-2 rounded-full bg-violet-500" />
                   <span className="text-sm font-semibold">Higher accuracy</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
+                <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-violet-500/50 transition-all">
                   <span className="w-2 h-2 rounded-full bg-violet-500" />
                   <span className="text-sm font-semibold">Faster settlements</span>
                 </div>
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-violet-700 via-purple-800 to-slate-800 text-white rounded-xl hover:scale-105 transition-all"
+                className="inline-flex items-center gap-2 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-semibold bg-gradient-to-br from-violet-700 via-purple-800 to-slate-800 text-white rounded-xl hover:scale-105 transition-all"
               >
                 Talk to Insurance AI Experts <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
 
             {/* Right Side: Claims Processing Dashboard */}
-            <div className="animate-scaleIn delay-200 opacity-0">
+            <div className="hidden lg:block animate-scaleIn delay-200 opacity-0">
               <div className="glass rounded-2xl p-10 border border-border/50">
                 <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
                   <div className="flex items-center gap-3">
@@ -328,7 +328,7 @@ const InsuranceFNOL = () => {
 
       {/* Context Section */}
       <section className="py-16 bg-slate-950">
-        <div className="container mx-auto max-w-4xl px-6">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           <div className="text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
               Insurance claims processing is plagued by manual data entry, slow validation, and delayed settlements. Traditional systems can't keep pace with customer expectations for fast, accurate claim handling. <span className="text-violet-400 font-semibold">Claims processing needs intelligent automation.</span>
@@ -339,7 +339,7 @@ const InsuranceFNOL = () => {
 
       {/* Key Problems */}
       <section className="py-20 bg-[#020617]">
-        <div className="container mx-auto max-w-7xl px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-4">Key Claims Challenges</h2>
           </div>
@@ -362,7 +362,7 @@ const InsuranceFNOL = () => {
 
       {/* Solution Overview */}
       <section className="py-20 bg-slate-950">
-        <div className="container mx-auto max-w-6xl px-6">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-4">
               The FNOL Agent Automates First Notice Of Loss Processing
@@ -412,7 +412,7 @@ const InsuranceFNOL = () => {
 
       {/* How It Works */}
       <section className="py-20 bg-[#020617]">
-        <div className="container mx-auto max-w-7xl px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-4">How It Works?</h2>
             <p className="text-lg text-slate-400">Five-step automated claims processing</p>
@@ -441,7 +441,7 @@ const InsuranceFNOL = () => {
 
       {/* Capabilities */}
       <section className="py-20 bg-slate-950">
-        <div className="container mx-auto max-w-7xl px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-6">Core Capabilities</h2>
           </div>
@@ -464,7 +464,7 @@ const InsuranceFNOL = () => {
 
       {/* Outcomes */}
       <section className="py-20 bg-[#020617]">
-        <div className="container mx-auto max-w-4xl px-6">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-6">
           <div className="bg-slate-900 rounded-[2.5rem] border border-slate-800 shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12 border-b border-slate-800 text-center">
               <h2 className="text-3xl font-bold text-white mb-2">Business Outcomes</h2>
@@ -494,7 +494,7 @@ const InsuranceFNOL = () => {
 
       {/* Governance */}
       <section className="py-20 bg-slate-950">
-        <div className="container mx-auto max-w-7xl px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-[48px] font-bold text-white mb-4">Enterprise-Grade Governance</h2>
           </div>
@@ -532,7 +532,7 @@ const InsuranceFNOL = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 container mx-auto px-6">
+      <section className="py-20 container mx-auto px-4 sm:px-6">
         <div className="bg-gradient-to-br from-violet-800 to-slate-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/20 blur-[100px]" />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">

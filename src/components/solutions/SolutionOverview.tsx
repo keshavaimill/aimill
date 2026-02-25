@@ -26,7 +26,7 @@ export const SolutionOverview = ({ title, description, capabilities, themeColor 
             {title}
           </h2>
 
-          <p className="text-xl text-muted-foreground mb-4">{description}</p>
+          <p className="text-base sm:text-xl text-muted-foreground mb-4">{description}</p>
 
           {/* Capabilities List */}
           <div className="grid sm:grid-cols-2 gap-4 mb-12">
@@ -48,21 +48,21 @@ export const SolutionOverview = ({ title, description, capabilities, themeColor 
           </div>
 
           {/* Flow Diagram */}
-          <div className="bg-card rounded-2xl p-8 border border-border/50">
-            <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="bg-card rounded-2xl p-4 sm:p-8 border border-border/50 overflow-x-auto">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
               {["Data Input", "Analysis", "Decision", "Execution", "Learning"].map((step, idx) => (
-                <div key={idx} className="flex items-center gap-4">
-                  <div className={`px-6 py-4 rounded-xl ${
+                <div key={idx} className="flex items-center gap-2 sm:gap-4">
+                  <div className={`px-3 py-2 sm:px-6 sm:py-4 rounded-xl ${
                     themeColor === "cyan" ? "bg-cyan/10 border-cyan/20" :
                     themeColor === "purple" ? "bg-purple/10 border-purple/20" :
                     themeColor === "green" ? "bg-green/10 border-green/20" :
                     themeColor === "pink" ? "bg-pink/10 border-pink/20" :
                     "bg-teal/10 border-teal/20"
                   } border`}>
-                    <span className="text-sm font-semibold">{step}</span>
+                    <span className="text-xs sm:text-sm font-semibold whitespace-nowrap">{step}</span>
                   </div>
                   {idx < 4 && (
-                    <div className="w-8 h-0.5 bg-border" />
+                    <div className="hidden sm:block w-8 h-0.5 bg-border" />
                   )}
                 </div>
               ))}

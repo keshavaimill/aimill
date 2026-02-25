@@ -123,42 +123,42 @@ const EcommerceIntelligence = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl px-6 py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-muted-foreground text-xs font-bold tracking-widest mb-6 uppercase hover:text-foreground hover:border-lime-500/50 transition-all">
                   ECOMMERCE INTELLIGENCE
                 </div>
-                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   Autonomous Agents<br />For The Modern<br />Catalog
                 </h1>
-                <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
+                <p className="text-base sm:text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   Orchestrate your entire product lifecycle. From detecting data discrepancies to generating conversion-optimized assets—fully automated.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-12">
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-lime-500" />
                     <span className="text-sm font-semibold">5x faster launches</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-lime-500" />
                     <span className="text-sm font-semibold">70% lower overhead</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-lime-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-lime-500" />
                     <span className="text-sm font-semibold">+40% conversion rate</span>
                   </div>
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-lime-700 via-green-700 to-emerald-800 text-white rounded-xl hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-semibold bg-gradient-to-br from-lime-700 via-green-700 to-emerald-800 text-white rounded-xl hover:scale-105 transition-all"
                 >
                   Talk to Ecommerce AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
 
               {/* Catalog Dashboard */}
-              <div className="animate-scaleIn delay-200 opacity-0">
+              <div className="hidden lg:block animate-scaleIn delay-200 opacity-0">
                 <div className="glass rounded-2xl p-10 border border-border/50">
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-slate-800/50">
                     <div className="flex items-center gap-3">
@@ -241,7 +241,7 @@ const EcommerceIntelligence = () => {
 
         {/* Context Section */}
         <section className="py-16 bg-slate-950">
-          <div className="container mx-auto max-w-4xl px-6 text-center">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
               Traditional ecommerce operations can't keep pace with modern demand. Data fragmentation slows launches, production bottlenecks delay revenue, and manual content creation burns out teams. <span className="text-lime-400 font-semibold">Ecommerce needs autonomous agents that orchestrate the entire catalog.</span>
             </p>
@@ -250,7 +250,7 @@ const EcommerceIntelligence = () => {
 
         {/* Key Problems */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Ecommerce Challenges</h2>
             </div>
@@ -273,7 +273,7 @@ const EcommerceIntelligence = () => {
 
         {/* Solution Overview */}
         <section className="py-20 bg-slate-950">
-          <div className="container mx-auto max-w-6xl px-6">
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 End-To-End Catalog Intelligence
@@ -322,7 +322,7 @@ const EcommerceIntelligence = () => {
 
         {/* How It Works */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">How It Works?</h2>
             </div>
@@ -389,7 +389,7 @@ const EcommerceIntelligence = () => {
 
         {/* Capabilities */}
         <section className="py-20 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Capabilities</h2>
             </div>
@@ -455,7 +455,7 @@ const EcommerceIntelligence = () => {
 
         {/* Outcomes */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-4xl px-6">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
             <div className="bg-slate-900 rounded-[2.5rem] border border-slate-800 shadow-2xl overflow-hidden">
               <div className="p-8 md:p-12 border-b border-slate-800 text-center">
                 <h2 className="text-3xl font-bold text-white mb-2">Business Outcomes</h2>
@@ -490,7 +490,7 @@ const EcommerceIntelligence = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 container mx-auto px-6">
+        <section className="py-20 container mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-br from-lime-800 to-emerald-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-lime-500/20 blur-[100px]" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">

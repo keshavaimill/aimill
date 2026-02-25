@@ -74,10 +74,10 @@ export const DeploymentScale = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative glass rounded-2xl p-8 sm:p-10 border border-border/50 hover:border-primary/30 transition-all group min-h-[260px] flex flex-col"
+              className="relative glass rounded-2xl p-6 sm:p-8 md:p-10 border border-border/50 hover:border-primary/30 transition-all group min-h-[220px] sm:min-h-[260px] flex flex-col"
             >
               {/* Badge */}
-              <div className={`absolute top-6 right-6 px-3 py-1 text-xs font-semibold rounded-full ${
+              <div className={`absolute top-4 right-4 sm:top-6 sm:right-6 px-3 py-1 text-xs font-semibold rounded-full ${
                 feature.color === "cyan" ? "bg-cyan/10 text-cyan" :
                 feature.color === "purple" ? "bg-purple/10 text-purple" :
                 feature.color === "pink" ? "bg-pink/10 text-pink" :
@@ -120,10 +120,10 @@ export const DeploymentScale = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: (index + 3) * 0.1 }}
-              className="relative glass rounded-2xl p-8 sm:p-10 border border-border/50 hover:border-primary/30 transition-all group min-h-[260px] flex flex-col"
+              className="relative glass rounded-2xl p-6 sm:p-8 md:p-10 border border-border/50 hover:border-primary/30 transition-all group min-h-[220px] sm:min-h-[260px] flex flex-col"
             >
               {/* Badge */}
-              <div className={`absolute top-6 right-6 px-3 py-1 text-xs font-semibold rounded-full ${
+              <div className={`absolute top-4 right-4 sm:top-6 sm:right-6 px-3 py-1 text-xs font-semibold rounded-full ${
                 feature.color === "cyan" ? "bg-cyan/10 text-cyan" :
                 feature.color === "purple" ? "bg-purple/10 text-purple" :
                 feature.color === "pink" ? "bg-pink/10 text-pink" :

@@ -117,42 +117,42 @@ const ForecastingEngine = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl px-6 py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-muted-foreground text-xs font-bold tracking-widest mb-6 uppercase hover:text-foreground hover:border-indigo-500/50 transition-all">
                   SUPPLY CHAIN & RETAIL
                 </div>
-                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   Demand Prediction<br />You Can Act On
                 </h1>
-                <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
+                <p className="text-base sm:text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   Agentic forecasting that blends statistical models and AI reasoning to improve planning accuracy — reducing inventory costs while preventing stockouts.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-12">
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-indigo-500" />
                     <span className="text-sm font-semibold">40% better accuracy</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-indigo-500" />
                     <span className="text-sm font-semibold">30% lower inventory</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
+                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass rounded-full border border-border/50 hover:border-indigo-500/50 transition-all">
                     <span className="w-2 h-2 rounded-full bg-indigo-500" />
                     <span className="text-sm font-semibold">50% fewer stockouts</span>
                   </div>
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-indigo-700 via-indigo-800 to-violet-800 text-white rounded-xl hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-semibold bg-gradient-to-br from-indigo-700 via-indigo-800 to-violet-800 text-white rounded-xl hover:scale-105 transition-all"
                 >
                   Talk to Supply Chain AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
 
               {/* Forecasting Dashboard */}
-              <div className="animate-scaleIn delay-200 opacity-0">
+              <div className="hidden lg:block animate-scaleIn delay-200 opacity-0">
                 <div className="glass rounded-2xl p-10 border border-border/50">
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-border/50">
                     <div className="flex items-center gap-3">
@@ -235,7 +235,7 @@ const ForecastingEngine = () => {
 
         {/* Context Section */}
         <section className="py-24 bg-slate-950">
-          <div className="container mx-auto max-w-4xl px-6 text-center">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
               Planning needs intelligence, not just algorithms. Traditional forecasting models miss trends, seasonality, and market signals — leading to excess inventory or costly stockouts. <span className="text-indigo-400 font-semibold">Forecasting needs agentic reasoning that adapts.</span>
             </p>
@@ -244,7 +244,7 @@ const ForecastingEngine = () => {
 
         {/* Key Problems */}
         <section className="py-32 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Forecasting Challenges</h2>
             </div>
@@ -267,7 +267,7 @@ const ForecastingEngine = () => {
 
         {/* Solution Overview */}
         <section className="py-32 bg-slate-950">
-          <div className="container mx-auto max-w-6xl px-6">
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
                 The Forecasting Engine Combines Statistical Models With Agentic Reasoning
@@ -316,7 +316,7 @@ const ForecastingEngine = () => {
 
         {/* How It Works */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">How It Works?</h2>
             </div>
@@ -383,7 +383,7 @@ const ForecastingEngine = () => {
 
         {/* Capabilities */}
         <section className="py-20 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Capabilities</h2>
             </div>
@@ -449,7 +449,7 @@ const ForecastingEngine = () => {
 
         {/* Outcomes */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-4xl px-6">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
             <div className="bg-slate-900 rounded-[2.5rem] border border-slate-800 shadow-2xl overflow-hidden">
               <div className="p-8 md:p-12 border-b border-slate-800 text-center">
                 <h2 className="text-3xl font-bold text-white mb-2">Business Outcomes</h2>
@@ -484,7 +484,7 @@ const ForecastingEngine = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 container mx-auto px-6">
+        <section className="py-20 container mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-br from-indigo-800 to-violet-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 blur-[100px]" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">

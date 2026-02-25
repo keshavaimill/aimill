@@ -21,7 +21,7 @@ const features = [
               </div>
             </div>
           </div>
-          <div className="rounded-xl p-3 flex items-center gap-3 max-w-[280px] ml-8 bg-white/80 backdrop-blur-md border border-white/30">
+          <div className="rounded-xl p-3 flex items-center gap-3 max-w-[280px] ml-4 sm:ml-8 bg-white/80 backdrop-blur-md border border-white/30">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-lg">🌐</div>
             <div>
               <div className="flex items-center gap-2">
@@ -111,17 +111,17 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 relative" style={{ backgroundColor: "#dbdbdb" }}>
-      <div className="container mx-auto px-6">
+    <section className="py-16 sm:py-24 relative overflow-x-hidden" style={{ backgroundColor: "#dbdbdb" }}>
+      <div className="container mx-auto px-4 sm:px-6 min-w-0">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900 tracking-wide text-left">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-zinc-900 tracking-wide text-left break-words">
             Ai Mill Designs Intelligent Systems Where Agentic Execution & Data Science Turn Predictions Into Action !!
           </h2>
         </motion.div>

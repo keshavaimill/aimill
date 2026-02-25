@@ -80,7 +80,7 @@ const About = () => {
               </motion.span>
 
               {/* Main heading with stagger effect */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black leading-[1] tracking-tight mb-6">
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

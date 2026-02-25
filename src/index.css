@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    overflow-x: hidden;
+  }
+
   :root {
     /* Dark Theme - Primary */
     --background: 220 20% 4%;

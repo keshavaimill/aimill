@@ -3,11 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 
 export const AnnouncementSection = () => {
     return (
-        <section className="py-12 md:py-24 flex justify-center relative bg-transparent">
+        <section className="py-12 md:py-24 flex justify-center relative bg-transparent overflow-x-hidden">
             {/* Split Background to bridge the Hero (Black) and Content (Theme Background) */}
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-black from-50% to-background to-50%" />
 
-            <div className="container px-4 md:px-6 relative z-10">
+            <div className="container px-4 md:px-6 relative z-10 w-full min-w-0">
                 <motion.a
                     href="#"
                     initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export const AnnouncementSection = () => {
                     className="group relative flex flex-col md:flex-row w-full overflow-hidden rounded-3xl cursor-pointer"
                 >
                     {/* Left Content - Light Theme Editorial */}
-                    <div className="md:w-[45%] flex flex-col justify-between bg-[#F5F5F7] p-8 md:p-12 lg:p-16 text-black relative z-10 transition-colors duration-300">
+                    <div className="md:w-[45%] flex flex-col justify-between bg-[#F5F5F7] p-5 sm:p-8 md:p-12 lg:p-16 text-black relative z-10 transition-colors duration-300">
                         {/* Animated Orbit Button Top Right */}
                         <div className="absolute top-8 right-8 z-20">
                             <div className="relative flex items-center justify-center w-12 h-12">
@@ -65,7 +65,7 @@ export const AnnouncementSection = () => {
                             <span className="inline-block text-xs md:text-sm font-semibold tracking-widest text-neutral-500 mb-6 uppercase">
                                 Announcing
                             </span>
-                            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tight text-neutral-900 mb-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.95] tracking-tight text-neutral-900 mb-6">
                                 The Enterprise <br />
                                 <span className="text-neutral-500">Agent Grid</span>
                             </h2>
@@ -84,9 +84,9 @@ export const AnnouncementSection = () => {
                                 { name: "Claude", logo: "/Claude.png" },
                                 { name: "Anthropic", logo: "/anthropic.png" },
                             ].map((provider, idx) => (
-                                <span key={idx} className="flex items-center gap-2">
-                                    <span className="text-xl font-bold font-serif tracking-tighter">{provider.name}</span>
-                                    <img src={provider.logo} alt={`${provider.name} Logo`} className="h-6 w-auto" />
+                                <span key={idx} className="flex items-center gap-1 sm:gap-2">
+                                    <span className="text-sm sm:text-xl font-bold font-serif tracking-tighter">{provider.name}</span>
+                                    <img src={provider.logo} alt={`${provider.name} Logo`} className="h-4 sm:h-6 w-auto" />
                                 </span>
                             ))}
                         </div>

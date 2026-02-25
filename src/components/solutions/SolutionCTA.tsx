@@ -20,7 +20,7 @@ export const SolutionCTA = ({ headline, subtext, themeColor }: SolutionCTAProps)
             {subtext}
           </p>
           <Link to="/contact">
-            <Button variant="hero" size="lg" className="group h-16 px-12 text-lg">
+            <Button variant="hero" size="lg" className="group h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-lg">
               Book a Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

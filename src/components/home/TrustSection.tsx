@@ -30,9 +30,9 @@ const trustItems = [
 
 export const TrustSection = () => {
   return (
-    <section className="relative py-16 sm:py-24 px-4 sm:px-8 lg:px-20 border-y border-border/50">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+    <section className="relative py-12 sm:py-24 px-4 sm:px-8 lg:px-20 border-y border-border/50">
+      <div className="container mx-auto max-w-6xl min-w-0">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12">
           {trustItems.map((item, idx) => (
             <motion.div
               key={idx}

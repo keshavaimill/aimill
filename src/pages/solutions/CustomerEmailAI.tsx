@@ -119,16 +119,16 @@ const CustomerEmailAI = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl px-6 py-20">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 py-20">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-fadeInLeft">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-border/50 text-muted-foreground text-xs font-bold tracking-widest mb-6 uppercase hover:text-foreground hover:border-amber-500/50 transition-all">
                   CUSTOMER SUPPORT AI
                 </div>
-                <h1 className="text-5xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-extrabold leading-[1.1] text-white mb-8 tracking-tight">
                   Your Autonomous<br />Backend Customer<br />Support Team
                 </h1>
-                <p className="text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
+                <p className="text-base sm:text-xl lg:text-[24px] text-slate-300 leading-relaxed mb-6 max-w-[600px]">
                   AI agents that read, reason, retrieve data, and respond to customer emails — with human oversight only when required.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-12">
@@ -147,14 +147,14 @@ const CustomerEmailAI = () => {
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 h-14 px-8 text-lg font-semibold bg-gradient-to-br from-amber-700 via-amber-800 to-amber-800 text-white rounded-xl hover:scale-105 transition-all"
+                  className="inline-flex items-center gap-2 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-semibold bg-gradient-to-br from-amber-700 via-amber-800 to-amber-800 text-white rounded-xl hover:scale-105 transition-all"
                 >
                   Talk to Support AI Experts <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
 
               {/* Support Dashboard */}
-              <div className="animate-scaleIn delay-200 opacity-0">
+              <div className="hidden lg:block animate-scaleIn delay-200 opacity-0">
                 <div className="glass rounded-2xl p-10 border border-border/50">
                   <div className="flex items-center justify-between mb-8 pb-6 border-b border-border/50">
                     <div className="flex items-center gap-3">
@@ -237,7 +237,7 @@ const CustomerEmailAI = () => {
 
         {/* Context Section */}
         <section className="py-24 bg-slate-950">
-          <div className="container mx-auto max-w-4xl px-6 text-center">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center">
             <p className="text-xl text-slate-400 leading-relaxed">
               Customer support needs intelligent automation that scales. Support teams are overwhelmed by email volume, slow response times hurt satisfaction, and manual processes limit throughput. <span className="text-amber-400 font-semibold">Support needs autonomous agents that respond intelligently.</span>
             </p>
@@ -246,7 +246,7 @@ const CustomerEmailAI = () => {
 
         {/* Key Problems */}
         <section className="py-32 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Key Support Challenges</h2>
             </div>
@@ -269,7 +269,7 @@ const CustomerEmailAI = () => {
 
         {/* Solution Overview */}
         <section className="py-32 bg-slate-950">
-          <div className="container mx-auto max-w-6xl px-6">
+          <div className="container mx-auto max-w-6xl px-4 sm:px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                 This Agent Operates As An Autonomous Support Specialist
@@ -318,7 +318,7 @@ const CustomerEmailAI = () => {
 
         {/* How It Works */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">How It Works?</h2>
             </div>
@@ -385,7 +385,7 @@ const CustomerEmailAI = () => {
 
         {/* Capabilities */}
         <section className="py-20 bg-slate-950">
-          <div className="container mx-auto max-w-7xl px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Key Capabilities</h2>
             </div>
@@ -451,7 +451,7 @@ const CustomerEmailAI = () => {
 
         {/* Outcomes */}
         <section className="py-20 bg-[#020617]">
-          <div className="container mx-auto max-w-4xl px-6">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6">
             <div className="bg-slate-900/90 rounded-[2.5rem] border border-amber-500/20 shadow-2xl shadow-amber-500/10 overflow-hidden">
               <div className="p-8 md:p-12 border-b border-slate-800 text-center">
                 <h2 className="text-3xl font-bold text-white mb-2">Business Outcomes</h2>
@@ -486,7 +486,7 @@ const CustomerEmailAI = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 container mx-auto px-6">
+        <section className="py-20 container mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-br from-amber-800 via-amber-800 to-amber-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/40 blur-[100px] animate-pulse" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/40 blur-[100px] animate-pulse" style={{ animationDelay: '0.5s' }} />

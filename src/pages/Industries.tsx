@@ -100,8 +100,8 @@ const Industries = () => {
           </div>
 
           {/* Ambient Glows - Using Theme Colors */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan/20 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple/10 rounded-full blur-[120px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-cyan/20 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-purple/10 rounded-full blur-[120px]" />
 
           <div className="container mx-auto max-w-4xl relative z-10 text-center">
             <motion.div
@@ -183,7 +183,7 @@ const Industries = () => {
                                     "text-teal"
                         }`} />
                     </div>
-                    <h3 className="text-2xl font-bold mb-3">{industry.name}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-3">{industry.name}</h3>
                     <p className="text-muted-foreground mb-6">{industry.description}</p>
 
                     <div className="mb-6">
@@ -273,7 +273,7 @@ const Industries = () => {
                 See how agentic AI can solve your specific challenges
               </p>
               <Link to="/contact">
-                <Button variant="hero" size="lg" className="group h-16 px-12 text-lg">
+                <Button variant="hero" size="lg" className="group h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-lg">
                   Book a Demo
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

@@ -47,7 +47,7 @@ export const AgenticAISection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="md:w-[45%] bg-[#f5f3f8] p-12 md:p-16 lg:p-24 flex flex-col"
+            className="md:w-[45%] bg-[#f5f3f8] p-6 sm:p-10 md:p-16 lg:p-24 flex flex-col"
           >
             {/* Large Heading */}
             <motion.h2
@@ -55,7 +55,7 @@ export const AgenticAISection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-[48px] lg:text-[56px] font-bold text-black mb-16"
+              className="text-3xl sm:text-4xl md:text-[48px] lg:text-[56px] font-bold text-black mb-10 sm:mb-16"
               style={{ lineHeight: "1.1", fontWeight: 700 }}
             >
               From Automation To Autonomy
@@ -70,7 +70,7 @@ export const AgenticAISection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="flex flex-col mb-12 last:mb-0"
+                  className="flex flex-col mb-8 sm:mb-12 last:mb-0"
                 >
                   {/* Bold Metric */}
                   <div 

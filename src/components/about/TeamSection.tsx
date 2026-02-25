@@ -59,7 +59,7 @@ export const TeamSection = () => {
           </p>
         </motion.div>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 list-none p-0 m-0">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 list-none p-0 m-0">
           {teamMembers.map((member, index) => (
             <li key={`${member.name}-${index}`} className="h-full">
               <motion.div
@@ -69,26 +69,26 @@ export const TeamSection = () => {
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="h-full"
               >
-                <Card className="h-full flex flex-col items-center border border-zinc-800/50 bg-gradient-to-br from-zinc-950/80 to-zinc-900/50 backdrop-blur-sm rounded-2xl px-6 pt-8 pb-6 shadow-sm hover:border-zinc-700/50 transition-all duration-300">
+                <Card className="h-full flex flex-col items-center border border-zinc-800/60 bg-gradient-to-br from-zinc-950/80 to-zinc-900/60 backdrop-blur-sm rounded-2xl px-5 py-6 sm:px-6 sm:pt-8 sm:pb-6 shadow-sm hover:border-zinc-700 transition-all duration-300">
                   {member.imageSrc && (
                     <div className="w-full flex justify-center mb-4">
                       <img
                         src={member.imageSrc}
                         alt={member.name}
-                        className="h-32 w-32 rounded-2xl object-cover border border-white/10 shadow-md"
+                        className="h-28 w-28 sm:h-32 sm:w-32 rounded-2xl object-cover border border-white/10 shadow-md"
                         style={{ objectPosition: "center 5%" }}
                         loading="lazy"
                       />
                     </div>
                   )}
-                  <div className="text-center space-y-2">
-                    <p className="text-base sm:text-lg font-semibold text-foreground">
+                  <div className="space-y-3 max-w-[26rem] mx-auto">
+                    <p className="text-base sm:text-lg font-semibold text-foreground leading-tight text-center">
                       {member.name}
                     </p>
-                    <p className="text-sm font-medium text-muted-foreground">
+                    <p className="text-sm font-medium text-muted-foreground text-center">
                       {member.role}
                     </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed text-left sm:text-center md:text-left">
                       {member.bio}
                     </p>
                   </div>

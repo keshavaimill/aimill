@@ -38,16 +38,16 @@ const capabilities = [
 
 export const PlatformTeaser = () => {
   return (
-    <section className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
-      <div className="container mx-auto max-w-6xl">
+    <section className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-8 lg:px-20 bg-section-bg">
+      <div className="container mx-auto max-w-6xl min-w-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6">
             The Ai Mill Agentic Ecosystem
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -56,7 +56,7 @@ export const PlatformTeaser = () => {
         </motion.div>
 
         {/* Capability Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {capabilities.map((capability, idx) => (
             <motion.div
               key={idx}

@@ -185,7 +185,7 @@ const Insurance = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
                 >
                   Insurance <span className="gradient-text-purple">AI Solutions</span>
                 </motion.h1>
@@ -209,7 +209,7 @@ const Insurance = () => {
                 >
                   <Button
                     size="lg"
-                    className="group relative bg-white text-black hover:bg-gray-100 px-8 h-14 text-base font-bold transition-all duration-300 rounded-lg overflow-hidden"
+                    className="group relative bg-white text-black hover:bg-gray-100 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-bold transition-all duration-300 rounded-lg overflow-hidden"
                     asChild
                   >
                     <Link to="/contact">
@@ -222,7 +222,7 @@ const Insurance = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-white/10 text-white hover:bg-white/5 px-8 h-14 text-base font-bold transition-all rounded-lg"
+                    className="border-white/10 text-white hover:bg-white/5 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-bold transition-all rounded-lg"
                     asChild
                   >
                     <Link to="/solutions">View Platform</Link>
@@ -359,7 +359,7 @@ const Insurance = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -406,7 +406,7 @@ const Insurance = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             {solutions.map((solution, idx) => (
               <motion.div
                 key={idx}
@@ -520,7 +520,7 @@ const Insurance = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
           </div>
-          <div className="container mx-auto max-w-[800px] relative z-10">
+          <div className="container mx-auto max-w-[800px] px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -585,7 +585,7 @@ const Insurance = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden text-center">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
           </div>
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -633,7 +633,7 @@ const Insurance = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -648,13 +648,13 @@ const Insurance = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
-                  <Button size="lg" className="group rounded-xl bg-white text-black hover:bg-gray-100 h-14 px-8 font-bold">
+                  <Button size="lg" className="group rounded-xl bg-white text-black hover:bg-gray-100 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-bold">
                     Transform Your Operations
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link to="/solutions">
-                  <Button variant="outline" size="lg" className="rounded-xl border-white/10 text-white hover:bg-white/5 h-14 px-8 font-bold">
+                  <Button variant="outline" size="lg" className="rounded-xl border-white/10 text-white hover:bg-white/5 h-12 px-6 text-base sm:h-14 sm:px-8 sm:text-lg font-bold">
                     View Case Studies
                   </Button>
                 </Link>

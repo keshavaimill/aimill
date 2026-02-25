@@ -25,13 +25,13 @@ export const PlatformCTA = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link to="/contact">
-              <Button variant="hero" size="lg" className="group h-16 px-12 text-lg">
+              <Button variant="hero" size="lg" className="group h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-lg">
                 Book a Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link to="/consulting">
-              <Button variant="heroOutline" size="lg" className="h-16 px-12 text-lg">
+              <Button variant="heroOutline" size="lg" className="h-12 sm:h-16 px-6 sm:px-12 text-sm sm:text-lg">
                 Talk to an Agentic AI Architect
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

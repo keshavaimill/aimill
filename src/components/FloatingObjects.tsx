@@ -3,7 +3,7 @@ import { Bot, Radar, Cpu, Database, Network, Sparkles } from "lucide-react";
 
 export const FloatingObjects = () => {
   return (
-    <div className="absolute inset-0 overflow-visible pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
       {/* 
                SCATTERED LAYOUT V4 (EXTREME SPREAD)
                Goal: Push icons to the very edges and extremities.

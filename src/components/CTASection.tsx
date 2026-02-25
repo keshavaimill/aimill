@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const CTASection = () => {
   return (
-    <section className="relative py-12 sm:py-16 px-4 sm:px-8 lg:px-20 bg-background overflow-hidden">
+    <section className="relative py-12 sm:py-16 px-4 sm:px-8 lg:px-20 bg-background overflow-hidden min-w-0">
       {/* Background with grey texture - more visible */}
       <div className="absolute inset-0">
         {/* Grey texture pattern - enhanced visibility */}

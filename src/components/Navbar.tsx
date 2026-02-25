@@ -24,11 +24,11 @@ export const Navbar = () => {
       >
         Skip to main content
       </a>
-      <div className="container mx-auto px-6 h-full flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/image.png" alt="Ai Mill Logo" className="w-8 h-8 rounded-lg object-contain" />
-          <span className="text-xl font-bold text-foreground">Ai Mill</span>
+          <img src="/image.png" alt="Ai Mill Logo" className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain" />
+          <span className="text-lg sm:text-xl font-bold text-foreground">Ai Mill</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -243,10 +243,12 @@ export const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          type="button"
+          className="lg:hidden inline-flex items-center justify-center rounded-md border border-border/60 bg-background/80 p-2 text-foreground shadow-sm"
+          aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
@@ -257,9 +259,9 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass border-b border-border/50"
+            className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border/50 max-h-[80vh] overflow-y-auto shadow-lg"
           >
-            <div className="container mx-auto px-6 py-4 space-y-4">
+            <div className="container mx-auto px-4 sm:px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <div key={item.label}>
                   {item.hasDropdown ? (

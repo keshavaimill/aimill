@@ -171,7 +171,7 @@ const Media = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-5xl md:text-6xl lg:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold leading-[0.95] tracking-[-0.03em] text-white mb-8"
                 >
                   Scale <span className="gradient-text-purple">Performance</span> <br />
                   Across Your <br />
@@ -296,7 +296,7 @@ const Media = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -342,7 +342,7 @@ const Media = () => {
               `,
             }} />
           </div>
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             {solutions.map((solution, idx) => (
               <motion.div
                 key={idx}
@@ -447,7 +447,7 @@ const Media = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
           </div>
-          <div className="container mx-auto max-w-[800px] relative z-10">
+          <div className="container mx-auto max-w-[800px] px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -512,7 +512,7 @@ const Media = () => {
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-background via-zinc-950/30 to-zinc-900/40" />
           </div>
-          <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -560,7 +560,7 @@ const Media = () => {
             }} />
           </div>
 
-          <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <div className="container mx-auto max-w-4xl px-4 sm:px-6 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
