@@ -27,7 +27,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/image.png" alt="Ai Mill Logo" className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain" />
+          <img src="/image.png" alt="Ai Mill Logo" className="w-12 h-12 sm:w-15 sm:h-15 rounded-lg object-contain" />
           <span className="text-lg sm:text-xl font-bold text-foreground">Ai Mill</span>
         </Link>
 
